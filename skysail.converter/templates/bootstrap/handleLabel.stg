@@ -1,0 +1,14 @@
+handleLabel(field) ::= <<
+  <label for='$field.id$' class='col-sm-2 control-label'>
+    $if(converter.edit)$
+      <a href='/i18n/v1/messages/$field.id$/'>&nbsp;$messages.(field.id).value$</a>
+    $else$
+      $messages.(field.id).value$
+    $endif$
+    <span class="glyphicon glyphicon-question-sign text-muted" aria-hidden="true"
+        data-toggle="tooltip" data-placement="right" data-html="true" data-title="Info"
+        title="$helpmessage(messages, field.descriptionFromResource)$">
+    </span>
+
+  </label>
+>>

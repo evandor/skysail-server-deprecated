@@ -4,11 +4,17 @@ import org.stringtemplate.v4.STGroupDir
 import io.skysail.server.services.StringTemplateProvider
 import org.osgi.framework.Bundle
 import org.restlet.resource.Resource
+import java.util.LinkedHashSet
 
 object STGroupBundleDir {
 	val UTF8_ENCODING = "UTF-8";
 	val DELIMITER_START_CHAR = '$'
 	val DELIMITER_STOP_CHAR = '$'
+	
+  val usedTemplates:java.util.Set = new LinkedHashSet[_]();
+
+  def clearUsedTemplates() = usedTemplates.clear()
+
   
 }
 

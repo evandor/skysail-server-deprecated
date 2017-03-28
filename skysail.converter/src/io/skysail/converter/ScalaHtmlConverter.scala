@@ -15,6 +15,7 @@ import io.skysail.api.responses.SkysailResponse
 import io.skysail.core.resources.SkysailServerResource
 import io.skysail.restlet.ScalaSkysailServerResource
 import io.skysail.server.services.StringTemplateProvider
+import io.skysail.api.um.UserManagementProvider
 
 object ScalaHtmlConverter {
   val DEFAULT_MATCH_VALUE = 0.5f;
@@ -30,8 +31,13 @@ object ScalaHtmlConverter {
 class ScalaHtmlConverter extends ConverterHelper with OsgiConverterHelper {
   
   @Reference(cardinality = ReferenceCardinality.MULTIPLE, policy = ReferencePolicy.DYNAMIC)
-  val templateProvider = new java.util.ArrayList[StringTemplateProvider]();
+  var templateProvider = new java.util.ArrayList[StringTemplateProvider]();
   def getTemplateProvider() = templateProvider
+  
+  @Reference(cardinality = ReferenceCardinality.MANDATORY)
+  var userManagementProvider: UserManagementProvider = null
+  def getUserManagementProvider() = userManagementProvider
+
 
   def getObjectClasses(x$1: Variant): java.util.List[Class[_]] = Collections.emptyList()
 
@@ -41,7 +47,6 @@ class ScalaHtmlConverter extends ConverterHelper with OsgiConverterHelper {
       new VariantInfo(SkysailApplication.SKYSAIL_MAILTO_MEDIATYPE),
       new VariantInfo(SkysailApplication.SKYSAIL_TIMELINE_MEDIATYPE),
       new VariantInfo(SkysailApplication.SKYSAIL_STANDLONE_APP_MEDIATYPE))
-
   }
 
   def score[T](x$1: Representation, x$2: Class[T], x$3: Resource) = -1.0F
