@@ -5,17 +5,19 @@ import io.skysail.server.services.StringTemplateProvider
 import org.osgi.framework.Bundle
 import org.restlet.resource.Resource
 import java.util.LinkedHashSet
+import org.stringtemplate.v4.compiler.CompiledST
+import java.util.Optional
+import java.net.URL
+import java.net.MalformedURLException
+import st4hidden.org.antlr.runtime.ANTLRStringStream
+import scala.collection.JavaConverters._
 
 object STGroupBundleDir {
 	val UTF8_ENCODING = "UTF-8";
 	val DELIMITER_START_CHAR = '$'
 	val DELIMITER_STOP_CHAR = '$'
-	
-  val usedTemplates:java.util.Set = new LinkedHashSet[_]();
-
+  val usedTemplates = new java.util.LinkedHashSet[String]()
   def clearUsedTemplates() = usedTemplates.clear()
-
-  
 }
 
 class STGroupBundleDir(
@@ -29,15 +31,105 @@ extends STGroupDir(
     STGroupBundleDir.DELIMITER_START_CHAR, 
     STGroupBundleDir.DELIMITER_STOP_CHAR) {
   
-}
-
-//public STGroupBundleDir(Bundle bundle, @NonNull Resource resource, @NonNull String resourcePath, @NonNull List<StringTemplateProvider> templateProvider) {
-//		super(bundle.getResource(resourcePath), UTF8_ENCODING, DELIMITER_START_CHAR, DELIMITER_STOP_CHAR);
-//
-//		log.debug("new STGroupBundleDir in bundle '{}' @path '{}'", bundle.getSymbolicName(), resourcePath);
-//		
-//		this.optionalResourceClassName = resource.getClass().getName();
+//  this.optionalResourceClassName = resource.getClass().getName();
 //		this.bundleSymbolicName = bundle.getSymbolicName();
 //		this.groupDirName = getGroupDirName(bundle, resourcePath); // e.g. "STGroupBundleDir: skysail.server - /templates"
 //		this.templateProvider = templateProvider;
-//	}
+  
+  override def load(name: String): CompiledST = {
+//		Validate.isTrue(name.startsWith("/"), "name is supposed to start with '/'");
+//		Validate.isTrue(!name.contains("."), NAME_IS_NOT_SUPPOSED_TO_CONTAIN_A_DOT);
+
+		return checkForResourceLevelTemplate(name)
+				.orElse(checkForProvidedTemplates(name)
+				.orElse(loadFromBundle(name, name)
+				.orElse(null)));
+	}  
+  
+  private def checkForResourceLevelTemplate(name: String):  Optional[CompiledST] = {
+		if (optionalResourceClassName == null) {
+			return Optional.empty();
+		}
+		val resourceLevelTemplate = (optionalResourceClassName() + "Stg").replace(".", "/") + "/" + name;
+		val optionalCompiledST = loadFromBundle(name, resourceLevelTemplate);
+		if (optionalCompiledST.isPresent()) {
+			//log.debug("found resourceLevelTemplate for key '{}': ", name, resourceLevelTemplate);
+		}
+		return optionalCompiledST;
+	}
+  
+  private def checkForProvidedTemplates(name: String): Optional[CompiledST] = {
+		//Validate.isTrue(!name.contains("."), NAME_IS_NOT_SUPPOSED_TO_CONTAIN_A_DOT);
+
+		val templateFileName = name + ".st";
+		val optionalTemplateProvider = templateProvider.asScala
+		  .filter { t => t.getTemplates().get(templateFileName) != null }
+		  .headOption
+		if (optionalTemplateProvider.isDefined) {
+			//log.debug("found Template for key '{}' in provider '{}'", name, optionalTemplateProvider.get().getShortName());
+
+			val charStream = new ANTLRStringStream(optionalTemplateProvider.get.getTemplates().get(templateFileName));
+			if (charStream.isInstanceOf[ANTLRStringStream] && charStream.getSourceName() == null) {
+				(charStream.asInstanceOf[ANTLRStringStream]).name = templateFileName;
+			}
+			val split = templateFileName.split("/")
+			val unqualifiedFileName = split(split.length-1)
+			val prefix = templateFileName.substring(0, templateFileName.length() - unqualifiedFileName.length())
+			return Optional.ofNullable(loadTemplateFile(prefix, unqualifiedFileName, charStream))
+		}
+		return Optional.empty();
+	}
+  
+  private def loadFromBundle(originalName: String, name: String): Optional[CompiledST] = {
+		//Validate.isTrue(!name.contains("."), NAME_IS_NOT_SUPPOSED_TO_CONTAIN_A_DOT);
+
+		val groupFileURL = determineGroupFileUrl(name);
+		if (groupFileURL == null) {
+			return Optional.empty();
+		}
+		val fileName = root + ("/" + name + ".stg").replace("//", "/");
+		if (!exists(groupFileURL)) {
+			return Optional.ofNullable(loadTemplateFile("/", name + ".st")); // load t.st file // NOSONAR
+		}
+		STGroupBundleDir.usedTemplates.add(bundleSymbolicName + ": " + groupFileURL.toString());
+		try {
+			loadGroupFile("/", fileName);
+//			log.debug(FOUND_RESOURCE_LOG_MSG_TEMPLATE, bundleSymbolicName, groupFileURL.toString());
+//			log.debug("");
+			return Optional.ofNullable(rawGetTemplate(originalName));
+		} catch  {
+		  case _: Throwable =>
+		}
+		if (root != null && "/".trim().length() != 0) {
+			loadGroupFile("/", fileName);
+		}
+		return Optional.ofNullable(rawGetTemplate(name));
+	}
+  
+  private def optionalResourceClassName() = resource.getClass().getName()
+  
+  def bundleSymbolicName() = bundle.getSymbolicName();
+  
+  private def determineGroupFileUrl(name: String): URL = {
+		if (root == null) {
+			return null;
+		}
+		val url = root + ("/" + name + ".stg").replace("//", "/");
+		try {
+			return new URL(url);
+		} catch  {
+		  case e: MalformedURLException => errMgr.internalError(null, "bad URL: " + url, e);
+		}
+		return null;
+	}
+  
+  private def exists(url: URL):Boolean = {
+		try {
+			url.openConnection().connect();
+		} catch  { 
+		  case _: Throwable => return false;
+		}
+		return true;
+	}
+
+}

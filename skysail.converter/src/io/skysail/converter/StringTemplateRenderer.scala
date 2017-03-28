@@ -31,7 +31,7 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Resour
   def createRepresenation(entity: SkysailResponse[_], target: Variant, resource: ScalaSkysailServerResource): StringRepresentation = {
     val styling = Styling.determineFrom(resource); // e.g. bootstrap, semanticui, jquerymobile
     val theming = Theming.determineFrom(resource, target)
-    //STGroupBundleDir.clearUsedTemplates();
+    STGroupBundleDir.clearUsedTemplates();
     val stGroup = createStringTemplateGroup(resource, styling, theming);
     val index = getStringTemplateIndex(resource, styling, stGroup);
     val resourceModel = createResourceModel(entity, target, theming, resource);
@@ -83,7 +83,8 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Resour
       return instanceOf;
     }
 
-    return stGroup.getInstanceOf(getIndexPageNameFromCookie(resource).orElse("index"));
+    val identifier = getIndexPageNameFromCookie(resource).orElse("index")
+    return stGroup.getInstanceOf(identifier);
 
   }
 
