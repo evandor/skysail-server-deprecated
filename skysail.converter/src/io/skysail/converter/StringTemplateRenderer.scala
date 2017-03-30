@@ -19,6 +19,7 @@ import io.skysail.server.utils.RequestUtils
 import io.skysail.core.utils.CookiesUtils
 import io.skysail.server.Constants
 import org.restlet.data.MediaType
+import io.skysail.core.app.SkysailApplicationService
 
 object StringTemplateRenderer {
   val SKYSAIL_SERVER_CONVERTER = "skysail.converter";
@@ -27,6 +28,8 @@ object StringTemplateRenderer {
 }
 
 class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Resource) {
+  
+  var skysailApplicationService: SkysailApplicationService = null
   
   def createRepresenation(entity: SkysailResponse[_], target: Variant, resource: ScalaSkysailServerResource): StringRepresentation = {
     val styling = Styling.determineFrom(resource); // e.g. bootstrap, semanticui, jquerymobile
@@ -124,9 +127,9 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Resour
     //        resourceModel.setFilterParser(filterParser);
     //        resourceModel.setInstallationProvider(installationProvider);
     //        resourceModel.setTemplateProvider(htmlConverter.getTemplateProvider());
-    //        resourceModel.setSkysailApplicationService(skysailApplicationService);
+    resourceModel.setSkysailApplicationService(skysailApplicationService);
     //
-    //        resourceModel.process();
+    resourceModel.process();
     //
     //        Map<String, Translation> messages = resource.getMessages(resourceModel.getFields());
     //        resourceModel.setMessages(messages);
@@ -142,6 +145,10 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Resour
     val rep = new StringRepresentation(stringTemplateRenderedHtml);
     rep.setMediaType(MediaType.TEXT_HTML);
     return rep;
+  }
+
+  def setSkysailApplicationService(service: SkysailApplicationService) = {
+    this.skysailApplicationService = service
   }
 
 }
