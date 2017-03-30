@@ -24,4 +24,5 @@ Include-Resource: templates=templates,webapp=webapp
 	io.skysail.bundled.json4s-native_2.11;version=3.5
 	    
 Private-Package: \
-	io.skysail.converter
+	io.skysail.converter,\
+	io.skysail.converter.app

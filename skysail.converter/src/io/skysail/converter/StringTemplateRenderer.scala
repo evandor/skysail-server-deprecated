@@ -20,6 +20,7 @@ import io.skysail.core.utils.CookiesUtils
 import io.skysail.server.Constants
 import org.restlet.data.MediaType
 import io.skysail.core.app.SkysailApplicationService
+import io.skysail.restlet.responses.ScalaSkysailResponse
 
 object StringTemplateRenderer {
   val SKYSAIL_SERVER_CONVERTER = "skysail.converter";
@@ -31,7 +32,7 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Resour
   
   var skysailApplicationService: SkysailApplicationService = null
   
-  def createRepresenation(entity: SkysailResponse[_], target: Variant, resource: ScalaSkysailServerResource): StringRepresentation = {
+  def createRepresenation(entity: ScalaSkysailResponse[_], target: Variant, resource: ScalaSkysailServerResource): StringRepresentation = {
     val styling = Styling.determineFrom(resource); // e.g. bootstrap, semanticui, jquerymobile
     val theming = Theming.determineFrom(resource, target)
     STGroupBundleDir.clearUsedTemplates();
@@ -122,7 +123,7 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Resour
 
   private def createResourceModel(entity: Any, target: Variant, theming: Theming, resource: ScalaSkysailServerResource): ResourceModel = {
 
-    val resourceModel = new ResourceModel(resource, entity.asInstanceOf[SkysailResponse[_]], htmlConverter.getUserManagementProvider(), target, theming);
+    val resourceModel = new ResourceModel(resource, entity.asInstanceOf[ScalaSkysailResponse[_]], htmlConverter.getUserManagementProvider(), target, theming);
     //        resourceModel.setMenuItemProviders(menuProviders);
     //        resourceModel.setFilterParser(filterParser);
     //        resourceModel.setInstallationProvider(installationProvider);

@@ -13,10 +13,11 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import java.util.LinkedHashMap
 import io.skysail.restlet.utils.FormfieldUtils
 import io.skysail.core.app.SkysailApplicationService
+import io.skysail.restlet.responses.ScalaSkysailResponse
 
 class ResourceModel(
     resource: ScalaSkysailServerResource, 
-    response: SkysailResponse[_], 
+    response: ScalaSkysailResponse[_], 
     userManagementProvider: UserManagementProvider, 
     target: Variant, theming: Theming) {
 
@@ -35,7 +36,7 @@ class ResourceModel(
     //
     val parameterizedType = resource.getParameterizedType();
 
-    val fields = FormfieldUtils.determineFormfields(response, resource, skysailApplicationService);
+    val fields = FormfieldUtils.determineFormfields(response, resource, skysailApplicationService)
     //
     //		rootEntity = new EntityModel<>(response.getEntity(), resource);
     //

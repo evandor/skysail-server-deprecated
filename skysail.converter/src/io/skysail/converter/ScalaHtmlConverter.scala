@@ -17,6 +17,7 @@ import io.skysail.restlet.ScalaSkysailServerResource
 import io.skysail.server.services.StringTemplateProvider
 import io.skysail.api.um.UserManagementProvider
 import io.skysail.core.app.SkysailApplicationService
+import io.skysail.restlet.responses.ScalaSkysailResponse
 
 object ScalaHtmlConverter {
   val DEFAULT_MATCH_VALUE = 0.5f;
@@ -39,7 +40,8 @@ class ScalaHtmlConverter extends ConverterHelper with OsgiConverterHelper {
   var userManagementProvider: UserManagementProvider = null
   def getUserManagementProvider() = userManagementProvider
 
-  @Reference(cardinality = ReferenceCardinality.OPTIONAL, policy = ReferencePolicy.DYNAMIC)
+  //@Reference(cardinality = ReferenceCardinality.OPTIONAL, policy = ReferencePolicy.DYNAMIC)
+  @Reference(cardinality = ReferenceCardinality.MANDATORY)
   var skysailApplicationService: SkysailApplicationService = null
   def getSkysailApplicationService() = skysailApplicationService
 
@@ -78,6 +80,6 @@ class ScalaHtmlConverter extends ConverterHelper with OsgiConverterHelper {
     //    stringTemplateRenderer.setFilterParser(filterParser);
     //    stringTemplateRenderer.setInstallationProvider(installationProvider);
     stringTemplateRenderer.setSkysailApplicationService(skysailApplicationService);
-    return stringTemplateRenderer.createRepresenation(skysailResponse.asInstanceOf[SkysailResponse[_]], target, resource.asInstanceOf[ScalaSkysailServerResource]);
+    return stringTemplateRenderer.createRepresenation(skysailResponse.asInstanceOf[ScalaSkysailResponse[_]], target, resource.asInstanceOf[ScalaSkysailServerResource]);
   }
 }
