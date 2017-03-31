@@ -33,7 +33,7 @@ object ScalaHtmlConverter {
 class ScalaHtmlConverter extends ConverterHelper with OsgiConverterHelper {
   
   @Reference(cardinality = ReferenceCardinality.MULTIPLE, policy = ReferencePolicy.DYNAMIC)
-  var templateProvider = new java.util.ArrayList[StringTemplateProvider]();
+  @volatile var templateProvider:java.util.List[StringTemplateProvider] = new java.util.ArrayList[StringTemplateProvider]();
   def getTemplateProvider() = templateProvider
   
   @Reference(cardinality = ReferenceCardinality.MANDATORY)
