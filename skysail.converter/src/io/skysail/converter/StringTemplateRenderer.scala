@@ -1,26 +1,25 @@
 package io.skysail.converter
 
-import org.restlet.representation.Variant
 import io.skysail.api.responses.SkysailResponse
+import io.skysail.core.app._
 import io.skysail.core.resources.SkysailServerResource
-import org.restlet.representation.StringRepresentation
-import org.restlet.resource.Resource
+import io.skysail.core.utils.CookiesUtils
 import io.skysail.restlet.ScalaSkysailServerResource
 import io.skysail.server.rendering.Theme
-import org.osgi.framework.Bundle
-import org.osgi.framework.BundleContext
+import io.skysail.server.ResourceContextId
+import io.skysail.server.utils.RequestUtils
+import io.skysail.server.Constants
+import io.skysail.restlet.responses.ScalaSkysailResponse
+import io.skysail.restlet.app.ScalaSkysailApplication
+import org.restlet.representation.StringRepresentation
+import org.restlet.resource.Resource
+import org.restlet.data.MediaType
+import org.restlet.representation.Variant
+import org.stringtemplate.v4.STGroup
+import org.osgi.framework._
+import org.stringtemplate.v4.ST
 import java.util.Optional
 import java.util.Arrays
-import io.skysail.core.app.SkysailApplication
-import org.stringtemplate.v4.STGroup
-import io.skysail.server.ResourceContextId
-import org.stringtemplate.v4.ST
-import io.skysail.server.utils.RequestUtils
-import io.skysail.core.utils.CookiesUtils
-import io.skysail.server.Constants
-import org.restlet.data.MediaType
-import io.skysail.core.app.SkysailApplicationService
-import io.skysail.restlet.responses.ScalaSkysailResponse
 
 object StringTemplateRenderer {
   val SKYSAIL_SERVER_CONVERTER = "skysail.converter";
@@ -63,7 +62,7 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Resour
     bundleContext.getBundles().filter { b => b.getSymbolicName().equals(bundleName) }.head
   }
 
-  private def appBundle = resource.getApplication().asInstanceOf[SkysailApplication].getBundle
+  private def appBundle = resource.getApplication().asInstanceOf[ScalaSkysailApplication].getBundle
   private def bundleProvidesTemplates(appBundle: Bundle) = appBundle.getResource(StringTemplateRenderer.TEMPLATES_DIR) != null
 
   private def getStringTemplateIndex(resource: Resource, styling: Styling, stGroup: STGroup): ST = {
