@@ -18,6 +18,7 @@ import io.skysail.server.services.StringTemplateProvider
 import io.skysail.api.um.UserManagementProvider
 import io.skysail.core.app.SkysailApplicationService
 import io.skysail.restlet.responses.ScalaSkysailResponse
+import io.skysail.restlet.app.ScalaSkysailApplicationService
 
 object ScalaHtmlConverter {
   val DEFAULT_MATCH_VALUE = 0.5f;
@@ -42,7 +43,7 @@ class ScalaHtmlConverter extends ConverterHelper with OsgiConverterHelper {
 
   //@Reference(cardinality = ReferenceCardinality.OPTIONAL, policy = ReferencePolicy.DYNAMIC)
   @Reference(cardinality = ReferenceCardinality.MANDATORY)
-  var skysailApplicationService: SkysailApplicationService = null
+  var skysailApplicationService: ScalaSkysailApplicationService = null
   def getSkysailApplicationService() = skysailApplicationService
 
   def getObjectClasses(x$1: Variant): java.util.List[Class[_]] = Collections.emptyList()
@@ -75,6 +76,7 @@ class ScalaHtmlConverter extends ConverterHelper with OsgiConverterHelper {
   }
 
   def toRepresentation(skysailResponse: Any, target: Variant, resource: Resource): Representation = {
+    require(skysailResponse.isInstanceOf[ScalaSkysailResponse[_]])
     val stringTemplateRenderer = new StringTemplateRenderer(this, resource);
     //    stringTemplateRenderer.setMenuProviders(menuProviders);
     //    stringTemplateRenderer.setFilterParser(filterParser);

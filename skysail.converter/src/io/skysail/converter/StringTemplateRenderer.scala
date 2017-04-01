@@ -20,6 +20,7 @@ import org.osgi.framework._
 import org.stringtemplate.v4.ST
 import java.util.Optional
 import java.util.Arrays
+import io.skysail.restlet.app.ScalaSkysailApplicationService
 
 object StringTemplateRenderer {
   val SKYSAIL_SERVER_CONVERTER = "skysail.converter";
@@ -29,7 +30,7 @@ object StringTemplateRenderer {
 
 class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Resource) {
   
-  var skysailApplicationService: SkysailApplicationService = null
+  var skysailApplicationService: ScalaSkysailApplicationService = null
   
   def createRepresenation(entity: ScalaSkysailResponse[_], target: Variant, resource: ScalaSkysailServerResource): StringRepresentation = {
     val styling = Styling.determineFrom(resource); // e.g. bootstrap, semanticui, jquerymobile
@@ -147,7 +148,7 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Resour
     return rep;
   }
 
-  def setSkysailApplicationService(service: SkysailApplicationService) = {
+  def setSkysailApplicationService(service: ScalaSkysailApplicationService) = {
     this.skysailApplicationService = service
   }
 

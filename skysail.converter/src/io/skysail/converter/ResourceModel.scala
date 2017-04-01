@@ -14,6 +14,7 @@ import java.util.LinkedHashMap
 import io.skysail.restlet.utils.FormfieldUtils
 import io.skysail.core.app.SkysailApplicationService
 import io.skysail.restlet.responses.ScalaSkysailResponse
+import io.skysail.restlet.app.ScalaSkysailApplicationService
 
 class ResourceModel(
     resource: ScalaSkysailServerResource, 
@@ -23,7 +24,7 @@ class ResourceModel(
 
   var rawData = new java.util.ArrayList[java.util.Map[String, Object]]()
   
-  var skysailApplicationService: SkysailApplicationService = null
+  var skysailApplicationService: ScalaSkysailApplicationService = null
 
   val mapper = new ObjectMapper();
 
@@ -37,23 +38,24 @@ class ResourceModel(
     val parameterizedType = resource.getParameterizedType();
 
     val fields = FormfieldUtils.determineFormfields(response, resource, skysailApplicationService)
-    //
-    //		rootEntity = new EntityModel<>(response.getEntity(), resource);
-    //
-    //		String identifierName = getIdentifierFormField(rawData);
-    //		SkysailResponse ssr = response;
-    //		String entityClassName = ssr.getEntity() != null ? ssr.getEntity().getClass().getName() : "";
-    //		if (ssr.getEntity() != null && List.class.isAssignableFrom(ssr.getEntity().getClass())) {
-    //			List listEntity = (List) ssr.getEntity();
-    //			if (listEntity.size() > 0) {
-    //				entityClassName = listEntity.get(0).getClass().getName();
-    //			}
-    //		}
-    //
-    //		data = convert(entityClassName, identifierName, resource);
-    //
-    //		addAssociatedLinks(data);
-    //		addAssociatedLinks(rawData);
+    println(fields)
+    
+    		rootEntity = new EntityModel<>(response.getEntity(), resource);
+    
+    		String identifierName = getIdentifierFormField(rawData);
+    		SkysailResponse ssr = response;
+    		String entityClassName = ssr.getEntity() != null ? ssr.getEntity().getClass().getName() : "";
+    		if (ssr.getEntity() != null && List.class.isAssignableFrom(ssr.getEntity().getClass())) {
+    			List listEntity = (List) ssr.getEntity();
+    			if (listEntity.size() > 0) {
+    				entityClassName = listEntity.get(0).getClass().getName();
+    			}
+    		}
+    
+    		data = convert(entityClassName, identifierName, resource);
+    
+    		addAssociatedLinks(data);
+    		addAssociatedLinks(rawData);
   }
 
   //  private List<Map<String, Object>> getData(Object source, R theResource) {
@@ -133,7 +135,7 @@ class ResourceModel(
     return result;
   }
 
-  def setSkysailApplicationService(service: SkysailApplicationService) = {
+  def setSkysailApplicationService(service: ScalaSkysailApplicationService) = {
       this.skysailApplicationService = service
     }
 }
