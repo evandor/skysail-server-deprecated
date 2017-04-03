@@ -30,6 +30,8 @@ import io.skysail.server.filter.FilterParser
 import io.skysail.restlet.queries.QueryFilterParser
 import io.skysail.restlet.resources.PostEntityServerResource2
 import io.skysail.restlet.resources.PutEntityServerResource2
+import io.skysail.restlet.forms.ScalaFormField
+import io.skysail.api.text.Translation
 
 class ResourceModel(
     resource: ScalaSkysailServerResource,
@@ -39,8 +41,8 @@ class ResourceModel(
     theming: Theming) {
 
   var rawData = new java.util.ArrayList[java.util.Map[String, Object]]()
-  
-  var data:java.util.List[java.util.Map[String, Object]] = new java.util.ArrayList[java.util.Map[String, Object]]()
+
+  var data: java.util.List[java.util.Map[String, Object]] = new java.util.ArrayList[java.util.Map[String, Object]]()
   def getData() = data
 
   var skysailApplicationService: ScalaSkysailApplicationService = null
@@ -51,6 +53,7 @@ class ResourceModel(
   val dateFormat = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.SHORT, locale);
 
   var parameterizedType: Class[_] = null
+  var fields:Map[String, ScalaFormField] = Map()
 
   mapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
   mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
@@ -58,10 +61,13 @@ class ResourceModel(
   //val target = new STTargetWrapper(target);
 
   val params = if (resource.getQuery() != null) resource.getQuery().getValuesMap() else Collections.emptyMap()
-  
+
   var filterParser: QueryFilterParser = null
   def setFilterParser(f: QueryFilterParser) = filterParser = f
   
+//  var messages: java.util.Map[String, Translation]
+//  def setMessages(m: java.util.Map[String,Translation]) = messages = m
+
   def getResource() = resource
 
   def process() = {
@@ -73,7 +79,7 @@ class ResourceModel(
     //
     parameterizedType = resource.getParameterizedType();
 
-    val fields = FormfieldUtils.determineFormfields(response, resource, skysailApplicationService)
+    fields = FormfieldUtils.determineFormfields(response, resource, skysailApplicationService)
     println(fields)
 
     // val rootEntity = new io.skysail.server.model.EntityModel[_](response.entity(), resource);
@@ -143,18 +149,21 @@ class ResourceModel(
       //
     } else if (response.isInstanceOf[FormResponse[_]]) {
       val entity = response.asInstanceOf[FormResponse[_]].entity
-      result.add(mapper.convertValue(entity, classOf[LinkedHashMap[String, Object]]));
+      println(entity)
+      val entityMap = mapper.convertValue(entity, classOf[LinkedHashMap[String, Object]])
+      println(entityMap)
+      result.add(entityMap);
 
       val p = new java.util.ArrayList[java.util.Map[String, Object]]();
       for (row <- result.asScala) {
-				if (row != null) {
-					val nR = new java.util.HashMap[String,Object]()
-					for (key <- row.keySet().asScala) {
-					  nR.put(entity.getClass().getName + "|" + key, row.get(key))
-					}
-					p.add(nR);
-				}
-			}
+        if (row != null) {
+          val nR = new java.util.HashMap[String, Object]()
+          for (key <- row.keySet().asScala) {
+            nR.put(entity.getClass().getName + "|" + key, row.get(key))
+          }
+          p.add(nR);
+        }
+      }
 
       return p;
 
@@ -217,18 +226,20 @@ class ResourceModel(
   //				simpleIdentifier, id, resource);
   //	}
   def calc(
-      fieldModel: ScalaSkysailFieldModel, 
-      dataRow: java.util.Map[String, Object], 
-      columnName: String, 
-      simpleIdentifier: String, 
-      id: Any, 
-      resource: ScalaSkysailServerResource) = {
+    fieldModel: ScalaSkysailFieldModel,
+    dataRow: java.util.Map[String, Object],
+    columnName: String,
+    simpleIdentifier: String,
+    id: Any,
+    resource: ScalaSkysailServerResource) = {
     new CellRendererHelper(fieldModel, response, filterParser)
-      //.render(dataRow.get(columnName), columnName, simpleIdentifier, id, resource);
+    //.render(dataRow.get(columnName), columnName, simpleIdentifier, id, resource);
   }
-  
+
   def isForm() = response.isForm()
   def isPostEntityServerResource() = resource.isInstanceOf[PostEntityServerResource2[_]]
   def isPutEntityServerResource() = resource.isInstanceOf[PutEntityServerResource2[_]]
   
+  def getFormfields() = fields.values.asJava;// new ArrayList<>(fields.values())
+
 }

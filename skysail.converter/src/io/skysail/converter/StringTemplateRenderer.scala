@@ -167,7 +167,7 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Resour
 //              installationFromCookie));
       decl.add("converter", this);
 //
-//      decl.add("messages", resourceModel.getMessages());
+      decl.add("messages", resource.getMessages(resourceModel.getFields())
       decl.add("model", resourceModel);
 //      decl.add("request", new STRequestWrapper(
 //              resource.getRequest(),
