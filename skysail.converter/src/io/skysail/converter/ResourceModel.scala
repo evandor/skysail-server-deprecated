@@ -7,7 +7,6 @@ import org.restlet.representation.Variant
 import io.skysail.restlet.ScalaSkysailServerResource
 import io.skysail.api.responses.ListServerResponse
 import io.skysail.api.responses.RelationTargetResponse
-import io.skysail.api.responses.FormResponse
 import io.skysail.api.responses.ConstraintViolationsResponse
 import com.fasterxml.jackson.databind.ObjectMapper
 import java.util.LinkedHashMap
@@ -15,6 +14,7 @@ import io.skysail.restlet.utils.FormfieldUtils
 import io.skysail.core.app.SkysailApplicationService
 import io.skysail.restlet.responses.ScalaSkysailResponse
 import io.skysail.restlet.app.ScalaSkysailApplicationService
+import io.skysail.restlet.responses.FormResponse
 
 class ResourceModel(
     resource: ScalaSkysailServerResource, 
@@ -40,22 +40,22 @@ class ResourceModel(
     val fields = FormfieldUtils.determineFormfields(response, resource, skysailApplicationService)
     println(fields)
     
-    		rootEntity = new EntityModel<>(response.getEntity(), resource);
-    
-    		String identifierName = getIdentifierFormField(rawData);
-    		SkysailResponse ssr = response;
-    		String entityClassName = ssr.getEntity() != null ? ssr.getEntity().getClass().getName() : "";
-    		if (ssr.getEntity() != null && List.class.isAssignableFrom(ssr.getEntity().getClass())) {
-    			List listEntity = (List) ssr.getEntity();
-    			if (listEntity.size() > 0) {
-    				entityClassName = listEntity.get(0).getClass().getName();
-    			}
-    		}
-    
-    		data = convert(entityClassName, identifierName, resource);
-    
-    		addAssociatedLinks(data);
-    		addAssociatedLinks(rawData);
+//    		rootEntity = new EntityModel<>(response.getEntity(), resource);
+//    
+//    		String identifierName = getIdentifierFormField(rawData);
+//    		SkysailResponse ssr = response;
+//    		String entityClassName = ssr.getEntity() != null ? ssr.getEntity().getClass().getName() : "";
+//    		if (ssr.getEntity() != null && List.class.isAssignableFrom(ssr.getEntity().getClass())) {
+//    			List listEntity = (List) ssr.getEntity();
+//    			if (listEntity.size() > 0) {
+//    				entityClassName = listEntity.get(0).getClass().getName();
+//    			}
+//    		}
+//    
+//    		data = convert(entityClassName, identifierName, resource);
+//    
+//    		addAssociatedLinks(data);
+//    		addAssociatedLinks(rawData);
   }
 
   //  private List<Map<String, Object>> getData(Object source, R theResource) {
@@ -106,7 +106,7 @@ class ResourceModel(
       //			return p;
       //
     } else if (response.isInstanceOf[FormResponse[_]]) {
-      val entity = response.asInstanceOf[FormResponse[_]].getEntity();
+      val entity = response.asInstanceOf[FormResponse[_]].entity
       result.add(mapper.convertValue(entity, classOf[LinkedHashMap[String, Object]]));
 
       val p = new java.util.ArrayList[java.util.Map[String, Object]]();
