@@ -21,6 +21,8 @@ import org.stringtemplate.v4.ST
 import java.util.Optional
 import java.util.Arrays
 import io.skysail.restlet.app.ScalaSkysailApplicationService
+import io.skysail.server.filter.FilterParser
+import io.skysail.restlet.queries.QueryFilterParser
 
 object StringTemplateRenderer {
   val SKYSAIL_SERVER_CONVERTER = "skysail.converter";
@@ -32,6 +34,9 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Resour
   
   var skysailApplicationService: ScalaSkysailApplicationService = null
   
+  var filterParser: QueryFilterParser = null
+  def setFilterParser(f: QueryFilterParser) = filterParser = f
+  
   def createRepresenation(entity: ScalaSkysailResponse[_], target: Variant, resource: ScalaSkysailServerResource): StringRepresentation = {
     val styling = Styling.determineFrom(resource); // e.g. bootstrap, semanticui, jquerymobile
     val theming = Theming.determineFrom(resource, target)
@@ -39,7 +44,7 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Resour
     val stGroup = createStringTemplateGroup(resource, styling, theming);
     val index = getStringTemplateIndex(resource, styling, stGroup);
     val resourceModel = createResourceModel(entity, target, theming, resource);
-    //  addSubstitutions(resourceModel, index);
+    addSubstitutions(resourceModel, index);
     //  checkForInspection(resource, index);
     return createRepresentation(index, stGroup);
   }
@@ -125,7 +130,7 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Resour
 
     val resourceModel = new ResourceModel(resource, entity.asInstanceOf[ScalaSkysailResponse[_]], htmlConverter.getUserManagementProvider(), target, theming);
     //        resourceModel.setMenuItemProviders(menuProviders);
-    //        resourceModel.setFilterParser(filterParser);
+    resourceModel.setFilterParser(filterParser);
     //        resourceModel.setInstallationProvider(installationProvider);
     //        resourceModel.setTemplateProvider(htmlConverter.getTemplateProvider());
     resourceModel.setSkysailApplicationService(skysailApplicationService);
@@ -151,5 +156,22 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Resour
   def setSkysailApplicationService(service: ScalaSkysailApplicationService) = {
     this.skysailApplicationService = service
   }
+  
+   private def addSubstitutions(resourceModel: ResourceModel, decl: ST):Unit = {
+
+     val resource = resourceModel.getResource();
+
+     val installationFromCookie = CookiesUtils.getInstallationFromCookie(resource.getRequest()).orElse(null);
+
+//      decl.add("user", new STUserWrapper(htmlConverter.getUserManagementProvider(), resourceModel.getResource(),
+//              installationFromCookie));
+      decl.add("converter", this);
+//
+//      decl.add("messages", resourceModel.getMessages());
+      decl.add("model", resourceModel);
+//      decl.add("request", new STRequestWrapper(
+//              resource.getRequest(),
+//              resourceModel.getFormfields().stream().map(FormField::getId).collect(Collectors.toList())));
+    }
 
 }

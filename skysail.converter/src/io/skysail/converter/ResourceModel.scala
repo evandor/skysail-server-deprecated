@@ -20,6 +20,17 @@ import java.text.DateFormat
 import com.fasterxml.jackson.databind.SerializationFeature
 import java.util.Collections
 
+import scala.collection.JavaConverters._
+import java.util.HashMap
+import java.util.Optional
+import io.skysail.domain.core.FieldModel
+import io.skysail.restlet.model.ScalaSkysailFieldModel
+import io.skysail.converter.forms.helper.CellRendererHelper
+import io.skysail.server.filter.FilterParser
+import io.skysail.restlet.queries.QueryFilterParser
+import io.skysail.restlet.resources.PostEntityServerResource2
+import io.skysail.restlet.resources.PutEntityServerResource2
+
 class ResourceModel(
     resource: ScalaSkysailServerResource,
     response: ScalaSkysailResponse[_],
@@ -28,6 +39,9 @@ class ResourceModel(
     theming: Theming) {
 
   var rawData = new java.util.ArrayList[java.util.Map[String, Object]]()
+  
+  var data:java.util.List[java.util.Map[String, Object]] = new java.util.ArrayList[java.util.Map[String, Object]]()
+  def getData() = data
 
   var skysailApplicationService: ScalaSkysailApplicationService = null
 
@@ -36,12 +50,19 @@ class ResourceModel(
   val locale = ResourceUtils.determineLocale(resource);
   val dateFormat = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.SHORT, locale);
 
+  var parameterizedType: Class[_] = null
+
   mapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
   mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
 
   //val target = new STTargetWrapper(target);
 
   val params = if (resource.getQuery() != null) resource.getQuery().getValuesMap() else Collections.emptyMap()
+  
+  var filterParser: QueryFilterParser = null
+  def setFilterParser(f: QueryFilterParser) = filterParser = f
+  
+  def getResource() = resource
 
   def process() = {
     rawData = getData(response, resource);
@@ -50,25 +71,25 @@ class ResourceModel(
     //			facets = ((ListServerResource<?>) resource).getFacets();
     //		}
     //
-    val parameterizedType = resource.getParameterizedType();
+    parameterizedType = resource.getParameterizedType();
 
     val fields = FormfieldUtils.determineFormfields(response, resource, skysailApplicationService)
     println(fields)
 
-   // val rootEntity = new io.skysail.server.model.EntityModel[_](response.entity(), resource);
-        
+    // val rootEntity = new io.skysail.server.model.EntityModel[_](response.entity(), resource);
+
     val identifierName = "id" //getIdentifierFormField(rawData);
     //    		SkysailResponse ssr = response;
     var entityClassName = if (response.entity != null) response.entity.getClass().getName() else ""
-  	if (response.entity != null && classOf[java.util.List[_]].isAssignableFrom(response.entity.getClass())) {
-  		val listEntity = response.entity.asInstanceOf[java.util.List[_]]
-  		if (listEntity.size() > 0) {
-  			entityClassName = listEntity.get(0).getClass().getName();
-  		}
-  	}
-        
-    val data = convert(entityClassName, identifierName, resource);
-        
+    if (response.entity != null && classOf[java.util.List[_]].isAssignableFrom(response.entity.getClass())) {
+      val listEntity = response.entity.asInstanceOf[java.util.List[_]]
+      if (listEntity.size() > 0) {
+        entityClassName = listEntity.get(0).getClass().getName();
+      }
+    }
+
+    data = convert(entityClassName, identifierName, resource);
+
     //    		addAssociatedLinks(data);
     //    		addAssociatedLinks(rawData);
   }
@@ -125,15 +146,15 @@ class ResourceModel(
       result.add(mapper.convertValue(entity, classOf[LinkedHashMap[String, Object]]));
 
       val p = new java.util.ArrayList[java.util.Map[String, Object]]();
-      /*for (row <- result) {
-      				if (row != null) {
-      					Map<String, Object> nR = new HashMap<>();
-      					for (String key : row.keySet()) {
-      						nR.put(entity.getClass().getName() + "|" + key, row.get(key));
-      					}
-      					p.add(nR);
-      				}
-      			}*/
+      for (row <- result.asScala) {
+				if (row != null) {
+					val nR = new java.util.HashMap[String,Object]()
+					for (key <- row.keySet().asScala) {
+					  nR.put(entity.getClass().getName + "|" + key, row.get(key))
+					}
+					p.add(nR);
+				}
+			}
 
       return p;
 
@@ -151,27 +172,63 @@ class ResourceModel(
   }
 
   def setSkysailApplicationService(service: ScalaSkysailApplicationService) = this.skysailApplicationService = service
+
+  protected def convert(className: String, identifierName: String, resource: ScalaSkysailServerResource): java.util.List[java.util.Map[String, Object]] = {
+    val result: java.util.List[java.util.Map[String, Object]] = new java.util.ArrayList[java.util.Map[String, Object]]()
+    rawData.asScala
+      .filter { d => d != null }
+      .foreach(row => {
+        val newRow = new HashMap[String, Object]()
+        result.add(newRow)
+        row.keySet().asScala
+          .foreach { columnName =>
+            {
+              val identifier = row.get(className + "|" + identifierName)
+              apply(newRow, row, className, columnName, identifier, resource);
+            }
+          }
+      })
+    return result;
+  }
+
+  private def apply(newRow: java.util.Map[String, Object], dataRow: java.util.Map[String, Object], className: String, columnName: String,
+    id: Any, resource: ScalaSkysailServerResource): Unit = {
+
+    val simpleIdentifier = if (columnName.contains("|")) columnName.split("\\|")(1) else columnName;
+    val field = getDomainField(columnName);
+    if (field.isPresent()) {
+      val value = calc(field.get().asInstanceOf[ScalaSkysailFieldModel], dataRow, columnName, simpleIdentifier, id, resource)
+      newRow.put(columnName, value);
+    } else if (columnName.endsWith("|id")) {
+      newRow.put(columnName, dataRow.get(columnName));
+    } else {
+    }
+  }
+
+  def getDomainField(columnName: String): Optional[FieldModel] = {
+    val applicationModel = resource.getSkysailApplication().getApplicationModel();
+    val entity = applicationModel.getEntity(parameterizedType.getName());
+    if (entity == null) Optional.empty() else Optional.ofNullable(entity.getField(columnName));
+  }
+
+  //  private String calc(@NonNull SkysailFieldModel field, Map<String, Object> dataRow, String columnName,
+  //			String simpleIdentifier, Object id, R resource) {
+  //		return new CellRendererHelper(field, response, filterParser).render(dataRow.get(columnName), columnName,
+  //				simpleIdentifier, id, resource);
+  //	}
+  def calc(
+      fieldModel: ScalaSkysailFieldModel, 
+      dataRow: java.util.Map[String, Object], 
+      columnName: String, 
+      simpleIdentifier: String, 
+      id: Any, 
+      resource: ScalaSkysailServerResource) = {
+    new CellRendererHelper(fieldModel, response, filterParser)
+      //.render(dataRow.get(columnName), columnName, simpleIdentifier, id, resource);
+  }
   
-  	protected def convert( className: String, identifierName: String, resource: ScalaSkysailResponse[_]): java.util.List[Map[String, Object]] = {
-		val result: java.util.List[Map[String, Object]] = new java.util.ArrayList[Map[String, Object]]()
-//		rawData.stream().filter(row -> row != null).forEach(row -> {
-//			Map<String, Object> newRow = new HashMap<>();
-//			result.add(newRow);
-//			row.keySet().stream().forEach(columnName -> { // e.g.
-//															// io.skysail.server.app.ref.singleentity.Account|owner
-//				Object identifier = row.get(className + "|" + identifierName); // e.g.
-//																				// io.skysail.server.app.ref.singleentity.Account|id
-//				if (identifier != null) {
-//					apply(newRow, row, className, columnName, identifier, resource);
-//				} else {
-//					// for now, for Gatling(?)
-//					log.debug("identifier was null");
-//					apply(newRow, row, className, columnName, "", resource);
-//				}
-//			});
-//		});
-		return result;
-	}
-
-
+  def isForm() = response.isForm()
+  def isPostEntityServerResource() = resource.isInstanceOf[PostEntityServerResource2[_]]
+  def isPutEntityServerResource() = resource.isInstanceOf[PutEntityServerResource2[_]]
+  
 }

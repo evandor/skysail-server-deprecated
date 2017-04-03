@@ -27,4 +27,5 @@ Include-Resource: templates=templates,webapp=webapp
 	    
 Private-Package: \
 	io.skysail.converter,\
-	io.skysail.converter.app
+	io.skysail.converter.app,\
+	io.skysail.converter.forms.helper
