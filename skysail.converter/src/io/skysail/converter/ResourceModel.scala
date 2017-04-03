@@ -15,18 +15,33 @@ import io.skysail.core.app.SkysailApplicationService
 import io.skysail.restlet.responses.ScalaSkysailResponse
 import io.skysail.restlet.app.ScalaSkysailApplicationService
 import io.skysail.restlet.responses.FormResponse
+import io.skysail.restlet.utils.ResourceUtils
+import java.text.DateFormat
+import com.fasterxml.jackson.databind.SerializationFeature
+import java.util.Collections
 
 class ResourceModel(
-    resource: ScalaSkysailServerResource, 
-    response: ScalaSkysailResponse[_], 
-    userManagementProvider: UserManagementProvider, 
-    target: Variant, theming: Theming) {
+    resource: ScalaSkysailServerResource,
+    response: ScalaSkysailResponse[_],
+    userManagementProvider: UserManagementProvider,
+    target: Variant,
+    theming: Theming) {
 
   var rawData = new java.util.ArrayList[java.util.Map[String, Object]]()
-  
+
   var skysailApplicationService: ScalaSkysailApplicationService = null
 
   val mapper = new ObjectMapper();
+
+  val locale = ResourceUtils.determineLocale(resource);
+  val dateFormat = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.SHORT, locale);
+
+  mapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
+  mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
+
+  //val target = new STTargetWrapper(target);
+
+  val params = if (resource.getQuery() != null) resource.getQuery().getValuesMap() else Collections.emptyMap()
 
   def process() = {
     rawData = getData(response, resource);
@@ -39,23 +54,23 @@ class ResourceModel(
 
     val fields = FormfieldUtils.determineFormfields(response, resource, skysailApplicationService)
     println(fields)
-    
-//    		rootEntity = new EntityModel<>(response.getEntity(), resource);
-//    
-//    		String identifierName = getIdentifierFormField(rawData);
-//    		SkysailResponse ssr = response;
-//    		String entityClassName = ssr.getEntity() != null ? ssr.getEntity().getClass().getName() : "";
-//    		if (ssr.getEntity() != null && List.class.isAssignableFrom(ssr.getEntity().getClass())) {
-//    			List listEntity = (List) ssr.getEntity();
-//    			if (listEntity.size() > 0) {
-//    				entityClassName = listEntity.get(0).getClass().getName();
-//    			}
-//    		}
-//    
-//    		data = convert(entityClassName, identifierName, resource);
-//    
-//    		addAssociatedLinks(data);
-//    		addAssociatedLinks(rawData);
+
+   // val rootEntity = new io.skysail.server.model.EntityModel[_](response.entity(), resource);
+        
+    val identifierName = "id" //getIdentifierFormField(rawData);
+    //    		SkysailResponse ssr = response;
+    var entityClassName = if (response.entity != null) response.entity.getClass().getName() else ""
+  	if (response.entity != null && classOf[java.util.List[_]].isAssignableFrom(response.entity.getClass())) {
+  		val listEntity = response.entity.asInstanceOf[java.util.List[_]]
+  		if (listEntity.size() > 0) {
+  			entityClassName = listEntity.get(0).getClass().getName();
+  		}
+  	}
+        
+    val data = convert(entityClassName, identifierName, resource);
+        
+    //    		addAssociatedLinks(data);
+    //    		addAssociatedLinks(rawData);
   }
 
   //  private List<Map<String, Object>> getData(Object source, R theResource) {
@@ -135,7 +150,28 @@ class ResourceModel(
     return result;
   }
 
-  def setSkysailApplicationService(service: ScalaSkysailApplicationService) = {
-      this.skysailApplicationService = service
-    }
+  def setSkysailApplicationService(service: ScalaSkysailApplicationService) = this.skysailApplicationService = service
+  
+  	protected def convert( className: String, identifierName: String, resource: ScalaSkysailResponse[_]): java.util.List[Map[String, Object]] = {
+		val result: java.util.List[Map[String, Object]] = new java.util.ArrayList[Map[String, Object]]()
+//		rawData.stream().filter(row -> row != null).forEach(row -> {
+//			Map<String, Object> newRow = new HashMap<>();
+//			result.add(newRow);
+//			row.keySet().stream().forEach(columnName -> { // e.g.
+//															// io.skysail.server.app.ref.singleentity.Account|owner
+//				Object identifier = row.get(className + "|" + identifierName); // e.g.
+//																				// io.skysail.server.app.ref.singleentity.Account|id
+//				if (identifier != null) {
+//					apply(newRow, row, className, columnName, identifier, resource);
+//				} else {
+//					// for now, for Gatling(?)
+//					log.debug("identifier was null");
+//					apply(newRow, row, className, columnName, "", resource);
+//				}
+//			});
+//		});
+		return result;
+	}
+
+
 }
