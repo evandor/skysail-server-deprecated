@@ -30,15 +30,15 @@ object StringTemplateRenderer {
   val INDEX_FOR_MOBILES = "indexMobile";
 }
 
-class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Resource) {
+class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: ScalaSkysailServerResource) {
 
   var skysailApplicationService: ScalaSkysailApplicationService = null
-
   var filterParser: QueryFilterParser = null
+  
   def setFilterParser(f: QueryFilterParser) = filterParser = f
 
-  def createRepresenation(entity: ScalaSkysailResponse[_], target: Variant, resource: ScalaSkysailServerResource): StringRepresentation = {
-    val styling = Styling.determineFrom(resource); // e.g. bootstrap, semanticui, jquerymobile
+  def createRepresenation(entity: ScalaSkysailResponse[_], target: Variant): StringRepresentation = {
+    val styling = Styling.determineFrom(resource);
     val theming = Theming.determineFrom(resource, target)
     STGroupBundleDir.clearUsedTemplates();
     val stGroup = createStringTemplateGroup(resource, styling, theming);
@@ -56,6 +56,10 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Resour
     importFrom(resource, theme, stGroup, System.getProperty(Constants.PRODUCT_BUNDLE_IDENTIFIER));
     stGroup;
   }
+
+  def resourcePathExists(resourcePath: String, theBundle: Bundle) = theBundle.getResource(resourcePath) != null
+
+  def setSkysailApplicationService(service: ScalaSkysailApplicationService) = this.skysailApplicationService = service
 
   private def determineBundleToUse(): Bundle = {
     if (bundleProvidesTemplates(appBundle)) {
@@ -124,8 +128,6 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Resour
     }
   }
 
-  def resourcePathExists(resourcePath: String, theBundle: Bundle) = theBundle.getResource(resourcePath) != null
-
   private def createResourceModel(entity: Any, target: Variant, theming: Theming, resource: ScalaSkysailServerResource): ResourceModel = {
 
     val resourceModel = new ResourceModel(resource, entity.asInstanceOf[ScalaSkysailResponse[_]], htmlConverter.getUserManagementProvider(), target, theming);
@@ -151,10 +153,6 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Resour
     val rep = new StringRepresentation(stringTemplateRenderedHtml);
     rep.setMediaType(MediaType.TEXT_HTML);
     return rep;
-  }
-
-  def setSkysailApplicationService(service: ScalaSkysailApplicationService) = {
-    this.skysailApplicationService = service
   }
 
   private def addSubstitutions(resourceModel: ResourceModel, decl: ST): Unit = {

@@ -28,29 +28,29 @@ object ScalaHtmlConverter {
     // result += ((MediaType.TEXT_HTML, 0.95F)
     result
   }
-
 }
 
-@Component(immediate = true) //, property = { "event.topics=" + EventHelper.GUI +"/*"})
+@Component(immediate = true)
 class ScalaHtmlConverter extends ConverterHelper with OsgiConverterHelper {
-  
+
   @Reference(cardinality = ReferenceCardinality.MULTIPLE, policy = ReferencePolicy.DYNAMIC)
-  @volatile var templateProvider:java.util.List[StringTemplateProvider] = new java.util.ArrayList[StringTemplateProvider]();
+  @volatile var templateProvider: java.util.List[StringTemplateProvider] = new java.util.ArrayList[StringTemplateProvider]();
   def getTemplateProvider() = templateProvider
-  
+
   @Reference(cardinality = ReferenceCardinality.MANDATORY)
   var userManagementProvider: UserManagementProvider = null
   def getUserManagementProvider() = userManagementProvider
 
-  //@Reference(cardinality = ReferenceCardinality.OPTIONAL, policy = ReferencePolicy.DYNAMIC)
   @Reference(cardinality = ReferenceCardinality.MANDATORY)
   var skysailApplicationService: ScalaSkysailApplicationService = null
   def getSkysailApplicationService() = skysailApplicationService
-  
+
   @Reference(cardinality = ReferenceCardinality.OPTIONAL)
   var filterParser: QueryFilterParser = null
 
-  def getObjectClasses(x$1: Variant): java.util.List[Class[_]] = Collections.emptyList()
+  def getObjectClasses(variant: Variant) = Collections.emptyList()
+
+  def score[T](rep: Representation, cls: Class[T], res: Resource) = -1.0F
 
   def getVariants(x$1: Class[_]): java.util.List[VariantInfo] = {
     Arrays.asList(
@@ -59,8 +59,6 @@ class ScalaHtmlConverter extends ConverterHelper with OsgiConverterHelper {
       new VariantInfo(SkysailApplication.SKYSAIL_TIMELINE_MEDIATYPE),
       new VariantInfo(SkysailApplication.SKYSAIL_STANDLONE_APP_MEDIATYPE))
   }
-
-  def score[T](x$1: Representation, x$2: Class[T], x$3: Resource) = -1.0F
 
   def score(source: Any, target: Variant, resource: Resource): Float = {
     if (target == null) {
@@ -72,20 +70,20 @@ class ScalaHtmlConverter extends ConverterHelper with OsgiConverterHelper {
       }
     }*/
     return ScalaHtmlConverter.DEFAULT_MATCH_VALUE;
-
   }
 
-  def toObject[T](x$1: Representation, x$2: Class[T], x$3: Resource): T = {
+  def toObject[T](rep: Representation, cls: Class[T], res: Resource): T = {
     throw new RuntimeException("toObject method is not implemented yet");
   }
 
   def toRepresentation(skysailResponse: Any, target: Variant, resource: Resource): Representation = {
     require(skysailResponse.isInstanceOf[ScalaSkysailResponse[_]])
-    val stringTemplateRenderer = new StringTemplateRenderer(this, resource);
+    val stringTemplateRenderer = new StringTemplateRenderer(this, resource.asInstanceOf[ScalaSkysailServerResource]);
     //    stringTemplateRenderer.setMenuProviders(menuProviders);
     stringTemplateRenderer.setFilterParser(filterParser);
     //    stringTemplateRenderer.setInstallationProvider(installationProvider);
     stringTemplateRenderer.setSkysailApplicationService(skysailApplicationService);
-    return stringTemplateRenderer.createRepresenation(skysailResponse.asInstanceOf[ScalaSkysailResponse[_]], target, resource.asInstanceOf[ScalaSkysailServerResource]);
+    val ssr = skysailResponse.asInstanceOf[ScalaSkysailResponse[_]]
+    return stringTemplateRenderer.createRepresenation(ssr, target);
   }
 }

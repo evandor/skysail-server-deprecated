@@ -1,5 +1,6 @@
 handleInputField(data, field, messages,i,autofocus) ::= <<
   $if(!field.readonlyInputType)$
+#$field$#
     $if(field.tagsInputType)$
         <div class='form-group $if(field.mandatory)$required$endif$'>
           <label for='s2id_$field.id$' class='col-sm-2 control-label' style="text-align: left;">$helpmessage(messages, field.nameKey)$ $if(converter.edit)$<a href='/i18n/v1/v1/messages/$data.entity.entity.class.name$.$field.id$/'><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>$endif$</label>

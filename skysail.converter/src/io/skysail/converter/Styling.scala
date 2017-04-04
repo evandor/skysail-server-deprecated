@@ -7,6 +7,10 @@ import io.skysail.restlet.ScalaSkysailServerResource
 
 object Styling {
   val DEFAULT_STYLING = "";
+
+  /**
+   * @return e.g. bootstrap, semanticui, jquerymobile
+   */
   def determineFrom(resource: ScalaSkysailServerResource): Styling = {
     if (resource.getQuery() == null || resource.getQuery().getFirstValue("_styling") == null) {
       return stylingFromCookieOrDefault(resource)
