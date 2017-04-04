@@ -31,12 +31,12 @@ object StringTemplateRenderer {
 }
 
 class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Resource) {
-  
+
   var skysailApplicationService: ScalaSkysailApplicationService = null
-  
+
   var filterParser: QueryFilterParser = null
   def setFilterParser(f: QueryFilterParser) = filterParser = f
-  
+
   def createRepresenation(entity: ScalaSkysailResponse[_], target: Variant, resource: ScalaSkysailServerResource): StringRepresentation = {
     val styling = Styling.determineFrom(resource); // e.g. bootstrap, semanticui, jquerymobile
     val theming = Theming.determineFrom(resource, target)
@@ -145,9 +145,9 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Resour
 
   private def createRepresentation(index: ST, stGroup: STGroup): StringRepresentation = {
     val stringTemplateRenderedHtml = index.render();
-//    if (importedGroupBundleDir != null && stGroup instanceof STGroupBundleDir) {
-//      ((STGroupBundleDir) stGroup).addUsedTemplates(STGroupBundleDir.getUsedTemplates());
-//    }
+    //    if (importedGroupBundleDir != null && stGroup instanceof STGroupBundleDir) {
+    //      ((STGroupBundleDir) stGroup).addUsedTemplates(STGroupBundleDir.getUsedTemplates());
+    //    }
     val rep = new StringRepresentation(stringTemplateRenderedHtml);
     rep.setMediaType(MediaType.TEXT_HTML);
     return rep;
@@ -156,22 +156,23 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Resour
   def setSkysailApplicationService(service: ScalaSkysailApplicationService) = {
     this.skysailApplicationService = service
   }
-  
-   private def addSubstitutions(resourceModel: ResourceModel, decl: ST):Unit = {
 
-     val resource = resourceModel.getResource();
+  private def addSubstitutions(resourceModel: ResourceModel, decl: ST): Unit = {
 
-     val installationFromCookie = CookiesUtils.getInstallationFromCookie(resource.getRequest()).orElse(null);
+    val resource = resourceModel.getResource();
 
-//      decl.add("user", new STUserWrapper(htmlConverter.getUserManagementProvider(), resourceModel.getResource(),
-//              installationFromCookie));
-      decl.add("converter", this);
-//
-      decl.add("messages", resource.getMessages(resourceModel.getFields())
-      decl.add("model", resourceModel);
-//      decl.add("request", new STRequestWrapper(
-//              resource.getRequest(),
-//              resourceModel.getFormfields().stream().map(FormField::getId).collect(Collectors.toList())));
-    }
+    val installationFromCookie = CookiesUtils.getInstallationFromCookie(resource.getRequest()).orElse(null);
+
+    //      decl.add("user", new STUserWrapper(htmlConverter.getUserManagementProvider(), resourceModel.getResource(),
+    //              installationFromCookie));
+    decl.add("converter", this);
+    //
+    val fs = resourceModel.fields.values
+    decl.add("messages", resource.getMessages(fs))
+    decl.add("model", resourceModel);
+    //      decl.add("request", new STRequestWrapper(
+    //              resource.getRequest(),
+    //              resourceModel.getFormfields().stream().map(FormField::getId).collect(Collectors.toList())));
+  }
 
 }
