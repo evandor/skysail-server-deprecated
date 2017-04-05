@@ -32,6 +32,7 @@ import io.skysail.restlet.resources.PostEntityServerResource2
 import io.skysail.restlet.resources.PutEntityServerResource2
 import io.skysail.restlet.forms.ScalaFormField
 import io.skysail.api.text.Translation
+import io.skysail.restlet.model.resource.StFormFieldsWrapper
 
 class ResourceModel(
     resource: ScalaSkysailServerResource,
@@ -53,7 +54,7 @@ class ResourceModel(
   val dateFormat = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.SHORT, locale);
 
   var parameterizedType: Class[_] = null
-  var fields:Map[String, ScalaFormField] = Map()
+  var fields: Map[String, ScalaFormField] = Map()
 
   mapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
   mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
@@ -64,9 +65,9 @@ class ResourceModel(
 
   var filterParser: QueryFilterParser = null
   def setFilterParser(f: QueryFilterParser) = filterParser = f
-  
-//  var messages: java.util.Map[String, Translation]
-//  def setMessages(m: java.util.Map[String,Translation]) = messages = m
+
+  //  var messages: java.util.Map[String, Translation]
+  //  def setMessages(m: java.util.Map[String,Translation]) = messages = m
 
   def getResource() = resource
 
@@ -239,7 +240,9 @@ class ResourceModel(
   def isForm() = response.isForm()
   def isPostEntityServerResource() = resource.isInstanceOf[PostEntityServerResource2[_]]
   def isPutEntityServerResource() = resource.isInstanceOf[PutEntityServerResource2[_]]
-  
-  def getFormfields() = fields.values.asJava;// new ArrayList<>(fields.values())
+
+  def getFormfields() = fields.values.asJava
+
+  def getFormfieldsWrapper(): StFormFieldsWrapper = new StFormFieldsWrapper(fields.values, this.resource.getRequest(), Map())
 
 }

@@ -23,6 +23,7 @@ import java.util.Arrays
 import io.skysail.restlet.app.ScalaSkysailApplicationService
 import io.skysail.server.filter.FilterParser
 import io.skysail.restlet.queries.QueryFilterParser
+import org.slf4j.LoggerFactory
 
 object StringTemplateRenderer {
   val SKYSAIL_SERVER_CONVERTER = "skysail.converter";
@@ -31,6 +32,8 @@ object StringTemplateRenderer {
 }
 
 class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: ScalaSkysailServerResource) {
+  
+  val log = LoggerFactory.getLogger(classOf[StringTemplateRenderer])
 
   var skysailApplicationService: ScalaSkysailApplicationService = null
   var filterParser: QueryFilterParser = null
@@ -90,7 +93,7 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: ScalaS
     if (styling.getName().length() > 0) {
       val instanceOf = stGroup.getInstanceOf(styling.getName() + "_index");
       if (instanceOf == null) {
-        // fallback
+        log.warn("could not find templates for style '{}', falling back to default", styling.getName())
         return stGroup.getInstanceOf("index");
       }
       return instanceOf;
