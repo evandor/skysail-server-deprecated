@@ -10,12 +10,10 @@ import io.skysail.api.responses.RelationTargetResponse
 import io.skysail.api.responses.ConstraintViolationsResponse
 import com.fasterxml.jackson.databind.ObjectMapper
 import java.util.LinkedHashMap
-import io.skysail.restlet.utils.FormfieldUtils
 import io.skysail.core.app.SkysailApplicationService
 import io.skysail.restlet.responses.ScalaSkysailResponse
 import io.skysail.restlet.app.ScalaSkysailApplicationService
 import io.skysail.restlet.responses.FormResponse
-import io.skysail.restlet.utils.ResourceUtils
 import java.text.DateFormat
 import com.fasterxml.jackson.databind.SerializationFeature
 import java.util.Collections
@@ -33,6 +31,7 @@ import io.skysail.restlet.resources.PutEntityServerResource2
 import io.skysail.restlet.forms.ScalaFormField
 import io.skysail.api.text.Translation
 import io.skysail.restlet.model.resource.StFormFieldsWrapper
+import io.skysail.restlet.utils._
 
 class ResourceModel(
     resource: ScalaSkysailServerResource,
@@ -50,7 +49,7 @@ class ResourceModel(
 
   val mapper = new ObjectMapper();
 
-  val locale = ResourceUtils.determineLocale(resource);
+  val locale = ScalaResourceUtils.determineLocale(resource);
   val dateFormat = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.SHORT, locale);
 
   var parameterizedType: Class[_] = null
@@ -80,7 +79,7 @@ class ResourceModel(
     //
     parameterizedType = resource.getParameterizedType();
 
-    fields = FormfieldUtils.determineFormfields(response, resource, skysailApplicationService)
+    fields = ScalaFormfieldUtils.determineFormfields(response, resource, skysailApplicationService)
     println(fields)
 
     // val rootEntity = new io.skysail.server.model.EntityModel[_](response.entity(), resource);
