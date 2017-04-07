@@ -1,12 +1,12 @@
 package io.skysail.repo.orientdb
 
-import io.skysail.domain.core.ScalaDbRepository
 import io.skysail.server.queryfilter.filtering.Filter
 import io.skysail.server.queryfilter.pagination.Pagination
 import io.skysail.core.utils.ReflectionUtils
-import io.skysail.repo.orientdb.helper.DbClassName
+import io.skysail.repo.orientdb.DbClassName
+import io.skysail.domain.repo.ScalaDbRepository
 
-class OrientDbRepository[T](db: DbService) extends ScalaDbRepository {
+class OrientDbRepository[T](db: ScalaDbService) extends ScalaDbRepository {
   
   val entityType = ReflectionUtils.getParameterizedType(getClass());
   

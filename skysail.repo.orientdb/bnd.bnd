@@ -12,6 +12,7 @@ Bundle-Version: 0.1.0.${tstamp}
 	${logging},\
 	${commons},\
 	${javax},\
+    ${orientdb},\
 	com.google.guava;version='[16.0,16.1)',\
     io.skysail.bundled.owasp-java-html-sanitizer;version='[20160422.1.0,20160422.1.1)',\
 	skysail.server;version=${skysail.server.version},\

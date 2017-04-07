@@ -1,5 +1,6 @@
 package io.skysail.repo.orientdb
 
-trait DbService {
-  
+trait ScalaDbService {
+  def createWithSuperClass(superClass: String, vertices: String*)
+  def register(classes: Class[_]*)
 }
