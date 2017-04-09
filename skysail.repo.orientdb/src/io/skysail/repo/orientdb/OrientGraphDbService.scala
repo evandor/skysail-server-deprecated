@@ -13,6 +13,7 @@ import scala.collection.JavaConverters._
 import com.orientechnologies.orient.core.sql._
 import org.osgi.service.component._
 import com.orientechnologies.orient.core.db.OPartitionedDatabasePool
+import io.skysail.restlet.model.ScalaSkysailApplicationModel
 
 @Component(immediate = true)
 class OrientGraphDbService extends AbstractOrientDbService with ScalaDbService {
@@ -187,4 +188,11 @@ class OrientGraphDbService extends AbstractOrientDbService with ScalaDbService {
     }
 
   }
+
+  def persist(entity: Any, applicationModel: ScalaSkysailApplicationModel): OrientVertex = {
+    new Persister(getGraphDb(), applicationModel).persist(entity)
+  }
+
+  private def getGraphDb(): OrientGraph = graphDbFactory.getTx()
+
 }
