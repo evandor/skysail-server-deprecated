@@ -1,19 +1,25 @@
 package io.skysail.repo.orientdb
 
-import org.osgi.service.component.annotations._
-import io.skysail.api.metrics.NoOpMetricsCollector
-import io.skysail.core.app.SkysailApplicationService
 import com.tinkerpop.blueprints.impls.orient._
 import com.orientechnologies.orient.`object`.db.OObjectDatabaseTx
-import org.slf4j.LoggerFactory
 import com.orientechnologies.orient.graph.sql._
 import com.orientechnologies.orient.graph.sql.functions._
-
-import scala.collection.JavaConverters._
 import com.orientechnologies.orient.core.sql._
-import org.osgi.service.component._
 import com.orientechnologies.orient.core.db.OPartitionedDatabasePool
+import com.orientechnologies.orient.core.record.impl.ODocument
+import io.skysail.api.metrics.NoOpMetricsCollector
+import io.skysail.core.app.SkysailApplicationService
 import io.skysail.restlet.model.ScalaSkysailApplicationModel
+import io.skysail.restlet.ScalaSkysailBeanUtils
+import io.skysail.restlet.app.ScalaSkysailApplicationService
+import java.util.Locale
+import org.osgi.service.component._
+import org.osgi.service.component.annotations._
+import org.slf4j.LoggerFactory
+import scala.collection.JavaConverters._
+import scala.util._
+import scala.collection.JavaConverters._
+
 
 @Component(immediate = true)
 class OrientGraphDbService extends AbstractOrientDbService with ScalaDbService {
@@ -30,7 +36,7 @@ class OrientGraphDbService extends AbstractOrientDbService with ScalaDbService {
   var metricsCollector = new NoOpMetricsCollector()
 
   @Reference
-  var appService: SkysailApplicationService = null
+  var appService: ScalaSkysailApplicationService = null
 
   var db: OObjectDatabaseTx = null
 
@@ -89,9 +95,7 @@ class OrientGraphDbService extends AbstractOrientDbService with ScalaDbService {
     }
   }
 
-  def registerShutdownHook(): Unit = {
-    ???
-  }
+  def registerShutdownHook(): Unit = Runtime.getRuntime().addShutdownHook(new Thread() { override def run() = stopDb() })
 
   def startDb(): Unit = {
     if (started) {
@@ -189,10 +193,94 @@ class OrientGraphDbService extends AbstractOrientDbService with ScalaDbService {
 
   }
 
-  def persist(entity: Any, applicationModel: ScalaSkysailApplicationModel): OrientVertex = {
+  def persist(entity: Any, applicationModel: ScalaSkysailApplicationModel): Try[OrientVertex] = {
     new Persister(getGraphDb(), applicationModel).persist(entity)
   }
 
-  private def getGraphDb(): OrientGraph = graphDbFactory.getTx()
+  def findGraphs[T](entityType: Class[_], sql: String, params: Map[String, Object]): List[T] = {
+    //val timer = metricsCollector.timerFor(this.getClass(), "findGraphs");
+    val graph = getGraphDb();
+    val oCommand = new OCommandSQL(sql);
+    val execute = graph.command(oCommand).execute(params.asJava)
 
+    var result = List[T]()
+  //  val iterator = execute.iterator();
+//    //beanCache.clear();
+//    while (iterator.hasNext()) {
+//      val next = iterator.next();
+//      // OrientElement detached = next.detach();
+//      // detachedEntities.add((T) detached);
+//      result.add(documentToBean(next.getRecord(), cls));
+//    }
+    //timer.stop();
+    return null //result;
+  }
+
+  private def getGraphDb(): OrientGraph = graphDbFactory.getTx()
+  
+   private def documentToBean[T]( document: ODocument, beanType: Class[_]): Unit = {
+        try {
+//            val bean = beanType.newInstance().asInstanceOf[T]
+//            populateProperties(document.toMap(), bean, new ScalaSkysailBeanUtils(bean, Locale.getDefault(), appService));
+//            //beanCache.put(bean.getId(), bean);
+//            populateOutgoingEdges(document, bean);
+            return null// bean;
+        } catch {
+          case e: Throwable => log.error(e.getMessage(), e)
+        }
+        return null;
+    }
+
+  private def populateProperties[T](entityMap: Map[String,Object], bean: T, beanUtilsBean: ScalaSkysailBeanUtils[T]):Unit = {
+        beanUtilsBean.populate(bean, entityMap);
+//        if (entityMap.get("@rid") != null && bean.getId() == null) {
+//            Field field;
+//            try {
+//                field = bean.getClass().getDeclaredField("id");
+//                field.setAccessible(true);
+//                field.set(bean, entityMap.get("@rid").toString());
+//            } catch (NoSuchFieldException | SecurityException e) {
+//                log.error(e.getMessage(),e);
+//            }
+//        }
+    }
+  
+   private def populateOutgoingEdges[T]( document: ODocument, bean: T) = {
+        val outFields = getOutgoingFieldNames(document)
+//        outFields.forEach(edgeName -> {
+//            ORidBag field = document.field(edgeName);
+//            field.setAutoConvertToRecord(true);
+//            field.convertLinks2Records();
+//
+//            ORidBag edgeIdBag = document.field(edgeName);
+//            Iterator<OIdentifiable> iterator = edgeIdBag.iterator();
+//            List<Entity> identifiables = new ArrayList<>();
+//            while (iterator.hasNext()) {
+//                ODocument edge = (ODocument) iterator.next();
+//                if (edge == null) {
+//                    continue;
+//                }
+//                ODocument inDocumentFromEdge = edge.field("in");
+//                String targetClassName = inDocumentFromEdge.getClassName().substring(
+//                        inDocumentFromEdge.getClassName().lastIndexOf("_") + 1);
+//                Class<?> targetClass = getObjectDb().getEntityManager().getEntityClass(targetClassName);
+//                Entity identifiable = beanCache.get(inDocumentFromEdge.getIdentity().toString());
+//                if (identifiable != null) {
+//                    identifiables.add(identifiable);
+//                } else {
+//                    identifiables.add(documentToBean(inDocumentFromEdge, targetClass));
+//                }
+//            }
+//            String fieldName = edgeName.replace("out_", "");
+//            String setterName = "set" + fieldName.substring(0, 1).toUpperCase() + fieldName.substring(1);
+//            try {
+//                bean.getClass().getMethod(setterName, List.class).invoke(bean, identifiables);
+//            } catch (Exception e) {
+//                log.error(e.getMessage(), e);
+//
+//            }
+//        });
+    }
+
+  def getOutgoingFieldNames(document: ODocument) = document.fieldNames().filter { f => f.startsWith("out_") }.toList
 }

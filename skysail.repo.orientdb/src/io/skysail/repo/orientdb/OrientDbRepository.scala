@@ -6,7 +6,9 @@ import io.skysail.core.utils.ReflectionUtils
 import scala.util.Try
 import io.skysail.domain.repo.ScalaDbRepository
 import io.skysail.restlet.model.ScalaSkysailApplicationModel
-import scala.util.Failure
+import scala.util._
+import io.skysail.domain.ddd.ScalaEntity
+import scala.collection.JavaConverters._
 
 trait BaseDbRepository[T] extends ScalaDbRepository {
   def save(entity: T, appModel: ScalaSkysailApplicationModel): Try[T]
@@ -23,8 +25,7 @@ class OrientDbRepository[T](db: ScalaDbService) extends BaseDbRepository[T] {
     //                        : "")
     //                + " " + limitClause(pagination);
     //        pagination.setEntityCount(count(filter));
-    //        dbService.findGraphs(entityType, sql, filter.getParams());
-    null
+    db.findGraphs[T](entityType, sql, filter.getParams().asScala.toMap)
   }
 
   def findOne(id: String): Option[T] = {
@@ -32,7 +33,16 @@ class OrientDbRepository[T](db: ScalaDbService) extends BaseDbRepository[T] {
   }
 
   def save(entity: T, appModel: ScalaSkysailApplicationModel): Try[T] = {
-    db.persist(entity, appModel)
-    Failure(new Exception(""))
+    val result = db.persist(entity, appModel)
+    //result.transform(s => s.asInstanceOf[T], f)
+    if (result.isSuccess) {
+      if (entity.isInstanceOf[ScalaEntity[String]]) {
+        val idAsString = result.get.getId.toString()
+        entity.asInstanceOf[ScalaEntity[String]].id = Some(idAsString)
+      }
+      return Success(entity)
+    } else {
+      Failure(result.failed.get)
+    }
   }
 }

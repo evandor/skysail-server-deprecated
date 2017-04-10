@@ -10,6 +10,7 @@ import java.util.function.Consumer
 import scala.collection.JavaConverters._
 import io.skysail.restlet.model.ScalaSkysailEntityModel
 import io.skysail.restlet.model.ScalaSkysailFieldModel
+import scala.util._
 
 class Persister(db: OrientGraph, applicationModel: ScalaSkysailApplicationModel) {
 
@@ -37,19 +38,19 @@ class Persister(db: OrientGraph, applicationModel: ScalaSkysailApplicationModel)
     null
   }
 
-  def persist(entity: Any): OrientVertex = {
+  def persist(entity: Any): Try[OrientVertex] = {
     return runInTransaction(entity)
   }
 
-  private def runInTransaction(entity: Any): OrientVertex = {
+  private def runInTransaction(entity: Any): Try[OrientVertex] = {
     try {
       val result = execute(entity)
       db.commit()
-      return result
+      Success(result)
     } catch {
       case e: Throwable =>
         db.rollback()
-        throw new RuntimeException("Database Problem, rolled back transaction", e)
+        Failure( new RuntimeException("Database Problem, rolled back transaction", e))
     } finally {
       db.shutdown()
     }

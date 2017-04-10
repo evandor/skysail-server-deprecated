@@ -32,7 +32,7 @@ abstract class AbstractOrientDbService {
       startDb()
       registerShutdownHook()
     } catch {
-      case _: Throwable => print("db threw up")
+      case e: Throwable => log.error(e.getMessage,e)
       //              case e: ODatabaseException => 
       //                if (!e.getMessage().startsWith("Database instance has been released to the pool.")) {
       //                    throw e
