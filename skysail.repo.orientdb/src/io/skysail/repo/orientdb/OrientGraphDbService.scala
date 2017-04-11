@@ -19,7 +19,9 @@ import org.slf4j.LoggerFactory
 import scala.collection.JavaConverters._
 import scala.util._
 import scala.collection.JavaConverters._
-
+import io.skysail.restlet.transformations.Transformations
+import org.json4s.DefaultFormats
+import org.json4s.JsonAST.JValue
 
 @Component(immediate = true)
 class OrientGraphDbService extends AbstractOrientDbService with ScalaDbService {
@@ -197,90 +199,97 @@ class OrientGraphDbService extends AbstractOrientDbService with ScalaDbService {
     new Persister(getGraphDb(), applicationModel).persist(entity)
   }
 
-  def findGraphs[T](entityType: Class[_], sql: String, params: Map[String, Object]): List[T] = {
+  def findGraphs[T](cls: Class[_], sql: String, params: Map[String, Object]): List[JValue] = {
+    println(metricsCollector)
     //val timer = metricsCollector.timerFor(this.getClass(), "findGraphs");
     val graph = getGraphDb();
     val oCommand = new OCommandSQL(sql);
-    val execute = graph.command(oCommand).execute(params.asJava)
+    val commandRequest = graph.command(oCommand)
+    val execute = commandRequest.execute[OrientDynaElementIterable](params.asJava)
 
-    var result = List[T]()
-  //  val iterator = execute.iterator();
-//    //beanCache.clear();
-//    while (iterator.hasNext()) {
-//      val next = iterator.next();
-//      // OrientElement detached = next.detach();
-//      // detachedEntities.add((T) detached);
-//      result.add(documentToBean(next.getRecord(), cls));
-//    }
+    val result = scala.collection.mutable.ListBuffer[JValue]()
+    val iterator = execute.iterator();
+    //    //beanCache.clear();
+    while (iterator.hasNext()) {
+      val next = iterator.next().asInstanceOf[OrientVertex]
+      val optionOfBean = documentToBean(next.getRecord(), cls)
+      //if (optionOfBean.isDefined) {
+          result += optionOfBean//.get
+      //}
+    }
     //timer.stop();
-    return null //result;
+    result.toList
   }
 
   private def getGraphDb(): OrientGraph = graphDbFactory.getTx()
-  
-   private def documentToBean[T]( document: ODocument, beanType: Class[_]): Unit = {
-        try {
-//            val bean = beanType.newInstance().asInstanceOf[T]
-//            populateProperties(document.toMap(), bean, new ScalaSkysailBeanUtils(bean, Locale.getDefault(), appService));
-//            //beanCache.put(bean.getId(), bean);
-//            populateOutgoingEdges(document, bean);
-            return null// bean;
-        } catch {
-          case e: Throwable => log.error(e.getMessage(), e)
-        }
-        return null;
-    }
 
-  private def populateProperties[T](entityMap: Map[String,Object], bean: T, beanUtilsBean: ScalaSkysailBeanUtils[T]):Unit = {
-        beanUtilsBean.populate(bean, entityMap);
-//        if (entityMap.get("@rid") != null && bean.getId() == null) {
-//            Field field;
-//            try {
-//                field = bean.getClass().getDeclaredField("id");
-//                field.setAccessible(true);
-//                field.set(bean, entityMap.get("@rid").toString());
-//            } catch (NoSuchFieldException | SecurityException e) {
-//                log.error(e.getMessage(),e);
-//            }
-//        }
-    }
-  
-   private def populateOutgoingEdges[T]( document: ODocument, bean: T) = {
-        val outFields = getOutgoingFieldNames(document)
-//        outFields.forEach(edgeName -> {
-//            ORidBag field = document.field(edgeName);
-//            field.setAutoConvertToRecord(true);
-//            field.convertLinks2Records();
-//
-//            ORidBag edgeIdBag = document.field(edgeName);
-//            Iterator<OIdentifiable> iterator = edgeIdBag.iterator();
-//            List<Entity> identifiables = new ArrayList<>();
-//            while (iterator.hasNext()) {
-//                ODocument edge = (ODocument) iterator.next();
-//                if (edge == null) {
-//                    continue;
-//                }
-//                ODocument inDocumentFromEdge = edge.field("in");
-//                String targetClassName = inDocumentFromEdge.getClassName().substring(
-//                        inDocumentFromEdge.getClassName().lastIndexOf("_") + 1);
-//                Class<?> targetClass = getObjectDb().getEntityManager().getEntityClass(targetClassName);
-//                Entity identifiable = beanCache.get(inDocumentFromEdge.getIdentity().toString());
-//                if (identifiable != null) {
-//                    identifiables.add(identifiable);
-//                } else {
-//                    identifiables.add(documentToBean(inDocumentFromEdge, targetClass));
-//                }
-//            }
-//            String fieldName = edgeName.replace("out_", "");
-//            String setterName = "set" + fieldName.substring(0, 1).toUpperCase() + fieldName.substring(1);
-//            try {
-//                bean.getClass().getMethod(setterName, List.class).invoke(bean, identifiables);
-//            } catch (Exception e) {
-//                log.error(e.getMessage(), e);
-//
-//            }
-//        });
-    }
+  private def documentToBean[T:Manifest](document: ODocument, beanType: Class[_]): JValue = {
+    //implicit val formats = DefaultFormats
+    Transformations.jsonFrom[T](document.toMap().asScala.toMap)
+//    try {
+//      val json = Transformations.jsonFrom[T](document.toMap().asScala.toMap)
+//      val bean2 = json.extract[T]
+////      val bean = beanType.newInstance().asInstanceOf[T]
+////      populateProperties(document.toMap().asScala.toMap, bean, new ScalaSkysailBeanUtils(bean, Locale.getDefault(), appService));
+////      //beanCache.put(bean.getId(), bean);
+////      populateOutgoingEdges(document, bean);
+//      return Some(bean2)
+//    } catch {
+//      case e: Throwable => log.error(e.getMessage(), e)
+//    }
+//    None
+  }
+
+  private def populateProperties[T](entityMap: Map[String, Object], bean: T, beanUtilsBean: ScalaSkysailBeanUtils[T]): Unit = {
+    beanUtilsBean.populate(bean, entityMap);
+    //        if (entityMap.get("@rid") != null && bean.getId() == null) {
+    //            Field field;
+    //            try {
+    //                field = bean.getClass().getDeclaredField("id");
+    //                field.setAccessible(true);
+    //                field.set(bean, entityMap.get("@rid").toString());
+    //            } catch (NoSuchFieldException | SecurityException e) {
+    //                log.error(e.getMessage(),e);
+    //            }
+    //        }
+  }
+
+  private def populateOutgoingEdges[T](document: ODocument, bean: T) = {
+    val outFields = getOutgoingFieldNames(document)
+    //        outFields.forEach(edgeName -> {
+    //            ORidBag field = document.field(edgeName);
+    //            field.setAutoConvertToRecord(true);
+    //            field.convertLinks2Records();
+    //
+    //            ORidBag edgeIdBag = document.field(edgeName);
+    //            Iterator<OIdentifiable> iterator = edgeIdBag.iterator();
+    //            List<Entity> identifiables = new ArrayList<>();
+    //            while (iterator.hasNext()) {
+    //                ODocument edge = (ODocument) iterator.next();
+    //                if (edge == null) {
+    //                    continue;
+    //                }
+    //                ODocument inDocumentFromEdge = edge.field("in");
+    //                String targetClassName = inDocumentFromEdge.getClassName().substring(
+    //                        inDocumentFromEdge.getClassName().lastIndexOf("_") + 1);
+    //                Class<?> targetClass = getObjectDb().getEntityManager().getEntityClass(targetClassName);
+    //                Entity identifiable = beanCache.get(inDocumentFromEdge.getIdentity().toString());
+    //                if (identifiable != null) {
+    //                    identifiables.add(identifiable);
+    //                } else {
+    //                    identifiables.add(documentToBean(inDocumentFromEdge, targetClass));
+    //                }
+    //            }
+    //            String fieldName = edgeName.replace("out_", "");
+    //            String setterName = "set" + fieldName.substring(0, 1).toUpperCase() + fieldName.substring(1);
+    //            try {
+    //                bean.getClass().getMethod(setterName, List.class).invoke(bean, identifiables);
+    //            } catch (Exception e) {
+    //                log.error(e.getMessage(), e);
+    //
+    //            }
+    //        });
+  }
 
   def getOutgoingFieldNames(document: ODocument) = document.fieldNames().filter { f => f.startsWith("out_") }.toList
 }

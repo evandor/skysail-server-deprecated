@@ -32,6 +32,7 @@ import io.skysail.restlet.forms.ScalaFormField
 import io.skysail.api.text.Translation
 import io.skysail.restlet.model.resource.StFormFieldsWrapper
 import io.skysail.restlet.utils._
+import io.skysail.restlet.responses.ListResponse
 
 class ResourceModel(
     resource: ScalaSkysailServerResource,
@@ -41,6 +42,7 @@ class ResourceModel(
     theming: Theming) {
 
   var rawData = new java.util.ArrayList[java.util.Map[String, Object]]()
+  def getRawData() = rawData
 
   var data: java.util.List[java.util.Map[String, Object]] = new java.util.ArrayList[java.util.Map[String, Object]]()
   def getData() = data
@@ -103,26 +105,25 @@ class ResourceModel(
   //  private List<Map<String, Object>> getData(Object source, R theResource) {
   def getData(response: Any, theResource: ScalaSkysailServerResource): java.util.ArrayList[java.util.Map[String, Object]] = {
     val result = new java.util.ArrayList[java.util.Map[String, Object]]()
-    if (response.isInstanceOf[ListServerResponse[_]]) {
-      //			List<?> list = ((ListServerResponse<?>) source).getEntity();
-      //			if (list != null) {
-      //				for (Object object : list) {
-      //					result.add(mapper.convertValue(object, LinkedHashMap.class));
-      //				}
-      //
-      //				List<Map<String, Object>> p = new ArrayList<>();
-      //				for (Map<String, Object> row : result) {
-      //					if (row != null) {
-      //						Map<String, Object> nR = new HashMap<>();
-      //						for (String key : row.keySet()) {
-      //							nR.put(list.get(0).getClass().getName() + "|" + key, row.get(key));
-      //						}
-      //						p.add(nR);
-      //					}
-      //				}
-      //
-      //				return p;
-      //			}
+    if (response.isInstanceOf[ListResponse[_]]) {
+      //      			List<?> list = ((ListServerResponse<?>) source).getEntity();
+      val list = response.asInstanceOf[ListResponse[_]].entity
+      for (element <- list) {
+        result.add(mapper.convertValue(element, classOf[LinkedHashMap[String, Object]]));
+      }
+
+      val p = new java.util.ArrayList[java.util.Map[String, Object]]()
+      for (row <- result.asScala) {
+        if (row != null) {
+          val nR = new java.util.HashMap[String, Object]();
+          for (key <- row.keySet().asScala) {
+            nR.put(list(0).getClass().getName() + "|" + key, row.get(key));
+          }
+          p.add(nR);
+        }
+      }
+
+      return p;
     } else if (response.isInstanceOf[RelationTargetResponse[_]]) {
       //			List<?> list = ((RelationTargetResponse<?>) source).getEntity();
       //			if (list != null) {
@@ -243,5 +244,7 @@ class ResourceModel(
   def getFormfields() = fields.values.asJava
 
   def getFormfieldsWrapper(): StFormFieldsWrapper = new StFormFieldsWrapper(fields.values, this.resource.getRequest(), Map())
+  
+	def isList() = response.isList()
 
 }

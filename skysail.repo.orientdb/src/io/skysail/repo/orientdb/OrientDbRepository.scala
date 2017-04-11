@@ -9,6 +9,7 @@ import io.skysail.restlet.model.ScalaSkysailApplicationModel
 import scala.util._
 import io.skysail.domain.ddd.ScalaEntity
 import scala.collection.JavaConverters._
+import org.json4s.JsonAST.JValue
 
 trait BaseDbRepository[T] extends ScalaDbRepository {
   def save(entity: T, appModel: ScalaSkysailApplicationModel): Try[T]
@@ -19,7 +20,7 @@ class OrientDbRepository[T](db: ScalaDbService) extends BaseDbRepository[T] {
 
   val entityType = ReflectionUtils.getParameterizedType(getClass());
 
-  def find(filter: Filter, pagination: Pagination): List[T] = {
+  def find(filter: Filter, pagination: Pagination): List[JValue] = {
     val sql = "SELECT * from " + DbClassName.of(entityType)
     //                + (!org.restlet.engine.util.StringUtils.isNullOrEmpty(filter.getPreparedStatement()) ? " WHERE " + filter.getPreparedStatement()
     //                        : "")
