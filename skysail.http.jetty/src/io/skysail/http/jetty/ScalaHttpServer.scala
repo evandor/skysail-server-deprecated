@@ -1,7 +1,7 @@
 package io.skysail.http.jetty
 
-import io.skysail.server.app.SkysailComponentProvider
-import io.skysail.server.services.InstallationProvider
+import io.skysail.restlet.ScalaSkysailComponent
+import io.skysail.restlet.services._
 import java.util.logging.Level
 import java.net.ServerSocket
 import java.io.IOException
@@ -17,8 +17,6 @@ import org.restlet.Context
 import org.restlet.data.Protocol
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import scala.collection.JavaConverters._
-import io.skysail.restlet.ScalaSkysailComponent
-import io.skysail.restlet.services.ScalaRestletServicesProvider
 
 object ScalaHttpServer {
 
@@ -66,7 +64,7 @@ object ScalaHttpServer {
   configurationPid = Array("skysailserver"),
   property = { Array("event.topics=de/twenty11/skysail/server/configuration/UPDATED") })
 class ScalaHttpServer extends ServerResource
-    with ScalaRestletServicesProvider with SkysailComponentProvider with InstallationProvider {
+    with ScalaRestletServicesProvider with ScalaSkysailComponentProvider with ScalaInstallationProvider {
 
   var log = LoggerFactory.getLogger(this.getClass)
 
