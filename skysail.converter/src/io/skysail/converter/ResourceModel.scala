@@ -73,8 +73,8 @@ class ResourceModel(
   def getResource() = resource
 
   def process() = {
-    rawData = getData(response, resource);
-
+    rawData = getData(response, resource)
+    println(rawData)
     //		if (resource instanceof ListServerResource<?>) {
     //			facets = ((ListServerResource<?>) resource).getFacets();
     //		}
@@ -96,8 +96,8 @@ class ResourceModel(
       }
     }
 
-    data = convert(entityClassName, identifierName, resource);
-
+    data = rawData //convert(entityClassName, identifierName, resource);
+    println(data)
     //    		addAssociatedLinks(data);
     //    		addAssociatedLinks(rawData);
   }
@@ -122,8 +122,7 @@ class ResourceModel(
           p.add(nR);
         }
       }
-
-      return p;
+      return p
     } else if (response.isInstanceOf[RelationTargetResponse[_]]) {
       //			List<?> list = ((RelationTargetResponse<?>) source).getEntity();
       //			if (list != null) {
@@ -244,7 +243,9 @@ class ResourceModel(
   def getFormfields() = fields.values.asJava
 
   def getFormfieldsWrapper(): StFormFieldsWrapper = new StFormFieldsWrapper(fields.values, this.resource.getRequest(), Map())
-  
-	def isList() = response.isList()
+
+  def isList() = response.isList()
+
+  def getLinks() = resource.getAuthorizedLinks()
 
 }
