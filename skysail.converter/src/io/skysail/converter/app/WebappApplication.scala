@@ -2,29 +2,14 @@ package io.skysail.converter.app
 
 import org.osgi.service.cm.ConfigurationException;
 import org.osgi.service.component.ComponentContext;
-import org.osgi.service.component.annotations.Activate;
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.ConfigurationPolicy;
-import org.osgi.service.component.annotations.Reference;
-import org.restlet.data.Protocol;
-import io.skysail.core.app.SkysailApplication
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.ConfigurationPolicy;
-import io.skysail.core.app.ApplicationProvider
-import io.skysail.server.menus.MenuItemProvider
-import io.skysail.core.app.ApiVersion
-import org.osgi.service.component.annotations.Activate
+import org.osgi.service.component.annotations._
 import org.osgi.service.component.ComponentContext
-import io.skysail.core.app.ApplicationConfiguration
+import org.restlet.data.Protocol;
 import org.restlet.data.Protocol
-import io.skysail.server.restlet.RouteBuilder
-import io.skysail.server.menus.MenuItem
 import java.util.Arrays
 import org.restlet.Restlet
 import org.restlet.data.LocalReference
-import io.skysail.core.utils.CompositeClassLoader
 import org.restlet.routing.Router
-import io.skysail.core.utils.ClassLoaderDirectory
 import org.restlet.routing.Filter
 import org.restlet.Request
 import org.restlet.Response
@@ -33,6 +18,11 @@ import java.util.GregorianCalendar
 import java.util.Date
 import java.util.Calendar
 import org.restlet.data.CacheDirective
+import io.skysail.restlet.utils.CompositeClassLoader
+import io.skysail.restlet.utils.ClassLoaderDirectory
+import io.skysail.restlet.services.MenuItemProvider
+import io.skysail.core.ApiVersion
+import io.skysail.restlet.app.ScalaApplicationProvider
 
 object WebappApplication {
   final val APP_NAME = "webapp"
@@ -41,8 +31,8 @@ object WebappApplication {
 @Component(
   immediate = true,
   configurationPolicy = ConfigurationPolicy.OPTIONAL,
-  service = Array(classOf[ApplicationProvider], classOf[MenuItemProvider]))
-class WebappApplication extends SkysailApplication(
+  service = Array(classOf[ScalaApplicationProvider], classOf[MenuItemProvider]))
+class WebappApplication extends io.skysail.restlet.app.ScalaSkysailApplication(
   WebappApplication.APP_NAME,
   new ApiVersion(int2Integer(1))) with MenuItemProvider {
 

@@ -1,7 +1,6 @@
 package io.skysail.converter
 
 import org.stringtemplate.v4.STGroupDir
-import io.skysail.server.services.StringTemplateProvider
 import org.osgi.framework.Bundle
 import org.restlet.resource.Resource
 import java.util.LinkedHashSet
@@ -15,6 +14,7 @@ import org.slf4j.LoggerFactory
 import org.restlet.ext.slf4j.Slf4jLogger
 import st4hidden.org.antlr.runtime.ANTLRInputStream
 import java.io.IOException
+import io.skysail.restlet.services.StringTemplateProvider
 
 object STGroupBundleDir {
   val UTF8_ENCODING = "UTF-8";
@@ -75,7 +75,7 @@ class STGroupBundleDir(
     if (optionalTemplateProvider.isDefined) {
       log.debug("found Template for key '" + name + "' in provider '{}'", optionalTemplateProvider.get.getShortName());
 
-      val charStream = new ANTLRStringStream(optionalTemplateProvider.get.getTemplates().get(templateFileName));
+      val charStream = new ANTLRStringStream(optionalTemplateProvider.get.getTemplates().get(templateFileName).get);
       if (charStream.isInstanceOf[ANTLRStringStream] && charStream.getSourceName() == null) {
         (charStream.asInstanceOf[ANTLRStringStream]).name = templateFileName;
       }

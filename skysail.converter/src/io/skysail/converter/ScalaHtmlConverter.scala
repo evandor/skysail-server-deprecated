@@ -2,24 +2,21 @@ package io.skysail.converter
 
 import org.osgi.service.component.annotations._
 import org.restlet.engine.converter.ConverterHelper
-import io.skysail.server.services.OsgiConverterHelper
 import org.restlet.representation.Variant
 import java.util.Collections
 import org.restlet.engine.resource.VariantInfo
 import java.util.Arrays
-import io.skysail.core.app.SkysailApplication
 import org.restlet.representation.Representation
 import org.restlet.resource.Resource
 import org.restlet.data.MediaType
 import io.skysail.api.responses.SkysailResponse
-import io.skysail.core.resources.SkysailServerResource
 import io.skysail.restlet.ScalaSkysailServerResource
-import io.skysail.server.services.StringTemplateProvider
 import io.skysail.api.um.UserManagementProvider
-import io.skysail.core.app.SkysailApplicationService
 import io.skysail.restlet.responses.ScalaSkysailResponse
 import io.skysail.restlet.app.ScalaSkysailApplicationService
 import io.skysail.restlet.queries.QueryFilterParser
+import io.skysail.restlet.services.StringTemplateProvider
+import io.skysail.restlet.app.ScalaSkysailApplication
 
 object ScalaHtmlConverter {
   val DEFAULT_MATCH_VALUE = 0.5f;
@@ -31,7 +28,7 @@ object ScalaHtmlConverter {
 }
 
 @Component(immediate = true)
-class ScalaHtmlConverter extends ConverterHelper with OsgiConverterHelper {
+class ScalaHtmlConverter extends ConverterHelper {
 
   @Reference(cardinality = ReferenceCardinality.MULTIPLE, policy = ReferencePolicy.DYNAMIC)
   @volatile var templateProvider: java.util.List[StringTemplateProvider] = new java.util.ArrayList[StringTemplateProvider]();
@@ -54,10 +51,11 @@ class ScalaHtmlConverter extends ConverterHelper with OsgiConverterHelper {
 
   def getVariants(x$1: Class[_]): java.util.List[VariantInfo] = {
     Arrays.asList(
-      new VariantInfo(SkysailApplication.SKYSAIL_TREE_FORM),
-      new VariantInfo(SkysailApplication.SKYSAIL_MAILTO_MEDIATYPE),
-      new VariantInfo(SkysailApplication.SKYSAIL_TIMELINE_MEDIATYPE),
-      new VariantInfo(SkysailApplication.SKYSAIL_STANDLONE_APP_MEDIATYPE))
+//      new VariantInfo(ScalaSkysailApplication.SKYSAIL_TREE_FORM),
+//      new VariantInfo(ScalaSkysailApplication.SKYSAIL_MAILTO_MEDIATYPE),
+//      new VariantInfo(ScalaSkysailApplication.SKYSAIL_TIMELINE_MEDIATYPE),
+//      new VariantInfo(ScalaSkysailApplication.SKYSAIL_STANDLONE_APP_MEDIATYPE)
+        )
   }
 
   def score(source: Any, target: Variant, resource: Resource): Float = {

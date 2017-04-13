@@ -2,13 +2,7 @@ package io.skysail.converter
 
 import io.skysail.api.responses.SkysailResponse
 import io.skysail.core.app._
-import io.skysail.core.resources.SkysailServerResource
-import io.skysail.core.utils.CookiesUtils
 import io.skysail.restlet.ScalaSkysailServerResource
-import io.skysail.server.rendering.Theme
-import io.skysail.server.ResourceContextId
-import io.skysail.server.utils.RequestUtils
-import io.skysail.server.Constants
 import io.skysail.restlet.responses.ScalaSkysailResponse
 import io.skysail.restlet.app.ScalaSkysailApplication
 import org.restlet.representation.StringRepresentation
@@ -21,9 +15,11 @@ import org.stringtemplate.v4.ST
 import java.util.Optional
 import java.util.Arrays
 import io.skysail.restlet.app.ScalaSkysailApplicationService
-import io.skysail.server.filter.FilterParser
 import io.skysail.restlet.queries.QueryFilterParser
 import org.slf4j.LoggerFactory
+import io.skysail.restlet.ResourceContextId
+import io.skysail.restlet.utils.ScalaCookiesUtils
+import io.skysail.restlet.utils.RequestUtils
 
 object StringTemplateRenderer {
   val SKYSAIL_SERVER_CONVERTER = "skysail.converter";
@@ -56,7 +52,7 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: ScalaS
     import StringTemplateRenderer._
     val stGroup = new STGroupBundleDir(determineBundleToUse(), resource, TEMPLATES_DIR, htmlConverter.getTemplateProvider());
     importFrom(resource, theme, stGroup, SKYSAIL_SERVER_CONVERTER);
-    importFrom(resource, theme, stGroup, System.getProperty(Constants.PRODUCT_BUNDLE_IDENTIFIER));
+    importFrom(resource, theme, stGroup, System.getProperty(io.skysail.core.Constants.PRODUCT_BUNDLE_IDENTIFIER));
     stGroup;
   }
 
@@ -99,13 +95,13 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: ScalaS
       return instanceOf;
     }
 
-    val identifier = getIndexPageNameFromCookie(resource).orElse("index")
-    return stGroup.getInstanceOf(identifier);
+    val identifier = getIndexPageNameFromCookie(resource).orElse(Some("index"))
+    return stGroup.getInstanceOf(identifier.get);
 
   }
 
-  private def getIndexPageNameFromCookie(resource: Resource): Optional[String] = {
-    return CookiesUtils.getMainPageFromCookie(resource.getRequest());
+  private def getIndexPageNameFromCookie(resource: Resource): Option[String] = {
+    return ScalaCookiesUtils.getMainPageFromCookie(resource.getRequest());
   }
 
   private def importFrom(resource: Resource, theme: Theming, stGroup: STGroupBundleDir, symbolicName: String): Unit = {
@@ -162,7 +158,7 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: ScalaS
 
     val resource = resourceModel.getResource();
 
-    val installationFromCookie = CookiesUtils.getInstallationFromCookie(resource.getRequest()).orElse(null);
+    val installationFromCookie = ScalaCookiesUtils.getInstallationFromCookie(resource.getRequest()).orElse(null);
 
     //      decl.add("user", new STUserWrapper(htmlConverter.getUserManagementProvider(), resourceModel.getResource(),
     //              installationFromCookie));

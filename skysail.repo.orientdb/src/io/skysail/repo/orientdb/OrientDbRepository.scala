@@ -2,7 +2,6 @@ package io.skysail.repo.orientdb
 
 import io.skysail.server.queryfilter.filtering.Filter
 import io.skysail.server.queryfilter.pagination.Pagination
-import io.skysail.core.utils.ReflectionUtils
 import scala.util.Try
 import io.skysail.domain.repo.ScalaDbRepository
 import io.skysail.restlet.model.ScalaSkysailApplicationModel
@@ -10,6 +9,7 @@ import scala.util._
 import io.skysail.domain.ddd.ScalaEntity
 import scala.collection.JavaConverters._
 import org.json4s.JsonAST.JValue
+import io.skysail.restlet.utils.ScalaReflectionUtils
 
 trait BaseDbRepository[T] extends ScalaDbRepository {
   def save(entity: T, appModel: ScalaSkysailApplicationModel): Try[T]
@@ -18,7 +18,7 @@ trait BaseDbRepository[T] extends ScalaDbRepository {
 
 class OrientDbRepository[T](db: ScalaDbService) extends BaseDbRepository[T] {
 
-  val entityType = ReflectionUtils.getParameterizedType(getClass());
+  val entityType = ScalaReflectionUtils.getParameterizedType(getClass());
 
   def find(filter: Filter, pagination: Pagination): List[JValue] = {
     val sql = "SELECT * from " + DbClassName.of(entityType)

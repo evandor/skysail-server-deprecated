@@ -1,9 +1,9 @@
 package io.skysail.converter
 
-import io.skysail.core.utils.CookiesUtils
-import io.skysail.server.Constants
 import org.restlet.resource.Resource
 import io.skysail.restlet.ScalaSkysailServerResource
+import io.skysail.restlet.utils.ScalaCookiesUtils
+import io.skysail.core.Constants
 
 object Styling {
   val DEFAULT_STYLING = "";
@@ -17,15 +17,15 @@ object Styling {
     }
     val stylingFromRequest: String = resource.getQuery().getFirstValue("_styling");
     val styling = Styling(stylingFromRequest, stylingFromRequest, true)
-    val stylingCookie = CookiesUtils.createCookie(Constants.COOKIE_NAME_STYLING, "/", -1);
+    val stylingCookie = ScalaCookiesUtils.createCookie(Constants.COOKIE_NAME_STYLING, "/", -1);
     stylingCookie.setValue(stylingFromRequest);
     resource.getResponse().getCookieSettings().add(stylingCookie);
     return styling;
   }
 
   private def stylingFromCookieOrDefault(resource: Resource): Styling = {
-    val styling = CookiesUtils.getStylingFromCookie(resource.getRequest()).orElse(DEFAULT_STYLING);
-    Styling(styling, "", false);
+    val styling = ScalaCookiesUtils.getStylingFromCookie(resource.getRequest()).orElse(Some(DEFAULT_STYLING));
+    Styling(styling.get, "", false);
   }
 }
 
