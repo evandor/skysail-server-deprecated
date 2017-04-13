@@ -1,22 +1,21 @@
 package io.skysail.converter
 
-import org.osgi.service.component.annotations._
-import org.restlet.engine.converter.ConverterHelper
-import org.restlet.representation.Variant
 import java.util.Collections
-import org.restlet.engine.resource.VariantInfo
 import java.util.Arrays
-import org.restlet.representation.Representation
-import org.restlet.resource.Resource
-import org.restlet.data.MediaType
 import io.skysail.api.responses.SkysailResponse
 import io.skysail.restlet.ScalaSkysailServerResource
 import io.skysail.api.um.UserManagementProvider
 import io.skysail.restlet.responses.ScalaSkysailResponse
-import io.skysail.restlet.app.ScalaSkysailApplicationService
 import io.skysail.restlet.queries.QueryFilterParser
 import io.skysail.restlet.services.StringTemplateProvider
-import io.skysail.restlet.app.ScalaSkysailApplication
+import io.skysail.restlet.app._
+import org.restlet.engine.resource.VariantInfo
+import org.restlet.representation.Representation
+import org.restlet.resource.Resource
+import org.osgi.service.component.annotations._
+import org.restlet.engine.converter.ConverterHelper
+import org.restlet.representation.Variant
+import org.restlet.data.MediaType
 
 object ScalaHtmlConverter {
   val DEFAULT_MATCH_VALUE = 0.5f;
@@ -39,7 +38,7 @@ class ScalaHtmlConverter extends ConverterHelper {
   def getUserManagementProvider() = userManagementProvider
 
   @Reference(cardinality = ReferenceCardinality.MANDATORY)
-  var skysailApplicationService: ScalaSkysailApplicationService = null
+  var skysailApplicationService: SecurityConfigBuilderService = null
   def getSkysailApplicationService() = skysailApplicationService
 
   @Reference(cardinality = ReferenceCardinality.OPTIONAL)
@@ -51,10 +50,10 @@ class ScalaHtmlConverter extends ConverterHelper {
 
   def getVariants(x$1: Class[_]): java.util.List[VariantInfo] = {
     Arrays.asList(
-//      new VariantInfo(ScalaSkysailApplication.SKYSAIL_TREE_FORM),
-//      new VariantInfo(ScalaSkysailApplication.SKYSAIL_MAILTO_MEDIATYPE),
-//      new VariantInfo(ScalaSkysailApplication.SKYSAIL_TIMELINE_MEDIATYPE),
-//      new VariantInfo(ScalaSkysailApplication.SKYSAIL_STANDLONE_APP_MEDIATYPE)
+//      new VariantInfo(SecurityConfigBuilder.SKYSAIL_TREE_FORM),
+//      new VariantInfo(SecurityConfigBuilder.SKYSAIL_MAILTO_MEDIATYPE),
+//      new VariantInfo(SecurityConfigBuilder.SKYSAIL_TIMELINE_MEDIATYPE),
+//      new VariantInfo(SecurityConfigBuilder.SKYSAIL_STANDLONE_APP_MEDIATYPE)
         )
   }
 

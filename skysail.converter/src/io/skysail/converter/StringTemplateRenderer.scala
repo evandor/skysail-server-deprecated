@@ -4,7 +4,7 @@ import io.skysail.api.responses.SkysailResponse
 import io.skysail.core.app._
 import io.skysail.restlet.ScalaSkysailServerResource
 import io.skysail.restlet.responses.ScalaSkysailResponse
-import io.skysail.restlet.app.ScalaSkysailApplication
+import io.skysail.restlet.app.SkysailApplication
 import org.restlet.representation.StringRepresentation
 import org.restlet.resource.Resource
 import org.restlet.data.MediaType
@@ -14,7 +14,7 @@ import org.osgi.framework._
 import org.stringtemplate.v4.ST
 import java.util.Optional
 import java.util.Arrays
-import io.skysail.restlet.app.ScalaSkysailApplicationService
+import io.skysail.restlet.app.SecurityConfigBuilderService
 import io.skysail.restlet.queries.QueryFilterParser
 import org.slf4j.LoggerFactory
 import io.skysail.restlet.ResourceContextId
@@ -31,7 +31,7 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: ScalaS
   
   val log = LoggerFactory.getLogger(classOf[StringTemplateRenderer])
 
-  var skysailApplicationService: ScalaSkysailApplicationService = null
+  var skysailApplicationService: SecurityConfigBuilderService = null
   var filterParser: QueryFilterParser = null
   
   def setFilterParser(f: QueryFilterParser) = filterParser = f
@@ -58,7 +58,7 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: ScalaS
 
   def resourcePathExists(resourcePath: String, theBundle: Bundle) = theBundle.getResource(resourcePath) != null
 
-  def setSkysailApplicationService(service: ScalaSkysailApplicationService) = this.skysailApplicationService = service
+  def setSkysailApplicationService(service: SecurityConfigBuilderService) = this.skysailApplicationService = service
 
   private def determineBundleToUse(): Bundle = {
     if (bundleProvidesTemplates(appBundle)) {
@@ -71,7 +71,7 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: ScalaS
     bundleContext.getBundles().filter { b => b.getSymbolicName().equals(bundleName) }.head
   }
 
-  private def appBundle = resource.getApplication().asInstanceOf[ScalaSkysailApplication].getBundle
+  private def appBundle = resource.getApplication().asInstanceOf[SkysailApplication].getBundle
   private def bundleProvidesTemplates(appBundle: Bundle) = appBundle.getResource(StringTemplateRenderer.TEMPLATES_DIR) != null
 
   private def getStringTemplateIndex(resource: Resource, styling: Styling, stGroup: STGroup): ST = {

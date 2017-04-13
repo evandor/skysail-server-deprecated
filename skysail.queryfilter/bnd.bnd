@@ -1,4 +1,4 @@
-Bundle-Name: SKYSAIL :: repo :: orientdb
+Bundle-Name: SKYSAIL :: queryfilter
 
 Bundle-Version: 0.1.0.${tstamp}
 
@@ -15,7 +15,6 @@ Bundle-Version: 0.1.0.${tstamp}
     ${orientdb},\
 	com.google.guava;version='[16.0,16.1)',\
     io.skysail.bundled.owasp-java-html-sanitizer;version='[20160422.1.0,20160422.1.1)',\
-	skysail.queryfilter;version=latest,\
 	skysail.restlet;version=latest,\
 	de.twentyeleven.skysail.org.antlr.stringtemplate-osgi;version=4.0.8,\
     com.fasterxml.jackson.core.jackson-annotations;version=${com.fasterxml.jackson.version},\
@@ -23,5 +22,6 @@ Bundle-Version: 0.1.0.${tstamp}
 	com.fasterxml.jackson.core.jackson-databind;version=${com.fasterxml.jackson.version},\
     io.skysail.bundled.json4s_2.11-3.5.1;version=3.5,\
 	    
-Export-Package: io.skysail.repo.orientdb
-Private-Package: io.skysail.repo.orientdb.helper
+Export-Package: \
+	io.skysail.queryfilter.filter,\
+	io.skysail.queryfilter.pagination

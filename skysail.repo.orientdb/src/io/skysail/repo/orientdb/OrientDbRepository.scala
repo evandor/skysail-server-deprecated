@@ -1,18 +1,18 @@
 package io.skysail.repo.orientdb
 
-import io.skysail.server.queryfilter.filtering.Filter
-import io.skysail.server.queryfilter.pagination.Pagination
 import scala.util.Try
 import io.skysail.domain.repo.ScalaDbRepository
-import io.skysail.restlet.model.ScalaSkysailApplicationModel
+import io.skysail.restlet.model.SecurityConfigBuilderModel
 import scala.util._
 import io.skysail.domain.ddd.ScalaEntity
 import scala.collection.JavaConverters._
 import org.json4s.JsonAST.JValue
 import io.skysail.restlet.utils.ScalaReflectionUtils
+import io.skysail.queryfilter.filter.Filter
+import io.skysail.queryfilter.pagination.Pagination
 
 trait BaseDbRepository[T] extends ScalaDbRepository {
-  def save(entity: T, appModel: ScalaSkysailApplicationModel): Try[T]
+  def save(entity: T, appModel: SecurityConfigBuilderModel): Try[T]
   def findOne(id: String): Option[T]
 }
 
@@ -26,14 +26,14 @@ class OrientDbRepository[T](db: ScalaDbService) extends BaseDbRepository[T] {
     //                        : "")
     //                + " " + limitClause(pagination);
     //        pagination.setEntityCount(count(filter));
-    db.findGraphs[T](entityType, sql, filter.getParams().asScala.toMap)
+    db.findGraphs[T](entityType, sql, filter.params)
   }
 
   def findOne(id: String): Option[T] = {
     None
   }
 
-  def save(entity: T, appModel: ScalaSkysailApplicationModel): Try[T] = {
+  def save(entity: T, appModel: SecurityConfigBuilderModel): Try[T] = {
     val result = db.persist(entity, appModel)
     //result.transform(s => s.asInstanceOf[T], f)
     if (result.isSuccess) {

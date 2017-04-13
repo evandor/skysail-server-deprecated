@@ -8,9 +8,9 @@ import com.orientechnologies.orient.core.sql._
 import com.orientechnologies.orient.core.db.OPartitionedDatabasePool
 import com.orientechnologies.orient.core.record.impl.ODocument
 import io.skysail.api.metrics.NoOpMetricsCollector
-import io.skysail.restlet.model.ScalaSkysailApplicationModel
+import io.skysail.restlet.model.SecurityConfigBuilderModel
 import io.skysail.restlet.ScalaSkysailBeanUtils
-import io.skysail.restlet.app.ScalaSkysailApplicationService
+import io.skysail.restlet.app.SecurityConfigBuilderService
 import java.util.Locale
 import org.osgi.service.component._
 import org.osgi.service.component.annotations._
@@ -37,7 +37,7 @@ class OrientGraphDbService extends AbstractOrientDbService with ScalaDbService {
   var metricsCollector = new NoOpMetricsCollector()
 
   @Reference
-  var appService: ScalaSkysailApplicationService = null
+  var appService: SecurityConfigBuilderService = null
 
   var db: OObjectDatabaseTx = null
 
@@ -194,7 +194,7 @@ class OrientGraphDbService extends AbstractOrientDbService with ScalaDbService {
 
   }
 
-  def persist(entity: Any, applicationModel: ScalaSkysailApplicationModel): Try[OrientVertex] = {
+  def persist(entity: Any, applicationModel: SecurityConfigBuilderModel): Try[OrientVertex] = {
     new Persister(getGraphDb(), applicationModel).persist(entity)
   }
 

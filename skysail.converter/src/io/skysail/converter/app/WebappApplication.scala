@@ -22,7 +22,7 @@ import io.skysail.restlet.utils.CompositeClassLoader
 import io.skysail.restlet.utils.ClassLoaderDirectory
 import io.skysail.restlet.services.MenuItemProvider
 import io.skysail.core.ApiVersion
-import io.skysail.restlet.app.ScalaApplicationProvider
+import io.skysail.restlet.app.ApplicationProvider
 
 object WebappApplication {
   final val APP_NAME = "webapp"
@@ -31,8 +31,8 @@ object WebappApplication {
 @Component(
   immediate = true,
   configurationPolicy = ConfigurationPolicy.OPTIONAL,
-  service = Array(classOf[ScalaApplicationProvider], classOf[MenuItemProvider]))
-class WebappApplication extends io.skysail.restlet.app.ScalaSkysailApplication(
+  service = Array(classOf[ApplicationProvider], classOf[MenuItemProvider]))
+class WebappApplication extends io.skysail.restlet.app.SkysailApplication(
   WebappApplication.APP_NAME,
   new ApiVersion(int2Integer(1))) with MenuItemProvider {
 
