@@ -10,7 +10,7 @@ import com.orientechnologies.orient.core.record.impl.ODocument
 import io.skysail.api.metrics.NoOpMetricsCollector
 import io.skysail.restlet.model.SecurityConfigBuilderModel
 import io.skysail.restlet.ScalaSkysailBeanUtils
-import io.skysail.restlet.app.SecurityConfigBuilderService
+import io.skysail.restlet.app.SkysailApplicationService
 import java.util.Locale
 import org.osgi.service.component._
 import org.osgi.service.component.annotations._
@@ -37,7 +37,7 @@ class OrientGraphDbService extends AbstractOrientDbService with ScalaDbService {
   var metricsCollector = new NoOpMetricsCollector()
 
   @Reference
-  var appService: SecurityConfigBuilderService = null
+  var appService: SkysailApplicationService = null
 
   var db: OObjectDatabaseTx = null
 

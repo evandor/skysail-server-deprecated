@@ -16,6 +16,11 @@ import org.osgi.service.component.annotations._
 import org.restlet.engine.converter.ConverterHelper
 import org.restlet.representation.Variant
 import org.restlet.data.MediaType
+import org.slf4j.LoggerFactory
+import io.skysail.restlet.app.SkysailApplicationService
+import io.skysail.core.osgi.services.OsgiConverterHelper
+import io.skysail.core.osgi.services.OsgiConverterHelper
+import org.restlet.engine.Engine
 
 object ScalaHtmlConverter {
   val DEFAULT_MATCH_VALUE = 0.5f;
@@ -26,35 +31,54 @@ object ScalaHtmlConverter {
   }
 }
 
-@Component(immediate = true)
-class ScalaHtmlConverter extends ConverterHelper {
+/**
+ * A restlet converter (extending ConverterHelper) as an OSGi service, implementing the marker
+ * interface OsgiConverterHelper.
+ *
+ * The marker interface is used by ScalaHttpServer to add this converter to the
+ *
+ */
+@Component(immediate = true, service = Array(classOf[OsgiConverterHelper]))
+class ScalaHtmlConverter extends ConverterHelper with OsgiConverterHelper {
+
+  val log = LoggerFactory.getLogger(getClass())
 
   @Reference(cardinality = ReferenceCardinality.MULTIPLE, policy = ReferencePolicy.DYNAMIC)
   @volatile var templateProvider: java.util.List[StringTemplateProvider] = new java.util.ArrayList[StringTemplateProvider]();
   def getTemplateProvider() = templateProvider
 
+  /** --- mandatory reference ------------------------- */
   @Reference(cardinality = ReferenceCardinality.MANDATORY)
   var userManagementProvider: UserManagementProvider = null
   def getUserManagementProvider() = userManagementProvider
 
-  @Reference(cardinality = ReferenceCardinality.MANDATORY)
-  var skysailApplicationService: SecurityConfigBuilderService = null
+  @Reference(cardinality = ReferenceCardinality.OPTIONAL)
+  var skysailApplicationService: SkysailApplicationService = null
   def getSkysailApplicationService() = skysailApplicationService
 
   @Reference(cardinality = ReferenceCardinality.OPTIONAL)
   var filterParser: QueryFilterParser = null
+
+  @Activate def activate():Unit = {
+    log.info(s"activating ${getClass().getName}")
+    Engine.getInstance().getRegisteredConverters().add(this)
+  }
+
+  @Deactivate def deactivate():Unit = {
+    log.info(s"deactivating ${getClass().getName}")
+    Engine.getInstance().getRegisteredConverters().remove(this)
+  }
 
   def getObjectClasses(variant: Variant) = Collections.emptyList()
 
   def score[T](rep: Representation, cls: Class[T], res: Resource) = -1.0F
 
   def getVariants(x$1: Class[_]): java.util.List[VariantInfo] = {
-    Arrays.asList(
-//      new VariantInfo(SecurityConfigBuilder.SKYSAIL_TREE_FORM),
-//      new VariantInfo(SecurityConfigBuilder.SKYSAIL_MAILTO_MEDIATYPE),
-//      new VariantInfo(SecurityConfigBuilder.SKYSAIL_TIMELINE_MEDIATYPE),
-//      new VariantInfo(SecurityConfigBuilder.SKYSAIL_STANDLONE_APP_MEDIATYPE)
-        )
+    Arrays.asList( //      new VariantInfo(SecurityConfigBuilder.SKYSAIL_TREE_FORM),
+    //      new VariantInfo(SecurityConfigBuilder.SKYSAIL_MAILTO_MEDIATYPE),
+    //      new VariantInfo(SecurityConfigBuilder.SKYSAIL_TIMELINE_MEDIATYPE),
+    //      new VariantInfo(SecurityConfigBuilder.SKYSAIL_STANDLONE_APP_MEDIATYPE)
+    )
   }
 
   def score(source: Any, target: Variant, resource: Resource): Float = {

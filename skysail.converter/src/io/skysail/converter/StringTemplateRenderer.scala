@@ -14,7 +14,7 @@ import org.osgi.framework._
 import org.stringtemplate.v4.ST
 import java.util.Optional
 import java.util.Arrays
-import io.skysail.restlet.app.SecurityConfigBuilderService
+import io.skysail.restlet.app.SkysailApplicationService
 import io.skysail.restlet.queries.QueryFilterParser
 import org.slf4j.LoggerFactory
 import io.skysail.restlet.ResourceContextId
@@ -31,7 +31,7 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: ScalaS
   
   val log = LoggerFactory.getLogger(classOf[StringTemplateRenderer])
 
-  var skysailApplicationService: SecurityConfigBuilderService = null
+  var skysailApplicationService: SkysailApplicationService = null
   var filterParser: QueryFilterParser = null
   
   def setFilterParser(f: QueryFilterParser) = filterParser = f
@@ -58,7 +58,7 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: ScalaS
 
   def resourcePathExists(resourcePath: String, theBundle: Bundle) = theBundle.getResource(resourcePath) != null
 
-  def setSkysailApplicationService(service: SecurityConfigBuilderService) = this.skysailApplicationService = service
+  def setSkysailApplicationService(service: SkysailApplicationService) = this.skysailApplicationService = service
 
   private def determineBundleToUse(): Bundle = {
     if (bundleProvidesTemplates(appBundle)) {

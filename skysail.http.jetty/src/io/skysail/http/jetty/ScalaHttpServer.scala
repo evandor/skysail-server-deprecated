@@ -17,6 +17,10 @@ import org.restlet.Context
 import org.restlet.data.Protocol
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import scala.collection.JavaConverters._
+import io.skysail.core.osgi.services.OsgiConverterHelper
+import org.restlet.engine.converter.ConverterHelper
+import org.hamcrest.core.IsInstanceOf
+import java.text.DecimalFormat
 
 object ScalaHttpServer {
 
@@ -78,6 +82,21 @@ class ScalaHttpServer extends ServerResource
   var registeredConverters = Engine.getInstance().getRegisteredConverters()
 
   def getPort(): Int = runningOnPort
+
+//  @Reference(cardinality = ReferenceCardinality.MULTIPLE, policy = ReferencePolicy.DYNAMIC)
+//  def addConverterHelper(converterHelper: OsgiConverterHelper) = {
+//    if (converterHelper.isInstanceOf[ConverterHelper]) {
+//      this.registeredConverters.add(converterHelper.asInstanceOf[ConverterHelper])
+//      log.debug(s"(+ Converter)   (#${formatSize(registeredConverters)}) with name '${converterHelper.getClass().getName()}'")
+//    }
+//  }
+//
+//  def removeConverterHelper(converterHelper: OsgiConverterHelper) = {
+//    if (converterHelper.isInstanceOf[ConverterHelper]) {
+//      this.registeredConverters.remove(converterHelper);
+//      log.debug(s"(- Converter)   name '${registeredConverters.getClass().getName()}', count is ${formatSize(registeredConverters)} now")
+//    }
+//  }
 
   @Activate
   def activate(serverConfig: ServerConfig, componentContext: ComponentContext) {
@@ -166,5 +185,7 @@ class ScalaHttpServer extends ServerResource
     }
     2015
   }
+
+  private def formatSize(list: java.util.List[_]) = new DecimalFormat("00").format(list.size())
 
 }

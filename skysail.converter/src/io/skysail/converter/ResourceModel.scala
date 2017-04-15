@@ -10,7 +10,7 @@ import io.skysail.api.responses.ConstraintViolationsResponse
 import com.fasterxml.jackson.databind.ObjectMapper
 import java.util.LinkedHashMap
 import io.skysail.restlet.responses.ScalaSkysailResponse
-import io.skysail.restlet.app.SecurityConfigBuilderService
+import io.skysail.restlet.app.SkysailApplicationService
 import io.skysail.restlet.responses.FormResponse
 import java.text.DateFormat
 import com.fasterxml.jackson.databind.SerializationFeature
@@ -44,7 +44,7 @@ class ResourceModel(
   var data: java.util.List[java.util.Map[String, Object]] = new java.util.ArrayList[java.util.Map[String, Object]]()
   def getData() = data
 
-  var skysailApplicationService: SecurityConfigBuilderService = null
+  var skysailApplicationService: SkysailApplicationService = null
 
   val mapper = new ObjectMapper();
 
@@ -177,7 +177,7 @@ class ResourceModel(
     return result;
   }
 
-  def setSkysailApplicationService(service: SecurityConfigBuilderService) = this.skysailApplicationService = service
+  def setSkysailApplicationService(service: SkysailApplicationService) = this.skysailApplicationService = service
 
   protected def convert(className: String, identifierName: String, resource: ScalaSkysailServerResource): java.util.List[java.util.Map[String, Object]] = {
     val result: java.util.List[java.util.Map[String, Object]] = new java.util.ArrayList[java.util.Map[String, Object]]()

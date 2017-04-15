@@ -70,12 +70,15 @@ class STGroupBundleDir(
 
     val templateFileName = name + ".st";
     val optionalTemplateProvider = templateProvider.asScala
-      .filter { t => t.getTemplates().get(templateFileName) != null }
+      .filter { 
+        t => t.getTemplates().get(templateFileName).isDefined
+      }
       .headOption
     if (optionalTemplateProvider.isDefined) {
       log.debug("found Template for key '" + name + "' in provider '{}'", optionalTemplateProvider.get.getShortName());
-
-      val charStream = new ANTLRStringStream(optionalTemplateProvider.get.getTemplates().get(templateFileName).get);
+      val templates = optionalTemplateProvider.get.getTemplates()
+      val template = templates.get(templateFileName)
+      val charStream = new ANTLRStringStream(template.get);
       if (charStream.isInstanceOf[ANTLRStringStream] && charStream.getSourceName() == null) {
         (charStream.asInstanceOf[ANTLRStringStream]).name = templateFileName;
       }
