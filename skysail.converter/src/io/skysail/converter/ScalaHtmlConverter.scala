@@ -52,7 +52,8 @@ class ScalaHtmlConverter extends ConverterHelper with OsgiConverterHelper {
   var userManagementProvider: UserManagementProvider = null
   def getUserManagementProvider() = userManagementProvider
 
-  @Reference(cardinality = ReferenceCardinality.OPTIONAL)
+  /** --- mandatory reference ------------------------- */
+  @Reference(cardinality = ReferenceCardinality.MANDATORY)
   var skysailApplicationService: SkysailApplicationService = null
   def getSkysailApplicationService() = skysailApplicationService
 
