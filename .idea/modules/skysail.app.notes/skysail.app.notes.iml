@@ -8,7 +8,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" inherit-compiler-output="false">
+  <component name="NewModuleRootManager">
     <output url="file://$MODULE_DIR$/../../../skysail.app.notes/generated/classes/main" />
     <output-test url="file://$MODULE_DIR$/../../../skysail.app.notes/generated/classes/test" />
     <exclude-output />
