@@ -199,8 +199,8 @@ class OrientGraphDbService extends AbstractOrientDbService with ScalaDbService {
   }
 
   def findGraphs[T](cls: Class[_], sql: String, params: Map[String, Object]): List[JValue] = {
-    println(metricsCollector)
-    //val timer = metricsCollector.timerFor(this.getClass(), "findGraphs");
+    //println(metricsCollector)
+    //val timer = getMetricsCollector().timerFor(this.getClass(), "findGraphs");
     val graph = getGraphDb();
     val oCommand = new OCommandSQL(sql);
     val commandRequest = graph.command(oCommand)

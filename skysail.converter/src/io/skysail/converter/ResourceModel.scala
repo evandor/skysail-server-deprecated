@@ -71,7 +71,7 @@ class ResourceModel(
 
   def process() = {
     rawData = getData(response, resource)
-    println(rawData)
+    //println(rawData)
     //		if (resource instanceof ListServerResource<?>) {
     //			facets = ((ListServerResource<?>) resource).getFacets();
     //		}
@@ -79,7 +79,7 @@ class ResourceModel(
     parameterizedType = resource.getParameterizedType();
 
     fields = ScalaFormfieldUtils.determineFormfields(response, resource, skysailApplicationService)
-    println(fields)
+    //println(fields)
 
     // val rootEntity = new io.skysail.server.model.EntityModel[_](response.entity(), resource);
 
@@ -94,7 +94,7 @@ class ResourceModel(
     }
 
     data = rawData //convert(entityClassName, identifierName, resource);
-    println(data)
+    //println(data)
     //    		addAssociatedLinks(data);
     //    		addAssociatedLinks(rawData);
   }
@@ -146,9 +146,9 @@ class ResourceModel(
       //
     } else if (response.isInstanceOf[FormResponse[_]]) {
       val entity = response.asInstanceOf[FormResponse[_]].entity
-      println(entity)
+      //println(entity)
       val entityMap = mapper.convertValue(entity, classOf[LinkedHashMap[String, Object]])
-      println(entityMap)
+      //println(entityMap)
       result.add(entityMap);
 
       val p = new java.util.ArrayList[java.util.Map[String, Object]]();
@@ -243,6 +243,6 @@ class ResourceModel(
 
   def isList() = response.isList()
 
-  def getLinks() = resource.getAuthorizedLinks()
+  def getLinks() = resource.getAuthorizedLinks().asJava
 
 }

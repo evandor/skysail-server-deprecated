@@ -20,6 +20,7 @@ import org.slf4j.LoggerFactory
 import io.skysail.restlet.ResourceContextId
 import io.skysail.restlet.utils.ScalaCookiesUtils
 import io.skysail.restlet.utils.RequestUtils
+import io.skysail.converter.st.wrapper.StUserWrapper
 
 object StringTemplateRenderer {
   val SKYSAIL_SERVER_CONVERTER = "skysail.converter";
@@ -158,10 +159,10 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: ScalaS
 
     val resource = resourceModel.getResource();
 
-    val installationFromCookie = ScalaCookiesUtils.getInstallationFromCookie(resource.getRequest()).orElse(null);
+    val installationFromCookie = ScalaCookiesUtils.getInstallationFromCookie(resource.getRequest()).getOrElse(null);
 
-    //      decl.add("user", new STUserWrapper(htmlConverter.getUserManagementProvider(), resourceModel.getResource(),
-    //              installationFromCookie));
+    decl.add("user", new StUserWrapper(htmlConverter.getUserManagementProvider(), resourceModel.getResource(),
+                  installationFromCookie));
     decl.add("converter", this);
     //
     val fs = resourceModel.fields.values
