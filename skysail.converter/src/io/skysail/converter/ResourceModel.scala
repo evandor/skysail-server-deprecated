@@ -101,8 +101,8 @@ class ResourceModel(
 
     data = rawData //convert(entityClassName, identifierName, resource);
     //println(data)
-    addAssociatedLinks(data.asScala);
-    //    		addAssociatedLinks(rawData);
+    addAssociatedLinks(data.asScala.toList);
+    addAssociatedLinks(rawData.asScala.toList);
   }
 
   //  private List<Map<String, Object>> getData(Object source, R theResource) {
@@ -253,7 +253,7 @@ class ResourceModel(
 
   def getResourceSimpleName() = resource.getClass().getSimpleName()
 
-  def addAssociatedLinks(theData: List[Map[String, Object]]): Unit = {
+  def addAssociatedLinks(theData: List[java.util.Map[String, Object]]): Unit = {
     if (!(getResource().isInstanceOf[ListServerResource2[_]])) {
       return ;
     }
@@ -268,7 +268,7 @@ class ResourceModel(
     }
   }
 
-  def addLinks(links: List[io.skysail.api.links.Link], dataRow: Map[String, Object]): Unit = {
+  def addLinks(links: List[io.skysail.api.links.Link], dataRow: java.util.Map[String, Object]): Unit = {
     val id = guessId(dataRow);
     if (id == null) {
       return ;
