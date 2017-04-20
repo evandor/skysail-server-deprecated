@@ -30,6 +30,12 @@ import io.skysail.api.text.Translation
 import io.skysail.restlet.model.resource.StFormFieldsWrapper
 import io.skysail.restlet.utils._
 import io.skysail.restlet.responses.ListResponse
+import io.skysail.restlet.resources.ListServerResource2
+import org.restlet.data.MediaType
+
+object ResourceModel {
+  val ID = "id";
+}
 
 class ResourceModel(
     resource: ScalaSkysailServerResource,
@@ -95,7 +101,7 @@ class ResourceModel(
 
     data = rawData //convert(entityClassName, identifierName, resource);
     //println(data)
-    //    		addAssociatedLinks(data);
+    addAssociatedLinks(data.asScala);
     //    		addAssociatedLinks(rawData);
   }
 
@@ -244,5 +250,75 @@ class ResourceModel(
   def isList() = response.isList()
 
   def getLinks() = resource.getAuthorizedLinks().asJava
+
+  def getResourceSimpleName() = resource.getClass().getSimpleName()
+
+  def addAssociatedLinks(theData: List[Map[String, Object]]): Unit = {
+    if (!(getResource().isInstanceOf[ListServerResource2[_]])) {
+      return ;
+    }
+    val listServerResource = getResource().asInstanceOf[ListServerResource2[_]]
+    val links = listServerResource.getLinks();
+    val entityResourceClass = listServerResource.getAssociatedServerResources();
+    if (entityResourceClass != null) {
+      val sourceAsList = theData;
+      for (dataRow <- sourceAsList) {
+        addLinks(links, dataRow);
+      }
+    }
+  }
+
+  def addLinks(links: List[io.skysail.api.links.Link], dataRow: Map[String, Object]): Unit = {
+    val id = guessId(dataRow);
+    if (id == null) {
+      return ;
+    }
+
+    val linkshtml = links
+      .filter(l => id.equals(l.getRefId()))
+      .map(link => {
+        val sb = new StringBuilder();
+
+        if (link.getImage(MediaType.TEXT_HTML) != null) {
+          sb.append("<a href='").append(link.getUri()).append("' title='").append(link.getTitle())
+            .append("' alt='").append(link.getAlt()).append("'>")
+            .append("<span class='glyphicon glyphicon-").append(link.getImage(MediaType.TEXT_HTML))
+            .append("' aria-hidden='true'></span>").append("</a>");
+        } else {
+          sb.append("<a href='").append(link.getUri()).append("' title='").append(link.getAlt()).append("'>")
+            .append(link.getTitle()).append("</a>");
+        }
+        return sb.toString();
+      })
+      .mkString("&nbsp;&nbsp;")
+
+    //		dataRow.put("_links", linkshtml);
+    //
+    //		dataRow.put("_linksNew", links.stream().filter(l -> id.equals(l.getRefId())).map(LinkTemplateAdapter::new)
+    //				.collect(Collectors.toList()));
+  }
+
+  def guessId(theObject: Any): String = {
+    if (!(theObject.isInstanceOf[Map[_, _]]))
+      return "";
+    val entity = theObject.asInstanceOf[Map[String, Object]]
+
+    val idKey = entity.keySet.filter(key => key.endsWith("|id")).headOption
+    if (idKey.isDefined && entity.get(idKey.get) != null) {
+      return entity.get(idKey.get).toString().replace("#", "");
+    }
+
+    if (entity.get(ResourceModel.ID) != null) {
+      val value = entity.get(ResourceModel.ID);
+      return value.toString().replace("#", "");
+    } else if (entity.get("@rid") != null) {
+      val str = entity.get("@rid").toString();
+      return str.replace("#", "");
+    } else if (entity.get("name") != null) {
+      return entity.get("name").toString();
+    } else {
+      return "";
+    }
+  }
 
 }

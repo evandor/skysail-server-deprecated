@@ -21,6 +21,8 @@ import io.skysail.restlet.ResourceContextId
 import io.skysail.restlet.utils.ScalaCookiesUtils
 import io.skysail.restlet.utils.RequestUtils
 import io.skysail.converter.st.wrapper.StUserWrapper
+import io.skysail.converter.st.wrapper.StRequestWrapper
+import scala.collection.JavaConverters._
 
 object StringTemplateRenderer {
   val SKYSAIL_SERVER_CONVERTER = "skysail.converter";
@@ -168,9 +170,9 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: ScalaS
     val fs = resourceModel.fields.values
     decl.add("messages", resource.getMessages(fs))
     decl.add("model", resourceModel);
-    //      decl.add("request", new STRequestWrapper(
-    //              resource.getRequest(),
-    //              resourceModel.getFormfields().stream().map(FormField::getId).collect(Collectors.toList())));
+    decl.add("request", new StRequestWrapper(
+                  resource.getRequest(),
+                  resourceModel.getFormfields().asScala.map(f => f.getId).toList));
   }
 
 }

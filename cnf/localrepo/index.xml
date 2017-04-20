@@ -1,5 +1,259 @@
 <?xml version="1.0" encoding="utf-8"?>
-<repository increment="1492500621920" name="Local" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+<repository increment="1492622810000" name="Local" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="38cfe8d176651110674c9e06adc111350ec817fc7c04e2bd69dcfa528c7df9e1"/>
+      <attribute name="url" value="io.reactivex.rxjava2.rxjava/io.reactivex.rxjava2.rxjava-2.0.8.jar"/>
+      <attribute name="size" type="Long" value="2148172"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex.annotations,io.reactivex.disposables,io.reactivex.flowables,io.reactivex.functions,io.reactivex.observables,io.reactivex.observers,io.reactivex.parallel,io.reactivex.schedulers,io.reactivex.subscribers,org.reactivestreams"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.annotations"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.disposables"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex.functions,io.reactivex.internal.disposables,org.reactivestreams"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.exceptions"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.flowables"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex,io.reactivex.disposables,io.reactivex.functions"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.functions"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.internal.disposables"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex,io.reactivex.disposables,io.reactivex.functions,io.reactivex.internal.fuseable"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.internal.functions"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex,io.reactivex.functions,io.reactivex.schedulers,org.reactivestreams"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.internal.fuseable"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex,io.reactivex.disposables,org.reactivestreams"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.internal.observers"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex,io.reactivex.disposables,io.reactivex.functions,io.reactivex.internal.disposables,io.reactivex.internal.fuseable,io.reactivex.internal.util,org.reactivestreams"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.internal.operators.completable"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex,io.reactivex.disposables,io.reactivex.functions,org.reactivestreams"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.internal.operators.flowable"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex,io.reactivex.disposables,io.reactivex.flowables,io.reactivex.functions,io.reactivex.internal.fuseable,io.reactivex.internal.subscriptions,io.reactivex.internal.util,io.reactivex.schedulers,org.reactivestreams"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.internal.operators.maybe"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex,io.reactivex.disposables,io.reactivex.functions,io.reactivex.internal.fuseable,org.reactivestreams"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.internal.operators.observable"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex,io.reactivex.disposables,io.reactivex.functions,io.reactivex.internal.fuseable,io.reactivex.internal.util,io.reactivex.observables,io.reactivex.schedulers,org.reactivestreams"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.internal.operators.parallel"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex,io.reactivex.functions,io.reactivex.internal.util,io.reactivex.parallel,org.reactivestreams"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.internal.operators.single"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex,io.reactivex.disposables,io.reactivex.functions,org.reactivestreams"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.internal.queue"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex.internal.fuseable"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.internal.schedulers"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex,io.reactivex.disposables,io.reactivex.functions,io.reactivex.internal.disposables"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.internal.subscribers"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex,io.reactivex.disposables,io.reactivex.functions,io.reactivex.internal.fuseable,io.reactivex.internal.subscriptions,io.reactivex.internal.util,org.reactivestreams"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.internal.subscriptions"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex.disposables,io.reactivex.internal.fuseable,org.reactivestreams"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.internal.util"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex,io.reactivex.disposables,io.reactivex.functions,io.reactivex.internal.fuseable,org.reactivestreams"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.observables"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex,io.reactivex.disposables,io.reactivex.functions"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.observers"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex,io.reactivex.disposables,io.reactivex.functions"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.parallel"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex,io.reactivex.annotations,io.reactivex.functions,org.reactivestreams"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.plugins"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex,io.reactivex.flowables,io.reactivex.functions,io.reactivex.observables,io.reactivex.parallel,org.reactivestreams"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.processors"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex,io.reactivex.annotations,org.reactivestreams"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.schedulers"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.subjects"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex,io.reactivex.annotations,io.reactivex.disposables"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.reactivex.subscribers"/>
+      <attribute name="version" type="Version" value="2.0.8"/>
+      <attribute name="bundle-symbolic-name" value="io.reactivex.rxjava2.rxjava"/>
+      <attribute name="bundle-version" type="Version" value="2.0.8"/>
+      <directive name="uses" value="io.reactivex,io.reactivex.disposables,io.reactivex.functions,io.reactivex.observers,org.reactivestreams"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.reactivestreams)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.6))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="org.reactivestreams.reactive-streams"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="1.0.0.final"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="d2a870c5d292c4ec5a73f2ad2da00d45af8462776b48c33a411a083b7154b3ce"/>
+      <attribute name="url" value="org.reactivestreams.reactive-streams/org.reactivestreams.reactive-streams-1.0.0.jar"/>
+      <attribute name="size" type="Long" value="2041"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="org.reactivestreams.reactive-streams"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.final"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="org.reactivestreams.reactive-streams"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.final"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.reactivestreams"/>
+      <attribute name="version" type="Version" value="1.0.0.final"/>
+      <attribute name="bundle-symbolic-name" value="org.reactivestreams.reactive-streams"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.final"/>
+    </capability>
+  </resource>
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="org.scala-lang.modules.scala-xml"/>
