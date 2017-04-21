@@ -3,7 +3,7 @@ package io.skysail.converter
 import java.util.Collections
 import java.util.Arrays
 import io.skysail.api.responses.SkysailResponse
-import io.skysail.restlet.ScalaSkysailServerResource
+import io.skysail.restlet.SkysailServerResource
 import io.skysail.api.um.UserManagementProvider
 import io.skysail.restlet.responses.ScalaSkysailResponse
 import io.skysail.restlet.queries.QueryFilterParser
@@ -100,7 +100,7 @@ class ScalaHtmlConverter extends ConverterHelper with OsgiConverterHelper {
 
   def toRepresentation(skysailResponse: Any, target: Variant, resource: Resource): Representation = {
     require(skysailResponse.isInstanceOf[ScalaSkysailResponse[_]])
-    val stringTemplateRenderer = new StringTemplateRenderer(this, resource.asInstanceOf[ScalaSkysailServerResource]);
+    val stringTemplateRenderer = new StringTemplateRenderer(this, resource.asInstanceOf[SkysailServerResource]);
     //    stringTemplateRenderer.setMenuProviders(menuProviders);
     stringTemplateRenderer.setFilterParser(filterParser);
     //    stringTemplateRenderer.setInstallationProvider(installationProvider);

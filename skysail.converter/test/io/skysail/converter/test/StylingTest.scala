@@ -1,7 +1,7 @@
 package io.skysail.converter.test
 
 import org.mockito.Mockito
-import io.skysail.restlet.ScalaSkysailServerResource
+import io.skysail.restlet.SkysailServerResource
 import org.restlet.Request
 import org.restlet.Response
 import org.restlet.data.Reference
@@ -18,7 +18,7 @@ import org.junit.Ignore
 
 class StylingTest {
   
-  val resource = mock(classOf[ScalaSkysailServerResource]);
+  val resource = mock(classOf[SkysailServerResource]);
 
   val request = mock(classOf[Request]);
 	val response = mock(classOf[Response]);

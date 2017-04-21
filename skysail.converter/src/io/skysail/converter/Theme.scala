@@ -1,6 +1,6 @@
 package io.skysail.converter
 
-import io.skysail.restlet.ScalaSkysailServerResource
+import io.skysail.restlet.SkysailServerResource
 import org.restlet.representation.Variant
 import java.util.Optional
 import io.skysail.restlet.utils.ScalaCookiesUtils
@@ -8,7 +8,7 @@ import io.skysail.core.Constants
 
 object Theming {
   
-  def determineFrom(resource: ScalaSkysailServerResource, target: Variant): Theming = {
+  def determineFrom(resource: SkysailServerResource, target: Variant): Theming = {
     if (resource.getQuery() == null || resource.getQuery().getFirstValue("_theme") == null) {
       val themeToUse = ScalaCookiesUtils.getThemeFromCookie(resource.getRequest());
       if (!themeToUse.isDefined) {

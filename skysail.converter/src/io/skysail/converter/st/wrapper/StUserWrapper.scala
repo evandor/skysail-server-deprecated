@@ -1,6 +1,6 @@
 package io.skysail.converter.st.wrapper
 
-import io.skysail.restlet.ScalaSkysailServerResource
+import io.skysail.restlet.SkysailServerResource
 import io.skysail.api.um.UserManagementProvider
 
 object StUserWrapper {
@@ -8,7 +8,7 @@ object StUserWrapper {
   val ANONYMOUS = "anonymous";
 }
 
-class StUserWrapper(userManagementProvider: UserManagementProvider, resource: ScalaSkysailServerResource, peerName: String) {
+class StUserWrapper(userManagementProvider: UserManagementProvider, resource: SkysailServerResource, peerName: String) {
 
   def getPrincipal() = {
     val principal = userManagementProvider.getAuthenticationService().getPrincipal(resource.getRequest());

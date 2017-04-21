@@ -2,7 +2,7 @@ package io.skysail.converter
 
 import io.skysail.api.responses.SkysailResponse
 import io.skysail.core.app._
-import io.skysail.restlet.ScalaSkysailServerResource
+import io.skysail.restlet.SkysailServerResource
 import io.skysail.restlet.responses.ScalaSkysailResponse
 import io.skysail.restlet.app.SkysailApplication
 import org.restlet.representation.StringRepresentation
@@ -30,7 +30,7 @@ object StringTemplateRenderer {
   val INDEX_FOR_MOBILES = "indexMobile";
 }
 
-class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: ScalaSkysailServerResource) {
+class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: SkysailServerResource) {
   
   val log = LoggerFactory.getLogger(classOf[StringTemplateRenderer])
 
@@ -78,10 +78,10 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: ScalaS
   private def bundleProvidesTemplates(appBundle: Bundle) = appBundle.getResource(StringTemplateRenderer.TEMPLATES_DIR) != null
 
   private def getStringTemplateIndex(resource: Resource, styling: Styling, stGroup: STGroup): ST = {
-    if (resource.isInstanceOf[ScalaSkysailServerResource]
+    if (resource.isInstanceOf[SkysailServerResource]
       && resource.getContext() != null
-      && resource.asInstanceOf[ScalaSkysailServerResource].getFromContext(ResourceContextId.RENDERER_HINT) != null) {
-      val root = resource.asInstanceOf[ScalaSkysailServerResource].getFromContext(ResourceContextId.RENDERER_HINT);
+      && resource.asInstanceOf[SkysailServerResource].getFromContext(ResourceContextId.RENDERER_HINT) != null) {
+      val root = resource.asInstanceOf[SkysailServerResource].getFromContext(ResourceContextId.RENDERER_HINT);
       resource.getContext().getAttributes().remove(ResourceContextId.RENDERER_HINT.name());
       return stGroup.getInstanceOf(root + "_index");
     }
@@ -130,7 +130,7 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: ScalaS
     }
   }
 
-  private def createResourceModel(entity: Any, target: Variant, theming: Theming, resource: ScalaSkysailServerResource): ResourceModel = {
+  private def createResourceModel(entity: Any, target: Variant, theming: Theming, resource: SkysailServerResource): ResourceModel = {
 
     val resourceModel = new ResourceModel(resource, entity.asInstanceOf[ScalaSkysailResponse[_]], htmlConverter.getUserManagementProvider(), target, theming);
     //        resourceModel.setMenuItemProviders(menuProviders);

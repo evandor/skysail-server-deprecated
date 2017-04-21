@@ -3,7 +3,7 @@ package io.skysail.converter
 import io.skysail.api.responses.SkysailResponse
 import io.skysail.api.um.UserManagementProvider
 import org.restlet.representation.Variant
-import io.skysail.restlet.ScalaSkysailServerResource
+import io.skysail.restlet.SkysailServerResource
 import io.skysail.api.responses.ListServerResponse
 import io.skysail.api.responses.RelationTargetResponse
 import io.skysail.api.responses.ConstraintViolationsResponse
@@ -32,13 +32,15 @@ import io.skysail.restlet.utils._
 import io.skysail.restlet.responses.ListResponse
 import io.skysail.restlet.resources.ListServerResource2
 import org.restlet.data.MediaType
+import io.skysail.api.links.Link
+import io.skysail.api.links.LinkRelation
 
 object ResourceModel {
   val ID = "id";
 }
 
 class ResourceModel(
-    resource: ScalaSkysailServerResource,
+    resource: SkysailServerResource,
     response: ScalaSkysailResponse[_],
     userManagementProvider: UserManagementProvider,
     target: Variant,
@@ -106,7 +108,7 @@ class ResourceModel(
   }
 
   //  private List<Map<String, Object>> getData(Object source, R theResource) {
-  def getData(response: Any, theResource: ScalaSkysailServerResource): java.util.ArrayList[java.util.Map[String, Object]] = {
+  def getData(response: Any, theResource: SkysailServerResource): java.util.ArrayList[java.util.Map[String, Object]] = {
     val result = new java.util.ArrayList[java.util.Map[String, Object]]()
     if (response.isInstanceOf[ListResponse[_]]) {
       //      			List<?> list = ((ListServerResponse<?>) source).getEntity();
@@ -185,7 +187,7 @@ class ResourceModel(
 
   def setSkysailApplicationService(service: SkysailApplicationService) = this.skysailApplicationService = service
 
-  protected def convert(className: String, identifierName: String, resource: ScalaSkysailServerResource): java.util.List[java.util.Map[String, Object]] = {
+  protected def convert(className: String, identifierName: String, resource: SkysailServerResource): java.util.List[java.util.Map[String, Object]] = {
     val result: java.util.List[java.util.Map[String, Object]] = new java.util.ArrayList[java.util.Map[String, Object]]()
     rawData.asScala
       .filter { d => d != null }
@@ -204,7 +206,7 @@ class ResourceModel(
   }
 
   private def apply(newRow: java.util.Map[String, Object], dataRow: java.util.Map[String, Object], className: String, columnName: String,
-    id: Any, resource: ScalaSkysailServerResource): Unit = {
+    id: Any, resource: SkysailServerResource): Unit = {
 
     val simpleIdentifier = if (columnName.contains("|")) columnName.split("\\|")(1) else columnName;
     val field = getDomainField(columnName);
@@ -234,7 +236,7 @@ class ResourceModel(
     columnName: String,
     simpleIdentifier: String,
     id: Any,
-    resource: ScalaSkysailServerResource) = {
+    resource: SkysailServerResource) = {
     new CellRendererHelper(fieldModel, response, filterParser)
     //.render(dataRow.get(columnName), columnName, simpleIdentifier, id, resource);
   }
@@ -320,5 +322,9 @@ class ResourceModel(
       return "";
     }
   }
+  
+  def getCreateFormLinks(): java.util.List[Link] = {
+    resource.getAuthorizedLinks().filter { l => LinkRelation.CREATE_FORM == l.getRel }.toList.asJava
+	}
 
 }

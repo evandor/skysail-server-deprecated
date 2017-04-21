@@ -1,7 +1,7 @@
 package io.skysail.converter
 
 import org.restlet.resource.Resource
-import io.skysail.restlet.ScalaSkysailServerResource
+import io.skysail.restlet.SkysailServerResource
 import io.skysail.restlet.utils.ScalaCookiesUtils
 import io.skysail.core.Constants
 
@@ -11,7 +11,7 @@ object Styling {
   /**
    * @return e.g. bootstrap, semanticui, jquerymobile
    */
-  def determineFrom(resource: ScalaSkysailServerResource): Styling = {
+  def determineFrom(resource: SkysailServerResource): Styling = {
     if (resource.getQuery() == null || resource.getQuery().getFirstValue("_styling") == null) {
       return stylingFromCookieOrDefault(resource)
     }
