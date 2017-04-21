@@ -1,6 +1,5 @@
 package io.skysail.repo.orientdb
 
-import io.skysail.restlet.model.SecurityConfigBuilderModel
 import com.tinkerpop.blueprints.impls.orient.OrientGraph
 import com.tinkerpop.blueprints.impls.orient.OrientVertex
 import com.fasterxml.jackson.databind.ObjectMapper
@@ -11,8 +10,9 @@ import scala.collection.JavaConverters._
 import io.skysail.restlet.model.ScalaSkysailEntityModel
 import io.skysail.restlet.model.ScalaSkysailFieldModel
 import scala.util._
+import io.skysail.restlet.model.SkysailApplicationModel
 
-class Persister(db: OrientGraph, applicationModel: SecurityConfigBuilderModel) {
+class Persister(db: OrientGraph, applicationModel: SkysailApplicationModel) {
 
   var log = LoggerFactory.getLogger(classOf[Persister])
 

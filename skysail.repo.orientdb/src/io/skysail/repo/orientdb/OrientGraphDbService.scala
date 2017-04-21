@@ -8,7 +8,6 @@ import com.orientechnologies.orient.core.sql._
 import com.orientechnologies.orient.core.db.OPartitionedDatabasePool
 import com.orientechnologies.orient.core.record.impl.ODocument
 import io.skysail.api.metrics.NoOpMetricsCollector
-import io.skysail.restlet.model.SecurityConfigBuilderModel
 import io.skysail.restlet.ScalaSkysailBeanUtils
 import io.skysail.restlet.app.SkysailApplicationService
 import java.util.Locale
@@ -21,6 +20,7 @@ import scala.collection.JavaConverters._
 import io.skysail.restlet.transformations.Transformations
 import org.json4s.DefaultFormats
 import org.json4s.JsonAST.JValue
+import io.skysail.restlet.model.SkysailApplicationModel
 
 @Component(immediate = true)
 class OrientGraphDbService extends AbstractOrientDbService with ScalaDbService {
@@ -194,7 +194,7 @@ class OrientGraphDbService extends AbstractOrientDbService with ScalaDbService {
 
   }
 
-  def persist(entity: Any, applicationModel: SecurityConfigBuilderModel): Try[OrientVertex] = {
+  def persist(entity: Any, applicationModel: SkysailApplicationModel): Try[OrientVertex] = {
     new Persister(getGraphDb(), applicationModel).persist(entity)
   }
 
