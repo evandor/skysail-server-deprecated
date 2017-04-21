@@ -277,19 +277,19 @@ class ResourceModel(
     }
 
     val linkshtml = links
-      .filter(l => id.equals(l.getRefId()))
+      .filter(l => id.equals(l.refId))
       .map(link => {
         val sb = new StringBuilder();
 
-        if (link.getImage(MediaType.TEXT_HTML) != null) {
-          sb.append("<a href='").append(link.getUri()).append("' title='").append(link.getTitle())
-            .append("' alt='").append(link.getAlt()).append("'>")
-            .append("<span class='glyphicon glyphicon-").append(link.getImage(MediaType.TEXT_HTML))
-            .append("' aria-hidden='true'></span>").append("</a>");
-        } else {
-          sb.append("<a href='").append(link.getUri()).append("' title='").append(link.getAlt()).append("'>")
-            .append(link.getTitle()).append("</a>");
-        }
+//        if (link.getImage(MediaType.TEXT_HTML) != null) {
+//          sb.append("<a href='").append(link.uri).append("' title='").append(link.getTitle())
+//            .append("' alt='").append(link.alt).append("'>")
+//           // .append("<span class='glyphicon glyphicon-").append(link.getImage(MediaType.TEXT_HTML))
+//            .append("' aria-hidden='true'></span>").append("</a>");
+//        } else {
+          sb.append("<a href='").append(link.uri).append("' title='").append(link.alt).append("'>")
+            .append(link.title).append("</a>");
+        //}
         return sb.toString();
       })
       .mkString("&nbsp;&nbsp;")
@@ -324,7 +324,7 @@ class ResourceModel(
   }
   
   def getCreateFormLinks(): java.util.List[Link] = {
-    resource.getAuthorizedLinks().filter { l => LinkRelation.CREATE_FORM == l.getRel }.toList.asJava
+    resource.getAuthorizedLinks().filter { l => LinkRelation.CREATE_FORM == l.relation }.toList.asJava
 	}
 
 }
