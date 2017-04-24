@@ -7,10 +7,10 @@ import org.slf4j.LoggerFactory
 import com.tinkerpop.blueprints.Vertex
 import java.util.function.Consumer
 import scala.collection.JavaConverters._
-import io.skysail.restlet.model.ScalaSkysailEntityModel
-import io.skysail.restlet.model.ScalaSkysailFieldModel
+import io.skysail.core.model.ScalaSkysailEntityModel
+import io.skysail.core.model.ScalaSkysailFieldModel
 import scala.util._
-import io.skysail.restlet.model.SkysailApplicationModel
+import io.skysail.core.model.SkysailApplicationModel
 
 class Persister(db: OrientGraph, applicationModel: SkysailApplicationModel) {
 

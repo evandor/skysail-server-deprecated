@@ -20,14 +20,14 @@ import scala.collection.JavaConverters._
 import java.util.HashMap
 import java.util.Optional
 import io.skysail.domain.core.FieldModel
-import io.skysail.restlet.model.ScalaSkysailFieldModel
+import io.skysail.core.model.ScalaSkysailFieldModel
 import io.skysail.converter.forms.helper.CellRendererHelper
 import io.skysail.restlet.queries.QueryFilterParser
 import io.skysail.restlet.resources.PostEntityServerResource2
 import io.skysail.restlet.resources.PutEntityServerResource2
 import io.skysail.restlet.forms.ScalaFormField
 import io.skysail.api.text.Translation
-import io.skysail.restlet.model.resource.StFormFieldsWrapper
+import io.skysail.core.model.resource.StFormFieldsWrapper
 import io.skysail.restlet.utils._
 import io.skysail.restlet.responses.ListResponse
 import io.skysail.restlet.resources.ListServerResource2
@@ -40,7 +40,7 @@ object ResourceModel {
 }
 
 class ResourceModel(
-    resource: SkysailServerResource,
+    resource: SkysailServerResource[_],
     response: ScalaSkysailResponse[_],
     userManagementProvider: UserManagementProvider,
     target: Variant,
@@ -108,7 +108,7 @@ class ResourceModel(
   }
 
   //  private List<Map<String, Object>> getData(Object source, R theResource) {
-  def getData(response: Any, theResource: SkysailServerResource): java.util.ArrayList[java.util.Map[String, Object]] = {
+  def getData(response: Any, theResource: SkysailServerResource[_]): java.util.ArrayList[java.util.Map[String, Object]] = {
     val result = new java.util.ArrayList[java.util.Map[String, Object]]()
     if (response.isInstanceOf[ListResponse[_]]) {
       //      			List<?> list = ((ListServerResponse<?>) source).getEntity();
@@ -187,7 +187,7 @@ class ResourceModel(
 
   def setSkysailApplicationService(service: SkysailApplicationService) = this.skysailApplicationService = service
 
-  protected def convert(className: String, identifierName: String, resource: SkysailServerResource): java.util.List[java.util.Map[String, Object]] = {
+  protected def convert(className: String, identifierName: String, resource: SkysailServerResource[_]): java.util.List[java.util.Map[String, Object]] = {
     val result: java.util.List[java.util.Map[String, Object]] = new java.util.ArrayList[java.util.Map[String, Object]]()
     rawData.asScala
       .filter { d => d != null }
@@ -206,7 +206,7 @@ class ResourceModel(
   }
 
   private def apply(newRow: java.util.Map[String, Object], dataRow: java.util.Map[String, Object], className: String, columnName: String,
-    id: Any, resource: SkysailServerResource): Unit = {
+    id: Any, resource: SkysailServerResource[_]): Unit = {
 
     val simpleIdentifier = if (columnName.contains("|")) columnName.split("\\|")(1) else columnName;
     val field = getDomainField(columnName);
@@ -236,7 +236,7 @@ class ResourceModel(
     columnName: String,
     simpleIdentifier: String,
     id: Any,
-    resource: SkysailServerResource) = {
+    resource: SkysailServerResource[_]) = {
     new CellRendererHelper(fieldModel, response, filterParser)
     //.render(dataRow.get(columnName), columnName, simpleIdentifier, id, resource);
   }

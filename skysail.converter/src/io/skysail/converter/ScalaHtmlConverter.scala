@@ -100,7 +100,7 @@ class ScalaHtmlConverter extends ConverterHelper with OsgiConverterHelper {
 
   def toRepresentation(skysailResponse: Any, target: Variant, resource: Resource): Representation = {
     require(skysailResponse.isInstanceOf[ScalaSkysailResponse[_]])
-    val stringTemplateRenderer = new StringTemplateRenderer(this, resource.asInstanceOf[SkysailServerResource]);
+    val stringTemplateRenderer = new StringTemplateRenderer(this, resource.asInstanceOf[SkysailServerResource[_]]);
     //    stringTemplateRenderer.setMenuProviders(menuProviders);
     stringTemplateRenderer.setFilterParser(filterParser);
     //    stringTemplateRenderer.setInstallationProvider(installationProvider);

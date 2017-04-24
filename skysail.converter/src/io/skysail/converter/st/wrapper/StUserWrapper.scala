@@ -8,7 +8,7 @@ object StUserWrapper {
   val ANONYMOUS = "anonymous";
 }
 
-class StUserWrapper(userManagementProvider: UserManagementProvider, resource: SkysailServerResource, peerName: String) {
+class StUserWrapper(userManagementProvider: UserManagementProvider, resource: SkysailServerResource[_], peerName: String) {
 
   def getPrincipal() = {
     val principal = userManagementProvider.getAuthenticationService().getPrincipal(resource.getRequest());

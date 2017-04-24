@@ -3,7 +3,7 @@ package io.skysail.repo.orientdb
 import com.tinkerpop.blueprints.impls.orient.OrientVertex
 import scala.util.Try
 import org.json4s.JsonAST.JValue
-import io.skysail.restlet.model.SkysailApplicationModel
+import io.skysail.core.model.SkysailApplicationModel
 
 trait ScalaDbService {
   

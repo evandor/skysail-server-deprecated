@@ -18,7 +18,7 @@ import org.junit.Ignore
 
 class StylingTest {
   
-  val resource = mock(classOf[SkysailServerResource]);
+  val resource = mock(classOf[SkysailServerResource[_]]);
 
   val request = mock(classOf[Request]);
 	val response = mock(classOf[Response]);

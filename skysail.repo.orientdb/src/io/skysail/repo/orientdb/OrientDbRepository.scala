@@ -9,7 +9,7 @@ import org.json4s.JsonAST.JValue
 import io.skysail.restlet.utils.ScalaReflectionUtils
 import io.skysail.queryfilter.filter.Filter
 import io.skysail.queryfilter.pagination.Pagination
-import io.skysail.restlet.model.SkysailApplicationModel
+import io.skysail.core.model.SkysailApplicationModel
 
 trait BaseDbRepository[T] extends ScalaDbRepository {
   def save(entity: T, appModel: SkysailApplicationModel): Try[T]

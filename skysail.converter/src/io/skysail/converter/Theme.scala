@@ -8,7 +8,7 @@ import io.skysail.core.Constants
 
 object Theming {
   
-  def determineFrom(resource: SkysailServerResource, target: Variant): Theming = {
+  def determineFrom(resource: SkysailServerResource[_], target: Variant): Theming = {
     if (resource.getQuery() == null || resource.getQuery().getFirstValue("_theme") == null) {
       val themeToUse = ScalaCookiesUtils.getThemeFromCookie(resource.getRequest());
       if (!themeToUse.isDefined) {

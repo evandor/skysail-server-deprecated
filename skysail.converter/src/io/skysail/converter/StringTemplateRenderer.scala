@@ -30,7 +30,7 @@ object StringTemplateRenderer {
   val INDEX_FOR_MOBILES = "indexMobile";
 }
 
-class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: SkysailServerResource) {
+class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: SkysailServerResource[_]) {
   
   val log = LoggerFactory.getLogger(classOf[StringTemplateRenderer])
 
@@ -78,10 +78,10 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Skysai
   private def bundleProvidesTemplates(appBundle: Bundle) = appBundle.getResource(StringTemplateRenderer.TEMPLATES_DIR) != null
 
   private def getStringTemplateIndex(resource: Resource, styling: Styling, stGroup: STGroup): ST = {
-    if (resource.isInstanceOf[SkysailServerResource]
+    if (resource.isInstanceOf[SkysailServerResource[_]]
       && resource.getContext() != null
-      && resource.asInstanceOf[SkysailServerResource].getFromContext(ResourceContextId.RENDERER_HINT) != null) {
-      val root = resource.asInstanceOf[SkysailServerResource].getFromContext(ResourceContextId.RENDERER_HINT);
+      && resource.asInstanceOf[SkysailServerResource[_]].getFromContext(ResourceContextId.RENDERER_HINT) != null) {
+      val root = resource.asInstanceOf[SkysailServerResource[_]].getFromContext(ResourceContextId.RENDERER_HINT);
       resource.getContext().getAttributes().remove(ResourceContextId.RENDERER_HINT.name());
       return stGroup.getInstanceOf(root + "_index");
     }
@@ -130,7 +130,7 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Skysai
     }
   }
 
-  private def createResourceModel(entity: Any, target: Variant, theming: Theming, resource: SkysailServerResource): ResourceModel = {
+  private def createResourceModel(entity: Any, target: Variant, theming: Theming, resource: SkysailServerResource[_]): ResourceModel = {
 
     val resourceModel = new ResourceModel(resource, entity.asInstanceOf[ScalaSkysailResponse[_]], htmlConverter.getUserManagementProvider(), target, theming);
     //        resourceModel.setMenuItemProviders(menuProviders);

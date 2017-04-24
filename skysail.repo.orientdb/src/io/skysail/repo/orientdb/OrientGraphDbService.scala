@@ -20,7 +20,7 @@ import scala.collection.JavaConverters._
 import io.skysail.restlet.transformations.Transformations
 import org.json4s.DefaultFormats
 import org.json4s.JsonAST.JValue
-import io.skysail.restlet.model.SkysailApplicationModel
+import io.skysail.core.model.SkysailApplicationModel
 
 @Component(immediate = true)
 class OrientGraphDbService extends AbstractOrientDbService with ScalaDbService {

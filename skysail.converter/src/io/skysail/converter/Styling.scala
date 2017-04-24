@@ -11,7 +11,7 @@ object Styling {
   /**
    * @return e.g. bootstrap, semanticui, jquerymobile
    */
-  def determineFrom(resource: SkysailServerResource): Styling = {
+  def determineFrom(resource: SkysailServerResource[_]): Styling = {
     if (resource.getQuery() == null || resource.getQuery().getFirstValue("_styling") == null) {
       return stylingFromCookieOrDefault(resource)
     }
