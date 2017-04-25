@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory
 import com.tinkerpop.blueprints.Vertex
 import java.util.function.Consumer
 import scala.collection.JavaConverters._
-import io.skysail.core.model.ScalaSkysailEntityModel
+import io.skysail.core.model.SkysailEntityModel
 import io.skysail.core.model.ScalaSkysailFieldModel
 import scala.util._
 import io.skysail.core.model.SkysailApplicationModel
@@ -118,8 +118,8 @@ class Persister(db: OrientGraph, applicationModel: SkysailApplicationModel) {
     if (relationExists) {
       return false
     }
-    if (entityModel.isInstanceOf[ScalaSkysailEntityModel]) {
-      val sem = entityModel.asInstanceOf[ScalaSkysailEntityModel]
+    if (entityModel.isInstanceOf[SkysailEntityModel]) {
+      val sem = entityModel.asInstanceOf[SkysailEntityModel]
       val field = sem.getField(entity.getClass().getName() + "|" + key).asInstanceOf[ScalaSkysailFieldModel]
       if (field == null) {
         log.warn("could not determine field for id '{}'", entity.getClass().getName() + "|" + key)
