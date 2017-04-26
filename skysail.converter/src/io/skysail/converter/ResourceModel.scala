@@ -261,13 +261,13 @@ class ResourceModel(
     }
     val listServerResource = getResource().asInstanceOf[ListServerResource2[_]]
     val links = listServerResource.getLinks();
-    val entityResourceClass = listServerResource.getAssociatedServerResources();
+    /*val entityResourceClass = listServerResource.getAssociatedServerResources();
     if (entityResourceClass != null) {
       val sourceAsList = theData;
       for (dataRow <- sourceAsList) {
         addLinks(links, dataRow);
       }
-    }
+    }*/
   }
 
   def addLinks(links: List[io.skysail.api.links.Link], dataRow: java.util.Map[String, Object]): Unit = {
