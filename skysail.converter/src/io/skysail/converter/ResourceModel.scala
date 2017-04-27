@@ -34,6 +34,7 @@ import io.skysail.restlet.resources.ListServerResource2
 import org.restlet.data.MediaType
 import io.skysail.api.links.Link
 import io.skysail.api.links.LinkRelation
+import io.skysail.core.model.LinkModel
 
 object ResourceModel {
   val ID = "id";
@@ -251,7 +252,14 @@ class ResourceModel(
 
   def isList() = response.isList()
 
-  def getLinks() = resource.getAuthorizedLinks().asJava
+  def getLinks():java.util.List[LinkModel] = { // java.util.List as this is used by stringtemplate
+    val appModel = resource.getSkysailApplication().getApplicationModel2()
+    val links = appModel.linksFor(resource.getClass)
+    println(links(0).getTitle)
+//    val javalinks = links.asJava
+//    println(javalinks.get(0).getTitle())
+    links.asJava
+  }
 
   def getResourceSimpleName() = resource.getClass().getSimpleName()
 
