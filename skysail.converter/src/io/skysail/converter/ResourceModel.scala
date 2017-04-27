@@ -87,7 +87,7 @@ class ResourceModel(
     parameterizedType = resource.getParameterizedType();
 
     fields = ScalaFormfieldUtils.determineFormfields(response, resource, skysailApplicationService)
-    //println(fields)
+    println(fields)
 
     // val rootEntity = new io.skysail.server.model.EntityModel[_](response.entity(), resource);
 
