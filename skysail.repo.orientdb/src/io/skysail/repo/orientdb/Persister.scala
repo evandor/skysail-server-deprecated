@@ -7,12 +7,12 @@ import org.slf4j.LoggerFactory
 import com.tinkerpop.blueprints.Vertex
 import java.util.function.Consumer
 import scala.collection.JavaConverters._
-import io.skysail.core.model.SkysailEntityModel
-import io.skysail.core.model.ScalaSkysailFieldModel
 import scala.util._
-import io.skysail.core.model.SkysailApplicationModel
+import io.skysail.core.model.SkysailApplicationModel2
+import io.skysail.core.model.SkysailEntityModel2
+import io.skysail.core.model.SkysailFieldModel2
 
-class Persister(db: OrientGraph, applicationModel: SkysailApplicationModel) {
+class Persister(db: OrientGraph, applicationModel: SkysailApplicationModel2) {
 
   var log = LoggerFactory.getLogger(classOf[Persister])
 
@@ -50,7 +50,7 @@ class Persister(db: OrientGraph, applicationModel: SkysailApplicationModel) {
     } catch {
       case e: Throwable =>
         db.rollback()
-        Failure( new RuntimeException("Database Problem, rolled back transaction", e))
+        Failure(new RuntimeException("Database Problem, rolled back transaction", e))
     } finally {
       db.shutdown()
     }
@@ -80,7 +80,7 @@ class Persister(db: OrientGraph, applicationModel: SkysailApplicationModel) {
   class AThingClass(entity: Any, vertex: Vertex, properties: Map[String, Object]) extends java.util.function.Consumer[String] {
     override def accept(key: String): Unit = {
       if ("id".equals(key)) {
-        return 
+        return
       }
       if (isProperty(entity, key)) {
         if (properties.get(key) != null && !("class".equals(key))) {
@@ -105,30 +105,29 @@ class Persister(db: OrientGraph, applicationModel: SkysailApplicationModel) {
     //        if (applicationModel == null) {
     //            return !edges.contains(key)
     //        }
-    val entityModel = applicationModel.getEntity(entity.getClass().getName())
+    val entityModel = applicationModel.entityModelFor(entity.getClass().getName())
     if (entityModel == null) {
       return true
     }
-    val relations = entityModel.getRelations() //.asScala
-    val relationExists = relations.asScala
-      .map { e => e.getName }
-      .filter { e => e == key }
-      .headOption.isDefined
+    // val relations = entityModel.getRelations() //.asScala
+    //    val relationExists = relations.asScala
+    //      .map { e => e.getName }
+    //      .filter { e => e == key }
+    //      .headOption.isDefined
 
-    if (relationExists) {
-      return false
+    //    if (relationExists) {
+    //      return false
+    //    }
+    val sem = entityModel.asInstanceOf[SkysailEntityModel2]
+    val field = sem.fieldFor(entity.getClass().getName() + "|" + key).get.asInstanceOf[SkysailFieldModel2]
+    if (field == null) {
+      log.warn("could not determine field for id '{}'", entity.getClass().getName() + "|" + key)
+      return true
     }
-    if (entityModel.isInstanceOf[SkysailEntityModel]) {
-      val sem = entityModel.asInstanceOf[SkysailEntityModel]
-      val field = sem.getField(entity.getClass().getName() + "|" + key).asInstanceOf[ScalaSkysailFieldModel]
-      if (field == null) {
-        log.warn("could not determine field for id '{}'", entity.getClass().getName() + "|" + key)
-        return true
-      }
-      if (field.getEntityType() != null) {
-        return false
-      }
-    }
+//    if (field.getEntityType() != null) {
+//      return false
+//    }
+
     return true
   }
   private def setProperty(entity: Any, vertex: Vertex, key: String) = {

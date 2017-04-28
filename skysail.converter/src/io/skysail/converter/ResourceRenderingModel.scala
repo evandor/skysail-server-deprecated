@@ -1,5 +1,6 @@
 package io.skysail.converter
 
+
 import io.skysail.api.responses.SkysailResponse
 import io.skysail.api.um.UserManagementProvider
 import org.restlet.representation.Variant
@@ -19,22 +20,18 @@ import java.util.Collections
 import scala.collection.JavaConverters._
 import java.util.HashMap
 import java.util.Optional
-import io.skysail.domain.core.FieldModel
-import io.skysail.core.model.ScalaSkysailFieldModel
-import io.skysail.converter.forms.helper.CellRendererHelper
-import io.skysail.restlet.queries.QueryFilterParser
-import io.skysail.restlet.resources.PostEntityServerResource2
-import io.skysail.restlet.resources.PutEntityServerResource2
-import io.skysail.restlet.forms.ScalaFormField
 import io.skysail.api.text.Translation
+import io.skysail.api.links._
+import io.skysail.converter.forms.helper.CellRendererHelper
 import io.skysail.core.model.resource.StFormFieldsWrapper
+import io.skysail.core.model._
+import io.skysail.restlet.queries.QueryFilterParser
+import io.skysail.restlet.resources._
+import io.skysail.restlet.forms.ScalaFormField
 import io.skysail.restlet.utils._
 import io.skysail.restlet.responses.ListResponse
 import io.skysail.restlet.resources.ListServerResource2
 import org.restlet.data.MediaType
-import io.skysail.api.links.Link
-import io.skysail.api.links.LinkRelation
-import io.skysail.core.model.LinkModel
 
 object ResourceModel {
   val ID = "id";
@@ -213,21 +210,21 @@ class ResourceRenderingModel(
     id: Any, resource: SkysailServerResource[_]): Unit = {
 
     val simpleIdentifier = if (columnName.contains("|")) columnName.split("\\|")(1) else columnName;
-    val field = getDomainField(columnName);
-    if (field.isPresent()) {
-      val value = calc(field.get().asInstanceOf[ScalaSkysailFieldModel], dataRow, columnName, simpleIdentifier, id, resource)
-      newRow.put(columnName, value);
-    } else if (columnName.endsWith("|id")) {
+//    val field = getDomainField(columnName);
+//    if (field.isPresent()) {
+//      val value = calc(field.get().asInstanceOf[ScalaSkysailFieldModel], dataRow, columnName, simpleIdentifier, id, resource)
+//      newRow.put(columnName, value);
+//    } else if (columnName.endsWith("|id")) {
       newRow.put(columnName, dataRow.get(columnName));
-    } else {
-    }
+//    } else {
+//    }
   }
 
-  private def getDomainField(columnName: String): Optional[FieldModel] = {
-    val applicationModel = resource.getSkysailApplication().getApplicationModel();
-    val entity = applicationModel.getEntity(parameterizedType.getName());
-    if (entity == null) Optional.empty() else Optional.ofNullable(entity.getField(columnName));
-  }
+//  private def getDomainField(columnName: String): Optional[FieldModel] = {
+//    //val applicationModel = resource.getSkysailApplication().getApplicationModel();
+//    val entity = applicationModel.getEntity(parameterizedType.getName());
+//    if (entity == null) Optional.empty() else Optional.ofNullable(entity.getField(columnName));
+//  }
 
   //  private String calc(@NonNull SkysailFieldModel field, Map<String, Object> dataRow, String columnName,
   //			String simpleIdentifier, Object id, R resource) {
@@ -235,7 +232,7 @@ class ResourceRenderingModel(
   //				simpleIdentifier, id, resource);
   //	}
   def calc(
-    fieldModel: ScalaSkysailFieldModel,
+    fieldModel: SkysailFieldModel2,
     dataRow: java.util.Map[String, Object],
     columnName: String,
     simpleIdentifier: String,

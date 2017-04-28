@@ -9,10 +9,10 @@ import org.json4s.JsonAST.JValue
 import io.skysail.restlet.utils.ScalaReflectionUtils
 import io.skysail.queryfilter.filter.Filter
 import io.skysail.queryfilter.pagination.Pagination
-import io.skysail.core.model.SkysailApplicationModel
+import io.skysail.core.model.SkysailApplicationModel2
 
 trait BaseDbRepository[T] extends ScalaDbRepository {
-  def save(entity: T, appModel: SkysailApplicationModel): Try[T]
+  def save(entity: T, appModel: SkysailApplicationModel2): Try[T]
   def findOne(id: String): Option[T]
 }
 
@@ -33,7 +33,7 @@ class OrientDbRepository[T](db: ScalaDbService) extends BaseDbRepository[T] {
     None
   }
 
-  def save(entity: T, appModel: SkysailApplicationModel): Try[T] = {
+  def save(entity: T, appModel: SkysailApplicationModel2): Try[T] = {
     val result = db.persist(entity, appModel)
     //result.transform(s => s.asInstanceOf[T], f)
     if (result.isSuccess) {
