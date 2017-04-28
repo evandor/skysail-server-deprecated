@@ -8,11 +8,11 @@ import com.tinkerpop.blueprints.Vertex
 import java.util.function.Consumer
 import scala.collection.JavaConverters._
 import scala.util._
-import io.skysail.core.model.SkysailApplicationModel2
+import io.skysail.core.model.ApplicationModel
 import io.skysail.core.model.SkysailEntityModel2
 import io.skysail.core.model.SkysailFieldModel2
 
-class Persister(db: OrientGraph, applicationModel: SkysailApplicationModel2) {
+class Persister(db: OrientGraph, applicationModel: ApplicationModel) {
 
   var log = LoggerFactory.getLogger(classOf[Persister])
 

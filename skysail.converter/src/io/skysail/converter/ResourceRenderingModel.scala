@@ -33,7 +33,7 @@ import io.skysail.restlet.responses.ListResponse
 import io.skysail.restlet.resources.ListServerResource2
 import org.restlet.data.MediaType
 
-object ResourceModel {
+object ResourceRenderingModel {
   val ID = "id";
 }
 
@@ -312,8 +312,8 @@ class ResourceRenderingModel(
       return entity.get(idKey.get).toString().replace("#", "");
     }
 
-    if (entity.get(ResourceModel.ID) != null) {
-      val value = entity.get(ResourceModel.ID);
+    if (entity.get(ResourceRenderingModel.ID) != null) {
+      val value = entity.get(ResourceRenderingModel.ID);
       return value.toString().replace("#", "");
     } else if (entity.get("@rid") != null) {
       val str = entity.get("@rid").toString();
