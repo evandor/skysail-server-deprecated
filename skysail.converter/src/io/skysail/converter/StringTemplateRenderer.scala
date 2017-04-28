@@ -130,9 +130,9 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Skysai
     }
   }
 
-  private def createResourceModel(entity: Any, target: Variant, theming: Theming, resource: SkysailServerResource[_]): ResourceModel = {
+  private def createResourceModel(entity: Any, target: Variant, theming: Theming, resource: SkysailServerResource[_]): ResourceRenderingModel = {
 
-    val resourceModel = new ResourceModel(resource, entity.asInstanceOf[ScalaSkysailResponse[_]], htmlConverter.getUserManagementProvider(), target, theming);
+    val resourceModel = new ResourceRenderingModel(resource, entity.asInstanceOf[ScalaSkysailResponse[_]], htmlConverter.getUserManagementProvider(), target, theming);
     //        resourceModel.setMenuItemProviders(menuProviders);
     resourceModel.setFilterParser(filterParser);
     //        resourceModel.setInstallationProvider(installationProvider);
@@ -157,7 +157,7 @@ class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: Skysai
     return rep;
   }
 
-  private def addSubstitutions(resourceModel: ResourceModel, decl: ST): Unit = {
+  private def addSubstitutions(resourceModel: ResourceRenderingModel, decl: ST): Unit = {
 
     val resource = resourceModel.getResource();
 

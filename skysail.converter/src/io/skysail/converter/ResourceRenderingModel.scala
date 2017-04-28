@@ -40,12 +40,15 @@ object ResourceModel {
   val ID = "id";
 }
 
-class ResourceModel(
+class ResourceRenderingModel(
     resource: SkysailServerResource[_],
     response: ScalaSkysailResponse[_],
     userManagementProvider: UserManagementProvider,
     target: Variant,
     theming: Theming) {
+  
+  val appModel = resource.getSkysailApplication().getApplicationModel2()
+  def getAppModelHtmlRepresentation() = appModel.toString()//.replace("\\n", "<br>\\n")
 
   var rawData = new java.util.ArrayList[java.util.Map[String, Object]]()
   def getRawData() = rawData
@@ -87,7 +90,7 @@ class ResourceModel(
     //
     parameterizedType = resource.getParameterizedType();
 
-    fields = ScalaFormfieldUtils.determineFormfields(response, resource, skysailApplicationService)
+    fields = ScalaFormfieldUtils.determineFormfields(response, resource)
     println(fields)
 
     // val rootEntity = new io.skysail.server.model.EntityModel[_](response.entity(), resource);
@@ -220,7 +223,7 @@ class ResourceModel(
     }
   }
 
-  def getDomainField(columnName: String): Optional[FieldModel] = {
+  private def getDomainField(columnName: String): Optional[FieldModel] = {
     val applicationModel = resource.getSkysailApplication().getApplicationModel();
     val entity = applicationModel.getEntity(parameterizedType.getName());
     if (entity == null) Optional.empty() else Optional.ofNullable(entity.getField(columnName));
@@ -252,14 +255,8 @@ class ResourceModel(
 
   def isList() = response.isList()
 
-  def getLinks():java.util.List[LinkModel] = { // java.util.List as this is used by stringtemplate
-    val appModel = resource.getSkysailApplication().getApplicationModel2()
-    val links = appModel.linksFor(resource.getClass)
-    println(links(0).getTitle)
-//    val javalinks = links.asJava
-//    println(javalinks.get(0).getTitle())
-    links.asJava
-  }
+  // java.util.List as this is used by stringtemplate
+  def getLinks():java.util.List[LinkModel] = appModel.linksFor(resource.getClass).asJava
 
   def getResourceSimpleName() = resource.getClass().getSimpleName()
 
@@ -268,7 +265,7 @@ class ResourceModel(
       return ;
     }
     val listServerResource = getResource().asInstanceOf[ListServerResource2[_]]
-    val links = listServerResource.getLinks();
+    //val links = listServerResource.getLinks();
     /*val entityResourceClass = listServerResource.getAssociatedServerResources();
     if (entityResourceClass != null) {
       val sourceAsList = theData;
@@ -332,7 +329,7 @@ class ResourceModel(
   }
   
   def getCreateFormLinks(): java.util.List[Link] = {
-    resource.getAuthorizedLinks().filter { l => LinkRelation.CREATE_FORM == l.relation }.toList.asJava
+    null//resource.getAuthorizedLinks().filter { l => LinkRelation.CREATE_FORM == l.relation }.toList.asJava
 	}
 
 }
