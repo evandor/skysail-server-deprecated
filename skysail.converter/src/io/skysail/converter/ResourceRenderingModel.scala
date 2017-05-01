@@ -1,6 +1,5 @@
 package io.skysail.converter
 
-
 import io.skysail.api.responses.SkysailResponse
 import io.skysail.api.um.UserManagementProvider
 import org.restlet.representation.Variant
@@ -43,9 +42,9 @@ class ResourceRenderingModel(
     userManagementProvider: UserManagementProvider,
     target: Variant,
     theming: Theming) {
-  
+
   val appModel = resource.getSkysailApplication().getApplicationModel2()
-  def getAppModelHtmlRepresentation() = appModel.toString()//.replace("\\n", "<br>\\n")
+  def getAppModelHtmlRepresentation() = appModel.toString() //.replace("\\n", "<br>\\n")
 
   var rawData = new java.util.ArrayList[java.util.Map[String, Object]]()
   def getRawData() = rawData
@@ -210,21 +209,21 @@ class ResourceRenderingModel(
     id: Any, resource: SkysailServerResource[_]): Unit = {
 
     val simpleIdentifier = if (columnName.contains("|")) columnName.split("\\|")(1) else columnName;
-//    val field = getDomainField(columnName);
-//    if (field.isPresent()) {
-//      val value = calc(field.get().asInstanceOf[ScalaSkysailFieldModel], dataRow, columnName, simpleIdentifier, id, resource)
-//      newRow.put(columnName, value);
-//    } else if (columnName.endsWith("|id")) {
-      newRow.put(columnName, dataRow.get(columnName));
-//    } else {
-//    }
+    //    val field = getDomainField(columnName);
+    //    if (field.isPresent()) {
+    //      val value = calc(field.get().asInstanceOf[ScalaSkysailFieldModel], dataRow, columnName, simpleIdentifier, id, resource)
+    //      newRow.put(columnName, value);
+    //    } else if (columnName.endsWith("|id")) {
+    newRow.put(columnName, dataRow.get(columnName));
+    //    } else {
+    //    }
   }
 
-//  private def getDomainField(columnName: String): Optional[FieldModel] = {
-//    //val applicationModel = resource.getSkysailApplication().getApplicationModel();
-//    val entity = applicationModel.getEntity(parameterizedType.getName());
-//    if (entity == null) Optional.empty() else Optional.ofNullable(entity.getField(columnName));
-//  }
+  //  private def getDomainField(columnName: String): Optional[FieldModel] = {
+  //    //val applicationModel = resource.getSkysailApplication().getApplicationModel();
+  //    val entity = applicationModel.getEntity(parameterizedType.getName());
+  //    if (entity == null) Optional.empty() else Optional.ofNullable(entity.getField(columnName));
+  //  }
 
   //  private String calc(@NonNull SkysailFieldModel field, Map<String, Object> dataRow, String columnName,
   //			String simpleIdentifier, Object id, R resource) {
@@ -232,7 +231,7 @@ class ResourceRenderingModel(
   //				simpleIdentifier, id, resource);
   //	}
   def calc(
-    fieldModel: SkysailFieldModel2,
+    fieldModel: FieldModel,
     dataRow: java.util.Map[String, Object],
     columnName: String,
     simpleIdentifier: String,
@@ -253,7 +252,7 @@ class ResourceRenderingModel(
   def isList() = response.isList()
 
   // java.util.List as this is used by stringtemplate
-  def getLinks():java.util.List[LinkModel] = appModel.linksFor(resource.getClass).asJava
+  def getLinks(): java.util.List[LinkModel] = appModel.linksFor(resource.getClass).asJava
 
   def getResourceSimpleName() = resource.getClass().getSimpleName()
 
@@ -272,35 +271,35 @@ class ResourceRenderingModel(
     }*/
   }
 
-  def addLinks(links: List[io.skysail.api.links.Link], dataRow: java.util.Map[String, Object]): Unit = {
-    val id = guessId(dataRow);
-    if (id == null) {
-      return ;
-    }
-
-    val linkshtml = links
-      .filter(l => id.equals(l.refId))
-      .map(link => {
-        val sb = new StringBuilder();
-
-//        if (link.getImage(MediaType.TEXT_HTML) != null) {
-//          sb.append("<a href='").append(link.uri).append("' title='").append(link.getTitle())
-//            .append("' alt='").append(link.alt).append("'>")
-//           // .append("<span class='glyphicon glyphicon-").append(link.getImage(MediaType.TEXT_HTML))
-//            .append("' aria-hidden='true'></span>").append("</a>");
-//        } else {
-          sb.append("<a href='").append(link.uri).append("' title='").append(link.alt).append("'>")
-            .append(link.title).append("</a>");
-        //}
-        return sb.toString();
-      })
-      .mkString("&nbsp;&nbsp;")
-
-    //		dataRow.put("_links", linkshtml);
-    //
-    //		dataRow.put("_linksNew", links.stream().filter(l -> id.equals(l.getRefId())).map(LinkTemplateAdapter::new)
-    //				.collect(Collectors.toList()));
-  }
+  //  def addLinks(links: List[io.skysail.api.links.Link], dataRow: java.util.Map[String, Object]): Unit = {
+  //    val id = guessId(dataRow);
+  //    if (id == null) {
+  //      return ;
+  //    }
+  //
+  //    val linkshtml = links
+  //      .filter(l => id.equals(l.refId))
+  //      .map(link => {
+  //        val sb = new StringBuilder();
+  //
+  ////        if (link.getImage(MediaType.TEXT_HTML) != null) {
+  ////          sb.append("<a href='").append(link.uri).append("' title='").append(link.getTitle())
+  ////            .append("' alt='").append(link.alt).append("'>")
+  ////           // .append("<span class='glyphicon glyphicon-").append(link.getImage(MediaType.TEXT_HTML))
+  ////            .append("' aria-hidden='true'></span>").append("</a>");
+  ////        } else {
+  //          sb.append("<a href='").append(link.uri).append("' title='").append(link.alt).append("'>")
+  //            .append(link.title).append("</a>");
+  //        //}
+  //        return sb.toString();
+  //      })
+  //      .mkString("&nbsp;&nbsp;")
+  //
+  //    //		dataRow.put("_links", linkshtml);
+  //    //
+  //    //		dataRow.put("_linksNew", links.stream().filter(l -> id.equals(l.getRefId())).map(LinkTemplateAdapter::new)
+  //    //				.collect(Collectors.toList()));
+  //  }
 
   def guessId(theObject: Any): String = {
     if (!(theObject.isInstanceOf[Map[_, _]]))
@@ -324,9 +323,9 @@ class ResourceRenderingModel(
       return "";
     }
   }
-  
-  def getCreateFormLinks(): java.util.List[Link] = {
-    null//resource.getAuthorizedLinks().filter { l => LinkRelation.CREATE_FORM == l.relation }.toList.asJava
-	}
+
+  def getCreateFormLinks(): java.util.List[LinkModel] = {
+    appModel.linksFor(resource.getClass).filter(l => LinkRelation.CREATE_FORM == l.relation).toList.asJava
+  }
 
 }
