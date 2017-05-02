@@ -28,8 +28,7 @@ import io.skysail.restlet.queries.QueryFilterParser
 import io.skysail.restlet.resources._
 import io.skysail.restlet.forms.ScalaFormField
 import io.skysail.restlet.utils._
-import io.skysail.restlet.responses.ListResponse
-import io.skysail.restlet.resources.ListServerResource2
+import io.skysail.restlet.responses._
 import org.restlet.data.MediaType
 
 object ResourceRenderingModel {
@@ -242,8 +241,8 @@ class ResourceRenderingModel(
   }
 
   def isForm() = response.isForm()
-  def isPostEntityServerResource() = resource.isInstanceOf[PostEntityServerResource2[_]]
-  def isPutEntityServerResource() = resource.isInstanceOf[PutEntityServerResource2[_]]
+  def isPostEntityServerResource() = resource.isInstanceOf[PostEntityServerResource[_]]
+  def isPutEntityServerResource() = resource.isInstanceOf[PutEntityServerResource[_]]
 
   def getFormfields() = fields.values.asJava
 
@@ -257,10 +256,10 @@ class ResourceRenderingModel(
   def getResourceSimpleName() = resource.getClass().getSimpleName()
 
   def addAssociatedLinks(theData: List[java.util.Map[String, Object]]): Unit = {
-    if (!(getResource().isInstanceOf[ListServerResource2[_]])) {
+    if (!(getResource().isInstanceOf[ListServerResource[_]])) {
       return ;
     }
-    val listServerResource = getResource().asInstanceOf[ListServerResource2[_]]
+    val listServerResource = getResource().asInstanceOf[ListServerResource[_]]
     //val links = listServerResource.getLinks();
     /*val entityResourceClass = listServerResource.getAssociatedServerResources();
     if (entityResourceClass != null) {

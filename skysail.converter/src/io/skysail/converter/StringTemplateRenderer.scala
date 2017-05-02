@@ -1,27 +1,23 @@
 package io.skysail.converter
 
 import io.skysail.api.responses.SkysailResponse
+import io.skysail.converter.st.wrapper._
 import io.skysail.core.app._
 import io.skysail.restlet.SkysailServerResource
-import io.skysail.restlet.responses.ScalaSkysailResponse
-import io.skysail.restlet.app.SkysailApplication
-import org.restlet.representation.StringRepresentation
-import org.restlet.resource.Resource
-import org.restlet.data.MediaType
-import org.restlet.representation.Variant
-import org.stringtemplate.v4.STGroup
-import org.osgi.framework._
-import org.stringtemplate.v4.ST
-import java.util.Optional
-import java.util.Arrays
 import io.skysail.restlet.app.SkysailApplicationService
 import io.skysail.restlet.queries.QueryFilterParser
-import org.slf4j.LoggerFactory
+import io.skysail.restlet.responses.ScalaSkysailResponse
+import io.skysail.restlet.app.SkysailApplication
 import io.skysail.restlet.ResourceContextId
-import io.skysail.restlet.utils.ScalaCookiesUtils
-import io.skysail.restlet.utils.RequestUtils
-import io.skysail.converter.st.wrapper.StUserWrapper
-import io.skysail.converter.st.wrapper.StRequestWrapper
+import io.skysail.restlet.utils._
+import org.restlet.representation.{StringRepresentation,Variant}
+import org.restlet.resource.Resource
+import org.restlet.data.MediaType
+import org.slf4j.LoggerFactory
+import org.stringtemplate.v4.{ST,STGroup}
+import org.osgi.framework._
+import java.util.Optional
+import java.util.Arrays
 import scala.collection.JavaConverters._
 
 object StringTemplateRenderer {
@@ -30,7 +26,7 @@ object StringTemplateRenderer {
   val INDEX_FOR_MOBILES = "indexMobile";
 }
 
-class StringTemplateRenderer(htmlConverter: ScalaHtmlConverter, resource: SkysailServerResource[_]) {
+class StringTemplateRenderer(htmlConverter: HtmlConverter, resource: SkysailServerResource[_]) {
   
   val log = LoggerFactory.getLogger(classOf[StringTemplateRenderer])
 

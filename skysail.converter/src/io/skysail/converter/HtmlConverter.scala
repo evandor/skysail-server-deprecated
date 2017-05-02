@@ -39,9 +39,9 @@ object ScalaHtmlConverter {
  *
  */
 @Component(immediate = true, service = Array(classOf[OsgiConverterHelper]))
-class ScalaHtmlConverter extends ConverterHelper with OsgiConverterHelper {
+class HtmlConverter extends ConverterHelper with OsgiConverterHelper {
 
-  val log = LoggerFactory.getLogger(getClass())
+  private val log = LoggerFactory.getLogger(getClass())
 
   @Reference(cardinality = ReferenceCardinality.MULTIPLE, policy = ReferencePolicy.DYNAMIC)
   @volatile var templateProvider: java.util.List[StringTemplateProvider] = new java.util.ArrayList[StringTemplateProvider]();
