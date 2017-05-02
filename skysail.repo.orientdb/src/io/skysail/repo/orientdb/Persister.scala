@@ -10,6 +10,11 @@ import scala.collection.JavaConverters._
 import scala.util._
 import io.skysail.core.model._
 
+object Persister {
+  def getMethodName(prefix: String, key: String): String = {
+    return new StringBuilder(prefix).append(key.substring(0, 1).toUpperCase()).append(key.substring(1)).toString();
+  }
+}
 class Persister(db: OrientGraph, applicationModel: ApplicationModel) {
 
   var log = LoggerFactory.getLogger(classOf[Persister])
@@ -104,7 +109,7 @@ class Persister(db: OrientGraph, applicationModel: ApplicationModel) {
     //            return !edges.contains(key)
     //        }
     val entityModel = applicationModel.entityModelFor(entity.getClass().getName())
-    if (entityModel == null) {
+    if (entityModel.isEmpty) {
       return true
     }
     // val relations = entityModel.getRelations() //.asScala
@@ -116,24 +121,25 @@ class Persister(db: OrientGraph, applicationModel: ApplicationModel) {
     //    if (relationExists) {
     //      return false
     //    }
-    val sem = entityModel.asInstanceOf[EntityModel]
-    val field = sem.fieldFor(entity.getClass().getName() + "|" + key).get.asInstanceOf[FieldModel]
-    if (field == null) {
-      log.warn("could not determine field for id '{}'", entity.getClass().getName() + "|" + key)
+    val sem = entityModel.get
+    val optionalField = sem.fieldFor( /*entity.getClass().getName() + "|" +*/ key)
+    //val field = optionalField.get.asInstanceOf[FieldModel]
+    if (optionalField.isEmpty == null) {
+      log.warn("could not determine field for id '{}'", /*entity.getClass().getName() + "|" +*/ key)
       return true
     }
-//    if (field.getEntityType() != null) {
-//      return false
-//    }
+    //    if (field.getEntityType() != null) {
+    //      return false
+    //    }
 
     return true
   }
   private def setProperty(entity: Any, vertex: Vertex, key: String) = {
     try {
       if (isOfBooleanType(entity, key)) {
-        //        setVertexProperty("is", entity, vertex, key)
+        setVertexProperty("is", entity, vertex, key)
       } else {
-        //        setVertexProperty("get", entity, vertex, key)
+        setVertexProperty("get", entity, vertex, key)
       }
     } catch {
       case e: Throwable => log.error(e.getMessage(), e)
@@ -141,5 +147,19 @@ class Persister(db: OrientGraph, applicationModel: ApplicationModel) {
   }
 
   private def isOfBooleanType(e: Any, key: String) = e.getClass().getDeclaredField(key).getType().isAssignableFrom(classOf[Boolean])
+
+  private def setVertexProperty(prefix: String, entity: Any, vertex: Vertex, key: String): Unit = {
+    val method = entity.getClass().getMethod(Persister.getMethodName(prefix, key));
+    val result = method.invoke(entity);
+    if (result == null) {
+      return
+    }
+    //        if (result.isInstanceOf[ValueObject]) {
+    //            vertex.setProperty(key, ((ValueObject)result).getValue().toString());
+    //        } else {
+    
+    vertex.setProperty(key, result);
+    //        }
+  }
 
 }
