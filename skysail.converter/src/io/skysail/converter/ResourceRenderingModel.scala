@@ -43,7 +43,7 @@ class ResourceRenderingModel(
     theming: Theming) {
 
   val appModel = resource.getSkysailApplication().getApplicationModel2()
-  def getAppModelHtmlRepresentation() = appModel.toString() //.replace("\\n", "<br>\\n")
+  def getAppModelHtmlRepresentation() = appModel.toHtml(resource.getRequest)
 
   var rawData = new java.util.ArrayList[java.util.Map[String, Object]]()
   def getRawData() = rawData
