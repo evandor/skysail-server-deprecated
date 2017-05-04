@@ -21,6 +21,7 @@ import io.skysail.restlet.transformations.Transformations
 import org.json4s.DefaultFormats
 import org.json4s.JsonAST.JValue
 import io.skysail.core.model.ApplicationModel
+import org.json4s.JsonAST.JString
 
 @Component(immediate = true)
 class OrientGraphDbService extends AbstractOrientDbService with ScalaDbService {
@@ -223,20 +224,9 @@ class OrientGraphDbService extends AbstractOrientDbService with ScalaDbService {
   private def getGraphDb(): OrientGraph = graphDbFactory.getTx()
 
   private def documentToBean[T:Manifest](document: ODocument, beanType: Class[_]): JValue = {
-    //implicit val formats = DefaultFormats
-    Transformations.jsonFrom[T](document.toMap().asScala.toMap)
-//    try {
-//      val json = Transformations.jsonFrom[T](document.toMap().asScala.toMap)
-//      val bean2 = json.extract[T]
-////      val bean = beanType.newInstance().asInstanceOf[T]
-////      populateProperties(document.toMap().asScala.toMap, bean, new ScalaSkysailBeanUtils(bean, Locale.getDefault(), appService));
-////      //beanCache.put(bean.getId(), bean);
-////      populateOutgoingEdges(document, bean);
-//      return Some(bean2)
-//    } catch {
-//      case e: Throwable => log.error(e.getMessage(), e)
-//    }
-//    None
+    val documentAsScalaMap = document.toMap().asScala.toMap
+    val id = document.getIdentity.toString().replace("#","")
+    Transformations.jsonFrom[T](documentAsScalaMap.+ ("id" -> id))
   }
 
   private def populateProperties[T](entityMap: Map[String, Object], bean: T, beanUtilsBean: ScalaSkysailBeanUtils[T]): Unit = {

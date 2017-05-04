@@ -267,6 +267,16 @@ class ResourceRenderingModel(
         addLinks(links, dataRow);
       }
     }*/
+    
+    val itemLinks = appModel.linksFor(resource.getClass).filter(l => l.relation == LinkRelation.ITEM).toList
+    
+    theData.foreach(dataRow => {
+      val links = itemLinks.map{ item =>
+        val uri = item.getUri().replace("{id}", if (dataRow.get("io.skysail.app.notes.domain.Note|id") != null) dataRow.get("io.skysail.app.notes.domain.Note|id").toString() else "???")
+        "<a href='"+uri+"'>"+item.title+"</a>"
+      }.mkString("&nbsp;")
+      dataRow.put("_links", links)
+    })
   }
 
   //  def addLinks(links: List[io.skysail.api.links.Link], dataRow: java.util.Map[String, Object]): Unit = {
