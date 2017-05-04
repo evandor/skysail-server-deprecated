@@ -13,7 +13,7 @@ import io.skysail.core.model.ApplicationModel
 
 trait BaseDbRepository[T] extends ScalaDbRepository {
   def save(entity: T, appModel: ApplicationModel): Try[T]
-  def findOne(id: String): Option[T]
+  def findOne(id: String): Option[JValue]
 }
 
 class OrientDbRepository[T](db: ScalaDbService) extends BaseDbRepository[T] {
@@ -29,8 +29,9 @@ class OrientDbRepository[T](db: ScalaDbService) extends BaseDbRepository[T] {
     db.findGraphs[T](entityType, sql, filter.params)
   }
 
-  def findOne(id: String): Option[T] = {
-    None
+  def findOne(id: String): Option[JValue] = {
+    //return dbService.findById2(entityType, id);
+    db.findOne(id)
   }
 
   def save(entity: T, appModel: ApplicationModel): Try[T] = {

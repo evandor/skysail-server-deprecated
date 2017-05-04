@@ -22,6 +22,10 @@ import org.json4s.DefaultFormats
 import org.json4s.JsonAST.JValue
 import io.skysail.core.model.ApplicationModel
 import org.json4s.JsonAST.JString
+import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal
+import com.orientechnologies.orient.core.id.ORecordId
+import com.orientechnologies.orient.core.sql.filter.OSQLPredicate
+import com.orientechnologies.orient.core.command.traverse.OTraverse
 
 @Component(immediate = true)
 class OrientGraphDbService extends AbstractOrientDbService with ScalaDbService {
@@ -212,21 +216,31 @@ class OrientGraphDbService extends AbstractOrientDbService with ScalaDbService {
     //    //beanCache.clear();
     while (iterator.hasNext()) {
       val next = iterator.next().asInstanceOf[OrientVertex]
-      val optionOfBean = documentToBean(next.getRecord(), cls)
+      val optionOfBean = documentToBean(next.getRecord())
       //if (optionOfBean.isDefined) {
-          result += optionOfBean//.get
+      result += optionOfBean //.get
       //}
     }
     //timer.stop();
     result.toList
   }
 
+  def findOne(id: String):Option[JValue] = {
+    val db = getObjectDb().getUnderlying();
+    ODatabaseRecordThreadLocal.INSTANCE.set(db);
+    val predicate = new OTraverse().target(new ORecordId(id)).fields("out", "int").limit(1)
+      .predicate(new OSQLPredicate("$depth <= 3"));
+    val document = predicate.iterator().next().asInstanceOf[ODocument]
+    //beanCache.clear();
+    if (document != null) Some(documentToBean(document)) else None
+  }
+
   private def getGraphDb(): OrientGraph = graphDbFactory.getTx()
 
-  private def documentToBean[T:Manifest](document: ODocument, beanType: Class[_]): JValue = {
+  private def documentToBean[T: Manifest](document: ODocument): JValue = {
     val documentAsScalaMap = document.toMap().asScala.toMap
-    val id = document.getIdentity.toString().replace("#","")
-    Transformations.jsonFrom[T](documentAsScalaMap.+ ("id" -> id))
+    val id = document.getIdentity.toString().replace("#", "")
+    Transformations.jsonFrom[T](documentAsScalaMap.+("id" -> id))
   }
 
   private def populateProperties[T](entityMap: Map[String, Object], bean: T, beanUtilsBean: ScalaSkysailBeanUtils[T]): Unit = {

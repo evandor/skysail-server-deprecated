@@ -13,5 +13,7 @@ trait ScalaDbService {
   def persist(entity: Any,  applicationModel: ApplicationModel): Try[OrientVertex]
 
   def findGraphs[T](entityType: Class[_], sql: String, arg: Map[String,Object]): List[JValue]
+  
+  def findOne(id: String):Option[JValue]
 
 }
