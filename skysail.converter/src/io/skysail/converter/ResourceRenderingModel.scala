@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.SerializationFeature
 import io.skysail.api.responses.SkysailResponse
 import io.skysail.api.um.UserManagementProvider
-import io.skysail.converter.st.wrapper.StMenuItemWrapper
 import io.skysail.restlet.SkysailServerResource
 import io.skysail.api.responses.ListServerResponse
 import io.skysail.api.responses.RelationTargetResponse
@@ -18,7 +17,6 @@ import io.skysail.converter.forms.helper.CellRendererHelper
 import io.skysail.core.model.resource.StFormFieldsWrapper
 import io.skysail.core.model._
 import io.skysail.restlet.queries.QueryFilterParser
-import io.skysail.restlet.menu.MenuItem
 import io.skysail.restlet.resources._
 import io.skysail.restlet.forms.ScalaFormField
 import io.skysail.restlet.utils._
@@ -32,9 +30,6 @@ import org.restlet.representation.Variant
 import org.restlet.data.MediaType
 import scala.collection.JavaConverters._
 import io.skysail.restlet.services.MenuItemProvider
-import io.skysail.restlet.menu.MenuItem
-import io.skysail.restlet.menu.Category
-import io.skysail.restlet.menu.APPLICATION_MAIN_MENU
 
 object ResourceRenderingModel {
   val ID = "id";
@@ -346,6 +341,27 @@ class ResourceRenderingModel(
     appModel.linksFor(resource.getClass).filter(l => LinkRelation.CREATE_FORM == l.relation).toList.asJava
   }
 
+  def getApplicationContextLinks() = {
+    val allApps = skysailApplicationService.applicationListProvider.getApplications()
+    val appContextResourceClasses = allApps
+      .map { app => app.associatedResourceClasses }
+      .flatten
+      .filter( association => association._1 == APPLICATION_CONTEXT_RESOURCE)
+      .map ( association => association._2)
+    println(appContextResourceClasses)
+    val allApplicationModels = allApps
+      .map { app => app.getApplicationModel2() }
+      //.map { appModel => appModel.linksFor(resourceClass)
+      
+    val optionalResourceModels = for (
+        appModel <- allApplicationModels;
+        resClass <- appContextResourceClasses;  
+        val z = appModel.resourceModelFor(resClass)
+    ) yield z
+    
+    optionalResourceModels.filter { m => m.isDefined }.map { m => m.get. }
+  }
+  
 //  def getApplications(): StMenuItemWrapper = {
 //    return getMenu(APPLICATION_MAIN_MENU);
 //  }
