@@ -1,35 +1,40 @@
 package io.skysail.converter
 
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.databind.SerializationFeature
 import io.skysail.api.responses.SkysailResponse
 import io.skysail.api.um.UserManagementProvider
-import org.restlet.representation.Variant
+import io.skysail.converter.st.wrapper.StMenuItemWrapper
 import io.skysail.restlet.SkysailServerResource
 import io.skysail.api.responses.ListServerResponse
 import io.skysail.api.responses.RelationTargetResponse
 import io.skysail.api.responses.ConstraintViolationsResponse
-import com.fasterxml.jackson.databind.ObjectMapper
-import java.util.LinkedHashMap
 import io.skysail.restlet.responses.ScalaSkysailResponse
 import io.skysail.restlet.app.SkysailApplicationService
 import io.skysail.restlet.responses.FormResponse
-import java.text.DateFormat
-import com.fasterxml.jackson.databind.SerializationFeature
-import java.util.Collections
-
-import scala.collection.JavaConverters._
-import java.util.HashMap
-import java.util.Optional
 import io.skysail.api.text.Translation
 import io.skysail.api.links._
 import io.skysail.converter.forms.helper.CellRendererHelper
 import io.skysail.core.model.resource.StFormFieldsWrapper
 import io.skysail.core.model._
 import io.skysail.restlet.queries.QueryFilterParser
+import io.skysail.restlet.menu.MenuItem
 import io.skysail.restlet.resources._
 import io.skysail.restlet.forms.ScalaFormField
 import io.skysail.restlet.utils._
 import io.skysail.restlet.responses._
+import java.util.LinkedHashMap
+import java.util.HashMap
+import java.util.Optional
+import java.text.DateFormat
+import java.util.Collections
+import org.restlet.representation.Variant
 import org.restlet.data.MediaType
+import scala.collection.JavaConverters._
+import io.skysail.restlet.services.MenuItemProvider
+import io.skysail.restlet.menu.MenuItem
+import io.skysail.restlet.menu.Category
+import io.skysail.restlet.menu.APPLICATION_MAIN_MENU
 
 object ResourceRenderingModel {
   val ID = "id";
@@ -41,10 +46,14 @@ class ResourceRenderingModel(
     userManagementProvider: UserManagementProvider,
     target: Variant,
     theming: Theming) {
+  
 
   val appModel = resource.getSkysailApplication().getApplicationModel2()
   def getAppModelHtmlRepresentation() = appModel.toHtml(resource.getRequest)
 
+  var menuProviders = Set[MenuItemProvider]()
+  def setMenuProviders(p: Set[MenuItemProvider]) = menuProviders = p
+  
   var rawData = new java.util.ArrayList[java.util.Map[String, Object]]()
   def getRawData() = rawData
 
@@ -267,13 +276,14 @@ class ResourceRenderingModel(
         addLinks(links, dataRow);
       }
     }*/
-    
+
     val itemLinks = appModel.linksFor(resource.getClass).filter(l => l.relation == LinkRelation.ITEM).toList
-    
+
     theData.foreach(dataRow => {
-      val links = itemLinks.map{ item =>
-        val uri = item.getUri().replace("{id}", if (dataRow.get("io.skysail.app.notes.domain.Note|id") != null) dataRow.get("io.skysail.app.notes.domain.Note|id").toString() else "???")
-        "<a href='"+uri+"'>"+item.title+"</a>"
+      val idName = appModel.entityModelFor(resource.getClass).get.name + "|id"
+      val links = itemLinks.map { item =>
+        val uri = item.getUri().replace("{id}", if (dataRow.get(idName) != null) dataRow.get(idName).toString() else "???")
+        "<a href='" + uri + "'>" + item.title + "</a>"
       }.mkString("&nbsp;")
       dataRow.put("_links", links)
     })
@@ -335,5 +345,14 @@ class ResourceRenderingModel(
   def getCreateFormLinks(): java.util.List[LinkModel] = {
     appModel.linksFor(resource.getClass).filter(l => LinkRelation.CREATE_FORM == l.relation).toList.asJava
   }
+
+//  def getApplications(): StMenuItemWrapper = {
+//    return getMenu(APPLICATION_MAIN_MENU);
+//  }
+//
+//  private def getMenu(category: Category): StMenuItemWrapper = {
+//    val menuItems = MenuItemUtils.getMenuItems(menuProviders, resource, category);
+//    new StMenuItemWrapper(menuItems.stream().sorted().collect(Collectors.toList()));
+//  }
 
 }
