@@ -341,14 +341,14 @@ class ResourceRenderingModel(
     appModel.linksFor(resource.getClass).filter(l => LinkRelation.CREATE_FORM == l.relation).toList.asJava
   }
 
-  def getApplicationContextLinks() = {
+  def getApplicationContextLinks(): java.util.List[LinkModel] = {
     val allApps = skysailApplicationService.applicationListProvider.getApplications()
     val appContextResourceClasses = allApps
       .map { app => app.associatedResourceClasses }
       .flatten
       .filter( association => association._1 == APPLICATION_CONTEXT_RESOURCE)
       .map ( association => association._2)
-    println(appContextResourceClasses)
+
     val allApplicationModels = allApps
       .map { app => app.getApplicationModel2() }
       //.map { appModel => appModel.linksFor(resourceClass)
@@ -359,7 +359,13 @@ class ResourceRenderingModel(
         val z = appModel.resourceModelFor(resClass)
     ) yield z
     
-    optionalResourceModels.filter { m => m.isDefined }.map { m => m.get. }
+    optionalResourceModels
+      .filter { m => m.isDefined }
+      .map { m => m.get }
+      .map { m => m.linkModel }
+      .toList
+      .asJava // for string template
+      
   }
   
 //  def getApplications(): StMenuItemWrapper = {
