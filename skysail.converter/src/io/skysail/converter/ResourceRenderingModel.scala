@@ -41,14 +41,13 @@ class ResourceRenderingModel(
     userManagementProvider: UserManagementProvider,
     target: Variant,
     theming: Theming) {
-  
 
   val appModel = resource.getSkysailApplication().getApplicationModel2()
   def getAppModelHtmlRepresentation() = appModel.toHtml(resource.getRequest)
 
   var menuProviders = Set[MenuItemProvider]()
   def setMenuProviders(p: Set[MenuItemProvider]) = menuProviders = p
-  
+
   var rawData = new java.util.ArrayList[java.util.Map[String, Object]]()
   def getRawData() = rawData
 
@@ -119,7 +118,9 @@ class ResourceRenderingModel(
         result.add(mapper.convertValue(element, classOf[LinkedHashMap[String, Object]]));
       }
 
-      val p = new java.util.ArrayList[java.util.Map[String, Object]]()
+      return adjustKeyNames(result, list(0).getClass())
+
+      /*val p = new java.util.ArrayList[java.util.Map[String, Object]]()
       for (row <- result.asScala) {
         if (row != null) {
           val nR = new java.util.HashMap[String, Object]();
@@ -129,7 +130,11 @@ class ResourceRenderingModel(
           p.add(nR);
         }
       }
-      return p
+      return p*/
+    } else if (response.isInstanceOf[EntityResponse[_]]) {
+      val entity = response.asInstanceOf[EntityResponse[_]].entity.asInstanceOf[Option[_]]
+      result.add(mapper.convertValue(entity.get, classOf[LinkedHashMap[String, Object]]))
+      return adjustKeyNames(result, entity.get.getClass())
     } else if (response.isInstanceOf[RelationTargetResponse[_]]) {
       //			List<?> list = ((RelationTargetResponse<?>) source).getEntity();
       //			if (list != null) {
@@ -346,35 +351,49 @@ class ResourceRenderingModel(
     val appContextResourceClasses = allApps
       .map { app => app.associatedResourceClasses }
       .flatten
-      .filter( association => association._1 == APPLICATION_CONTEXT_RESOURCE)
-      .map ( association => association._2)
+      .filter(association => association._1 == APPLICATION_CONTEXT_RESOURCE)
+      .map(association => association._2)
 
     val allApplicationModels = allApps
       .map { app => app.getApplicationModel2() }
-      //.map { appModel => appModel.linksFor(resourceClass)
-      
+    //.map { appModel => appModel.linksFor(resourceClass)
+
     val optionalResourceModels = for (
-        appModel <- allApplicationModels;
-        resClass <- appContextResourceClasses;  
-        val z = appModel.resourceModelFor(resClass)
+      appModel <- allApplicationModels;
+      resClass <- appContextResourceClasses;
+      val z = appModel.resourceModelFor(resClass)
     ) yield z
-    
+
     optionalResourceModels
       .filter { m => m.isDefined }
       .map { m => m.get }
       .map { m => m.linkModel }
       .toList
       .asJava // for string template
-      
+
   }
-  
-//  def getApplications(): StMenuItemWrapper = {
-//    return getMenu(APPLICATION_MAIN_MENU);
-//  }
-//
-//  private def getMenu(category: Category): StMenuItemWrapper = {
-//    val menuItems = MenuItemUtils.getMenuItems(menuProviders, resource, category);
-//    new StMenuItemWrapper(menuItems.stream().sorted().collect(Collectors.toList()));
-//  }
+
+  private def adjustKeyNames(result: java.util.ArrayList[java.util.Map[String, Object]], cls: Class[_]) = {
+    val p = new java.util.ArrayList[java.util.Map[String, Object]]()
+    for (row <- result.asScala) {
+      if (row != null) {
+        val nR = new java.util.HashMap[String, Object]();
+        for (key <- row.keySet().asScala) {
+          nR.put(cls.getName() + "|" + key, row.get(key));
+        }
+        p.add(nR);
+      }
+    }
+    p
+  }
+
+  //  def getApplications(): StMenuItemWrapper = {
+  //    return getMenu(APPLICATION_MAIN_MENU);
+  //  }
+  //
+  //  private def getMenu(category: Category): StMenuItemWrapper = {
+  //    val menuItems = MenuItemUtils.getMenuItems(menuProviders, resource, category);
+  //    new StMenuItemWrapper(menuItems.stream().sorted().collect(Collectors.toList()));
+  //  }
 
 }
