@@ -118,7 +118,7 @@ class ResourceRenderingModel(
         result.add(mapper.convertValue(element, classOf[LinkedHashMap[String, Object]]));
       }
 
-      return adjustKeyNames(result, list(0).getClass())
+      return if (list.size > 0) adjustKeyNames(result, list(0).getClass()) else result
 
       /*val p = new java.util.ArrayList[java.util.Map[String, Object]]()
       for (row <- result.asScala) {
