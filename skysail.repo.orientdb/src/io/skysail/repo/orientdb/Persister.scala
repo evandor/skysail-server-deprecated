@@ -108,7 +108,7 @@ class Persister(db: OrientGraph, applicationModel: ApplicationModel) {
     //        if (applicationModel == null) {
     //            return !edges.contains(key)
     //        }
-    val entityModel = applicationModel.entityModelFor(entity.getClass().getName())
+    val entityModel = applicationModel.entityModelFor(entity.getClass())
     if (entityModel.isEmpty) {
       return true
     }

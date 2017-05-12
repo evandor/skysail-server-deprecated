@@ -8,7 +8,7 @@ import io.skysail.api.um.UserManagementProvider
 import io.skysail.restlet.responses.ScalaSkysailResponse
 import io.skysail.restlet.queries.QueryFilterParser
 import io.skysail.restlet.services.StringTemplateProvider
-import io.skysail.restlet.app._
+import io.skysail.core.app._
 import org.restlet.engine.resource.VariantInfo
 import org.restlet.representation.Representation
 import org.restlet.resource.Resource
@@ -17,7 +17,7 @@ import org.restlet.engine.converter.ConverterHelper
 import org.restlet.representation.Variant
 import org.restlet.data.MediaType
 import org.slf4j.LoggerFactory
-import io.skysail.restlet.app.SkysailApplicationService
+import io.skysail.core.app.SkysailApplicationService
 import io.skysail.core.osgi.services.OsgiConverterHelper
 import io.skysail.core.osgi.services.OsgiConverterHelper
 import org.restlet.engine.Engine

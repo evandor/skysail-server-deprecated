@@ -9,7 +9,7 @@ import io.skysail.api.responses.ListServerResponse
 import io.skysail.api.responses.RelationTargetResponse
 import io.skysail.api.responses.ConstraintViolationsResponse
 import io.skysail.restlet.responses.ScalaSkysailResponse
-import io.skysail.restlet.app.SkysailApplicationService
+import io.skysail.core.app.SkysailApplicationService
 import io.skysail.restlet.responses.FormResponse
 import io.skysail.api.text.Translation
 import io.skysail.api.links._
@@ -30,6 +30,7 @@ import org.restlet.representation.Variant
 import org.restlet.data.MediaType
 import scala.collection.JavaConverters._
 import io.skysail.restlet.services.MenuItemProvider
+import io.skysail.core.app.resources.ModelResource
 
 object ResourceRenderingModel {
   val ID = "id";
@@ -132,9 +133,16 @@ class ResourceRenderingModel(
       }
       return p*/
     } else if (response.isInstanceOf[EntityResponse[_]]) {
-      val entity = response.asInstanceOf[EntityResponse[_]].entity.asInstanceOf[Option[_]]
-      result.add(mapper.convertValue(entity.get, classOf[LinkedHashMap[String, Object]]))
-      return adjustKeyNames(result, entity.get.getClass())
+      if (response.asInstanceOf[EntityResponse[_]].entity.isInstanceOf[Option[_]]) {
+        val entity = response.asInstanceOf[EntityResponse[_]].entity.asInstanceOf[Option[_]]
+        result.add(mapper.convertValue(entity.get, classOf[LinkedHashMap[String, Object]]))
+        return adjustKeyNames(result, entity.get.getClass())        
+      } else {
+        val entity = response.asInstanceOf[EntityResponse[_]].entity
+        result.add(mapper.convertValue(entity, classOf[LinkedHashMap[String, Object]]))
+        return adjustKeyNames(result, entity.getClass())        
+        
+      }
     } else if (response.isInstanceOf[RelationTargetResponse[_]]) {
       //			List<?> list = ((RelationTargetResponse<?>) source).getEntity();
       //			if (list != null) {
@@ -280,7 +288,7 @@ class ResourceRenderingModel(
     val itemLinks = appModel.linksFor(resource.getClass).filter(l => l.relation == LinkRelation.ITEM).toList
 
     theData.foreach(dataRow => {
-      val idName = appModel.entityModelFor(resource.getClass).get.name + "|id"
+      val idName = appModel.entityModelFor(resource).get.name + "|id"
       val links = itemLinks.map { item =>
         val uri = item.getUri().replace("{id}", if (dataRow.get(idName) != null) dataRow.get(idName).toString() else "???")
         "<a href='" + uri + "'>" + item.title + "</a>"
@@ -371,6 +379,12 @@ class ResourceRenderingModel(
       .toList
       .asJava // for string template
 
+  }
+  
+  def getModelLink(): LinkModel = {
+    val model = resource.getModel()
+    val resourceModel = model.resourceModelFor(classOf[ModelResource])
+    if (resourceModel.isDefined) resourceModel.get.linkModel else LinkModel(context = model.name, path = ".", resource = resource)
   }
 
   private def adjustKeyNames(result: java.util.ArrayList[java.util.Map[String, Object]], cls: Class[_]) = {
