@@ -42,10 +42,7 @@ Include-Resource: resources
 	com.thoughtworks.paranamer;version=2.8
 
 
-Export-Package: \
-  	io.skysail.app.notes
 
 Private-Package: \
-	io.skysail.app.notes.domain,\
-	io.skysail.app.notes.resources,\
-	io.skysail.app.notes.repository
+	io.skysail.doc.swagger,\
+	io.skysail.doc.swagger.app

@@ -5,6 +5,6 @@
 //
 //@RequiredArgsConstructor
 //@Getter
-//public class SwaggerExternalDoc {
-//	private final String description,url;
+//public class SwaggerContact2 {
+//	private final String name, url, email;
 //}
