@@ -386,6 +386,8 @@ class ResourceRenderingModel(
     val resourceModel = model.resourceModelFor(classOf[ModelResource])
     if (resourceModel.isDefined) resourceModel.get.linkModel else LinkModel(context = model.name, path = ".", resource = resource)
   }
+  
+  def getApplicationName() = resource.getApplication().getName()
 
   private def adjustKeyNames(result: java.util.ArrayList[java.util.Map[String, Object]], cls: Class[_]) = {
     val p = new java.util.ArrayList[java.util.Map[String, Object]]()

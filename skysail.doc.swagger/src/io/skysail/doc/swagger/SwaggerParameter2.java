@@ -1,3 +1,4 @@
+package io.skysail.doc.swagger;
 //package io.skysail.doc.swagger;
 //
 //import com.fasterxml.jackson.annotation.JsonInclude;

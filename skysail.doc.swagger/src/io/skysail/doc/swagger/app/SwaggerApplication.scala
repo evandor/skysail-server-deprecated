@@ -5,17 +5,15 @@ import org.restlet.data.Protocol
 import java.util.Arrays
 import io.skysail.core.security.config.SecurityConfigBuilder
 import io.skysail.core.app._
-import io.skysail.repo.orientdb.ScalaDbService
 import io.skysail.core.ApiVersion
 import io.skysail.restlet.RouteBuilder
-import io.skysail.core.app.ApplicationConfiguration
 import io.skysail.restlet.services.MenuItemProvider
 import org.osgi.service.component.ComponentContext
 import io.skysail.core.model.APPLICATION_CONTEXT_RESOURCE
 import org.restlet.Restlet
 
 object SwaggerApplication {
-  final val APP_NAME = "notes"
+  final val APP_NAME = "_doc/swagger/2.0"
 }
 
 @Component(
@@ -37,7 +35,7 @@ class SwaggerApplication extends SkysailApplication(
     if (application == null) {
       return
     }
-    val swaggerRestlet = new SwaggerRestlet2(provider.getSkysailApplication())
+    val swaggerRestlet = new SwaggerRestlet(provider.getSkysailApplication())
     restlets.put(getIdentifier(application), swaggerRestlet);
   }
 

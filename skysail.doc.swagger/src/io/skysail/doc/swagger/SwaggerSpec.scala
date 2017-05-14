@@ -7,21 +7,28 @@ import org.restlet.Request
 import java.net.InetAddress
 import java.net.UnknownHostException
 import io.skysail.restlet.SkysailServerResource
+import scala.annotation.meta.field
+import scala.beans.BeanProperty
+import java.util.Arrays
+import com.fasterxml.jackson.annotation.JsonInclude
+import com.fasterxml.jackson.annotation.JsonInclude.Include
 
-class SwaggerSpec2(skysailApplication: SkysailApplication, request: Request) extends ScalaEntity[String] {
+@JsonInclude(Include.NON_NULL)
+class SwaggerSpec(skysailApplication: SkysailApplication, request: Request) extends ScalaEntity[String] {
 
-//  @JsonIgnore
+  @JsonIgnore
   var id: Option[String] = None
-  val swagger = "2.0";
-  var info: SwaggerInfo = null
-  var host = "localhost:2021"; // : petstore.swagger.io
-  var basePath: String = ""
-  val schemes = List("http");
-  val paths = scala.collection.mutable.Map[String, SwaggerPath]()
-  val definitions = scala.collection.mutable.Map[String, SwaggerDefinition2]()
-  //val externalDocs = new SwaggerExternalDoc("skysail documentation", "https://evandor.gitbooks.io/skysail/content/");
+  
+  @BeanProperty val swagger = "2.0";
+  @BeanProperty var info: SwaggerInfo = null
+  @BeanProperty var host = "localhost:2021"; // : petstore.swagger.io
+  @BeanProperty var basePath: String = ""
+  @BeanProperty val schemes = Arrays.asList("http");
+  @BeanProperty val paths = new java.util.HashMap[String, SwaggerPath]()
+  @BeanProperty val definitions = new java.util.HashMap[String, SwaggerDefinition]()
+  @BeanProperty val externalDocs = new SwaggerExternalDoc("skysail documentation", "https://evandor.gitbooks.io/skysail/content/")
 
-  //@JsonIgnore
+  @JsonIgnore
   val types = scala.collection.mutable.Set[Class[_]]()
 
   info = new SwaggerInfo(skysailApplication);
@@ -62,7 +69,7 @@ class SwaggerSpec2(skysailApplication: SkysailApplication, request: Request) ext
     types
       .toList
       .sortWith((e1, e2) => e1.getName.compareTo(e2.getName) > 0)
-      .foreach { entity => definitions.put(entity.getSimpleName(), new SwaggerDefinition2(entity)) }
+      .foreach { entity => definitions.put(entity.getSimpleName(), new SwaggerDefinition(entity)) }
   }
 
   private def determineHost(skysailApplication: SkysailApplication, request: Request): String = {
