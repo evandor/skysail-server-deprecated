@@ -14,7 +14,7 @@ Include-Resource: templates=templates,webapp=webapp
 	${javax},\
 	com.google.guava;version='[16.0,16.1)',\
     io.skysail.bundled.owasp-java-html-sanitizer;version='[20160422.1.0,20160422.1.1)',\
-	skysail.core;version=latest,\
+	skysail.core;version=${skysail.core.version},\
 	de.twentyeleven.skysail.org.antlr.stringtemplate-osgi;version=4.0.8,\
     com.fasterxml.jackson.core.jackson-annotations;version=${com.fasterxml.jackson.version},\
     com.fasterxml.jackson.core.jackson-core;version=${com.fasterxml.jackson.version},\

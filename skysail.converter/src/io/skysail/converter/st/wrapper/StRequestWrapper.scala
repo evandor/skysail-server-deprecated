@@ -21,7 +21,7 @@ case class StRequestWrapper(request: Request, fieldNames: List[String]) {
   val adapter = new RequestAdapter(request);
   
   def getRequest() = request
-
+  
   //adapter.sortIndicators = fieldNames.map(name => name -> new SortingParamUtils(name, request).getSortIndicator())
   //adapter.toggleSortLinks = fieldNames.map(name => name -> new SortingParamUtils(name, request).toggleSortLink())
 

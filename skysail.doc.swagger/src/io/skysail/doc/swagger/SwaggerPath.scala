@@ -13,6 +13,7 @@ import scala.collection.JavaConverters._
 import com.fasterxml.jackson.annotation.JsonInclude
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import org.restlet.resource.ServerResource
+import io.skysail.restlet.resources.ListServerResource
 
 object SwaggerPath {
   val PARAMETERS = "parameters"
@@ -79,6 +80,16 @@ class SwaggerPath(routeBuilder: RouteBuilder) {
     get.put(SwaggerPath.RESPONSES, addGetResponses(routeBuilder))
     post.put(SwaggerPath.PRODUCES, List("application/json"))
     post.put(SwaggerPath.RESPONSES, addPostResponse(routeBuilder))
+  } else if (classOf[ListServerResource[_]] isAssignableFrom (parentClass)) {
+    get = initIfNeccessary(get);
+    addApiMetadataForGet(get, apiMetadata);
+    get.put(SwaggerPath.PRODUCES, Arrays.asList("application/json"))
+    /*if (routeBuilder.pathVariables.size > 0) {
+      val parameterList = new java.util.ArrayList[SwaggerParameter]()
+      routeBuilder.pathVariables.foreach(path => parameterList.add(SwaggerParameter(path)))
+      get.put(SwaggerPath.PARAMETERS,parameterList)
+    }*/
+    get.put(SwaggerPath.RESPONSES, addGetResponses(routeBuilder))
   }
 
   private def initIfNeccessary(theMap: java.util.Map[String, Object]) = {
@@ -87,7 +98,8 @@ class SwaggerPath(routeBuilder: RouteBuilder) {
 
   def addGetResponses(routeBuilder: RouteBuilder) = {
     val responseMap = new java.util.HashMap[String, Object]()
-    responseMap.put("200", Map[String, String](SwaggerPath.DESCRIPTION -> "post entity get").asJava)
+    responseMap.put("200", Map[String, String](SwaggerPath.DESCRIPTION -> "OK").asJava)
+    responseMap.put("404", Map[String, String](SwaggerPath.DESCRIPTION -> "not found").asJava)
     responseMap
   }
 

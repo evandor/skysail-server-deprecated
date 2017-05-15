@@ -11,7 +11,9 @@ class SwaggerDefinition(entity: Class[_]) {
 
   private val log = LoggerFactory.getLogger(this.getClass())
 
+  @BeanProperty val `type` = "object"
   @BeanProperty val properties = new java.util.HashMap[String, SwaggerProperty]()
+  
 
   try {
     //val newInstance = entity.newInstance()
