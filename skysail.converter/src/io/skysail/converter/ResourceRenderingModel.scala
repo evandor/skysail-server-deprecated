@@ -355,30 +355,7 @@ class ResourceRenderingModel(
   }
 
   def getApplicationContextLinks(): java.util.List[LinkModel] = {
-    val allApps = skysailApplicationService.applicationListProvider.getApplications()
-    val appContextResourceClasses = allApps
-      .map { app => app.associatedResourceClasses }
-      .flatten
-      .filter(association => association._1 == APPLICATION_CONTEXT_RESOURCE)
-      .map(association => association._2)
-
-    val allApplicationModels = allApps
-      .map { app => app.getApplicationModel2() }
-    //.map { appModel => appModel.linksFor(resourceClass)
-
-    val optionalResourceModels = for (
-      appModel <- allApplicationModels;
-      resClass <- appContextResourceClasses;
-      val z = appModel.resourceModelFor(resClass)
-    ) yield z
-
-    optionalResourceModels
-      .filter { m => m.isDefined }
-      .map { m => m.get }
-      .map { m => m.linkModel }
-      .toList
-      .asJava // for string template
-
+    skysailApplicationService.getApplicationContextResources().map{_.linkModel}.toList.asJava // java for stringtemplate
   }
   
   def getModelLink(): LinkModel = {

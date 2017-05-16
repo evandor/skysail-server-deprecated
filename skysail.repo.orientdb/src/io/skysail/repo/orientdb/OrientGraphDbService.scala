@@ -182,8 +182,8 @@ class OrientGraphDbService extends AbstractOrientDbService with ScalaDbService {
     } else if (dbUrl.startsWith("memory:")) {
       val databaseTx = new OObjectDatabaseTx(dbUrl);
       if (!databaseTx.exists()) {
-        val create = databaseTx.create();
-        log.debug("created new in-memory database {}", create.toString());
+        databaseTx.create();
+        log.debug("created new in-memory database {}");
       }
 
       val factory = new OrientGraphFactory(dbUrl, getDbUsername(), getDbPassword()).setupPool(1, 10);

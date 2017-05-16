@@ -4,7 +4,7 @@ Bundle-Version: 0.1.0.${tstamp}
 
 Bundle-Description: the app bundles' description
 
-Include-Resource: resources
+#Include-Resource: resources
 #, templates=src;recursive:=true;filter:=*.st|*.stg
 
 -buildpath: \
