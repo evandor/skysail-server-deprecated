@@ -53,6 +53,8 @@ class SwaggerApplication extends SkysailApplication(
       .foreach { key => router.attach("/api/"+key, restlets.get(key).get) }
   }
 
-  private def getIdentifier(application: SkysailApplication) = application.getName() + application.apiVersion.getVersionPath()
+  private def getIdentifier(application: SkysailApplication) = {
+    if (application.apiVersion != null) application.getName() + application.apiVersion.getVersionPath() else application.getName()
+  }
 
 }

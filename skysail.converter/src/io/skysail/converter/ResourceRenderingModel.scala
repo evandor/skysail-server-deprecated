@@ -266,8 +266,8 @@ class ResourceRenderingModel(
 
   def isList() = response.isList()
 
-  // java.util.List as this is used by stringtemplate
-  def getLinks(): java.util.List[LinkModel] = appModel.linksFor(resource.getClass).asJava
+  // "java.util.List", as this is used by stringtemplate
+  def getLinks(): java.util.List[LinkModel] = (appModel.linksFor(resource.getClass) ::: resource.runtimeLinks()).asJava
 
   def getResourceSimpleName() = resource.getClass().getSimpleName()
 
