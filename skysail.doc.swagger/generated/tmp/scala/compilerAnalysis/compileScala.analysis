@@ -1,0 +1,888 @@
+format version: 5
+output mode:
+1 items
+0 -> single
+output directories:
+1 items
+output dir -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin
+compile options:
+2 items
+0 -> -deprecation
+1 -> -unchecked
+javac options:
+8 items
+0 -> -source
+1 -> 1.8
+2 -> -target
+3 -> 1.8
+4 -> -d
+5 -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin
+6 -> -g
+7 -> -XDuseUnsharedTable=true
+compiler version:
+1 items
+0 -> 2.11.8
+compile order:
+1 items
+0 -> Mixed
+name hashing:
+1 items
+0 -> true
+products:
+29 items
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerContact$.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerContact.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerDefinition$$anonfun$1.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerDefinition$$anonfun$2.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerDefinition.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerExternalDoc$.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerExternalDoc.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerInfo.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerLicence.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerParameter$.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerParameter.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerPath$$anonfun$1.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerPath$.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerPath.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerProperty$.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerProperty.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerSpec$$anonfun$1.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerSpec$$anonfun$2.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerSpec$$anonfun$3.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerSpec$$anonfun$4.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerSpec$$anonfun$5.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerSpec$$anonfun$determineDefinitions$1.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerSpec$$anonfun$determineDefinitions$2.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerSpec.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/app/SwaggerApplication$$anonfun$attach$1.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/app/SwaggerApplication$.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/app/SwaggerApplication.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/app/SwaggerRestlet$.class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/app/SwaggerRestlet.class
+binary dependencies:
+46 items
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> /Users/carsten/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.11.8/ddd5a8bced249bedd86fb4578a39b9fb71480573/scala-library-2.11.8.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> /Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/jackson-annotations-2.8.5.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> /Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/slf4j-api-1.7.21.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> /Users/carsten/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.11.8/ddd5a8bced249bedd86fb4578a39b9fb71480573/scala-library-2.11.8.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> /Users/carsten/git/skysail-notes/cnf/localrepo/skysail.core/skysail.core-1.0.0.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> /Users/carsten/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.11.8/ddd5a8bced249bedd86fb4578a39b9fb71480573/scala-library-2.11.8.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> /Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/org.restlet-2.3.9.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> /Users/carsten/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.11.8/ddd5a8bced249bedd86fb4578a39b9fb71480573/scala-library-2.11.8.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> /Users/carsten/git/skysail-notes/cnf/localrepo/skysail.core/skysail.core-1.0.0.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> /Users/carsten/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.11.8/ddd5a8bced249bedd86fb4578a39b9fb71480573/scala-library-2.11.8.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> /Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/jackson-annotations-2.8.5.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> /Users/carsten/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.11.8/ddd5a8bced249bedd86fb4578a39b9fb71480573/scala-library-2.11.8.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> /Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/jackson-annotations-2.8.5.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> /Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/org.restlet-2.3.9.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> /Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/slf4j-api-1.7.21.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> /Users/carsten/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.11.8/ddd5a8bced249bedd86fb4578a39b9fb71480573/scala-library-2.11.8.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> /Users/carsten/git/skysail-notes/cnf/localrepo/skysail.core/skysail.core-1.0.0.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> /Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/jackson-annotations-2.8.5.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> /Users/carsten/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.11.8/ddd5a8bced249bedd86fb4578a39b9fb71480573/scala-library-2.11.8.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> /Users/carsten/git/skysail-notes/cnf/localrepo/skysail.core/skysail.core-1.0.0.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> /Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/jackson-annotations-2.8.5.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> /Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/org.restlet-2.3.9.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> /Users/carsten/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.11.8/ddd5a8bced249bedd86fb4578a39b9fb71480573/scala-library-2.11.8.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> /Users/carsten/git/skysail-notes/cnf/localrepo/skysail.core/skysail.core-1.0.0.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> /Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/org.restlet-2.3.9.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> /Users/carsten/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.11.8/ddd5a8bced249bedd86fb4578a39b9fb71480573/scala-library-2.11.8.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> /Users/carsten/.m2/repository/org/osgi/osgi.cmpn/6.0.0/osgi.cmpn-6.0.0.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> /Users/carsten/git/skysail-notes/cnf/localrepo/skysail.core/skysail.core-1.0.0.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> /Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/jackson-core-2.8.5.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> /Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/jackson-databind-2.8.5.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> /Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/org.restlet-2.3.9.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> /Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/slf4j-api-1.7.21.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> /Users/carsten/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.11.8/ddd5a8bced249bedd86fb4578a39b9fb71480573/scala-library-2.11.8.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> /Users/carsten/git/skysail-notes/cnf/localrepo/skysail.core/skysail.core-1.0.0.jar
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerSpec.class
+direct source dependencies:
+0 items
+direct external dependencies:
+0 items
+public inherited source dependencies:
+0 items
+public inherited external dependencies:
+0 items
+member reference internal dependencies:
+10 items
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> /Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala
+member reference external dependencies:
+0 items
+inheritance internal dependencies:
+0 items
+inheritance external dependencies:
+0 items
+class names:
+29 items
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> io.skysail.doc.swagger.SwaggerContact
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> io.skysail.doc.swagger.SwaggerContact$
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> io.skysail.doc.swagger.SwaggerDefinition
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> io.skysail.doc.swagger.SwaggerDefinition$$anonfun$1
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> io.skysail.doc.swagger.SwaggerDefinition$$anonfun$2
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> io.skysail.doc.swagger.SwaggerExternalDoc
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> io.skysail.doc.swagger.SwaggerExternalDoc$
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> io.skysail.doc.swagger.SwaggerInfo
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> io.skysail.doc.swagger.SwaggerLicence
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> io.skysail.doc.swagger.SwaggerParameter
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> io.skysail.doc.swagger.SwaggerParameter$
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> io.skysail.doc.swagger.SwaggerPath
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> io.skysail.doc.swagger.SwaggerPath$
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> io.skysail.doc.swagger.SwaggerPath$$anonfun$1
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> io.skysail.doc.swagger.SwaggerProperty
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> io.skysail.doc.swagger.SwaggerProperty$
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> io.skysail.doc.swagger.SwaggerSpec
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> io.skysail.doc.swagger.SwaggerSpec$$anonfun$1
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> io.skysail.doc.swagger.SwaggerSpec$$anonfun$2
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> io.skysail.doc.swagger.SwaggerSpec$$anonfun$3
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> io.skysail.doc.swagger.SwaggerSpec$$anonfun$4
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> io.skysail.doc.swagger.SwaggerSpec$$anonfun$5
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> io.skysail.doc.swagger.SwaggerSpec$$anonfun$determineDefinitions$1
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> io.skysail.doc.swagger.SwaggerSpec$$anonfun$determineDefinitions$2
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> io.skysail.doc.swagger.app.SwaggerApplication
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> io.skysail.doc.swagger.app.SwaggerApplication$
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> io.skysail.doc.swagger.app.SwaggerApplication$$anonfun$attach$1
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> io.skysail.doc.swagger.app.SwaggerRestlet
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> io.skysail.doc.swagger.app.SwaggerRestlet$
+used names:
+584 items
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> &&
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> <init>
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> ==
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> AbstractFunction3
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> BeanProperty
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> None
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> Predef
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> Product
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> ScalaRunTime
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> Serializable
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> String
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> SwaggerContact
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> _hashCode
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> _toString
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> annotation
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> asInstanceOf
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> beans
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> doc
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> email
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> eq
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> field
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> io
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> isInstanceOf
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> meta
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> name
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> runtime
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> scala
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> skysail
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> swagger
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> toString
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> typedProductIterator
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> url
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> ||
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> !=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> <init>
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> AnyRef
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> BeanProperty
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> Class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> HashMap
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> Include
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> JsonInclude
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> LoggerFactory
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> Predef
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> String
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> SwaggerDefinition
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> SwaggerProperty
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> annotation
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> beans
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> com
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> doc
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> entity
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> error
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> f
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> fasterxml
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> field
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> fields
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> filter
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> foreach
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> getClass
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> getDeclaredAnnotation
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> getDeclaredFields
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> getLogger
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> getMessage
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> getName
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> io
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> jackson
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> java
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> log
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> meta
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> ne
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> org
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> properties
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> put
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> refArrayOps
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> scala
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> skysail
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> slf4j
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> swagger
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> toList
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> type
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> util
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> &&
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> <init>
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> ==
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> AbstractFunction2
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> BeanProperty
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> None
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> Predef
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> Product
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> ScalaRunTime
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> Serializable
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> String
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> SwaggerExternalDoc
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> _hashCode
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> _toString
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> annotation
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> asInstanceOf
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> beans
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> description
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> doc
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> eq
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> field
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> io
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> isInstanceOf
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> meta
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> runtime
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> scala
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> skysail
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> swagger
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> toString
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> typedProductIterator
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> url
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> ||
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> <init>
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> AnyRef
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> BeanProperty
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> SkysailApplication
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> SwaggerContact
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> SwaggerInfo
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> SwaggerLicence
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> annotation
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> apiVersion
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> app
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> beans
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> contact
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> core
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> description
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> doc
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> field
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> getDescription
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> getName
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> io
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> license
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> meta
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> scala
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> skysail
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> skysailApplication
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> swagger
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> title
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> toString
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> version
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> <init>
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> AnyRef
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> BeanProperty
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> Predef
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> String
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> SwaggerLicence
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> annotation
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> beans
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> doc
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> field
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> io
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> meta
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> name
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> scala
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> skysail
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> swagger
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> url
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> &&
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> <init>
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> ==
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> AbstractFunction1
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> BeanProperty
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> JsonInclude
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> None
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> Predef
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> Product
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> ScalaRunTime
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> Serializable
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> String
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> SwaggerParameter
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> _hashCode
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> _toString
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> annotation
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> asInstanceOf
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> beans
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> com
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> description
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> doc
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> eq
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> fasterxml
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> field
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> in
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> io
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> isInstanceOf
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> jackson
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> meta
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> name
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> required
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> runtime
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> scala
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> skysail
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> swagger
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> toString
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> type
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> typedProductIterator
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> ||
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> !=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> +
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> ->
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> <init>
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> ==
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> >
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> AnyRef
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> ApiMetadata
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> ArrayList
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> Arrays
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> BeanProperty
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> Class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> DESCRIPTION
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> EntityServerResource
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> HashMap
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> Include
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> JavaConverters
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> JsonInclude
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> List
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> ListServerResource
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> LoggerFactory
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> Map
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> Object
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> PARAMETERS
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> PRODUCES
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> PostEntityServerResource
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> Predef
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> PutEntityServerResource
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> RESPONSES
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> RouteBuilder
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> SUMMARY
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> ServerResource
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> SkysailServerResource
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> String
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> SwaggerParameter
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> SwaggerPath
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> TAGS
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> add
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> addApiMetadataForGet
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> addApiMetadataForPost
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> addApiMetadataForPut
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> addGetResponses
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> addPostResponse
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> analyse
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> annotation
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> api
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> apiMetadata
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> apiMetadata_=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> apply
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> asInstanceOf
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> asJava
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> asList
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> beans
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> build
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> builder
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> collection
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> com
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> delete
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> desc
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> doc
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> error
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> fasterxml
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> field
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> foreach
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> get
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> getApiMetadata
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> getClass
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> getDescriptionForDelete
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> getDescriptionForGet
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> getDescriptionForPost
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> getDescriptionForPut
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> getDescriptionMethod
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> getLogger
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> getMessage
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> getMethod
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> getSimpleName
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> getSummaryForDelete
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> getSummaryForGet
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> getSummaryForPost
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> getSummaryForPut
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> getSuperclass
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> getTagsForDelete
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> getTagsForGet
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> getTagsForPost
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> getTagsForPut
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> get_=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> immutable
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> initIfNeccessary
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> invoke
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> io
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> isAssignableFrom
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> jackson
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> java
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> lang
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> log
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> map
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> mapAsJavaMapConverter
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> meta
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> ne
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> newInstance
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> org
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> parameterList
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> parentClass
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> path
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> pathVariables
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> post
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> post_=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> put
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> put_=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> resource
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> resources
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> responseMap
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> restlet
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> routeBuilder
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> scala
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> size
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> skysail
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> slf4j
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> swagger
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> targetClass
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> theMap
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> util
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> &&
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> <init>
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> ==
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> AbstractFunction1
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> BeanProperty
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> Field
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> Include
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> JsonInclude
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> None
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> Product
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> ScalaRunTime
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> Serializable
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> SwaggerProperty
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> _hashCode
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> _toString
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> annotation
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> asInstanceOf
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> beans
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> com
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> description
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> doc
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> domainFieldAnnotation
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> eq
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> f
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> fasterxml
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> field
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> getDeclaredAnnotation
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> io
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> isInstanceOf
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> jackson
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> java
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> lang
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> meta
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> reflect
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> runtime
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> scala
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> skysail
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> swagger
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> toString
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> type
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> typedProductIterator
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> ||
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> +
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> +=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> <init>
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> >
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> Arrays
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> BeanProperty
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> Class
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> HashMap
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> Include
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> InetAddress
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> JsonIgnore
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> JsonInclude
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> None
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> Option
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> Predef
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> Request
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> ScalaEntity
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> Set
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> SkysailApplication
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> SkysailServerResource
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> String
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> SwaggerDefinition
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> SwaggerExternalDoc
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> SwaggerInfo
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> SwaggerPath
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> SwaggerSpec
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> UnknownHostException
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> annotation
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> apiVersion
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> app
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> apply
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> asInstanceOf
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> asList
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> basePath
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> basePath_=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> beans
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> collection
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> com
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> compareTo
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> core
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> ddd
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> definitions
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> determineDefinitions
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> determineHost
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> determinePaths
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> doc
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> domain
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> e
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> e1
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> e2
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> entity
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> externalDocs
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> fasterxml
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> field
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> filter
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> foreach
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> get
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> getByName
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> getHost
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> getHostDomain
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> getHostName
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> getHostPort
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> getHostRef
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> getName
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> getParameterizedType
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> getSimpleName
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> getVersionPath
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> host
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> host_=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> id
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> info
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> info_=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> io
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> isAssignableFrom
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> isDefined
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> isEmpty
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> jackson
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> java
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> keys
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> length
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> meta
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> mutable
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> ne
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> net
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> newInstance
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> org
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> p1
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> p2
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> path
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> paths
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> printStackTrace
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> put
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> request
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> restlet
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> routeBuilder
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> routesMap
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> scala
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> schemes
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> skysail
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> skysailApplication
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> sortWith
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> startsWith
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> substring
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> swagger
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> targetClass
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> toList
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> types
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> unary_!
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> util
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> versionPath
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> !=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> +
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> <init>
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> ==
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> APPLICATION_CONTEXT_RESOURCE
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> AnyRef
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> ApiVersion
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> ApplicationProvider
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> Arrays
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> ComponentContext
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> HTTPS
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> Integer2int
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> Map
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> MenuItemProvider
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> Predef
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> Protocol
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> Restlet
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> RouteBuilder
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> SecurityConfigBuilder
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> SkysailApplication
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> String
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> SwaggerApplication
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> SwaggerRestlet
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> Unit
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> add
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> addApplicationProvider
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> annotations
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> apiVersion
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> app
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> application
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> apply
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> attach
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> collection
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> component
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> config
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> core
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> data
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> detach
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> doc
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> foreach
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> get
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> getClientProtocols
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> getConnectorService
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> getIdentifier
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> getName
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> getSkysailApplication
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> getVersionPath
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> int2Integer
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> io
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> java
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> key
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> keys
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> model
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> mutable
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> org
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> osgi
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> provider
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> put
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> removeApplicationProvider
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> restlet
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> restlets
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> router
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> scala
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> security
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> service
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> services
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> setDescription
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> skysail
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> swagger
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> swaggerRestlet
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> toList
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> util
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> <init>
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> AnyRef
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> JsonProcessingException
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> LoggerFactory
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> ObjectMapper
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> Request
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> Response
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> Restlet
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> SkysailApplication
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> StringRepresentation
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> SwaggerRestlet
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> SwaggerSpec
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> app
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> application
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> com
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> core
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> databind
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> doc
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> e
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> error
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> fasterxml
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> getClass
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> getLogger
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> getMessage
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> io
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> jackson
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> log
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> mapper
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> org
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> representation
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> request
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> response
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> restlet
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> scala
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> setEntity
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> skysail
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> slf4j
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> swagger
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> swaggerApi
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> swaggerSpec
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> writeValueAsString
+product stamps:
+29 items
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerContact$.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerContact.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerDefinition$$anonfun$1.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerDefinition$$anonfun$2.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerDefinition.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerExternalDoc$.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerExternalDoc.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerInfo.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerLicence.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerParameter$.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerParameter.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerPath$$anonfun$1.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerPath$.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerPath.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerProperty$.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerProperty.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerSpec$$anonfun$1.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerSpec$$anonfun$2.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerSpec$$anonfun$3.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerSpec$$anonfun$4.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerSpec$$anonfun$5.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerSpec$$anonfun$determineDefinitions$1.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerSpec$$anonfun$determineDefinitions$2.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerSpec.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/app/SwaggerApplication$$anonfun$attach$1.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/app/SwaggerApplication$.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/app/SwaggerApplication.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/app/SwaggerRestlet$.class -> lastModified(1495033923000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/app/SwaggerRestlet.class -> lastModified(1495033923000)
+source stamps:
+14 items
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> hash(eb6d54348f617f803e667d37aab146b72ed08c82)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> hash(06445be5ce0b3fa57741e17c4efae3eab0f6dc9d)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> hash(87e6b53665b1ab8a51033353ea257b2ecb462487)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> hash(85e60625c04ed512b218a6ce92ea42401f453f15)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> hash(0ab7654b8099c30f785b74fb6540f97c2b783ac3)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> hash(4f1f0eb7010c713d42c002b120f252493f42e112)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> hash(f1494aae879fea0f0e31925ff93fd6dd6699214e)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPathVariable.java -> hash(a6a390fb19e58dc0c180b1e0c7b170f064e83f58)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> hash(ba839c4d40ab702cfff782ca23a0c5bc44784b65)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerResource.java -> hash(f1df1504578057274b570684578feb6b1f04b281)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> hash(b248a610cdcf5ec4307c6d46c31a2136376e0c6f)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerVerb.java -> hash(fffce51e2db0774a8936b09871230e819efa4199)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> hash(5ecf939ae3177cf5126940be75589f2475234dc9)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> hash(5fc6b59af278370f1adbe3d4d3236f4cd3143a6f)
+binary stamps:
+10 items
+/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar -> lastModified(1481605174000)
+/Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/jackson-annotations-2.8.5.jar -> lastModified(1485714905000)
+/Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/jackson-core-2.8.5.jar -> lastModified(1485714906000)
+/Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/jackson-databind-2.8.5.jar -> lastModified(1485714908000)
+/Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/org.restlet-2.3.9.jar -> lastModified(1485713253000)
+/Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/slf4j-api-1.7.21.jar -> lastModified(1486203267000)
+/Users/carsten/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.11.8/ddd5a8bced249bedd86fb4578a39b9fb71480573/scala-library-2.11.8.jar -> lastModified(1475076757000)
+/Users/carsten/.m2/repository/org/osgi/osgi.cmpn/6.0.0/osgi.cmpn-6.0.0.jar -> lastModified(1438804852000)
+/Users/carsten/git/skysail-notes/cnf/localrepo/skysail.core/skysail.core-1.0.0.jar -> lastModified(1495033296000)
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerSpec.class -> lastModified(1495033923000)
+class names:
+10 items
+/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar -> java.lang.Object
+/Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/jackson-annotations-2.8.5.jar -> com.fasterxml.jackson.annotation.JsonIgnore
+/Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/jackson-core-2.8.5.jar -> com.fasterxml.jackson.core.JsonProcessingException
+/Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/jackson-databind-2.8.5.jar -> com.fasterxml.jackson.databind.ObjectMapper
+/Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/org.restlet-2.3.9.jar -> org.restlet.Restlet
+/Users/carsten/.bnd/cache/https%3A%2F%2Fgithub.com%2Fevandor%2Fskysail-repository%2Fraw%2Fmaster%2Frelease/slf4j-api-1.7.21.jar -> org.slf4j.Logger
+/Users/carsten/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.11.8/ddd5a8bced249bedd86fb4578a39b9fb71480573/scala-library-2.11.8.jar -> scala.Unit
+/Users/carsten/.m2/repository/org/osgi/osgi.cmpn/6.0.0/osgi.cmpn-6.0.0.jar -> org.osgi.service.component.ComponentContext
+/Users/carsten/git/skysail-notes/cnf/localrepo/skysail.core/skysail.core-1.0.0.jar -> io.skysail.core.app.SkysailApplication
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/bin/io/skysail/doc/swagger/SwaggerSpec.class -> io.skysail.doc.swagger.SwaggerSpec
+internal apis:
+14 items
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHArild9AHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAJHNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cB6+3M10AAZub3RpZnlzcQB+AAxhDVKTdAAEbmFtZXNxAH4ADDNlNhx0AAR3YWl0c3EAfgAMBWXllnQADmNvcHkkZGVmYXVsdCQyc3EAfgAMbVi0zXQADSRhc0luc3RhbmNlT2ZzcQB+AAwEK3P1dAAFZW1haWxzcQB+AAxdEDV6dAAMcHJvZHVjdEFyaXR5c3EAfgAMmZJz1nQAA3VybHNxAH4ADJ5qZql0AAZlcXVhbHNzcQB+AAzNuN+CdAAMYXNJbnN0YW5jZU9mc3EAfgAM0ecWd3QACGdldEVtYWlsc3EAfgAMfP8oM3QADHN5bmNocm9uaXplZHNxAH4ADDo7YeB0AA0kaXNJbnN0YW5jZU9mc3EAfgAMVvOd0XQACGNhbkVxdWFsc3EAfgAMPNoh9HQADXByb2R1Y3RQcmVmaXhzcQB+AAwIGBIadAAJbm90aWZ5QWxsc3EAfgAM34enenQAB2dldE5hbWVzcQB+AAwkUaTxdAAMaXNJbnN0YW5jZU9mc3EAfgAMOfcBOnQABjxpbml0PnNxAH4ADHrHIjF0AAI9PXNxAH4ADEDk4gx0AAVjbG9uZXNxAH4ADE2wXlF0AAZnZXRVcmxzcQB+AAwhbfthdAAOY29weSRkZWZhdWx0JDNzcQB+AAxH/0tgdAAEY29weXNxAH4ADGFqQNh0AAh0b1N0cmluZ3NxAH4ADGgAsx10AAIhPXNxAH4ADHCLOMp0AAhnZXRDbGFzc3NxAH4ADLwyOyB0AA5jb3B5JGRlZmF1bHQkMXNxAH4ADPEHb5J0AAJuZXNxAH4ADDmM7OR0AA5Td2FnZ2VyQ29udGFjdHNxAH4ADJZyD5l0AAJlcXNxAH4ADLNbKBp0AA9wcm9kdWN0SXRlcmF0b3JzcQB+AAzAXj/ndAACIyNzcQB+AAyB8tNGdAAIZmluYWxpemVzcQB+AAzAJv8AdAAOcHJvZHVjdEVsZW1lbnRzcQB+AAxxBT6ndAAIaGFzaENvZGVzcgATeHNidGkuYXBpLlNvdXJjZUFQSblep/kpIzikAgACWwALZGVmaW5pdGlvbnN0ABdbTHhzYnRpL2FwaS9EZWZpbml0aW9uO1sACHBhY2thZ2VzdAAUW0x4c2J0aS9hcGkvUGFja2FnZTt4cHVyABdbTHhzYnRpLmFwaS5EZWZpbml0aW9uO4jJXOe0414OAgAAeHAAAAABc3IAE3hzYnRpLmFwaS5DbGFzc0xpa2WDNByh37CXbAIABEwADmRlZmluaXRpb25UeXBldAAaTHhzYnRpL2FwaS9EZWZpbml0aW9uVHlwZTtbABBzYXZlZEFubm90YXRpb25zdAATW0xqYXZhL2xhbmcvU3RyaW5nO0wACHNlbGZUeXBldAAQTHhzYnRpL2FwaS9MYXp5O0wACXN0cnVjdHVyZXEAfgBfeHIAIXhzYnRpLmFwaS5QYXJhbWV0ZXJpemVkRGVmaW5pdGlvbvkRbrHVUDziAgABWwAOdHlwZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9UeXBlUGFyYW1ldGVyO3hyABR4c2J0aS5hcGkuRGVmaW5pdGlvbocqG+hxQuNGAgAETAAGYWNjZXNzdAASTHhzYnRpL2FwaS9BY2Nlc3M7WwALYW5ub3RhdGlvbnN0ABdbTHhzYnRpL2FwaS9Bbm5vdGF0aW9uO0wACW1vZGlmaWVyc3QAFUx4c2J0aS9hcGkvTW9kaWZpZXJzO0wABG5hbWVxAH4ADXhwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAAAc3IAE3hzYnRpLmFwaS5Nb2RpZmllcnPHERMhaZzcJAIAAUIABWZsYWdzeHAAdAAlaW8uc2t5c2FpbC5kb2Muc3dhZ2dlci5Td2FnZ2VyQ29udGFjdHVyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQACENsYXNzRGVmdXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyABN4c2J0aS5TYWZlTGF6eSRJbXBsUAIuk5eXQD8CAANaAAhiaXRtYXAkMEwAAl90dAASTGphdmEvbGFuZy9PYmplY3Q7TAAEZXZhbHQAEUxzY2FsYS9GdW5jdGlvbjA7eHIAFnhzYnRpLmFwaS5BYnN0cmFjdExhennTd7UBX7vnoAIAAHhwAHBzcgAgeHNidGkuU2FmZUxhenkkJGFub25mdW4kc3RyaWN0JDEAAAAAAAAAAAIAAUwAB3ZhbHVlJDFxAH4AeHhwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHNxAH4AdwBwc3EAfgB8c3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AF9MAAlpbmhlcml0ZWRxAH4AX0wAB3BhcmVudHNxAH4AX3hxAH4AgHNxAH4AdwBwc3EAfgB8dXEAfgBaAAAAAHNxAH4AdwBwc3EAfgB8dXEAfgBaAAAAAHNxAH4AdwBwc3EAfgB8dXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAZzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgB/dAAMU2VyaWFsaXphYmxlc3IAE3hzYnRpLmFwaS5TaW5nbGV0b278p1/4z1bkRgIAAUwABHBhdGh0ABBMeHNidGkvYXBpL1BhdGg7eHEAfgB/c3IADnhzYnRpLmFwaS5QYXRomz1cCM6lJ4QCAAFbAApjb21wb25lbnRzdAAaW0x4c2J0aS9hcGkvUGF0aENvbXBvbmVudDt4cHVyABpbTHhzYnRpLmFwaS5QYXRoQ29tcG9uZW50O0PaCXQtZxZ0AgAAeHAAAAACc3IADHhzYnRpLmFwaS5JZJgybIs3U8RAAgABTAACaWRxAH4ADXhyABd4c2J0aS5hcGkuUGF0aENvbXBvbmVudF+aIlsuhp+8AgAAeHB0AAVzY2FsYXNyAA54c2J0aS5hcGkuVGhpc9sJ7abMWkBcAgAAeHEAfgCdc3EAfgCQcQB+AJNzcQB+AJRzcQB+AJd1cQB+AJoAAAADc3EAfgCcdAAEamF2YXNxAH4AnHQAAmlvcQB+AKFzcQB+AJB0AAdQcm9kdWN0cQB+AJZzcQB+AJB0AAZFcXVhbHNxAH4AlnNxAH4AkHQABk9iamVjdHNxAH4AlHNxAH4Al3VxAH4AmgAAAANzcQB+AJxxAH4Ap3NxAH4AnHQABGxhbmdxAH4AoXNxAH4AkHQAA0FueXEAfgCWdXIAFFtMeHNidGkuYXBpLlBhY2thZ2U7WxMZN3CnJ6ECAAB4cAAAAARzcgAReHNidGkuYXBpLlBhY2thZ2V+WY/2rs45WAIAAUwABG5hbWVxAH4ADXhwdAAWaW8uc2t5c2FpbC5kb2Muc3dhZ2dlcnNxAH4AunQAAmlvc3EAfgC6dAAOaW8uc2t5c2FpbC5kb2NzcQB+ALp0AAppby5za3lzYWlsc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFcFvdAlHVyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADUwAD3NvdXJjZURpcmVjdG9yeXEAfgANeHB0ADgvVXNlcnMvY2Fyc3Rlbi9naXQvc2t5c2FpbC1ub3Rlcy9za3lzYWlsLmRvYy5zd2FnZ2VyL2JpbnQAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFOttVDSPYX+APmZ9N6qxRrcu0IyC
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHBemW+2AHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAGnNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cJUN3fh0AAZub3RpZnlzcQB+AAyg0OiAdAAEd2FpdHNxAH4ADMNoCB10AA0kYXNJbnN0YW5jZU9mc3EAfgAMsfC3/3QAEVN3YWdnZXJEZWZpbml0aW9uc3EAfgAMjTN3xXQABmVxdWFsc3NxAH4ADGGddfB0AAxhc0luc3RhbmNlT2ZzcQB+AAy3YRcydAAMc3luY2hyb25pemVkc3EAfgAMus6VjXQADSRpc0luc3RhbmNlT2ZzcQB+AAyflqG5dAAJbm90aWZ5QWxsc3EAfgAMavR04HQADGlzSW5zdGFuY2VPZnNxAH4ADPke1Hp0AAY8aW5pdD5zcQB+AAzd3M3ddAAKcHJvcGVydGllc3NxAH4ADKEVLT50AAI9PXNxAH4ADEqHS2d0AAVjbG9uZXNxAH4ADMU6OWF0AAdnZXRUeXBlc3EAfgAMw9zY9nQACHRvU3RyaW5nc3EAfgAM3aE3/nQAAiE9c3EAfgAMZ1sr+HQACGdldENsYXNzc3EAfgAMtn/8D3QABHR5cGVzcQB+AAz9unk/dAACbmVzcQB+AAxvbv2MdAANZ2V0UHJvcGVydGllc3NxAH4ADMGvbZN0AAJlcXNxAH4ADDIZ0bp0AANsb2dzcQB+AAwYhBhQdAACIyNzcQB+AAyTdR3+dAAIZmluYWxpemVzcQB+AAyTjiNvdAAIaGFzaENvZGVzcgATeHNidGkuYXBpLlNvdXJjZUFQSblep/kpIzikAgACWwALZGVmaW5pdGlvbnN0ABdbTHhzYnRpL2FwaS9EZWZpbml0aW9uO1sACHBhY2thZ2VzdAAUW0x4c2J0aS9hcGkvUGFja2FnZTt4cHVyABdbTHhzYnRpLmFwaS5EZWZpbml0aW9uO4jJXOe0414OAgAAeHAAAAABc3IAE3hzYnRpLmFwaS5DbGFzc0xpa2WDNByh37CXbAIABEwADmRlZmluaXRpb25UeXBldAAaTHhzYnRpL2FwaS9EZWZpbml0aW9uVHlwZTtbABBzYXZlZEFubm90YXRpb25zdAATW0xqYXZhL2xhbmcvU3RyaW5nO0wACHNlbGZUeXBldAAQTHhzYnRpL2FwaS9MYXp5O0wACXN0cnVjdHVyZXEAfgBLeHIAIXhzYnRpLmFwaS5QYXJhbWV0ZXJpemVkRGVmaW5pdGlvbvkRbrHVUDziAgABWwAOdHlwZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9UeXBlUGFyYW1ldGVyO3hyABR4c2J0aS5hcGkuRGVmaW5pdGlvbocqG+hxQuNGAgAETAAGYWNjZXNzdAASTHhzYnRpL2FwaS9BY2Nlc3M7WwALYW5ub3RhdGlvbnN0ABdbTHhzYnRpL2FwaS9Bbm5vdGF0aW9uO0wACW1vZGlmaWVyc3QAFUx4c2J0aS9hcGkvTW9kaWZpZXJzO0wABG5hbWVxAH4ADXhwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAABc3IAFHhzYnRpLmFwaS5Bbm5vdGF0aW9u3g6BovZcCrICAAJbAAlhcmd1bWVudHN0AB9bTHhzYnRpL2FwaS9Bbm5vdGF0aW9uQXJndW1lbnQ7TAAEYmFzZXQAEEx4c2J0aS9hcGkvVHlwZTt4cHVyAB9bTHhzYnRpLmFwaS5Bbm5vdGF0aW9uQXJndW1lbnQ7UZ2mjzglD3gCAAB4cAAAAAFzcgAceHNidGkuYXBpLkFubm90YXRpb25Bcmd1bWVudNZFsdgDGxd8AgACTAAEbmFtZXEAfgANTAAFdmFsdWVxAH4ADXhwdAAFdmFsdWV0AAhOT05fTlVMTHNyABR4c2J0aS5hcGkuUHJvamVjdGlvbvPSjVTpRaQtAgACTAACaWRxAH4ADUwABnByZWZpeHQAFkx4c2J0aS9hcGkvU2ltcGxlVHlwZTt4cgAUeHNidGkuYXBpLlNpbXBsZVR5cGVyeGKIISO/QAIAAHhyAA54c2J0aS5hcGkuVHlwZT9q2SEWSarKAgAAeHB0AAtKc29uSW5jbHVkZXNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4AZHNyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAABXNyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AA14cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAADY29tc3EAfgBwdAAJZmFzdGVyeG1sc3EAfgBwdAAHamFja3NvbnNxAH4AcHQACmFubm90YXRpb25zcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4AcXNyABN4c2J0aS5hcGkuTW9kaWZpZXJzxxETIWmc3CQCAAFCAAVmbGFnc3hwAHQAKGlvLnNreXNhaWwuZG9jLnN3YWdnZXIuU3dhZ2dlckRlZmluaXRpb251cgAaW0x4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcjvZbSYPKJ3ytgIAAHhwAAAAAH5yABh4c2J0aS5hcGkuRGVmaW5pdGlvblR5cGUAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AAhDbGFzc0RlZnVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgATeHNidGkuU2FmZUxhenkkSW1wbFACLpOXl0A/AgADWgAIYml0bWFwJDBMAAJfdHQAEkxqYXZhL2xhbmcvT2JqZWN0O0wABGV2YWx0ABFMc2NhbGEvRnVuY3Rpb24wO3hyABZ4c2J0aS5hcGkuQWJzdHJhY3RMYXp503e1AV+756ACAAB4cABwc3IAIHhzYnRpLlNhZmVMYXp5JCRhbm9uZnVuJHN0cmljdCQxAAAAAAAAAAACAAFMAAd2YWx1ZSQxcQB+AIh4cHNyABN4c2J0aS5hcGkuRW1wdHlUeXBlvP2eRkk7iSQCAAB4cQB+AGRzcQB+AIcAcHNxAH4AjHNyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgBLTAAJaW5oZXJpdGVkcQB+AEtMAAdwYXJlbnRzcQB+AEt4cQB+AGVzcQB+AIcAcHNxAH4AjHVxAH4ARgAAAABzcQB+AIcAcHNxAH4AjHVxAH4ARgAAAABzcQB+AIcAcHNxAH4AjHVyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAACc3EAfgBidAAGT2JqZWN0c3EAfgBoc3EAfgBrdXEAfgBuAAAAA3NxAH4AcHQABGphdmFzcQB+AHB0AARsYW5ncQB+AHtzcQB+AGJ0AANBbnlzcQB+AGhzcQB+AGt1cQB+AG4AAAACc3EAfgBwdAAFc2NhbGFxAH4Ae3VyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAAEc3IAEXhzYnRpLmFwaS5QYWNrYWdlflmP9q7OOVgCAAFMAARuYW1lcQB+AA14cHQAFmlvLnNreXNhaWwuZG9jLnN3YWdnZXJzcQB+ALB0AAJpb3NxAH4AsHQADmlvLnNreXNhaWwuZG9jc3EAfgCwdAAKaW8uc2t5c2FpbHNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABXBb3QJR1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5cQB+AA1MAA9zb3VyY2VEaXJlY3RvcnlxAH4ADXhwdAA4L1VzZXJzL2NhcnN0ZW4vZ2l0L3NreXNhaWwtbm90ZXMvc2t5c2FpbC5kb2Muc3dhZ2dlci9iaW50AAEvdXIAAltCrPMX+AYIVOACAAB4cAAAABQGRFvlzgs/pXdB4XxO+uPqsPbcnQ==
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHDT9xR5AHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAIXNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cFko1Md0AAZub3RpZnlzcQB+AAwhLqs3dAAEd2FpdHNxAH4ADCnkfWV0AA5jb3B5JGRlZmF1bHQkMnNxAH4ADEVtnN50AA0kYXNJbnN0YW5jZU9mc3EAfgAMkRflInQADHByb2R1Y3RBcml0eXNxAH4ADMww8op0AAN1cmxzcQB+AAzrQWOGdAAGZXF1YWxzc3EAfgAMSbypn3QAC2Rlc2NyaXB0aW9uc3EAfgAMk6UWSHQADGFzSW5zdGFuY2VPZnNxAH4ADB2FnUp0AAxzeW5jaHJvbml6ZWRzcQB+AAwD4P1QdAASU3dhZ2dlckV4dGVybmFsRG9jc3EAfgAMo4Dd5nQADSRpc0luc3RhbmNlT2ZzcQB+AAwim+AvdAAIY2FuRXF1YWxzcQB+AAy27T2bdAAOZ2V0RGVzY3JpcHRpb25zcQB+AAxKST/ldAANcHJvZHVjdFByZWZpeHNxAH4ADIs96il0AAlub3RpZnlBbGxzcQB+AAw2m2PxdAAMaXNJbnN0YW5jZU9mc3EAfgAMGs4cx3QABjxpbml0PnNxAH4ADDzWkR90AAI9PXNxAH4ADL4LvLl0AAVjbG9uZXNxAH4ADJbsW490AAZnZXRVcmxzcQB+AAxh7tLfdAAEY29weXNxAH4ADElCtd50AAh0b1N0cmluZ3NxAH4ADJ4fE/N0AAIhPXNxAH4ADCjPBcd0AAhnZXRDbGFzc3NxAH4ADLJWLrF0AA5jb3B5JGRlZmF1bHQkMXNxAH4ADL8II3N0AAJuZXNxAH4ADAxXL+J0AAJlcXNxAH4ADL73W1p0AA9wcm9kdWN0SXRlcmF0b3JzcQB+AAzxrufndAACIyNzcQB+AAwz+5L7dAAIZmluYWxpemVzcQB+AAz2Fz+SdAAOcHJvZHVjdEVsZW1lbnRzcQB+AAwn+7xqdAAIaGFzaENvZGVzcgATeHNidGkuYXBpLlNvdXJjZUFQSblep/kpIzikAgACWwALZGVmaW5pdGlvbnN0ABdbTHhzYnRpL2FwaS9EZWZpbml0aW9uO1sACHBhY2thZ2VzdAAUW0x4c2J0aS9hcGkvUGFja2FnZTt4cHVyABdbTHhzYnRpLmFwaS5EZWZpbml0aW9uO4jJXOe0414OAgAAeHAAAAABc3IAE3hzYnRpLmFwaS5DbGFzc0xpa2WDNByh37CXbAIABEwADmRlZmluaXRpb25UeXBldAAaTHhzYnRpL2FwaS9EZWZpbml0aW9uVHlwZTtbABBzYXZlZEFubm90YXRpb25zdAATW0xqYXZhL2xhbmcvU3RyaW5nO0wACHNlbGZUeXBldAAQTHhzYnRpL2FwaS9MYXp5O0wACXN0cnVjdHVyZXEAfgBZeHIAIXhzYnRpLmFwaS5QYXJhbWV0ZXJpemVkRGVmaW5pdGlvbvkRbrHVUDziAgABWwAOdHlwZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9UeXBlUGFyYW1ldGVyO3hyABR4c2J0aS5hcGkuRGVmaW5pdGlvbocqG+hxQuNGAgAETAAGYWNjZXNzdAASTHhzYnRpL2FwaS9BY2Nlc3M7WwALYW5ub3RhdGlvbnN0ABdbTHhzYnRpL2FwaS9Bbm5vdGF0aW9uO0wACW1vZGlmaWVyc3QAFUx4c2J0aS9hcGkvTW9kaWZpZXJzO0wABG5hbWVxAH4ADXhwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAAAc3IAE3hzYnRpLmFwaS5Nb2RpZmllcnPHERMhaZzcJAIAAUIABWZsYWdzeHAAdAApaW8uc2t5c2FpbC5kb2Muc3dhZ2dlci5Td2FnZ2VyRXh0ZXJuYWxEb2N1cgAaW0x4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcjvZbSYPKJ3ytgIAAHhwAAAAAH5yABh4c2J0aS5hcGkuRGVmaW5pdGlvblR5cGUAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AAhDbGFzc0RlZnVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgATeHNidGkuU2FmZUxhenkkSW1wbFACLpOXl0A/AgADWgAIYml0bWFwJDBMAAJfdHQAEkxqYXZhL2xhbmcvT2JqZWN0O0wABGV2YWx0ABFMc2NhbGEvRnVuY3Rpb24wO3hyABZ4c2J0aS5hcGkuQWJzdHJhY3RMYXp503e1AV+756ACAAB4cABwc3IAIHhzYnRpLlNhZmVMYXp5JCRhbm9uZnVuJHN0cmljdCQxAAAAAAAAAAACAAFMAAd2YWx1ZSQxcQB+AHJ4cHNyABN4c2J0aS5hcGkuRW1wdHlUeXBlvP2eRkk7iSQCAAB4cgAUeHNidGkuYXBpLlNpbXBsZVR5cGVyeGKIISO/QAIAAHhyAA54c2J0aS5hcGkuVHlwZT9q2SEWSarKAgAAeHBzcQB+AHEAcHNxAH4AdnNyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgBZTAAJaW5oZXJpdGVkcQB+AFlMAAdwYXJlbnRzcQB+AFl4cQB+AHpzcQB+AHEAcHNxAH4AdnVxAH4AVAAAAABzcQB+AHEAcHNxAH4AdnVxAH4AVAAAAABzcQB+AHEAcHNxAH4AdnVyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAAGc3IAFHhzYnRpLmFwaS5Qcm9qZWN0aW9u89KNVOlFpC0CAAJMAAJpZHEAfgANTAAGcHJlZml4dAAWTHhzYnRpL2FwaS9TaW1wbGVUeXBlO3hxAH4AeXQADFNlcmlhbGl6YWJsZXNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4AeXNyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAAnNyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AA14cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAAFc2NhbGFzcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4Al3NxAH4AinEAfgCNc3EAfgCOc3EAfgCRdXEAfgCUAAAAA3NxAH4AlnQABGphdmFzcQB+AJZ0AAJpb3EAfgCbc3EAfgCKdAAHUHJvZHVjdHEAfgCQc3EAfgCKdAAGRXF1YWxzcQB+AJBzcQB+AIp0AAZPYmplY3RzcQB+AI5zcQB+AJF1cQB+AJQAAAADc3EAfgCWcQB+AKFzcQB+AJZ0AARsYW5ncQB+AJtzcQB+AIp0AANBbnlxAH4AkHVyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAAEc3IAEXhzYnRpLmFwaS5QYWNrYWdlflmP9q7OOVgCAAFMAARuYW1lcQB+AA14cHQAFmlvLnNreXNhaWwuZG9jLnN3YWdnZXJzcQB+ALR0AAJpb3NxAH4AtHQADmlvLnNreXNhaWwuZG9jc3EAfgC0dAAKaW8uc2t5c2FpbHNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABXBb3QJR1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5cQB+AA1MAA9zb3VyY2VEaXJlY3RvcnlxAH4ADXhwdAA4L1VzZXJzL2NhcnN0ZW4vZ2l0L3NreXNhaWwtbm90ZXMvc2t5c2FpbC5kb2Muc3dhZ2dlci9iaW50AAEvdXIAAltCrPMX+AYIVOACAAB4cAAAABSH5rU2ZbGrilEDM1PqJXsuy0Ykhw==
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHA05qBgAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAH3NyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cHWAqex0AAZub3RpZnlzcQB+AAxyXfWxdAAEd2FpdHNxAH4ADOSsUPF0AA0kYXNJbnN0YW5jZU9mc3EAfgAMSIQO6HQABmVxdWFsc3NxAH4ADDs4baJ0AAtkZXNjcmlwdGlvbnNxAH4ADDDOnO50AAxhc0luc3RhbmNlT2ZzcQB+AAylNhtTdAAKZ2V0Q29udGFjdHNxAH4ADH4EQrJ0AAxzeW5jaHJvbml6ZWRzcQB+AAxGNgcqdAANJGlzSW5zdGFuY2VPZnNxAH4ADB4PXcF0AAhnZXRUaXRsZXNxAH4ADIeEtZJ0AApnZXRWZXJzaW9uc3EAfgAMfjXpxHQADmdldERlc2NyaXB0aW9uc3EAfgAMpWIpVHQAB2NvbnRhY3RzcQB+AAyinbZVdAAKZ2V0TGljZW5zZXNxAH4ADDo1r3V0AAlub3RpZnlBbGxzcQB+AAz7B4FHdAAMaXNJbnN0YW5jZU9mc3EAfgAMLoM3yHQAB2xpY2Vuc2VzcQB+AAwqNhrfdAAHdmVyc2lvbnNxAH4ADFOSnxh0AAY8aW5pdD5zcQB+AAyVJDxDdAACPT1zcQB+AAzNfm2mdAAFY2xvbmVzcQB+AAyAQCBYdAALU3dhZ2dlckluZm9zcQB+AAyyZjbhdAAIdG9TdHJpbmdzcQB+AAxlZTY6dAACIT1zcQB+AAxa3p08dAAIZ2V0Q2xhc3NzcQB+AAxyDNL9dAAFdGl0bGVzcQB+AAwBeW8ndAACbmVzcQB+AAyFhjVedAACZXFzcQB+AAyxC4DzdAACIyNzcQB+AAwKksgAdAAIZmluYWxpemVzcQB+AAxQrNbZdAAIaGFzaENvZGVzcgATeHNidGkuYXBpLlNvdXJjZUFQSblep/kpIzikAgACWwALZGVmaW5pdGlvbnN0ABdbTHhzYnRpL2FwaS9EZWZpbml0aW9uO1sACHBhY2thZ2VzdAAUW0x4c2J0aS9hcGkvUGFja2FnZTt4cHVyABdbTHhzYnRpLmFwaS5EZWZpbml0aW9uO4jJXOe0414OAgAAeHAAAAABc3IAE3hzYnRpLmFwaS5DbGFzc0xpa2WDNByh37CXbAIABEwADmRlZmluaXRpb25UeXBldAAaTHhzYnRpL2FwaS9EZWZpbml0aW9uVHlwZTtbABBzYXZlZEFubm90YXRpb25zdAATW0xqYXZhL2xhbmcvU3RyaW5nO0wACHNlbGZUeXBldAAQTHhzYnRpL2FwaS9MYXp5O0wACXN0cnVjdHVyZXEAfgBVeHIAIXhzYnRpLmFwaS5QYXJhbWV0ZXJpemVkRGVmaW5pdGlvbvkRbrHVUDziAgABWwAOdHlwZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9UeXBlUGFyYW1ldGVyO3hyABR4c2J0aS5hcGkuRGVmaW5pdGlvbocqG+hxQuNGAgAETAAGYWNjZXNzdAASTHhzYnRpL2FwaS9BY2Nlc3M7WwALYW5ub3RhdGlvbnN0ABdbTHhzYnRpL2FwaS9Bbm5vdGF0aW9uO0wACW1vZGlmaWVyc3QAFUx4c2J0aS9hcGkvTW9kaWZpZXJzO0wABG5hbWVxAH4ADXhwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAAAc3IAE3hzYnRpLmFwaS5Nb2RpZmllcnPHERMhaZzcJAIAAUIABWZsYWdzeHAAdAAiaW8uc2t5c2FpbC5kb2Muc3dhZ2dlci5Td2FnZ2VySW5mb3VyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQACENsYXNzRGVmdXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyABN4c2J0aS5TYWZlTGF6eSRJbXBsUAIuk5eXQD8CAANaAAhiaXRtYXAkMEwAAl90dAASTGphdmEvbGFuZy9PYmplY3Q7TAAEZXZhbHQAEUxzY2FsYS9GdW5jdGlvbjA7eHIAFnhzYnRpLmFwaS5BYnN0cmFjdExhennTd7UBX7vnoAIAAHhwAHBzcgAgeHNidGkuU2FmZUxhenkkJGFub25mdW4kc3RyaWN0JDEAAAAAAAAAAAIAAUwAB3ZhbHVlJDFxAH4Abnhwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHNxAH4AbQBwc3EAfgByc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AFVMAAlpbmhlcml0ZWRxAH4AVUwAB3BhcmVudHNxAH4AVXhxAH4AdnNxAH4AbQBwc3EAfgBydXEAfgBQAAAAAHNxAH4AbQBwc3EAfgBydXEAfgBQAAAAAHNxAH4AbQBwc3EAfgBydXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAJzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgB1dAAGT2JqZWN0c3IAE3hzYnRpLmFwaS5TaW5nbGV0b278p1/4z1bkRgIAAUwABHBhdGh0ABBMeHNidGkvYXBpL1BhdGg7eHEAfgB1c3IADnhzYnRpLmFwaS5QYXRomz1cCM6lJ4QCAAFbAApjb21wb25lbnRzdAAaW0x4c2J0aS9hcGkvUGF0aENvbXBvbmVudDt4cHVyABpbTHhzYnRpLmFwaS5QYXRoQ29tcG9uZW50O0PaCXQtZxZ0AgAAeHAAAAADc3IADHhzYnRpLmFwaS5JZJgybIs3U8RAAgABTAACaWRxAH4ADXhyABd4c2J0aS5hcGkuUGF0aENvbXBvbmVudF+aIlsuhp+8AgAAeHB0AARqYXZhc3EAfgCSdAAEbGFuZ3NyAA54c2J0aS5hcGkuVGhpc9sJ7abMWkBcAgAAeHEAfgCTc3EAfgCGdAADQW55c3EAfgCKc3EAfgCNdXEAfgCQAAAAAnNxAH4AknQABXNjYWxhcQB+AJl1cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAABHNyABF4c2J0aS5hcGkuUGFja2FnZX5Zj/auzjlYAgABTAAEbmFtZXEAfgANeHB0ABZpby5za3lzYWlsLmRvYy5zd2FnZ2Vyc3EAfgCjdAACaW9zcQB+AKN0AA5pby5za3lzYWlsLmRvY3NxAH4Ao3QACmlvLnNreXNhaWxzcgAVeHNidGkuYXBpLkNvbXBpbGF0aW9u7frgw2rooEICAAJKAAlzdGFydFRpbWVbAAdvdXRwdXRzdAAaW0x4c2J0aS9hcGkvT3V0cHV0U2V0dGluZzt4cAAAAVwW90CUdXIAGltMeHNidGkuYXBpLk91dHB1dFNldHRpbmc7f2rC86eHpUICAAB4cAAAAAFzcgAXeHNidGkuYXBpLk91dHB1dFNldHRpbmd62ZpHdPsdewIAAkwAD291dHB1dERpcmVjdG9yeXEAfgANTAAPc291cmNlRGlyZWN0b3J5cQB+AA14cHQAOC9Vc2Vycy9jYXJzdGVuL2dpdC9za3lzYWlsLW5vdGVzL3NreXNhaWwuZG9jLnN3YWdnZXIvYmludAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAUheYGJcBO1RKyGKbOkupCQB9FPxU=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHCVrw7ZAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAGXNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cMvdixN0AAZub3RpZnlzcQB+AAz7cae0dAAEbmFtZXNxAH4ADH9PZ490AAR3YWl0c3EAfgAMRYkENXQADSRhc0luc3RhbmNlT2ZzcQB+AAyroq13dAADdXJsc3EAfgAMBKt1w3QABmVxdWFsc3NxAH4ADB2tMU50AAxhc0luc3RhbmNlT2ZzcQB+AAzEG6wDdAAMc3luY2hyb25pemVkc3EAfgAMvbUBWnQADSRpc0luc3RhbmNlT2ZzcQB+AAwtc3UddAAJbm90aWZ5QWxsc3EAfgAMELMkInQAB2dldE5hbWVzcQB+AAwKhjUidAAMaXNJbnN0YW5jZU9mc3EAfgAMnv1RQXQABjxpbml0PnNxAH4ADLWfyAF0AAI9PXNxAH4ADGxDMmZ0AAVjbG9uZXNxAH4ADPYyxp10AAZnZXRVcmxzcQB+AAyGCXeWdAAIdG9TdHJpbmdzcQB+AAx4DOAYdAACIT1zcQB+AAwQwmbDdAAOU3dhZ2dlckxpY2VuY2VzcQB+AAycycI2dAAIZ2V0Q2xhc3NzcQB+AAy5jVWcdAACbmVzcQB+AAykkszydAACZXFzcQB+AAx2NY4VdAACIyNzcQB+AAyccwMadAAIZmluYWxpemVzcQB+AAxsIiWudAAIaGFzaENvZGVzcgATeHNidGkuYXBpLlNvdXJjZUFQSblep/kpIzikAgACWwALZGVmaW5pdGlvbnN0ABdbTHhzYnRpL2FwaS9EZWZpbml0aW9uO1sACHBhY2thZ2VzdAAUW0x4c2J0aS9hcGkvUGFja2FnZTt4cHVyABdbTHhzYnRpLmFwaS5EZWZpbml0aW9uO4jJXOe0414OAgAAeHAAAAABc3IAE3hzYnRpLmFwaS5DbGFzc0xpa2WDNByh37CXbAIABEwADmRlZmluaXRpb25UeXBldAAaTHhzYnRpL2FwaS9EZWZpbml0aW9uVHlwZTtbABBzYXZlZEFubm90YXRpb25zdAATW0xqYXZhL2xhbmcvU3RyaW5nO0wACHNlbGZUeXBldAAQTHhzYnRpL2FwaS9MYXp5O0wACXN0cnVjdHVyZXEAfgBJeHIAIXhzYnRpLmFwaS5QYXJhbWV0ZXJpemVkRGVmaW5pdGlvbvkRbrHVUDziAgABWwAOdHlwZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9UeXBlUGFyYW1ldGVyO3hyABR4c2J0aS5hcGkuRGVmaW5pdGlvbocqG+hxQuNGAgAETAAGYWNjZXNzdAASTHhzYnRpL2FwaS9BY2Nlc3M7WwALYW5ub3RhdGlvbnN0ABdbTHhzYnRpL2FwaS9Bbm5vdGF0aW9uO0wACW1vZGlmaWVyc3QAFUx4c2J0aS9hcGkvTW9kaWZpZXJzO0wABG5hbWVxAH4ADXhwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAAAc3IAE3hzYnRpLmFwaS5Nb2RpZmllcnPHERMhaZzcJAIAAUIABWZsYWdzeHAAdAAlaW8uc2t5c2FpbC5kb2Muc3dhZ2dlci5Td2FnZ2VyTGljZW5jZXVyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQACENsYXNzRGVmdXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyABN4c2J0aS5TYWZlTGF6eSRJbXBsUAIuk5eXQD8CAANaAAhiaXRtYXAkMEwAAl90dAASTGphdmEvbGFuZy9PYmplY3Q7TAAEZXZhbHQAEUxzY2FsYS9GdW5jdGlvbjA7eHIAFnhzYnRpLmFwaS5BYnN0cmFjdExhennTd7UBX7vnoAIAAHhwAHBzcgAgeHNidGkuU2FmZUxhenkkJGFub25mdW4kc3RyaWN0JDEAAAAAAAAAAAIAAUwAB3ZhbHVlJDFxAH4AYnhwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHNxAH4AYQBwc3EAfgBmc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AElMAAlpbmhlcml0ZWRxAH4ASUwAB3BhcmVudHNxAH4ASXhxAH4AanNxAH4AYQBwc3EAfgBmdXEAfgBEAAAAAHNxAH4AYQBwc3EAfgBmdXEAfgBEAAAAAHNxAH4AYQBwc3EAfgBmdXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAJzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgBpdAAGT2JqZWN0c3IAE3hzYnRpLmFwaS5TaW5nbGV0b278p1/4z1bkRgIAAUwABHBhdGh0ABBMeHNidGkvYXBpL1BhdGg7eHEAfgBpc3IADnhzYnRpLmFwaS5QYXRomz1cCM6lJ4QCAAFbAApjb21wb25lbnRzdAAaW0x4c2J0aS9hcGkvUGF0aENvbXBvbmVudDt4cHVyABpbTHhzYnRpLmFwaS5QYXRoQ29tcG9uZW50O0PaCXQtZxZ0AgAAeHAAAAADc3IADHhzYnRpLmFwaS5JZJgybIs3U8RAAgABTAACaWRxAH4ADXhyABd4c2J0aS5hcGkuUGF0aENvbXBvbmVudF+aIlsuhp+8AgAAeHB0AARqYXZhc3EAfgCGdAAEbGFuZ3NyAA54c2J0aS5hcGkuVGhpc9sJ7abMWkBcAgAAeHEAfgCHc3EAfgB6dAADQW55c3EAfgB+c3EAfgCBdXEAfgCEAAAAAnNxAH4AhnQABXNjYWxhcQB+AI11cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAABHNyABF4c2J0aS5hcGkuUGFja2FnZX5Zj/auzjlYAgABTAAEbmFtZXEAfgANeHB0ABZpby5za3lzYWlsLmRvYy5zd2FnZ2Vyc3EAfgCXdAACaW9zcQB+AJd0AA5pby5za3lzYWlsLmRvY3NxAH4Al3QACmlvLnNreXNhaWxzcgAVeHNidGkuYXBpLkNvbXBpbGF0aW9u7frgw2rooEICAAJKAAlzdGFydFRpbWVbAAdvdXRwdXRzdAAaW0x4c2J0aS9hcGkvT3V0cHV0U2V0dGluZzt4cAAAAVwW90CUdXIAGltMeHNidGkuYXBpLk91dHB1dFNldHRpbmc7f2rC86eHpUICAAB4cAAAAAFzcgAXeHNidGkuYXBpLk91dHB1dFNldHRpbmd62ZpHdPsdewIAAkwAD291dHB1dERpcmVjdG9yeXEAfgANTAAPc291cmNlRGlyZWN0b3J5cQB+AA14cHQAOC9Vc2Vycy9jYXJzdGVuL2dpdC9za3lzYWlsLW5vdGVzL3NreXNhaWwuZG9jLnN3YWdnZXIvYmludAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAUCrdlS4CZww94W3T7ZUD5fCt4OsM=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHDVdJ4uAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAJnNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cHwY+O90AAZub3RpZnlzcQB+AAw6yGYKdAAEbmFtZXNxAH4ADAb33Ql0AAJpbnNxAH4ADNLt0yd0AAR3YWl0c3EAfgAMQEIuz3QADSRhc0luc3RhbmNlT2ZzcQB+AAzGE5s8dAAMcHJvZHVjdEFyaXR5c3EAfgAM3RkQtXQABmVxdWFsc3NxAH4ADPagObV0AAtkZXNjcmlwdGlvbnNxAH4ADNT+1Mp0AAxhc0luc3RhbmNlT2ZzcQB+AAzYiEkqdAAMc3luY2hyb25pemVkc3EAfgAMCEscbXQADSRpc0luc3RhbmNlT2ZzcQB+AAyh3xTRdAAIY2FuRXF1YWxzcQB+AAy7ExEhdAAOZ2V0RGVzY3JpcHRpb25zcQB+AAyu2mnxdAAQU3dhZ2dlclBhcmFtZXRlcnNxAH4ADBWaPgB0AA1wcm9kdWN0UHJlZml4c3EAfgAMJDjsfnQACW5vdGlmeUFsbHNxAH4ADPsmdBt0AAdnZXROYW1lc3EAfgAMmZv7anQADGlzSW5zdGFuY2VPZnNxAH4ADEtRIP50AAY8aW5pdD5zcQB+AAxJ5eBgdAACPT1zcQB+AAyWQdCHdAAFY2xvbmVzcQB+AAy4GyI+dAAHZ2V0VHlwZXNxAH4ADLeOyZV0AARjb3B5c3EAfgAMF4aqvXQACHRvU3RyaW5nc3EAfgAMnx7T9XQAC2dldFJlcXVpcmVkc3EAfgAMuDohtXQAAiE9c3EAfgAMHuThd3QACGdldENsYXNzc3EAfgAMaJhK4XQADmNvcHkkZGVmYXVsdCQxc3EAfgAM3DiAtnQABHR5cGVzcQB+AAxJxx6AdAAIcmVxdWlyZWRzcQB+AAxW/pKSdAAFZ2V0SW5zcQB+AAyAZY1sdAACbmVzcQB+AAxHJzL1dAACZXFzcQB+AAxuuVD1dAAPcHJvZHVjdEl0ZXJhdG9yc3EAfgAMau4s+XQAAiMjc3EAfgAMDZMyHHQACGZpbmFsaXplc3EAfgAMLmn3A3QADnByb2R1Y3RFbGVtZW50c3EAfgAMJjtkYnQACGhhc2hDb2Rlc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAAAXNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4AY3hyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AA14cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAXNyABR4c2J0aS5hcGkuQW5ub3RhdGlvbt4OgaL2XAqyAgACWwAJYXJndW1lbnRzdAAfW0x4c2J0aS9hcGkvQW5ub3RhdGlvbkFyZ3VtZW50O0wABGJhc2V0ABBMeHNidGkvYXBpL1R5cGU7eHB1cgAfW0x4c2J0aS5hcGkuQW5ub3RhdGlvbkFyZ3VtZW50O1Gdpo84JQ94AgAAeHAAAAABc3IAHHhzYnRpLmFwaS5Bbm5vdGF0aW9uQXJndW1lbnTWRbHYAxsXfAIAAkwABG5hbWVxAH4ADUwABXZhbHVlcQB+AA14cHQAB2NvbnRlbnR0AAhOT05fTlVMTHNyABR4c2J0aS5hcGkuUHJvamVjdGlvbvPSjVTpRaQtAgACTAACaWRxAH4ADUwABnByZWZpeHQAFkx4c2J0aS9hcGkvU2ltcGxlVHlwZTt4cgAUeHNidGkuYXBpLlNpbXBsZVR5cGVyeGKIISO/QAIAAHhyAA54c2J0aS5hcGkuVHlwZT9q2SEWSarKAgAAeHB0AAtKc29uSW5jbHVkZXNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4AfHNyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAABXNyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AA14cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAADY29tc3EAfgCIdAAJZmFzdGVyeG1sc3EAfgCIdAAHamFja3NvbnNxAH4AiHQACmFubm90YXRpb25zcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4AiXNyABN4c2J0aS5hcGkuTW9kaWZpZXJzxxETIWmc3CQCAAFCAAVmbGFnc3hwAHQAJ2lvLnNreXNhaWwuZG9jLnN3YWdnZXIuU3dhZ2dlclBhcmFtZXRlcnVyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQACENsYXNzRGVmdXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyABN4c2J0aS5TYWZlTGF6eSRJbXBsUAIuk5eXQD8CAANaAAhiaXRtYXAkMEwAAl90dAASTGphdmEvbGFuZy9PYmplY3Q7TAAEZXZhbHQAEUxzY2FsYS9GdW5jdGlvbjA7eHIAFnhzYnRpLmFwaS5BYnN0cmFjdExhennTd7UBX7vnoAIAAHhwAHBzcgAgeHNidGkuU2FmZUxhenkkJGFub25mdW4kc3RyaWN0JDEAAAAAAAAAAAIAAUwAB3ZhbHVlJDFxAH4AoHhwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhxAH4AfHNxAH4AnwBwc3EAfgCkc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AGNMAAlpbmhlcml0ZWRxAH4AY0wAB3BhcmVudHNxAH4AY3hxAH4AfXNxAH4AnwBwc3EAfgCkdXEAfgBeAAAAAHNxAH4AnwBwc3EAfgCkdXEAfgBeAAAAAHNxAH4AnwBwc3EAfgCkdXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAZzcQB+AHp0AAxTZXJpYWxpemFibGVzcQB+AIBzcQB+AIN1cQB+AIYAAAACc3EAfgCIdAAFc2NhbGFxAH4Ak3NxAH4AenEAfgC3c3EAfgCAc3EAfgCDdXEAfgCGAAAAA3NxAH4AiHQABGphdmFzcQB+AIh0AAJpb3EAfgCTc3EAfgB6dAAHUHJvZHVjdHEAfgC4c3EAfgB6dAAGRXF1YWxzcQB+ALhzcQB+AHp0AAZPYmplY3RzcQB+AIBzcQB+AIN1cQB+AIYAAAADc3EAfgCIcQB+AMJzcQB+AIh0AARsYW5ncQB+AJNzcQB+AHp0AANBbnlxAH4AuHVyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAAEc3IAEXhzYnRpLmFwaS5QYWNrYWdlflmP9q7OOVgCAAFMAARuYW1lcQB+AA14cHQAFmlvLnNreXNhaWwuZG9jLnN3YWdnZXJzcQB+ANV0AAJpb3NxAH4A1XQADmlvLnNreXNhaWwuZG9jc3EAfgDVdAAKaW8uc2t5c2FpbHNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABXBb3QJR1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5cQB+AA1MAA9zb3VyY2VEaXJlY3RvcnlxAH4ADXhwdAA4L1VzZXJzL2NhcnN0ZW4vZ2l0L3NreXNhaWwtbm90ZXMvc2t5c2FpbC5kb2Muc3dhZ2dlci9iaW50AAEvdXIAAltCrPMX+AYIVOACAAB4cAAAABRPHw63AQxxPULAArEg8lJJP0LhEg==
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHCtUPuvAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAMnNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cNM8SlZ0AAZub3RpZnlzcQB+AAycV/sUdAAHZ2V0UG9zdHNxAH4ADK6Zi8R0AARwb3N0c3EAfgAMPlCbF3QABHdhaXRzcQB+AAzMAZhZdAANJGFzSW5zdGFuY2VPZnNxAH4ADMISw+p0AAhQUk9EVUNFU3NxAH4ADOw58Pl0AAtERVNDUklQVElPTnNxAH4ADIirTNV0AAdhbmFseXNlc3EAfgAM70+kdXQABmVxdWFsc3NxAH4ADBX2pUd0AAtwYXJlbnRDbGFzc3NxAH4ADLBwEAN0AAxhc0luc3RhbmNlT2ZzcQB+AAyuXDyrdAAJUkVTUE9OU0VTc3EAfgAManxcPXQAD2FkZFBvc3RSZXNwb25zZXNxAH4ADGaUNxF0AAxzeW5jaHJvbml6ZWRzcQB+AAyP8VixdAANJGlzSW5zdGFuY2VPZnNxAH4ADJlQ4750AAlzZXREZWxldGVzcQB+AAzxpE1odAAGZ2V0UHV0c3EAfgAMsD7CPnQACW5vdGlmeUFsbHNxAH4ADPkBzcN0AA9hZGRHZXRSZXNwb25zZXNzcQB+AAwWQXigdAAMaXNJbnN0YW5jZU9mc3EAfgAMiOcQC3QABFRBR1NzcQB+AAwAdMoxdAAGPGluaXQ+c3EAfgAMuHgab3QAClBBUkFNRVRFUlNzcQB+AAxdVbeBdAACPT1zcQB+AAxjvDFCdAALU3dhZ2dlclBhdGhzcQB+AAxtiWQhdAAFY2xvbmVzcQB+AAymxKLJdAAGZGVsZXRlc3EAfgAMZPIVJHQABnNldFB1dHNxAH4ADP5GtON0AAZzZXRHZXRzcQB+AAy7/g2udAADcHV0c3EAfgAMVPyC73QACHRvU3RyaW5nc3EAfgAMVo3aBHQAEGluaXRJZk5lY2Nlc3NhcnlzcQB+AAxb4zDjdAAGZ2V0R2V0c3EAfgAMRp60u3QAAiE9c3EAfgAMowc913QAA2dldHNxAH4ADCp7lGV0ABVhZGRBcGlNZXRhZGF0YUZvclBvc3RzcQB+AAwmWnZZdAAJZ2V0RGVsZXRlc3EAfgAMIRyxuHQACGdldENsYXNzc3EAfgAMFCfm9XQAF2FkZEFwaU1ldGFkYXRhRm9yRGVsZXRlc3EAfgAMnDNWC3QAC2FwaU1ldGFkYXRhc3EAfgAMr1kRvnQAB1NVTU1BUllzcQB+AAz0pjv5dAACbmVzcQB+AAwh2U32dAACZXFzcQB+AAwR8eAWdAADbG9nc3EAfgAMEOps2XQAB3NldFBvc3RzcQB+AAw0f/dydAACIyNzcQB+AAzM9O1GdAAIZmluYWxpemVzcQB+AAx8pCZ3dAAUYWRkQXBpTWV0YWRhdGFGb3JHZXRzcQB+AAxi0ngGdAAIaGFzaENvZGVzcQB+AAwt8ABWdAAUYWRkQXBpTWV0YWRhdGFGb3JQdXRzcgATeHNidGkuYXBpLlNvdXJjZUFQSblep/kpIzikAgACWwALZGVmaW5pdGlvbnN0ABdbTHhzYnRpL2FwaS9EZWZpbml0aW9uO1sACHBhY2thZ2VzdAAUW0x4c2J0aS9hcGkvUGFja2FnZTt4cHVyABdbTHhzYnRpLmFwaS5EZWZpbml0aW9uO4jJXOe0414OAgAAeHAAAAACc3IAE3hzYnRpLmFwaS5DbGFzc0xpa2WDNByh37CXbAIABEwADmRlZmluaXRpb25UeXBldAAaTHhzYnRpL2FwaS9EZWZpbml0aW9uVHlwZTtbABBzYXZlZEFubm90YXRpb25zdAATW0xqYXZhL2xhbmcvU3RyaW5nO0wACHNlbGZUeXBldAAQTHhzYnRpL2FwaS9MYXp5O0wACXN0cnVjdHVyZXEAfgB7eHIAIXhzYnRpLmFwaS5QYXJhbWV0ZXJpemVkRGVmaW5pdGlvbvkRbrHVUDziAgABWwAOdHlwZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9UeXBlUGFyYW1ldGVyO3hyABR4c2J0aS5hcGkuRGVmaW5pdGlvbocqG+hxQuNGAgAETAAGYWNjZXNzdAASTHhzYnRpL2FwaS9BY2Nlc3M7WwALYW5ub3RhdGlvbnN0ABdbTHhzYnRpL2FwaS9Bbm5vdGF0aW9uO0wACW1vZGlmaWVyc3QAFUx4c2J0aS9hcGkvTW9kaWZpZXJzO0wABG5hbWVxAH4ADXhwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAAAc3IAE3hzYnRpLmFwaS5Nb2RpZmllcnPHERMhaZzcJAIAAUIABWZsYWdzeHAAdAAiaW8uc2t5c2FpbC5kb2Muc3dhZ2dlci5Td2FnZ2VyUGF0aHVyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQABk1vZHVsZXVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgATeHNidGkuU2FmZUxhenkkSW1wbFACLpOXl0A/AgADWgAIYml0bWFwJDBMAAJfdHQAEkxqYXZhL2xhbmcvT2JqZWN0O0wABGV2YWx0ABFMc2NhbGEvRnVuY3Rpb24wO3hyABZ4c2J0aS5hcGkuQWJzdHJhY3RMYXp503e1AV+756ACAAB4cABwc3IAIHhzYnRpLlNhZmVMYXp5JCRhbm9uZnVuJHN0cmljdCQxAAAAAAAAAAACAAFMAAd2YWx1ZSQxcQB+AJR4cHNyABN4c2J0aS5hcGkuRW1wdHlUeXBlvP2eRkk7iSQCAAB4cgAUeHNidGkuYXBpLlNpbXBsZVR5cGVyeGKIISO/QAIAAHhyAA54c2J0aS5hcGkuVHlwZT9q2SEWSarKAgAAeHBzcQB+AJMAcHNxAH4AmHNyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgB7TAAJaW5oZXJpdGVkcQB+AHtMAAdwYXJlbnRzcQB+AHt4cQB+AJxzcQB+AJMAcHNxAH4AmHVxAH4AdgAAAABzcQB+AJMAcHNxAH4AmHVxAH4AdgAAAABzcQB+AJMAcHNxAH4AmHVyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAACc3IAFHhzYnRpLmFwaS5Qcm9qZWN0aW9u89KNVOlFpC0CAAJMAAJpZHEAfgANTAAGcHJlZml4dAAWTHhzYnRpL2FwaS9TaW1wbGVUeXBlO3hxAH4Am3QABk9iamVjdHNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4Am3NyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAA3NyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AA14cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAAEamF2YXNxAH4AuHQABGxhbmdzcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4AuXNxAH4ArHQAA0FueXNxAH4AsHNxAH4As3VxAH4AtgAAAAJzcQB+ALh0AAVzY2FsYXEAfgC/c3EAfgB4cQB+AIV1cQB+AIYAAAABc3IAFHhzYnRpLmFwaS5Bbm5vdGF0aW9u3g6BovZcCrICAAJbAAlhcmd1bWVudHN0AB9bTHhzYnRpL2FwaS9Bbm5vdGF0aW9uQXJndW1lbnQ7TAAEYmFzZXQAEEx4c2J0aS9hcGkvVHlwZTt4cHVyAB9bTHhzYnRpLmFwaS5Bbm5vdGF0aW9uQXJndW1lbnQ7UZ2mjzglD3gCAAB4cAAAAAFzcgAceHNidGkuYXBpLkFubm90YXRpb25Bcmd1bWVudNZFsdgDGxd8AgACTAAEbmFtZXEAfgANTAAFdmFsdWVxAH4ADXhwdAAFdmFsdWV0AAhOT05fTlVMTHNxAH4ArHQAC0pzb25JbmNsdWRlc3EAfgCwc3EAfgCzdXEAfgC2AAAABXNxAH4AuHQAA2NvbXNxAH4AuHQACWZhc3RlcnhtbHNxAH4AuHQAB2phY2tzb25zcQB+ALh0AAphbm5vdGF0aW9ucQB+AL9zcQB+AIgAdAAiaW8uc2t5c2FpbC5kb2Muc3dhZ2dlci5Td2FnZ2VyUGF0aHVxAH4AiwAAAAB+cQB+AI10AAhDbGFzc0RlZnVxAH4AkQAAAABzcQB+AJMAcHNxAH4AmHEAfgCdc3EAfgCTAHBzcQB+AJhzcQB+AKBzcQB+AJMAcHNxAH4AmHVxAH4AdgAAAABzcQB+AJMAcHNxAH4AmHVxAH4AdgAAAABzcQB+AJMAcHNxAH4AmHVxAH4AqgAAAAJzcQB+AKxxAH4Ar3NxAH4AsHNxAH4As3VxAH4AtgAAAANzcQB+ALhxAH4Au3NxAH4AuHEAfgC9cQB+AL9zcQB+AKxxAH4AwXNxAH4AsHNxAH4As3VxAH4AtgAAAAJzcQB+ALhxAH4AxnEAfgC/dXIAFFtMeHNidGkuYXBpLlBhY2thZ2U7WxMZN3CnJ6ECAAB4cAAAAARzcgAReHNidGkuYXBpLlBhY2thZ2V+WY/2rs45WAIAAUwABG5hbWVxAH4ADXhwdAAWaW8uc2t5c2FpbC5kb2Muc3dhZ2dlcnNxAH4BAXQAAmlvc3EAfgEBdAAOaW8uc2t5c2FpbC5kb2NzcQB+AQF0AAppby5za3lzYWlsc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFcFvdAlHVyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADUwAD3NvdXJjZURpcmVjdG9yeXEAfgANeHB0ADgvVXNlcnMvY2Fyc3Rlbi9naXQvc2t5c2FpbC1ub3Rlcy9za3lzYWlsLmRvYy5zd2FnZ2VyL2JpbnQAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFPFJSq6Hn+oPDjGSX/k/1t1mmSFO
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPathVariable.java -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHC4IVHqAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAAHNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAB1cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAAAHNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABXBb3QJR1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+ABp4cHQAOC9Vc2Vycy9jYXJzdGVuL2dpdC9za3lzYWlsLW5vdGVzL3NreXNhaWwuZG9jLnN3YWdnZXIvYmludAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAUpqOQ+xnljcDBgLHgx7Fw8GToP1g=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHBaruUGAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAInNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cNskg3l0AAZub3RpZnlzcQB+AAyKY3QDdAAEd2FpdHNxAH4ADB3lGW50AA0kYXNJbnN0YW5jZU9mc3EAfgAMvrKS4nQADHByb2R1Y3RBcml0eXNxAH4ADPPKjZN0AAZlcXVhbHNzcQB+AAxH3XavdAALZGVzY3JpcHRpb25zcQB+AAwJiq16dAAMYXNJbnN0YW5jZU9mc3EAfgAMSUXy3HQAAWZzcQB+AAzeVvktdAAPU3dhZ2dlclByb3BlcnR5c3EAfgAMfgq7iHQADHN5bmNocm9uaXplZHNxAH4ADOAVeNx0AA0kaXNJbnN0YW5jZU9mc3EAfgAM19ChmHQACGNhbkVxdWFsc3EAfgAMTYd2RnQADmdldERlc2NyaXB0aW9uc3EAfgAM2STIZnQADXByb2R1Y3RQcmVmaXhzcQB+AAyWownMdAAJbm90aWZ5QWxsc3EAfgAMHZwVoHQADGlzSW5zdGFuY2VPZnNxAH4ADMSA9vF0AAY8aW5pdD5zcQB+AAx9pprLdAACPT1zcQB+AAzTlPUIdAAFY2xvbmVzcQB+AAzLFshldAAVZG9tYWluRmllbGRBbm5vdGF0aW9uc3EAfgAMENe1EXQAB2dldFR5cGVzcQB+AAxvP0ejdAAEY29weXNxAH4ADKUJAzd0AAh0b1N0cmluZ3NxAH4ADDNhke50AAIhPXNxAH4ADNTz6Zx0AAhnZXRDbGFzc3NxAH4ADM8lAGZ0AA5jb3B5JGRlZmF1bHQkMXNxAH4ADGtCxAx0AAR0eXBlc3EAfgAM9YGwPHQAAm5lc3EAfgAMrDtsA3QAAmVxc3EAfgAME/v58HQAD3Byb2R1Y3RJdGVyYXRvcnNxAH4ADGm1OdN0AAIjI3NxAH4ADIBj19N0AAhmaW5hbGl6ZXNxAH4ADPxitMF0AA5wcm9kdWN0RWxlbWVudHNxAH4ADD/MWSl0AAhoYXNoQ29kZXNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAFzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AFt4cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgANeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAAFzcgAUeHNidGkuYXBpLkFubm90YXRpb27eDoGi9lwKsgIAAlsACWFyZ3VtZW50c3QAH1tMeHNidGkvYXBpL0Fubm90YXRpb25Bcmd1bWVudDtMAARiYXNldAAQTHhzYnRpL2FwaS9UeXBlO3hwdXIAH1tMeHNidGkuYXBpLkFubm90YXRpb25Bcmd1bWVudDtRnaaPOCUPeAIAAHhwAAAAAXNyABx4c2J0aS5hcGkuQW5ub3RhdGlvbkFyZ3VtZW501kWx2AMbF3wCAAJMAARuYW1lcQB+AA1MAAV2YWx1ZXEAfgANeHB0AAV2YWx1ZXQACE5PTl9OVUxMc3IAFHhzYnRpLmFwaS5Qcm9qZWN0aW9u89KNVOlFpC0CAAJMAAJpZHEAfgANTAAGcHJlZml4dAAWTHhzYnRpL2FwaS9TaW1wbGVUeXBlO3hyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHQAC0pzb25JbmNsdWRlc3IAE3hzYnRpLmFwaS5TaW5nbGV0b278p1/4z1bkRgIAAUwABHBhdGh0ABBMeHNidGkvYXBpL1BhdGg7eHEAfgB0c3IADnhzYnRpLmFwaS5QYXRomz1cCM6lJ4QCAAFbAApjb21wb25lbnRzdAAaW0x4c2J0aS9hcGkvUGF0aENvbXBvbmVudDt4cHVyABpbTHhzYnRpLmFwaS5QYXRoQ29tcG9uZW50O0PaCXQtZxZ0AgAAeHAAAAAFc3IADHhzYnRpLmFwaS5JZJgybIs3U8RAAgABTAACaWRxAH4ADXhyABd4c2J0aS5hcGkuUGF0aENvbXBvbmVudF+aIlsuhp+8AgAAeHB0AANjb21zcQB+AIB0AAlmYXN0ZXJ4bWxzcQB+AIB0AAdqYWNrc29uc3EAfgCAdAAKYW5ub3RhdGlvbnNyAA54c2J0aS5hcGkuVGhpc9sJ7abMWkBcAgAAeHEAfgCBc3IAE3hzYnRpLmFwaS5Nb2RpZmllcnPHERMhaZzcJAIAAUIABWZsYWdzeHAAdAAmaW8uc2t5c2FpbC5kb2Muc3dhZ2dlci5Td2FnZ2VyUHJvcGVydHl1cgAaW0x4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcjvZbSYPKJ3ytgIAAHhwAAAAAH5yABh4c2J0aS5hcGkuRGVmaW5pdGlvblR5cGUAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AAhDbGFzc0RlZnVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgATeHNidGkuU2FmZUxhenkkSW1wbFACLpOXl0A/AgADWgAIYml0bWFwJDBMAAJfdHQAEkxqYXZhL2xhbmcvT2JqZWN0O0wABGV2YWx0ABFMc2NhbGEvRnVuY3Rpb24wO3hyABZ4c2J0aS5hcGkuQWJzdHJhY3RMYXp503e1AV+756ACAAB4cABwc3IAIHhzYnRpLlNhZmVMYXp5JCRhbm9uZnVuJHN0cmljdCQxAAAAAAAAAAACAAFMAAd2YWx1ZSQxcQB+AJh4cHNyABN4c2J0aS5hcGkuRW1wdHlUeXBlvP2eRkk7iSQCAAB4cQB+AHRzcQB+AJcAcHNxAH4AnHNyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgBbTAAJaW5oZXJpdGVkcQB+AFtMAAdwYXJlbnRzcQB+AFt4cQB+AHVzcQB+AJcAcHNxAH4AnHVxAH4AVgAAAABzcQB+AJcAcHNxAH4AnHVxAH4AVgAAAABzcQB+AJcAcHNxAH4AnHVyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAAGc3EAfgBydAAMU2VyaWFsaXphYmxlc3EAfgB4c3EAfgB7dXEAfgB+AAAAAnNxAH4AgHQABXNjYWxhcQB+AItzcQB+AHJxAH4Ar3NxAH4AeHNxAH4Ae3VxAH4AfgAAAANzcQB+AIB0AARqYXZhc3EAfgCAdAACaW9xAH4Ai3NxAH4AcnQAB1Byb2R1Y3RxAH4AsHNxAH4AcnQABkVxdWFsc3EAfgCwc3EAfgBydAAGT2JqZWN0c3EAfgB4c3EAfgB7dXEAfgB+AAAAA3NxAH4AgHEAfgC6c3EAfgCAdAAEbGFuZ3EAfgCLc3EAfgBydAADQW55cQB+ALB1cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAABHNyABF4c2J0aS5hcGkuUGFja2FnZX5Zj/auzjlYAgABTAAEbmFtZXEAfgANeHB0ABZpby5za3lzYWlsLmRvYy5zd2FnZ2Vyc3EAfgDNdAACaW9zcQB+AM10AA5pby5za3lzYWlsLmRvY3NxAH4AzXQACmlvLnNreXNhaWxzcgAVeHNidGkuYXBpLkNvbXBpbGF0aW9u7frgw2rooEICAAJKAAlzdGFydFRpbWVbAAdvdXRwdXRzdAAaW0x4c2J0aS9hcGkvT3V0cHV0U2V0dGluZzt4cAAAAVwW90CUdXIAGltMeHNidGkuYXBpLk91dHB1dFNldHRpbmc7f2rC86eHpUICAAB4cAAAAAFzcgAXeHNidGkuYXBpLk91dHB1dFNldHRpbmd62ZpHdPsdewIAAkwAD291dHB1dERpcmVjdG9yeXEAfgANTAAPc291cmNlRGlyZWN0b3J5cQB+AA14cHQAOC9Vc2Vycy9jYXJzdGVuL2dpdC9za3lzYWlsLW5vdGVzL3NreXNhaWwuZG9jLnN3YWdnZXIvYmludAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAUuoOcTUCrcCz/94LKI6DFvER4S2U=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerResource.java -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHC4IVHqAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAAHNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAB1cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAAAHNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABXBb3QJR1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+ABp4cHQAOC9Vc2Vycy9jYXJzdGVuL2dpdC9za3lzYWlsLW5vdGVzL3NreXNhaWwuZG9jLnN3YWdnZXIvYmludAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAU8d8VBFeAVydLVwaEV4/rax8EsoE=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHBiGMrcAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAL3NyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cM4/vlZ0AAZub3RpZnlzcQB+AAyqlK7QdAAOZ2V0RGVmaW5pdGlvbnNzcQB+AAxgnQT2dAAEd2FpdHNxAH4ADF5pnm50AApnZXRTd2FnZ2Vyc3EAfgAM8eDjD3QADSRhc0luc3RhbmNlT2ZzcQB+AAyXAXBFdAAFc2V0SWRzcQB+AAx1vF+FdAAGZXF1YWxzc3EAfgAMMtto0HQAC2dldEJhc2VQYXRoc3EAfgAMgGIAKHQAB3NldEluZm9zcQB+AAyrDln7dAAMYXNJbnN0YW5jZU9mc3EAfgAMTB+z63QABGhvc3RzcQB+AAzvC+1vdAALc2V0QmFzZVBhdGhzcQB+AAwvZRLAdAAMc3luY2hyb25pemVkc3EAfgAMTjz9O3QAB2dldEluZm9zcQB+AAxlQ/TFdAANJGlzSW5zdGFuY2VPZnNxAH4ADLLzDF90AAdnZXRIb3N0c3EAfgAM8j316HQABXBhdGhzc3EAfgAMD5b81HQACGdldFBhdGhzc3EAfgAMUp+3BnQACGJhc2VQYXRoc3EAfgAMN8nHOnQABGluZm9zcQB+AAxaJZSIdAAJbm90aWZ5QWxsc3EAfgAMpVarQ3QAB3NjaGVtZXNzcQB+AAxugtAFdAAMaXNJbnN0YW5jZU9mc3EAfgAMaWUxjnQABjxpbml0PnNxAH4ADMFuks10AAJpZHNxAH4ADOW3uCF0AAdzZXRIb3N0c3EAfgAME3eSznQAFGRldGVybWluZURlZmluaXRpb25zc3EAfgAMeLk7AHQAAj09c3EAfgAM+4X4JnQABWNsb25lc3EAfgAMDBosYXQAC1N3YWdnZXJTcGVjc3EAfgAMTsiE3HQADWRldGVybWluZUhvc3RzcQB+AAy7sFn1dAALZGVmaW5pdGlvbnNzcQB+AAx4KE34dAAIdG9TdHJpbmdzcQB+AAyYIHkMdAAPZ2V0RXh0ZXJuYWxEb2Nzc3EAfgAMHBP5/XQAB3N3YWdnZXJzcQB+AAwQKtcbdAACIT1zcQB+AAxE4g+IdAAOZGV0ZXJtaW5lUGF0aHNzcQB+AAynYvKVdAAIZ2V0Q2xhc3NzcQB+AAxuPf4ldAAKZ2V0U2NoZW1lc3NxAH4ADPEnO9p0AAJuZXNxAH4ADMLJcSJ0AAV0eXBlc3NxAH4ADKWbM4x0AAVnZXRJZHNxAH4ADFDNo1h0AAxleHRlcm5hbERvY3NzcQB+AAxQkj1udAACZXFzcQB+AAzsaqFndAACIyNzcQB+AAw9ZstbdAAIZmluYWxpemVzcQB+AAzl/Cl8dAAIaGFzaENvZGVzcgATeHNidGkuYXBpLlNvdXJjZUFQSblep/kpIzikAgACWwALZGVmaW5pdGlvbnN0ABdbTHhzYnRpL2FwaS9EZWZpbml0aW9uO1sACHBhY2thZ2VzdAAUW0x4c2J0aS9hcGkvUGFja2FnZTt4cHVyABdbTHhzYnRpLmFwaS5EZWZpbml0aW9uO4jJXOe0414OAgAAeHAAAAABc3IAE3hzYnRpLmFwaS5DbGFzc0xpa2WDNByh37CXbAIABEwADmRlZmluaXRpb25UeXBldAAaTHhzYnRpL2FwaS9EZWZpbml0aW9uVHlwZTtbABBzYXZlZEFubm90YXRpb25zdAATW0xqYXZhL2xhbmcvU3RyaW5nO0wACHNlbGZUeXBldAAQTHhzYnRpL2FwaS9MYXp5O0wACXN0cnVjdHVyZXEAfgB1eHIAIXhzYnRpLmFwaS5QYXJhbWV0ZXJpemVkRGVmaW5pdGlvbvkRbrHVUDziAgABWwAOdHlwZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9UeXBlUGFyYW1ldGVyO3hyABR4c2J0aS5hcGkuRGVmaW5pdGlvbocqG+hxQuNGAgAETAAGYWNjZXNzdAASTHhzYnRpL2FwaS9BY2Nlc3M7WwALYW5ub3RhdGlvbnN0ABdbTHhzYnRpL2FwaS9Bbm5vdGF0aW9uO0wACW1vZGlmaWVyc3QAFUx4c2J0aS9hcGkvTW9kaWZpZXJzO0wABG5hbWVxAH4ADXhwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAABc3IAFHhzYnRpLmFwaS5Bbm5vdGF0aW9u3g6BovZcCrICAAJbAAlhcmd1bWVudHN0AB9bTHhzYnRpL2FwaS9Bbm5vdGF0aW9uQXJndW1lbnQ7TAAEYmFzZXQAEEx4c2J0aS9hcGkvVHlwZTt4cHVyAB9bTHhzYnRpLmFwaS5Bbm5vdGF0aW9uQXJndW1lbnQ7UZ2mjzglD3gCAAB4cAAAAAFzcgAceHNidGkuYXBpLkFubm90YXRpb25Bcmd1bWVudNZFsdgDGxd8AgACTAAEbmFtZXEAfgANTAAFdmFsdWVxAH4ADXhwdAAFdmFsdWV0AAhOT05fTlVMTHNyABR4c2J0aS5hcGkuUHJvamVjdGlvbvPSjVTpRaQtAgACTAACaWRxAH4ADUwABnByZWZpeHQAFkx4c2J0aS9hcGkvU2ltcGxlVHlwZTt4cgAUeHNidGkuYXBpLlNpbXBsZVR5cGVyeGKIISO/QAIAAHhyAA54c2J0aS5hcGkuVHlwZT9q2SEWSarKAgAAeHB0AAtKc29uSW5jbHVkZXNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4AjnNyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAABXNyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AA14cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAADY29tc3EAfgCadAAJZmFzdGVyeG1sc3EAfgCadAAHamFja3NvbnNxAH4AmnQACmFubm90YXRpb25zcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4Am3NyABN4c2J0aS5hcGkuTW9kaWZpZXJzxxETIWmc3CQCAAFCAAVmbGFnc3hwAHQAImlvLnNreXNhaWwuZG9jLnN3YWdnZXIuU3dhZ2dlclNwZWN1cgAaW0x4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcjvZbSYPKJ3ytgIAAHhwAAAAAH5yABh4c2J0aS5hcGkuRGVmaW5pdGlvblR5cGUAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AAhDbGFzc0RlZnVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgATeHNidGkuU2FmZUxhenkkSW1wbFACLpOXl0A/AgADWgAIYml0bWFwJDBMAAJfdHQAEkxqYXZhL2xhbmcvT2JqZWN0O0wABGV2YWx0ABFMc2NhbGEvRnVuY3Rpb24wO3hyABZ4c2J0aS5hcGkuQWJzdHJhY3RMYXp503e1AV+756ACAAB4cABwc3IAIHhzYnRpLlNhZmVMYXp5JCRhbm9uZnVuJHN0cmljdCQxAAAAAAAAAAACAAFMAAd2YWx1ZSQxcQB+ALJ4cHNyABN4c2J0aS5hcGkuRW1wdHlUeXBlvP2eRkk7iSQCAAB4cQB+AI5zcQB+ALEAcHNxAH4AtnNyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgB1TAAJaW5oZXJpdGVkcQB+AHVMAAdwYXJlbnRzcQB+AHV4cQB+AI9zcQB+ALEAcHNxAH4AtnVxAH4AcAAAAABzcQB+ALEAcHNxAH4AtnVxAH4AcAAAAABzcQB+ALEAcHNxAH4AtnVyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAADc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJpemVkFmzuaQPJu38CAAJMAAhiYXNlVHlwZXEAfgCNWwANdHlwZUFyZ3VtZW50c3QAEVtMeHNidGkvYXBpL1R5cGU7eHEAfgCOc3EAfgCMdAALU2NhbGFFbnRpdHlzcQB+AJJzcQB+AJV1cQB+AJgAAAAFc3EAfgCadAACaW9zcQB+AJp0AAdza3lzYWlsc3EAfgCadAAGZG9tYWluc3EAfgCadAADZGRkcQB+AKV1cQB+AMYAAAABc3EAfgCMdAAGU3RyaW5nc3EAfgCSc3EAfgCVdXEAfgCYAAAAA3NxAH4AmnQABGphdmFzcQB+AJp0AARsYW5ncQB+AKVzcQB+AIx0AAZPYmplY3RxAH4A23NxAH4AjHQAA0FueXNxAH4AknNxAH4AlXVxAH4AmAAAAAJzcQB+AJp0AAVzY2FsYXEAfgCldXIAFFtMeHNidGkuYXBpLlBhY2thZ2U7WxMZN3CnJ6ECAAB4cAAAAARzcgAReHNidGkuYXBpLlBhY2thZ2V+WY/2rs45WAIAAUwABG5hbWVxAH4ADXhwdAAWaW8uc2t5c2FpbC5kb2Muc3dhZ2dlcnNxAH4A7XQAAmlvc3EAfgDtdAAOaW8uc2t5c2FpbC5kb2NzcQB+AO10AAppby5za3lzYWlsc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFcFvdAlHVyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADUwAD3NvdXJjZURpcmVjdG9yeXEAfgANeHB0ADgvVXNlcnMvY2Fyc3Rlbi9naXQvc2t5c2FpbC1ub3Rlcy9za3lzYWlsLmRvYy5zd2FnZ2VyL2JpbnQAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFLJIphDNz17EMHxtRsMaITY3bgxv
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerVerb.java -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHC4IVHqAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAAHNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAB1cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAAAHNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABXBb3QJR1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+ABp4cHQAOC9Vc2Vycy9jYXJzdGVuL2dpdC9za3lzYWlsLW5vdGVzL3NreXNhaWwuZG9jLnN3YWdnZXIvYmludAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAU//zlHi2wd0qJNrCYcSMOgZ76QZk=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHB+FCDgAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAeHNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cJ6PJYd0AAtpc0RlYnVnZ2luZ3NxAH4ADMNs2wZ0ABJzZXRNZXRhZGF0YVNlcnZpY2VzcQB+AAyvI9ZVdAAGbm90aWZ5c3EAfgAM0MeKcHQAGXJlbW92ZUFwcGxpY2F0aW9uUHJvdmlkZXJzcQB+AAyMUSN+dAAJZ2V0TG9nZ2Vyc3EAfgAMR1DY6nQADWdldElkZW50aWZpZXJzcQB+AAwsMtlzdAATc2V0Q29ubmVjdG9yU2VydmljZXNxAH4ADE3BLlt0AAR3YWl0c3EAfgAMEZ+/B3QAEGdldFJvdXRlQnVpbGRlcnNzcQB+AAx2QNhzdAAUZGVmaW5lU2VjdXJpdHlDb25maWdzcQB+AAxjm1pbdAACPD1zcQB+AAwXvayzdAASU3dhZ2dlckFwcGxpY2F0aW9uc3EAfgAMtXTXTHQAEmdldE1ldGFkYXRhU2VydmljZXNxAH4ADPA4oaB0AA0kYXNJbnN0YW5jZU9mc3EAfgAMOU8jo3QAB3NldE5hbWVzcQB+AAzTFIMkdAARYXBwbGljYXRpb25Nb2RlbDJzcQB+AAwWedm2dAAJZ2V0QXV0aG9yc3EAfgAM2Zn7uXQAD2dldE91dGJvdW5kUm9vdHNxAH4ADBaBUSR0AA5zZXRJbmJvdW5kUm9vdHNxAH4ADItXu190AAhyZXN0bGV0c3NxAH4ADDDTtKR0ABFzZXRFbmNvZGVyU2VydmljZXNxAH4ADABeZ8p0AAZlcXVhbHNzcQB+AAxPb190dAAOZ2V0RmluZGVyQ2xhc3NzcQB+AAwMW2xHdAAWYWRkQXBwbGljYXRpb25Qcm92aWRlcnNxAH4ADMyUXnp0ABNnZXRNZXRyaWNzQ29sbGVjdG9yc3EAfgAMITTPjHQAG2dldFJvdXRlQnVpbGRlcnNGb3JSZXNvdXJjZXNxAH4ADLNmTcF0AA5nZXRBcHBsaWNhdGlvbnNxAH4ADAiy/FV0AAhzZXRPd25lcnNxAH4ADHyoFSt0AApkZWFjdGl2YXRlc3EAfgAMwNW0gnQADGFzSW5zdGFuY2VPZnNxAH4ADPlqiCd0AAhBUFBfTkFNRXNxAH4ADI7MBch0AAE8c3EAfgAMXqIN93QAFWNyZWF0ZVN0YXRpY0RpcmVjdG9yeXNxAH4ADCn9Gf50AARob3N0c3EAfgAMjVVq73QAE2dldENvbXBvbmVudENvbnRleHRzcQB+AAyCPTzXdAAPc2V0UmFuZ2VTZXJ2aWNlc3EAfgAMQdtw5HQAEmNyZWF0ZU91dGJvdW5kUm9vdHNxAH4ADIhmQdh0AAxzeW5jaHJvbml6ZWRzcQB+AAwYuP3adAANJGlzSW5zdGFuY2VPZnNxAH4ADAV6Ddx0ABJnZXRSZXNvdXJjZUJ1bmRsZXNzcQB+AAwLvdAXdAACPj1zcQB+AAzLNoErdAAHZ2V0SG9zdHNxAH4ADK8Qnax0AA5nZXRUYXNrU2VydmljZXNxAH4ADIwx3yR0AAtnZXRTZXJ2aWNlc3NxAH4ADFZEBRJ0AAlpc1N0YXJ0ZWRzcQB+AAx1scSkdAARZ2V0RGVjb2RlclNlcnZpY2VzcQB+AAxG3uk+dAAOZ2V0RGVzY3JpcHRpb25zcQB+AAzS11DDdAAQc2V0VHVubmVsU2VydmljZXNxAH4ADGCXT6V0AAlnZXRCdW5kbGVzcQB+AAxo1X8OdAAQY29tcG9uZW50Q29udGV4dHNxAH4ADGB7RSd0AA9nZXRSYW5nZVNlcnZpY2VzcQB+AAwMFkNNdAAEc3RvcHNxAH4ADO57K510ABxhZGRBc3NvY2lhdGVkUmVzb3VyY2VDbGFzc2Vzc3EAfgAMGvgCvXQACW5vdGlmeUFsbHNxAH4ADOLazPl0AAdnZXROYW1lc3EAfgAMtLio7nQACWNvbXBhcmVUb3NxAH4ADOUyTD10AAxpc0luc3RhbmNlT2ZzcQB+AAxRDNHhdAAcZ2V0U2t5c2FpbEFwcGxpY2F0aW9uU2VydmljZXNxAH4ADJlgzEB0AAlpc1N0b3BwZWRzcQB+AAxTnCIgdAAIc2V0Um9sZXNzcQB+AAyb9n1ZdAAGPGluaXQ+c3EAfgAMWDn93HQADnNldFRhc2tTZXJ2aWNlc3EAfgAM4XfWJHQABmF0dGFjaHNxAH4ADALnxYp0AAlyb3V0ZXNNYXBzcQB+AAwwyvIhdAAVZ2V0U2t5c2FpbEFwcGxpY2F0aW9uc3EAfgAMAHvUb3QAE3NldENvbnZlcnRlclNlcnZpY2VzcQB+AAzjJWJedAARc2V0RGVjb2RlclNlcnZpY2VzcQB+AAyQnuE3dAACPT1zcQB+AAwm4F4XdAAFY2xvbmVzcQB+AAylOB/4dAAIZ2V0T3duZXJzcQB+AAx5YWRNdAAJc2V0QXV0aG9yc3EAfgAMxM1W+3QADmdldE1lbnVFbnRyaWVzc3EAfgAM8qlqJHQADHJlcG9zaXRvcmllc3NxAH4ADLreq3p0ABhnZXRBdXRoZW50aWNhdGlvblNlcnZpY2VzcQB+AAxGgRJ9dAAJdHJhbnNsYXRlc3EAfgAMWORWzHQAE2dldENvbnZlcnRlclNlcnZpY2VzcQB+AAzTCERWdAAOc2V0RGVzY3JpcHRpb25zcQB+AAwygj0ddAAQZ2V0U3RhdHVzU2VydmljZXNxAH4ADHJBLNd0ABBnZXRUdW5uZWxTZXJ2aWNlc3EAfgAMbaNJYnQACmdldENvbnRleHRzcQB+AAzapyt2dAAMY3JlYXRlRmluZGVyc3EAfgAMkikS4nQACHRvU3RyaW5nc3EAfgAMc7FRw3QAD2lzQXV0aGVudGljYXRlZHNxAH4ADAYW4kN0ABRnZXRBcHBsaWNhdGlvbk1vZGVsMnNxAH4ADLFp2b90ABBnZXRCdW5kbGVDb250ZXh0c3EAfgAM5768E3QAAiE9c3EAfgAMmRtPhXQAEHNldENvbm5lZ1NlcnZpY2VzcQB+AAwCkIU+dAAHZ2V0Um9sZXNxAH4ADNA1OUh0AA1nZXRSZXBvc2l0b3J5c3EAfgAMvYuPK3QACGdldENsYXNzc3EAfgAMVrfTWXQAEGdldFRlbXBsYXRlUGF0aHNzcQB+AAxIzc9ldAAOZ2V0SW5ib3VuZFJvb3RzcQB+AAzavVVodAAIZ2V0Um9sZXNzcQB+AAzEicJudAAKYXBpVmVyc2lvbnNxAH4ADKo+ouV0AA1hZGRSZXBvc2l0b3J5c3EAfgAMgmDugXQACGFjdGl2YXRlc3EAfgAMDiKaXnQAG0lOX01FTU9SWV9UUkFOU0xBVElPTl9TVE9SRXNxAH4ADEKB8L90AAVzdGFydHNxAH4ADD4getp0ABJpc05vdEluTWVtb3J5U3RvcmVzcQB+AAwdQfHRdAARZ2V0RW5jb2RlclNlcnZpY2VzcQB+AAzlndd5dAAQc2V0U3RhdHVzU2VydmljZXNxAH4ADDQ2mXV0AAJuZXNxAH4ADNdtGkB0ABFjcmVhdGVJbmJvdW5kUm9vdHNxAH4ADLKrMd90AA5zZXRGaW5kZXJDbGFzc3NxAH4ADPMYtA50ABBnZXRDb25uZWdTZXJ2aWNlc3EAfgAMYY30znQABnJvdXRlcnNxAH4ADJJ/oZV0AA9zZXRPdXRib3VuZFJvb3RzcQB+AAwPqJ1udAATZ2V0Q29ubmVjdG9yU2VydmljZXNxAH4ADEahncd0ABBzdHJpbmdDb250ZXh0TWFwc3EAfgAMZQlDpXQAAmVxc3EAfgAM+chuF3QAB2NvbXBhcmVzcQB+AAzBRwFddAAMc2V0RGVidWdnaW5nc3EAfgAMttUyH3QAA2xvZ3NxAH4ADG8VvBd0AAE+c3EAfgAMMbb4IXQAAiMjc3EAfgAMJTWnfnQACGZpbmFsaXplc3EAfgAMni14OHQACGhhc2hDb2Rlc3EAfgAMvkfJjHQACnNldENvbnRleHRzcQB+AAy95pH2dAAGaGFuZGxlc3EAfgAMZvTT83QAGWFzc29jaWF0ZWRSZXNvdXJjZUNsYXNzZXNzcgATeHNidGkuYXBpLlNvdXJjZUFQSblep/kpIzikAgACWwALZGVmaW5pdGlvbnN0ABdbTHhzYnRpL2FwaS9EZWZpbml0aW9uO1sACHBhY2thZ2VzdAAUW0x4c2J0aS9hcGkvUGFja2FnZTt4cHVyABdbTHhzYnRpLmFwaS5EZWZpbml0aW9uO4jJXOe0414OAgAAeHAAAAACc3IAE3hzYnRpLmFwaS5DbGFzc0xpa2WDNByh37CXbAIABEwADmRlZmluaXRpb25UeXBldAAaTHhzYnRpL2FwaS9EZWZpbml0aW9uVHlwZTtbABBzYXZlZEFubm90YXRpb25zdAATW0xqYXZhL2xhbmcvU3RyaW5nO0wACHNlbGZUeXBldAAQTHhzYnRpL2FwaS9MYXp5O0wACXN0cnVjdHVyZXEAfgEHeHIAIXhzYnRpLmFwaS5QYXJhbWV0ZXJpemVkRGVmaW5pdGlvbvkRbrHVUDziAgABWwAOdHlwZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9UeXBlUGFyYW1ldGVyO3hyABR4c2J0aS5hcGkuRGVmaW5pdGlvbocqG+hxQuNGAgAETAAGYWNjZXNzdAASTHhzYnRpL2FwaS9BY2Nlc3M7WwALYW5ub3RhdGlvbnN0ABdbTHhzYnRpL2FwaS9Bbm5vdGF0aW9uO0wACW1vZGlmaWVyc3QAFUx4c2J0aS9hcGkvTW9kaWZpZXJzO0wABG5hbWVxAH4ADXhwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAAAc3IAE3hzYnRpLmFwaS5Nb2RpZmllcnPHERMhaZzcJAIAAUIABWZsYWdzeHAAdAAtaW8uc2t5c2FpbC5kb2Muc3dhZ2dlci5hcHAuU3dhZ2dlckFwcGxpY2F0aW9udXIAGltMeHNidGkuYXBpLlR5cGVQYXJhbWV0ZXI72W0mDyid8rYCAAB4cAAAAAB+cgAYeHNidGkuYXBpLkRlZmluaXRpb25UeXBlAAAAAAAAAAASAAB4cgAOamF2YS5sYW5nLkVudW0AAAAAAAAAABIAAHhwdAAGTW9kdWxldXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyABN4c2J0aS5TYWZlTGF6eSRJbXBsUAIuk5eXQD8CAANaAAhiaXRtYXAkMEwAAl90dAASTGphdmEvbGFuZy9PYmplY3Q7TAAEZXZhbHQAEUxzY2FsYS9GdW5jdGlvbjA7eHIAFnhzYnRpLmFwaS5BYnN0cmFjdExhennTd7UBX7vnoAIAAHhwAHBzcgAgeHNidGkuU2FmZUxhenkkJGFub25mdW4kc3RyaWN0JDEAAAAAAAAAAAIAAUwAB3ZhbHVlJDFxAH4BIHhwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHNxAH4BHwBwc3EAfgEkc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AQdMAAlpbmhlcml0ZWRxAH4BB0wAB3BhcmVudHNxAH4BB3hxAH4BKHNxAH4BHwBwc3EAfgEkdXEAfgECAAAAAHNxAH4BHwBwc3EAfgEkdXEAfgECAAAAAHNxAH4BHwBwc3EAfgEkdXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAJzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgEndAAGT2JqZWN0c3IAE3hzYnRpLmFwaS5TaW5nbGV0b278p1/4z1bkRgIAAUwABHBhdGh0ABBMeHNidGkvYXBpL1BhdGg7eHEAfgEnc3IADnhzYnRpLmFwaS5QYXRomz1cCM6lJ4QCAAFbAApjb21wb25lbnRzdAAaW0x4c2J0aS9hcGkvUGF0aENvbXBvbmVudDt4cHVyABpbTHhzYnRpLmFwaS5QYXRoQ29tcG9uZW50O0PaCXQtZxZ0AgAAeHAAAAADc3IADHhzYnRpLmFwaS5JZJgybIs3U8RAAgABTAACaWRxAH4ADXhyABd4c2J0aS5hcGkuUGF0aENvbXBvbmVudF+aIlsuhp+8AgAAeHB0AARqYXZhc3EAfgFEdAAEbGFuZ3NyAA54c2J0aS5hcGkuVGhpc9sJ7abMWkBcAgAAeHEAfgFFc3EAfgE4dAADQW55c3EAfgE8c3EAfgE/dXEAfgFCAAAAAnNxAH4BRHQABXNjYWxhcQB+AUtzcQB+AQRxAH4BEXVxAH4BEgAAAAFzcgAUeHNidGkuYXBpLkFubm90YXRpb27eDoGi9lwKsgIAAlsACWFyZ3VtZW50c3QAH1tMeHNidGkvYXBpL0Fubm90YXRpb25Bcmd1bWVudDtMAARiYXNldAAQTHhzYnRpL2FwaS9UeXBlO3hwdXIAH1tMeHNidGkuYXBpLkFubm90YXRpb25Bcmd1bWVudDtRnaaPOCUPeAIAAHhwAAAAA3NyABx4c2J0aS5hcGkuQW5ub3RhdGlvbkFyZ3VtZW501kWx2AMbF3wCAAJMAARuYW1lcQB+AA1MAAV2YWx1ZXEAfgANeHB0AAlpbW1lZGlhdGV0AAR0cnVlc3EAfgFbdAATY29uZmlndXJhdGlvblBvbGljeXQACE9QVElPTkFMc3EAfgFbdAAHc2VydmljZXQAMltjbGFzc09mW2lvLnNreXNhaWwuY29yZS5hcHAuQXBwbGljYXRpb25Qcm92aWRlcl1dc3EAfgE4dAAJQ29tcG9uZW50c3EAfgE8c3EAfgE/dXEAfgFCAAAABnNxAH4BRHQAA29yZ3NxAH4BRHQABG9zZ2lzcQB+AUR0AAdzZXJ2aWNlc3EAfgFEdAAJY29tcG9uZW50c3EAfgFEdAALYW5ub3RhdGlvbnNxAH4BS3NxAH4BFAB0AC1pby5za3lzYWlsLmRvYy5zd2FnZ2VyLmFwcC5Td2FnZ2VyQXBwbGljYXRpb251cQB+ARcAAAAAfnEAfgEZdAAIQ2xhc3NEZWZ1cQB+AR0AAAAFdAAvb3JnLm9zZ2kuc2VydmljZS5jb21wb25lbnQuYW5ub3RhdGlvbnMuQWN0aXZhdGV0ADFvcmcub3NnaS5zZXJ2aWNlLmNvbXBvbmVudC5hbm5vdGF0aW9ucy5EZWFjdGl2YXRldAAwb3JnLm9zZ2kuc2VydmljZS5jb21wb25lbnQuYW5ub3RhdGlvbnMuUmVmZXJlbmNldAAQc2NhbGEuZGVwcmVjYXRlZHQAFGphdmEubGFuZy5EZXByZWNhdGVkc3EAfgEfAHBzcQB+ASRxAH4BKXNxAH4BHwBwc3EAfgEkc3EAfgEsc3EAfgEfAHBzcQB+ASR1cQB+AQIAAAAAc3EAfgEfAHBzcQB+ASR1cQB+AQIAAAAAc3EAfgEfAHBzcQB+ASR1cQB+ATYAAAAKc3EAfgE4dAASU2t5c2FpbEFwcGxpY2F0aW9uc3EAfgE8c3EAfgE/dXEAfgFCAAAABXNxAH4BRHQAAmlvc3EAfgFEdAAHc2t5c2FpbHNxAH4BRHQABGNvcmVzcQB+AUR0AANhcHBxAH4BS3NxAH4BOHQAFlJlc291cmNlQnVuZGxlUHJvdmlkZXJzcQB+ATxzcQB+AT91cQB+AUIAAAAFc3EAfgFEdAACaW9zcQB+AUR0AAdza3lzYWlsc3EAfgFEdAAHcmVzdGxldHNxAH4BRHQACHNlcnZpY2VzcQB+AUtzcQB+ATh0ABNBcHBsaWNhdGlvblByb3ZpZGVycQB+AY9zcgAXeHNidGkuYXBpLlBhcmFtZXRlcml6ZWQWbO5pA8m7fwIAAkwACGJhc2VUeXBlcQB+ATlbAA10eXBlQXJndW1lbnRzdAARW0x4c2J0aS9hcGkvVHlwZTt4cQB+ASdzcQB+ATh0AAdPcmRlcmVkc3EAfgE8c3EAfgE/dXEAfgFCAAAAA3NxAH4BRHEAfgFSc3EAfgFEdAAEbWF0aHEAfgFLdXEAfgE2AAAAAXEAfgGnc3EAfgGpc3EAfgE4dAAKQ29tcGFyYWJsZXNxAH4BPHNxAH4BP3VxAH4BQgAAAANzcQB+AURxAH4BR3NxAH4BRHEAfgFJcQB+AUt1cQB+ATYAAAABcQB+AadzcQB+ATh0AAtBcHBsaWNhdGlvbnNxAH4BPHNxAH4BP3VxAH4BQgAAAANzcQB+AUR0AANvcmdzcQB+AUR0AAdyZXN0bGV0cQB+AUtzcQB+ATh0AAdSZXN0bGV0cQB+AcBzcQB+ATh0AAdVbmlmb3JtcQB+AcBzcQB+AThxAH4BO3EAfgG4c3EAfgE4cQB+AU1zcQB+ATxzcQB+AT91cQB+AUIAAAACc3EAfgFEcQB+AVJxAH4BS3VyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAAFc3IAEXhzYnRpLmFwaS5QYWNrYWdlflmP9q7OOVgCAAFMAARuYW1lcQB+AA14cHQAFmlvLnNreXNhaWwuZG9jLnN3YWdnZXJzcQB+AdN0ABppby5za3lzYWlsLmRvYy5zd2FnZ2VyLmFwcHNxAH4B03QAAmlvc3EAfgHTdAAOaW8uc2t5c2FpbC5kb2NzcQB+AdN0AAppby5za3lzYWlsc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFcFvdAlHVyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADUwAD3NvdXJjZURpcmVjdG9yeXEAfgANeHB0ADgvVXNlcnMvY2Fyc3Rlbi9naXQvc2t5c2FpbC1ub3Rlcy9za3lzYWlsLmRvYy5zd2FnZ2VyL2JpbnQAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFF7Pk5rjF3z1EmlAvnVYnyR1I03J
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHDpFCZWAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAK3NyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cJVQSsp0AAZub3RpZnlzcQB+AAzrPmQrdAAJZ2V0TG9nZ2Vyc3EAfgAMnU9H5HQADlN3YWdnZXJSZXN0bGV0c3EAfgAMzZhFP3QABHdhaXRzcQB+AAyM9eVadAANJGFzSW5zdGFuY2VPZnNxAH4ADHWFzaZ0AAdzZXROYW1lc3EAfgAMOMKUxXQACWdldEF1dGhvcnNxAH4ADGXrtX50AAZtYXBwZXJzcQB+AAw0cHqfdAAGZXF1YWxzc3EAfgAMEzv5t3QADmdldEZpbmRlckNsYXNzc3EAfgAMBUlHIXQADmdldEFwcGxpY2F0aW9uc3EAfgAMn8Y2bnQACHNldE93bmVyc3EAfgAMhnE3wHQADGFzSW5zdGFuY2VPZnNxAH4ADAfJCOl0AAxzeW5jaHJvbml6ZWRzcQB+AAz/3HIFdAANJGlzSW5zdGFuY2VPZnNxAH4ADM75x/N0AAlpc1N0YXJ0ZWRzcQB+AAxwqbfQdAAOZ2V0RGVzY3JpcHRpb25zcQB+AAytQQaudAAEc3RvcHNxAH4ADGlO0iV0AAlub3RpZnlBbGxzcQB+AAxU02updAAHZ2V0TmFtZXNxAH4ADH5TFTV0AAxpc0luc3RhbmNlT2ZzcQB+AAwwVDbJdAAJaXNTdG9wcGVkc3EAfgAMuIMeOXQABjxpbml0PnNxAH4ADMvuBBZ0AAI9PXNxAH4ADDXttE90AAVjbG9uZXNxAH4ADF1EXxt0AAhnZXRPd25lcnNxAH4ADFitOm90AAlzZXRBdXRob3JzcQB+AAzUb9HIdAAOc2V0RGVzY3JpcHRpb25zcQB+AAyKPNCzdAAKZ2V0Q29udGV4dHNxAH4ADLc2bQt0AAxjcmVhdGVGaW5kZXJzcQB+AAzPbnTDdAAIdG9TdHJpbmdzcQB+AAxBJS0jdAACIT1zcQB+AAxgSEXbdAAIZ2V0Q2xhc3NzcQB+AAxDKIlPdAAFc3RhcnRzcQB+AAyp0DiNdAACbmVzcQB+AAzFL2tTdAAOc2V0RmluZGVyQ2xhc3NzcQB+AAzDfhm7dAACZXFzcQB+AAzzTxqAdAADbG9nc3EAfgAMMT0kfHQAAiMjc3EAfgAMQQsS13QACGZpbmFsaXplc3EAfgAMkIUxdHQACGhhc2hDb2Rlc3EAfgAMaQR+sHQACnNldENvbnRleHRzcQB+AAw42IItdAAGaGFuZGxlc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAAAnNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4AbXhyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AA14cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzxxETIWmc3CQCAAFCAAVmbGFnc3hwAHQAKWlvLnNreXNhaWwuZG9jLnN3YWdnZXIuYXBwLlN3YWdnZXJSZXN0bGV0dXIAGltMeHNidGkuYXBpLlR5cGVQYXJhbWV0ZXI72W0mDyid8rYCAAB4cAAAAAB+cgAYeHNidGkuYXBpLkRlZmluaXRpb25UeXBlAAAAAAAAAAASAAB4cgAOamF2YS5sYW5nLkVudW0AAAAAAAAAABIAAHhwdAAGTW9kdWxldXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyABN4c2J0aS5TYWZlTGF6eSRJbXBsUAIuk5eXQD8CAANaAAhiaXRtYXAkMEwAAl90dAASTGphdmEvbGFuZy9PYmplY3Q7TAAEZXZhbHQAEUxzY2FsYS9GdW5jdGlvbjA7eHIAFnhzYnRpLmFwaS5BYnN0cmFjdExhennTd7UBX7vnoAIAAHhwAHBzcgAgeHNidGkuU2FmZUxhenkkJGFub25mdW4kc3RyaWN0JDEAAAAAAAAAAAIAAUwAB3ZhbHVlJDFxAH4Ahnhwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHNxAH4AhQBwc3EAfgCKc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AG1MAAlpbmhlcml0ZWRxAH4AbUwAB3BhcmVudHNxAH4AbXhxAH4AjnNxAH4AhQBwc3EAfgCKdXEAfgBoAAAAAHNxAH4AhQBwc3EAfgCKdXEAfgBoAAAAAHNxAH4AhQBwc3EAfgCKdXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAJzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgCNdAAGT2JqZWN0c3IAE3hzYnRpLmFwaS5TaW5nbGV0b278p1/4z1bkRgIAAUwABHBhdGh0ABBMeHNidGkvYXBpL1BhdGg7eHEAfgCNc3IADnhzYnRpLmFwaS5QYXRomz1cCM6lJ4QCAAFbAApjb21wb25lbnRzdAAaW0x4c2J0aS9hcGkvUGF0aENvbXBvbmVudDt4cHVyABpbTHhzYnRpLmFwaS5QYXRoQ29tcG9uZW50O0PaCXQtZxZ0AgAAeHAAAAADc3IADHhzYnRpLmFwaS5JZJgybIs3U8RAAgABTAACaWRxAH4ADXhyABd4c2J0aS5hcGkuUGF0aENvbXBvbmVudF+aIlsuhp+8AgAAeHB0AARqYXZhc3EAfgCqdAAEbGFuZ3NyAA54c2J0aS5hcGkuVGhpc9sJ7abMWkBcAgAAeHEAfgCrc3EAfgCedAADQW55c3EAfgCic3EAfgCldXEAfgCoAAAAAnNxAH4AqnQABXNjYWxhcQB+ALFzcQB+AGpxAH4Ad3VxAH4AeAAAAABzcQB+AHoAdAApaW8uc2t5c2FpbC5kb2Muc3dhZ2dlci5hcHAuU3dhZ2dlclJlc3RsZXR1cQB+AH0AAAAAfnEAfgB/dAAIQ2xhc3NEZWZ1cQB+AIMAAAAAc3EAfgCFAHBzcQB+AIpxAH4Aj3NxAH4AhQBwc3EAfgCKc3EAfgCSc3EAfgCFAHBzcQB+AIp1cQB+AGgAAAAAc3EAfgCFAHBzcQB+AIp1cQB+AGgAAAAAc3EAfgCFAHBzcQB+AIp1cQB+AJwAAAAEc3EAfgCedAAHUmVzdGxldHNxAH4AonNxAH4ApXVxAH4AqAAAAANzcQB+AKp0AANvcmdzcQB+AKp0AAdyZXN0bGV0cQB+ALFzcQB+AJ50AAdVbmlmb3JtcQB+ANFzcQB+AJ5xAH4AoXNxAH4AonNxAH4ApXVxAH4AqAAAAANzcQB+AKpxAH4ArXNxAH4AqnEAfgCvcQB+ALFzcQB+AJ5xAH4As3NxAH4AonNxAH4ApXVxAH4AqAAAAAJzcQB+AKpxAH4AuHEAfgCxdXIAFFtMeHNidGkuYXBpLlBhY2thZ2U7WxMZN3CnJ6ECAAB4cAAAAAVzcgAReHNidGkuYXBpLlBhY2thZ2V+WY/2rs45WAIAAUwABG5hbWVxAH4ADXhwdAAWaW8uc2t5c2FpbC5kb2Muc3dhZ2dlcnNxAH4A53QAGmlvLnNreXNhaWwuZG9jLnN3YWdnZXIuYXBwc3EAfgDndAACaW9zcQB+AOd0AA5pby5za3lzYWlsLmRvY3NxAH4A53QACmlvLnNreXNhaWxzcgAVeHNidGkuYXBpLkNvbXBpbGF0aW9u7frgw2rooEICAAJKAAlzdGFydFRpbWVbAAdvdXRwdXRzdAAaW0x4c2J0aS9hcGkvT3V0cHV0U2V0dGluZzt4cAAAAVwW90CUdXIAGltMeHNidGkuYXBpLk91dHB1dFNldHRpbmc7f2rC86eHpUICAAB4cAAAAAFzcgAXeHNidGkuYXBpLk91dHB1dFNldHRpbmd62ZpHdPsdewIAAkwAD291dHB1dERpcmVjdG9yeXEAfgANTAAPc291cmNlRGlyZWN0b3J5cQB+AA14cHQAOC9Vc2Vycy9jYXJzdGVuL2dpdC9za3lzYWlsLW5vdGVzL3NreXNhaWwuZG9jLnN3YWdnZXIvYmludAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAUX8a1mvJ4Nw8a2+PU0yNvTNMUOm8=
+external apis:
+0 items
+source infos:
+14 items
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerContact.scala -> 
+AAAAAAAAAAA=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerDefinition.scala -> 
+AAAAAAAAAAA=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerExternalDoc.scala -> 
+AAAAAAAAAAA=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerInfo.scala -> 
+AAAAAAAAAAA=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerLicence.scala -> 
+AAAAAAAAAAA=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerParameter.scala -> 
+AAAAAAAAAAA=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPath.scala -> 
+AAAAAAAAAAA=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerPathVariable.java -> 
+AAAAAAAAAAA=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerProperty.scala -> 
+AAAAAAAAAAA=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerResource.java -> 
+AAAAAAAAAAA=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerSpec.scala -> 
+AAAAAAAAAAA=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/SwaggerVerb.java -> 
+AAAAAAAAAAA=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerApplication.scala -> 
+AAAAAAAAAAA=
+/Users/carsten/git/skysail-notes/skysail.doc.swagger/src/io/skysail/doc/swagger/app/SwaggerRestlet.scala -> 
+AAAAAAAAAAA=
+compilations:
+1 items
+0 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABXBb3QJR1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAOC9Vc2Vycy9jYXJzdGVuL2dpdC9za3lzYWlsLW5vdGVzL3NreXNhaWwuZG9jLnN3YWdnZXIvYmludAABLw==
