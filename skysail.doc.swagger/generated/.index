@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<repository increment="1495003476678" name="skysail.doc.swagger" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+<repository increment="1495013789146" name="skysail.doc.swagger" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="skysail.doc.swagger"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" type="Version" value="0.1.0.201705170644"/>
+      <attribute name="version" type="Version" value="0.1.0.201705170936"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="osgi.content" value="92ad890aac15b94af29c1a09b4238ff868b8e7db0504d818184b1dda5a801e75"/>
+      <attribute name="osgi.content" value="319801619a5b75e2f5deb62017247e59a3720d0187739c5846e04c261f4761b2"/>
       <attribute name="url" value="generated/skysail.doc.swagger.jar"/>
-      <attribute name="size" type="Long" value="54058"/>
+      <attribute name="size" type="Long" value="54057"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
       <attribute name="osgi.wiring.bundle" value="skysail.doc.swagger"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201705170644"/>
+      <attribute name="bundle-version" type="Version" value="0.1.0.201705170936"/>
     </capability>
     <capability namespace="osgi.wiring.host">
       <attribute name="osgi.wiring.host" value="skysail.doc.swagger"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201705170644"/>
+      <attribute name="bundle-version" type="Version" value="0.1.0.201705170936"/>
     </capability>
     <capability namespace="osgi.service">
       <attribute name="objectClass" type="List&lt;String&gt;" value="io.skysail.core.app.ApplicationProvider"/>
@@ -28,7 +28,7 @@
       <directive name="uses" value="io.skysail.core.app"/>
     </capability>
     <capability namespace="bndtools.workspace">
-      <attribute name="bndtools.workspace" value="file:/Users/carsten/workspaces/skysail-notes"/>
+      <attribute name="bndtools.workspace" value="file:/C:/workspaces/skysail-notes"/>
       <attribute name="project.path" value="/skysail.doc.swagger"/>
     </capability>
     <requirement namespace="osgi.wiring.package">
