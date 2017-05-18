@@ -82,21 +82,21 @@ class ScalaHttpServer extends ServerResource
   var registeredConverters = Engine.getInstance().getRegisteredConverters()
 
   def getPort(): Int = runningOnPort
+  // TODO: why here?
+  @Reference(cardinality = ReferenceCardinality.MULTIPLE, policy = ReferencePolicy.DYNAMIC)
+  def addConverterHelper(converterHelper: OsgiConverterHelper) = {
+    if (converterHelper.isInstanceOf[ConverterHelper]) {
+      this.registeredConverters.add(converterHelper.asInstanceOf[ConverterHelper])
+      log.info(s"(+ Converter)   (#${formatSize(registeredConverters)}) with name '${converterHelper.getClass().getName()}'")
+    }
+  }
 
-//  @Reference(cardinality = ReferenceCardinality.MULTIPLE, policy = ReferencePolicy.DYNAMIC)
-//  def addConverterHelper(converterHelper: OsgiConverterHelper) = {
-//    if (converterHelper.isInstanceOf[ConverterHelper]) {
-//      this.registeredConverters.add(converterHelper.asInstanceOf[ConverterHelper])
-//      log.debug(s"(+ Converter)   (#${formatSize(registeredConverters)}) with name '${converterHelper.getClass().getName()}'")
-//    }
-//  }
-//
-//  def removeConverterHelper(converterHelper: OsgiConverterHelper) = {
-//    if (converterHelper.isInstanceOf[ConverterHelper]) {
-//      this.registeredConverters.remove(converterHelper);
-//      log.debug(s"(- Converter)   name '${registeredConverters.getClass().getName()}', count is ${formatSize(registeredConverters)} now")
-//    }
-//  }
+  def removeConverterHelper(converterHelper: OsgiConverterHelper) = {
+    if (converterHelper.isInstanceOf[ConverterHelper]) {
+      this.registeredConverters.remove(converterHelper);
+      log.info(s"(- Converter)   name '${registeredConverters.getClass().getName()}', count is ${formatSize(registeredConverters)} now")
+    }
+  }
 
   @Activate
   def activate(serverConfig: ServerConfig, componentContext: ComponentContext) {

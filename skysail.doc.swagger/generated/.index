@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<repository increment="1495033848085" name="skysail.doc.swagger" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+<repository increment="1495090826544" name="skysail.doc.swagger" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="skysail.doc.swagger"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" type="Version" value="0.1.0.201705171510"/>
+      <attribute name="version" type="Version" value="0.1.0.201705180700"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="osgi.content" value="1ca78fbc7726f59fc74133e9ffe8ff13e5186943a7ca86ee19402a802bd3aaf9"/>
+      <attribute name="osgi.content" value="ac4cb1a248f59243118b8fabb46c34e27b1b087769da96a6a19e893ca5ef0ddd"/>
       <attribute name="url" value="generated/skysail.doc.swagger.jar"/>
-      <attribute name="size" type="Long" value="54057"/>
+      <attribute name="size" type="Long" value="54055"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
       <attribute name="osgi.wiring.bundle" value="skysail.doc.swagger"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201705171510"/>
+      <attribute name="bundle-version" type="Version" value="0.1.0.201705180700"/>
     </capability>
     <capability namespace="osgi.wiring.host">
       <attribute name="osgi.wiring.host" value="skysail.doc.swagger"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201705171510"/>
+      <attribute name="bundle-version" type="Version" value="0.1.0.201705180700"/>
     </capability>
     <capability namespace="osgi.service">
       <attribute name="objectClass" type="List&lt;String&gt;" value="io.skysail.core.app.ApplicationProvider"/>

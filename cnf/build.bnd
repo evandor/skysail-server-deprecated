@@ -51,7 +51,7 @@ skysail.server.text.store.inmemory.version         '[0.1.0,0.1.1)'
 skysail.server.um.httpbasic.version                '[1.0.0,1.0.1)'
 
 # remote: 1.0.0
-skysail.server.um.shiro.version                    '[1.0.0,1.0.1)'
+skysail.um.shiro.version                           '[0.1.0,0.1.1)'
 
 # remote 0.1.2
 skysail.server.um.verifier.filebased.version       '[0.1.2,0.1.3)'
