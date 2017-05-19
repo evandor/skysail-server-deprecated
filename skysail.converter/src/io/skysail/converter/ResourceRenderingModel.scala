@@ -114,7 +114,7 @@ class ResourceRenderingModel(
     val result = new java.util.ArrayList[java.util.Map[String, Object]]()
     if (response.isInstanceOf[ListResponse[_]]) {
       //      			List<?> list = ((ListServerResponse<?>) source).getEntity();
-      val list = response.asInstanceOf[ListResponse[_]].entity
+      val list = response.asInstanceOf[ListResponse[_]].entity.asInstanceOf[List[_]]
       for (element <- list) {
         result.add(mapper.convertValue(element, classOf[LinkedHashMap[String, Object]]));
       }
@@ -365,6 +365,15 @@ class ResourceRenderingModel(
   }
   
   def getApplicationName() = resource.getApplication().getName()
+  def getResponseStatusAsHtml() = {
+    response.status.getCode match {
+      case it if 200 until 299 contains it  => s"<span style='color:green'>${response.status}</span>" 
+      case it if 300 until 399 contains it  => s"<span style='color:gray'>${response.status}</span>" 
+      case it if 400 until 499 contains it  => s"<span style='color:orange'>${response.status}</span>" 
+      case it if 500 until 999 contains it  => s"<span style='color:red'>${response.status}</span>" 
+      case it  => s"<span style='color:red'>${response.status}</span>" 
+    }
+  }
 
   private def adjustKeyNames(result: java.util.ArrayList[java.util.Map[String, Object]], cls: Class[_]) = {
     val p = new java.util.ArrayList[java.util.Map[String, Object]]()

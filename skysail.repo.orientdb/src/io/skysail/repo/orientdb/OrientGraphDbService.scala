@@ -101,7 +101,9 @@ class OrientGraphDbService extends AbstractOrientDbService with ScalaDbService {
     }
   }
 
-  def registerShutdownHook(): Unit = Runtime.getRuntime().addShutdownHook(new Thread() { override def run() = stopDb() })
+  def registerShutdownHook(): Unit = Runtime.getRuntime().addShutdownHook(new Thread() { 
+    override def run() = stopDb() }
+  )
 
   def startDb(): Unit = {
     if (started) {
@@ -139,7 +141,7 @@ class OrientGraphDbService extends AbstractOrientDbService with ScalaDbService {
       try {
         db.drop();
       } catch {
-        case e: Throwable => log.error(e.getMessage(), e);
+        case e: Throwable => //log.error(e.getMessage(), e);
       }
     }
 
