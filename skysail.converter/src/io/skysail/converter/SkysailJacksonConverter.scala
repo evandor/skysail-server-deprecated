@@ -5,7 +5,6 @@ import io.skysail.core.osgi.services.OsgiConverterHelper
 import org.restlet.ext.jackson.JacksonConverter
 import org.restlet.representation.Variant
 import org.restlet.resource.Resource
-import io.skysail.api.responses.SkysailResponse
 import org.restlet.representation.Representation
 import io.skysail.restlet.SkysailServerResource
 import org.restlet.ext.jackson.JacksonRepresentation
@@ -16,8 +15,8 @@ import io.skysail.restlet.responses.ScalaSkysailResponse
 class SkysailJacksonConverter extends JacksonConverter with OsgiConverterHelper {
 
   override def toRepresentation(source: AnyRef, target: Variant, resource: Resource): Representation = {
-    if (source.isInstanceOf[SkysailResponse[_]]) {
-      val entity = source.asInstanceOf[SkysailResponse[_]].getEntity()
+    if (source.isInstanceOf[ScalaSkysailResponse[_]]) {
+      val entity = source.asInstanceOf[ScalaSkysailResponse[_]].entity
       if (resource.getQuery().getNames().contains("_rendered")) {
         val skysailServerResource = resource.asInstanceOf[SkysailServerResource[_]]
 

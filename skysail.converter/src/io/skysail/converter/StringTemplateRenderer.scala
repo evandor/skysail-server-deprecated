@@ -1,6 +1,5 @@
 package io.skysail.converter
 
-import io.skysail.api.responses.SkysailResponse
 import io.skysail.converter.st.wrapper._
 import io.skysail.core.app._
 import io.skysail.restlet.SkysailServerResource
