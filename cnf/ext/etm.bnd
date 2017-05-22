@@ -1,3 +1,0 @@
-etm:\
-    etm.core;version='[1.2.3,1.2.4)',\
-    etm.contrib;version='[1.2.3,1.2.4)'

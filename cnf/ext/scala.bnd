@@ -1,0 +1,6 @@
+scala:\
+    org.scala-lang.scala-library;version=2.11.8,\
+    org.scala-lang.scala-reflect;version=2.11.8,\
+    org.scala-lang.modules.scala-xml;version=1.0,\
+    org.scala-lang.scala-compiler;version=2.11.8,\
+    org.scala-lang.modules.scala-parser-combinators;version=1.0.6

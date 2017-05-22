@@ -8,7 +8,6 @@ import io.skysail.restlet.responses.ScalaSkysailResponse
 import io.skysail.core.app.SkysailApplicationService
 import io.skysail.restlet.responses.FormResponse
 import io.skysail.api.text.Translation
-import io.skysail.api.links._
 import io.skysail.converter.forms.helper.CellRendererHelper
 import io.skysail.core.model.resource.StFormFieldsWrapper
 import io.skysail.core.model._
