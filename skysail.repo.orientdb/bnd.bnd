@@ -4,6 +4,8 @@ Bundle-Version: 0.1.0.${tstamp}
 
 #Include-Resource: templates=templates,webapp=webapp
 
+DynamicImport-Package: *
+
 -buildpath: \
 	${osgi},\
 	org.osgi.service.event;version=1.3,\
