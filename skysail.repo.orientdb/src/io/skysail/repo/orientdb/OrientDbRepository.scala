@@ -38,7 +38,7 @@ class OrientDbRepository[T](db: ScalaDbService) extends BaseDbRepository[T] {
     val result = db.persist(entity, appModel)
     //result.transform(s => s.asInstanceOf[T], f)
     if (result.isSuccess) {
-      if (entity.isInstanceOf[ScalaEntity[String]]) {
+      if (entity.isInstanceOf[ScalaEntity[_]]) {
         val idAsString = result.get.getId.toString()
         entity.asInstanceOf[ScalaEntity[String]].id = Some(idAsString)
       }
