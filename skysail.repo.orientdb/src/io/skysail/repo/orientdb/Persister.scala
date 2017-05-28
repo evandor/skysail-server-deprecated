@@ -60,6 +60,7 @@ class Persister(db: OrientGraph, applicationModel: ApplicationModel) {
   }
 
   private def determineVertex(entity: Any): OrientVertex = {
+    require(entity != null, "Provided entity is null")
     //        OrientVertex vertex
     //        if (entity.getId() != null) {
     //            vertex = db.getVertex(entity.getId())
