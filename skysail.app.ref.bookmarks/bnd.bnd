@@ -1,0 +1,53 @@
+Bundle-Name: SKYSAIL :: app :: ref :: bookmarks
+
+Bundle-Version: 0.1.0.${tstamp}
+
+Bundle-Description: reference app for simple bookmarks
+
+#Include-Resource: resources
+
+#-runfw: org.apache.felix.framework;version='[5.6.2,5.6.2]'
+#-runee: JavaSE-1.8
+
+-buildpath: \
+	${osgi},\
+	org.osgi.service.event;version=1.3,\
+	${testlibs},\
+	${restlet},\
+	${cucumber},\
+	${fasterxml},\
+	${orientdb},\
+	${logging},\
+	${commons},\
+	${javax},\
+	javassist;version='[3.18.1,3.18.2)',\
+	org.hibernate.validator;version=${org.hibernate.validator.version},\
+	skysail.core;version=${skysail.core.version},\
+	skysail.queryfilter;version=latest,\
+	skysail.repo.orientdb;version=latest,\
+	skysail.server.codegen;version=latest,\
+	skysail.server.testsupport;version=${skysail.server.testsupport.version},\
+	de.twentyeleven.skysail.org.antlr.stringtemplate-osgi;version=4.0.8,\
+	de.twentyeleven.skysail.org.json-osgi;version=20080701.0,\
+	com.googlecode.concurrentlinkedhashmap.lru;version='[1.4.0,1.4.1)',\
+	io.skysail.bundled.owasp-java-html-sanitizer;version='[20160422.1.0,20160422.1.1)',\
+	io.skysail.bundled.tinkerpop.blueprints-core;version=2.6,\
+	com.google.guava;version=${guava.version},\
+	org.jsoup;version=1.8,\
+	io.skysail.bundled.json4s_2.11-3.5.1;version=3.5,\
+	com.fasterxml.jackson.core.jackson-annotations;version=2.5,\
+	org.scalatest;version=3.0,\
+	org.scalactic;version=3.0,\
+	org.scala-lang.modules.scala-xml;version=1.0,\
+	org.eclipse.jetty.server;version=9.2,\
+	org.eclipse.jetty.util;version=9.2,\
+	com.thoughtworks.paranamer;version=2.8,\
+	org.assertj.core;version=3.5
+
+Private-Package: \
+	io.skysail.app.ref.bookmarks,\
+	io.skysail.app.ref.bookmarks.repository,\
+	io.skysail.app.ref.bookmarks.resources,\
+	io.skysail.app.ref.bookmarks.services
+	
+Export-Package: io.skysail.app.ref.bookmarks.domain
