@@ -1,6 +1,6 @@
 Bundle-Name: SKYSAIL :: app :: skysail.app.notes
 
-Bundle-Version: 0.1.0.${tstamp}
+Bundle-Version: 0.1.1.${tstamp}
 
 Bundle-Description: the app bundles' description
 
