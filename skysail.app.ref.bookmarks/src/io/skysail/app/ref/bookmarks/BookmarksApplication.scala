@@ -14,6 +14,7 @@ import org.osgi.service.component.ComponentContext
 import io.skysail.core.model.APPLICATION_CONTEXT_RESOURCE
 import io.skysail.app.ref.bookmarks.services.BookmarksService
 import io.skysail.app.ref.bookmarks.resources.BookmarksResource
+import io.skysail.app.ref.bookmarks.resources.PostBookmarkResource
 
 object WytApplication {
   final val APP_NAME = "bookmarks"
@@ -53,8 +54,8 @@ class BookmarksApplication extends SkysailApplication(
   }
 
   override def attach() = {
-//    router.attach(new RouteBuilder("", classOf[PactsResource])); // TODO Redirect to pacts
-//    router.attach(new RouteBuilder("/pact/", classOf[PostPactResource]))
+    router.attach(new RouteBuilder("", classOf[BookmarksResource]));
+    router.attach(new RouteBuilder("/bookmarks/", classOf[PostBookmarkResource]))
 //    router.attach(new RouteBuilder("/confirmation/", classOf[PostConfirmationResource]))
 //    router.attach(new RouteBuilder("/pact/{id}/turn", classOf[TurnResource]))
 //

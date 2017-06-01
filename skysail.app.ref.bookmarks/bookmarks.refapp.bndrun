@@ -38,12 +38,11 @@ skysail.server.um:\
 	skysail.core;version=${skysail.core.version},\
 	skysail.http.jetty;version=latest,\
 	skysail.repo.orientdb;version=latest,\
+	skysail.ui.raw;version=latest,\
 	skysail.app.ref.bookmarks;version=latest,\
 	io.dropwizard.metrics.core;version=3.1.2,\
 	com.thoughtworks.paranamer;version=2.8,\
 	io.skysail.bundled.json4s_2.11-3.5.1;version=3.5,\
 	org.scala-lang.scala-library;version=2.11.8,\
 	org.scala-lang.scala-reflect;version=2.11.8
-		
-#	skysail.ui.raw;version=latest,\
-		
+				
