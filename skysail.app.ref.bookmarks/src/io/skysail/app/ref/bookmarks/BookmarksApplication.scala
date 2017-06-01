@@ -16,7 +16,7 @@ import io.skysail.app.ref.bookmarks.services.BookmarksService
 import io.skysail.app.ref.bookmarks.resources.BookmarksResource
 import io.skysail.app.ref.bookmarks.resources.PostBookmarkResource
 
-object WytApplication {
+object BookmarksApplication {
   final val APP_NAME = "bookmarks"
 }
 
@@ -25,7 +25,7 @@ object WytApplication {
   configurationPolicy = ConfigurationPolicy.OPTIONAL,
   service = Array(classOf[ApplicationProvider]))
 class BookmarksApplication extends SkysailApplication(
-  WytApplication.APP_NAME,
+  BookmarksApplication.APP_NAME,
   new ApiVersion(int2Integer(1))) {
 
   setDescription("wait-your-turn backend application")

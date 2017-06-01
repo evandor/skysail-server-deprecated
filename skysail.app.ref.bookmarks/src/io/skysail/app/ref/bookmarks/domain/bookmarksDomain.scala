@@ -1,14 +1,12 @@
 package io.skysail.app.ref.bookmarks.domain
 
+import scala.annotation.meta.field
 import io.skysail.domain.ddd.ScalaEntity
+import io.skysail.core.html.Field
+import scala.beans.BeanProperty
 
-//@JsonIgnoreProperties(ignoreUnknown = true)
-//case class Pact(
-//    var id: Option[String] = None,
-//    @BeanProperty @(Field @field) var title: String = "",
-//    @BeanProperty var turn: Turn = new Turn("test")) extends ScalaEntity[String] {
-//
-//  // title, selectionStrategy & confirmationS
-//
-//}
-case class Bookmark(title:String,url:String)  extends ScalaEntity[String]
+case class Bookmark(
+
+  var id: Option[String] = None,
+  @BeanProperty @(Field @field) var title: String,
+  @BeanProperty @(Field @field) var url: String) extends ScalaEntity[String]

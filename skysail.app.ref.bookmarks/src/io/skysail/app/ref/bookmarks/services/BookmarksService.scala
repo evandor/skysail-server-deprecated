@@ -24,7 +24,12 @@ class BookmarksService(dbService: ScalaDbService, appModel: ApplicationModel) {
   //    if (entry.isDefined) Some(entry.get.extract[Connection]) else None
   //  }
   //
-  def find(f: Filter, p: Pagination) = repo.find(f, p).map { (row => row.extract[Bookmark]) }.toList
+  def find(f: Filter, p: Pagination) = repo.find(f, p).map { 
+    row => {
+      println(row)
+      row.extract[Bookmark]
+    }
+  }.toList
 
  
   //

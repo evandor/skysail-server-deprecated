@@ -23,7 +23,7 @@ class BookmarksResource extends ListServerResource[List[Bookmark]]() {
 
   setDescription("""resource dealing with retrieving all configured Bookmarks""")
 
-  addToContext(ResourceContextId.LINK_TITLE, "wyt")
+  addToContext(ResourceContextId.LINK_TITLE, "bookmarks")
 
   @ApiSummary("list of all Bookmarks")
   override def getEntity() = {
@@ -41,7 +41,7 @@ class PostBookmarkResource extends PostEntityServerResource[Bookmark] {
   setDescription("""resource dealing with posting Bookmarks""")
   addToContext(ResourceContextId.LINK_TITLE, "post Bookmark")
 
-  def createEntityTemplate() = Bookmark("title", "url")
+  def createEntityTemplate() = Bookmark(None,"title", "url")
 
   @ApiSummary("returns a Bookmark template")
   def addEntity(entity: Bookmark): Bookmark = {
