@@ -18,39 +18,37 @@ import org.json4s.native.Serialization.{ read, write }
 import org.json4s.JsonAST.JObject
 import io.skysail.app.ref.bookmarks.domain.Bookmark
 import io.skysail.app.ref.bookmarks.services.Services
+import io.skysail.restlet.resources.EntityServerResource
+import io.skysail.restlet.resources.PutEntityServerResource
 
-class BookmarksResource extends ListServerResource[List[Bookmark]]() {
-
-  setDescription("""resource dealing with retrieving all configured Bookmarks""")
-
+class BookmarksResource extends ListServerResource[List[Bookmark]](classOf[BookmarkResource]) {
   addToContext(ResourceContextId.LINK_TITLE, "bookmarks")
+  override def getEntity() = Services.bookmarks.find(new Filter(getRequest()), new Pagination(getRequest(), getResponse()))
+  override def linkedResourceClasses() = List(classOf[PostBookmarkResource], classOf[PutBookmarkResource])
+}
 
-  @ApiSummary("list of all Bookmarks")
-  override def getEntity() = {
-    Services.bookmarks.find(new Filter(getRequest()), new Pagination(getRequest(), getResponse()))
-    //associatedResourceClasses(Array(classOf[TurnResource]))
-  }
-  override def linkedResourceClasses() = List(
-    classOf[PostBookmarkResource]
-  )
-
+class BookmarkResource extends EntityServerResource[Bookmark] {
+  override def getEntity(): Bookmark = Services.bookmarks.getById(getAttribute("id")).get
+  override def eraseEntity() = null
+  override def redirectTo() = super.redirectTo(classOf[BookmarksResource])
 }
 
 class PostBookmarkResource extends PostEntityServerResource[Bookmark] {
-
-  setDescription("""resource dealing with posting Bookmarks""")
-  addToContext(ResourceContextId.LINK_TITLE, "post Bookmark")
-
-  def createEntityTemplate() = Bookmark(None,"title", "url")
-
-  @ApiSummary("returns a Bookmark template")
-  def addEntity(entity: Bookmark): Bookmark = {
-    //Services.turns.confirm(entity)
-    val Bookmark = Services.bookmarks.create(entity)
-    //Bookmark(Some("1"), "default Bookmark")
-    Bookmark.get
-  }
-
+  addToContext(ResourceContextId.LINK_TITLE, "post bookmark")
+  def createEntityTemplate() = Bookmark(None, "title", "url")
+  def addEntity(entity: Bookmark): Bookmark = Services.bookmarks.create(entity).get
 }
 
+class PutBookmarkResource extends PutEntityServerResource[Bookmark] {
+  addToContext(ResourceContextId.LINK_TITLE, "update bookmark")
+  override def getEntity(): Bookmark = Services.bookmarks.getById(getAttribute("id")).get
+  def updateEntity(entity: Bookmark): Unit = {
+    val original = getEntity()
+    //    val originalCreated = original.getCreated()
+    //    copyProperties(original, entity)
+    //    original.setCreated(originalCreated)
+    //    original.setModified(new Date())
+    //    //NotesResource.noteRepo(getApplication()).update(original, getApplicationModel())
+  }
+}
 

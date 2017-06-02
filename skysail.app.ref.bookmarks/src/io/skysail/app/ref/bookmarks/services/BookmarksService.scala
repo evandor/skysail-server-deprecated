@@ -19,19 +19,20 @@ class BookmarksService(dbService: ScalaDbService, appModel: ApplicationModel) {
   def create(car: Bookmark): Try[Bookmark] = {
     repo.save(car, appModel)
   }
-  //  def getById(id: String): Option[Connection] = {
-  //    val entry = repo.findOne(id)
-  //    if (entry.isDefined) Some(entry.get.extract[Connection]) else None
-  //  }
-  //
-  def find(f: Filter, p: Pagination) = repo.find(f, p).map { 
-    row => {
-      println(row)
-      row.extract[Bookmark]
-    }
+  
+  def getById(id: String): Option[Bookmark] = {
+    val entry = repo.findOne(id)
+    if (entry.isDefined) Some(entry.get.extract[Bookmark]) else None
+  }
+
+  def find(f: Filter, p: Pagination) = repo.find(f, p).map {
+    row =>
+      {
+        //println(row)
+        row.extract[Bookmark]
+      }
   }.toList
 
- 
   //
   //  def findOne(id: String): Option[Connection] = {
   //    val option = repo.findOne(id)

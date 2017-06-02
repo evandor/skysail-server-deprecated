@@ -1,0 +1,5 @@
+/bin/
+/generated/
+/bin_test/
+/.cache-main
+/.cache-tests

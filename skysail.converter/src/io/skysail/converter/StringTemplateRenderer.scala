@@ -9,15 +9,16 @@ import io.skysail.restlet.responses.ScalaSkysailResponse
 import io.skysail.core.app.SkysailApplication
 import io.skysail.restlet.ResourceContextId
 import io.skysail.restlet.utils._
-import org.restlet.representation.{StringRepresentation,Variant}
+import org.restlet.representation.{ StringRepresentation, Variant }
 import org.restlet.resource.Resource
 import org.restlet.data.MediaType
 import org.slf4j.LoggerFactory
-import org.stringtemplate.v4.{ST,STGroup}
+import org.stringtemplate.v4.{ ST, STGroup }
 import org.osgi.framework._
 import java.util.Optional
 import java.util.Arrays
 import scala.collection.JavaConverters._
+import io.skysail.domain.ddd.ScalaEntity
 
 object StringTemplateRenderer {
   val SKYSAIL_SERVER_CONVERTER = "skysail.converter";
@@ -26,12 +27,12 @@ object StringTemplateRenderer {
 }
 
 class StringTemplateRenderer(htmlConverter: HtmlConverter, resource: SkysailServerResource[_]) {
-  
+
   val log = LoggerFactory.getLogger(classOf[StringTemplateRenderer])
 
   var skysailApplicationService: SkysailApplicationService = null
   var filterParser: QueryFilterParser = null
-  
+
   def setFilterParser(f: QueryFilterParser) = filterParser = f
 
   def createRepresenation(entity: ScalaSkysailResponse[_], target: Variant): StringRepresentation = {
@@ -49,6 +50,14 @@ class StringTemplateRenderer(htmlConverter: HtmlConverter, resource: SkysailServ
   def createStringTemplateGroup(resource: Resource, styling: Styling, theme: Theming) = {
     import StringTemplateRenderer._
     val stGroup = new STGroupBundleDir(determineBundleToUse(), resource, TEMPLATES_DIR, htmlConverter.getTemplateProvider());
+//    stGroup.registerModelAdaptor(classOf[ScalaEntity[_]], new ObjectModelAdaptor() {
+//      override def getProperty(interpreter: Interpreter, self: ST, o: AnyRef, property: AnyRef, propertyName: String): AnyRef = {
+//        //if (propertyName.equals("name")) return ((User)o).name.substring(0, 1).toUpperCase() + ((User)o).name.substring(1);
+//        //if (propertyName.equals("description")) return "User object with id:" + ((User)o).id;
+//        println(propertyName)
+//        return super.getProperty(interpreter, self, o, property, propertyName);
+//      }
+//    })
     importFrom(resource, theme, stGroup, SKYSAIL_SERVER_CONVERTER);
     importFrom(resource, theme, stGroup, System.getProperty(io.skysail.core.Constants.PRODUCT_BUNDLE_IDENTIFIER));
     stGroup;
@@ -159,15 +168,15 @@ class StringTemplateRenderer(htmlConverter: HtmlConverter, resource: SkysailServ
     val installationFromCookie = ScalaCookiesUtils.getInstallationFromCookie(resource.getRequest()).getOrElse(null);
 
     decl.add("user", new StUserWrapper(htmlConverter.getUserManagementProvider(), resourceModel.getResource(),
-                  installationFromCookie));
+      installationFromCookie));
     decl.add("converter", this);
     //
     val fs = resourceModel.fields.values
     decl.add("messages", resource.getMessages(fs))
     decl.add("model", resourceModel);
     decl.add("request", new StRequestWrapper(
-                  resource.getRequest(),
-                  resourceModel.getFormfields().asScala.map(f => f.getId).toList));
+      resource.getRequest(),
+      resourceModel.getFormfields().asScala.map(f => f.getId).toList));
   }
 
 }

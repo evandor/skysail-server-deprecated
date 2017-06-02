@@ -12,6 +12,7 @@ import io.skysail.core.model._
 
 object Persister {
   def getMethodName(prefix: String, key: String): String = {
+    //return key + "_="
     return new StringBuilder(prefix).append(key.substring(0, 1).toUpperCase()).append(key.substring(1)).toString();
   }
 }

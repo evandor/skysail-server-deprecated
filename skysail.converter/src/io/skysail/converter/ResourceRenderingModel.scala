@@ -280,7 +280,7 @@ class ResourceRenderingModel(
       }
     }*/
 
-    val itemLinks = appModel.linksFor(resource.getClass).filter(l => l.relation == LinkRelation.ITEM).toList
+    val itemLinks = appModel.linksFor(resource.getClass).filter(l => l.relation == LinkRelation.ITEM || l.relation == LinkRelation.EDIT_FORM).toList
 
     theData.foreach(dataRow => {
       val idName = appModel.entityModelFor(resource).get.name + "|id"
