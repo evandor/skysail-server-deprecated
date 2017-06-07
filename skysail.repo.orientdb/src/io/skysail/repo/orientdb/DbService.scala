@@ -9,11 +9,10 @@ trait ScalaDbService {
   
   def createWithSuperClass(superClass: String, vertices: String*)
   def register(classes: Class[_]*)
-  
-  def persist(entity: Any,  applicationModel: ApplicationModel): Try[OrientVertex]
 
+  def persist(entity: Any,  applicationModel: ApplicationModel): Try[OrientVertex]
+  def update(entity: Any, applicationModel: ApplicationModel): Try[OrientVertex]
   def findGraphs[T](entityType: Class[_], sql: String, arg: Map[String,Object]): List[JValue]
-  
   def findOne(id: String):Option[JValue]
 
 }

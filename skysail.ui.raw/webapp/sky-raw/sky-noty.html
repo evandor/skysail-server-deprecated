@@ -1,0 +1,28 @@
+<link rel="import" href="/_polymer/bower_components/polymer/polymer.html">
+
+<dom-module id="sky-noty">
+  
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+        {{renderNoty(value, type)}}    
+  </template>
+
+  <script>
+    Polymer({
+      is: 'sky-noty',
+      properties: {
+        value: { type: String, value: '' },
+        type:  { type: String, value: '' }
+      },
+      renderNoty: function(value, type) {
+        return "noty({text: '"+value+"', type: 'warning'});"
+      },
+      ready: function() {
+      }
+    });
+  </script>
+</dom-module>

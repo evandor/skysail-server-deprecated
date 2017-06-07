@@ -1,0 +1,116 @@
+<link rel="import" href="/_polymer/bower_components/polymer/polymer.html">
+
+<dom-module id="sky-form-element">
+
+  <template>
+  
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    
+    <template is="dom-if" if="{{isRelation(relationPath)}}">
+      <iron-ajax
+      		auto
+            url="{{relationPath}}"
+            headers='{"Accept": "text/html"}'
+            handle-as="text"
+            on-response="handleResponse"
+            debounce-duration="300"></iron-ajax>
+          
+      <div class='form-group'>
+        <label for='{{id}}' class='col-sm-2 control-label'>{{label}}</label>
+        <div class='col-sm-10' id="theTarget" style="border:1px dotted #bfbfbf">
+       
+        </div>
+     </div>
+    </template>
+    <template is="dom-if" if="{{isElse(inputType, relationPath)}}">
+    
+        <div class="pure-control-group">
+            <label for="{{id}}">{{label}}</label>
+            <input id="{{id}}" type="text" name="{{name}}" placeholder="{{placeholder}}" class="pure-input-2-3">
+            <span class="pure-form-message-inline"></span>
+        </div>
+
+    
+    
+      <!--<div class$='{{determineClass(cssClass,required)}}' style$="{{cssStyle}}">
+        <label for='{{id}}' class='col-sm-4 control-label'>
+          <sky-label identifier="{{name}}" content="{{label}}" info-message="{{infoMsg}}" edit-base-url='{{editBaseUrl}}'></sky-label>
+        </label>
+        <div class='col-sm-12'>
+          <sky-form-field id="{{id}}" name="{{name}}" value="{{value}}" focus-event="{{focus}}" tab-index="1" title="" placeholder="{{placeholder}}" input-type="{{inputType}}"></sky-form-field>
+          <template is="dom-if" if="hasError(errorMsg)">
+            <sky-form-field-error error-message="{{errorMsg}}" />
+          </template>
+          <sky-form-field-help help-message="{{helpMsg}}" identifier="{{name}}.desc" edit-base-url='{{editBaseUrl}}' />
+        </div>
+      </div>-->
+    </template>
+	
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'sky-form-element',
+      properties: {
+        id:           { type: String, value: 'unknown' },
+        name:         { type: String, value: 'unknown' },
+        label:        { type: String, value: 'unknown' },
+        da:           { type: String, value: 'AIzaSyBaywrpgIGIY8guYt9vqRlzBCAs7LNjMUY' },
+        focus:        { type: String, value: '' },
+        relationPath: { type: String, value: '' },
+        inputType:    { type: String, value: 'TEXT' },
+        value:        { type: String, value: '' },
+        helpMsg:      { type: String, value: '' },
+        infoMsg:      { type: String, value: '' },
+        errorMsg:     { type: String, value: '' },
+        placeholder:  { type: String, value: '' },
+        cssClass:     { type: String, value: '' },
+        cssStyle:     { type: String, value: '' },
+        required:     { type: Boolean, value: false },
+        editable:     { type: Boolean, value: false },
+        editBaseUrl:  { type: String, value: null }
+      },
+      behaviors: [ Polymer.CarbonI18nBehavior ],
+      hasTabs: function(tabs) {
+	  	return tabs.length > 0;
+	  },
+	  isRelation: function(path) {
+	  	return path != '';
+	  },
+	  isStatic: function (inputType, relationPath) {
+	  	return inputType == "STATIC"; //!this.isRelation(relationPath) && ;
+	  },
+	  isElse: function (inputType, relationPath) {
+	  	//console.log("InputType",relationPath == '' && inputType != "STATIC")
+	    return relationPath == '' && inputType != "STATIC";
+	  },
+	  hasError: function(message) {
+	  	return message != null;
+	  },
+	  determineClass: function(cssClass, required) {
+	    if (!required) {
+  	      return 'form-group';
+  	    }
+  	    return 'form-group required';
+	  },
+	  handleResponse: function (e, request) {
+        //var headers = request.xhr.getAllResponseHeaders();
+        var response = e.detail.response;
+        var remoteHtml = $.parseHTML(response, document, true);
+        var output = $("<div>").append(remoteHtml).find("#showFormDiv").html();
+        $("#theTarget").html(output);
+      },
+      getDA: function(da) {
+      	return "AIzaSyBaywrpgIGIY8guYt9vqRlzBCAs7LNjMUY";
+      },
+      isReadonly: function(inputType) {
+	  	return inputType == "READONLY";
+	  },
+    });
+  </script>
+</dom-module>

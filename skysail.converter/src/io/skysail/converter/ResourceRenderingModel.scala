@@ -321,6 +321,23 @@ class ResourceRenderingModel(
   //    //		dataRow.put("_linksNew", links.stream().filter(l -> id.equals(l.getRefId())).map(LinkTemplateAdapter::new)
   //    //				.collect(Collectors.toList()));
   //  }
+  
+  	def getFormTarget():String = {
+//		if (response instanceof ConstraintViolationsResponse) {
+//			Reference actionReference = ((ConstraintViolationsResponse<?>) response).getActionReference();
+//			return actionReference.toString();
+//		}
+		if (!(response.isInstanceOf[FormResponse[_]])) {
+			return null
+		}
+		val formResponse = response.asInstanceOf[FormResponse[_]]
+		var result = if (formResponse.target == null)  "" else formResponse.target
+//		if (isPutEntityServerResource()) {
+//			result += "?method=PUT";
+//		}
+		return result;
+	}
+
 
   def guessId(theObject: Any): String = {
     if (!(theObject.isInstanceOf[Map[_, _]]))

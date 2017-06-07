@@ -1,0 +1,179 @@
+<link rel="import" href="/_polymer/bower_components/polymer/polymer.html">
+
+<!--<link rel="import" href="/_polymer/bower_components/carbon-i18n-behavior/carbon-i18n-behavior.html">-->
+
+<!--<link rel="import" href="/_ui/raw/sky-raw/sky-input.html">-->
+
+<dom-module id="sky-form2">
+
+  <template>
+  
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    
+      <template is="dom-if" if="{{hasTabs(tabs)}}">
+        <div>
+          <ul class="nav nav-tabs" role="tablist">
+            <template is="dom-repeat" items={{tabs}} as="tab">
+            	<li role="presentation" class$="{{checkActive('',tab)}}">
+            	  <a href="#tabId_{{index}}" aria-controls="tabId_{{index}}" role="tab" data-toggle="tab">{{tab.label}}</a>
+                </li>
+            </template>
+          </ul>
+          <div class="tab-content">
+            <template is="dom-repeat" items={{tabs}} as="tab">
+              <div role="tabpanel" class$="{{checkActive('tab-pane', tab)}}" id="tabId_{{index}}" style="margin-top:10px;">
+                <template is="dom-repeat" items="{{fields}}" as="field">
+                  <template is="dom-if" if="{{belongsToTab(field,tab)}}">
+                  	<template is="dom-if" if="{{isFieldRelation(field)}}">
+                  	
+           	            <iron-ajax
+			          		auto
+			                url="{{field.fieldRelation.path}}"
+			                headers='{"Accept": "text/html"}'
+			                handle-as="text"
+			                on-response="handleResponse"
+			                debounce-duration="300"></iron-ajax>
+			          
+			  	        <div class='form-group'>
+			   	          <label for='{{field.name}}' class='col-sm-2 control-label'>{{field.name}}</label>
+			              <div class='col-sm-10' id="theTarget" style="border:1px dotted #bfbfbf">
+			              
+			              </div>
+			            </div>
+
+                  	
+                  	
+                  	</template>
+                  	<template is="dom-if" if="{{!isFieldRelation(field)}}">
+                   	  <div class='form-group'>
+			   	        <label for='{{field.name}}' class='col-sm-2 control-label'>{{field.name}}</label>
+			            <div class='col-sm-10'>
+			              <input type='text' class='form-control' name='{{field.name}}' id='{{field.name}}' value='{{getData(data,field)}}' tabindex="1" title='titlte'>
+			            </div>
+			          </div>
+                  	</template>
+                  	
+                  </template>
+                </template>  	
+              </div>
+            </template>
+          </div>
+        </div>
+      </template>
+      <template is="dom-if" if="{{!hasTabs(tabs)}}">
+      
+      <!--Simple:: <b>+[[i18n.hello]]+</b>::<br>-->
+        <template is="dom-repeat" items="{{fields}}" as="field">
+          
+          <template is="dom-if" if="{{isFieldRelation(field)}}">
+          
+            <iron-ajax
+          		auto
+                url="{{field.fieldRelation.path}}"
+                headers='{"Accept": "text/html"}'
+                handle-as="text"
+                on-response="handleResponse"
+                debounce-duration="300"></iron-ajax>
+          
+  	        <div class='form-group'>
+   	          <label for='{{field.name}}' class='col-sm-2 control-label'>{{field.name}}</label>
+              <div class='col-sm-10' id="theTarget" style="border:1px dotted #bfbfbf">
+              
+              </div>
+            </div>
+          </template>
+          
+          <template is="dom-if" if="{{!isFieldRelation(field)}}">
+  	        <div class='form-group'>
+   	          <label for='{{field.name}}' class='col-sm-2 control-label'>{{field.name}}</label>
+              <div class='col-sm-10'>
+              **  <sky-input name="{{field.name}}" value="{{getData(data,field)}}" tab-index="1" title="" readonly="{{isReadonly(field.inputType)}}" help="test"></sky-input>
+              </div>
+            </div>
+          </template>
+          
+        </template>
+	  </template>
+
+    <!--
+    <template is="dom-repeat" items="{{fields}}" as="field">
+		{{getData2(data,fields,field)}}
+    </template>
+    -->
+    	
+    
+	<!--
+	<div><b>sky-form2#fields</b>:{{debug(fields)}}</div>
+	<div><b>sky-form2#data</b>: {{debug(data)}}</div>
+	-->
+	
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'sky-form2',
+      properties: {
+        context: { type: String, value: '/' },
+        tabs:    { type: Array,  value: function () { return []; } },
+       	fields:  { type: Array,  value: function () { return []; } },
+       	data:    { type: Array,  value: function () { return []; } }
+      },
+      behaviors: [ Polymer.CarbonI18nBehavior ],
+   	  getData: function(data, item) {
+   	  	if (item.inputType == "TABLE") {
+   	  		return "_form_td_" + item.name;
+   	  	} 
+		return data[0][item.name];
+	  },
+   	  getData2: function(data, fields, field) {
+   	  	if (field.inputType == "TABLE") {
+   	  	    var fields = this.debug2(fields,field.name);
+   	  		document.querySelector("#_td_indices").innerHTML = 
+   	  			"<sky-table fields='"+fields+"' data='"+JSON.stringify(data[0][field.name])+"'></sky-table>";
+   	  	} 
+	  },
+	  getTdId: function(name) {
+	  	  return "_td_" + name;
+	  },
+      hasTabs: function(tabs) {
+	  	return tabs.length > 0;
+	  },
+	  checkActive: function(cssDefault, theTab) {
+	  	return theTab.active ? cssDefault + " active" : cssDefault;
+	  },
+	  belongsToTab: function(field,tab) {
+	    console.log("field.tab", field.tab, "tab", tab);
+	  	return field.tab == tab.identifier;
+	  },
+	  isReadonly: function(inputType) {
+	  	return inputType == "READONLY";
+	  },
+	  isFieldRelation: function(field) {
+	  	return field.fieldRelation.path != null;
+	  },
+	  handleResponse: function (e, request) {
+        //var headers = request.xhr.getAllResponseHeaders();
+        var response = e.detail.response;
+        var remoteHtml = $.parseHTML(response, document, true);
+        var output = $("<div>").append(remoteHtml).find("#showFormDiv").html();
+        $("#theTarget").html(output);
+      },
+	  debug: function(input) {
+		return JSON.stringify(input);
+	  },
+   	  debug2: function(input,theName) {
+   	    for(var i = 0; i < input.length; i++) {
+   	        if (input[i].name == theName) {
+   	        	return JSON.stringify(input[i]['nestedTable']);
+   	        }
+   	    }
+		return "-";
+	  }
+    });
+  </script>
+</dom-module>

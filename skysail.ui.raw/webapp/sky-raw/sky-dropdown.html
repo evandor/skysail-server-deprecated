@@ -1,0 +1,69 @@
+<link rel="import" href="/_polymer/bower_components/polymer/polymer.html">
+
+<dom-module id="sky-dropdown">
+
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    
+    <template is="dom-if" if="{{atLeastNEntries(data,collapseFrom)}}">
+      <ul class$="nav navbar-nav {{styling}}">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <template is="dom-if" if="{{faIcon}}">
+	          <i class$="{{getIconClass(faIcon)}}" aria-hidden="true"></i>&nbsp;
+	        </template>
+            {{title}} <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+          <template is="dom-repeat" items="{{data}}">
+            <template is="dom-if" if="{{item.selected}}">
+              <li><a href='#'><i class$="{{renderItemIcon(item.icon)}}" aria-hidden="true"></i>&nbsp;<b>{{item.label}}</b></a></li>
+            </template>
+            <template is="dom-if" if="{{!item.selected}}">
+              <li><a href='{{item.link}}'><i class$="{{renderItemIcon(item.icon)}}" aria-hidden="true"></i>&nbsp;{{item.label}}</a></li>
+            </template>
+          </template>
+          </ul>
+        </li>
+      </ul>
+    </template>
+    <template is="dom-if" if="{{!atLeastNEntries(data,collapseFrom)}}">
+      <ul class$="nav navbar-nav {{styling}}">
+        <template is="dom-repeat" items="{{data}}" as="entry">
+          <li><a href='{{entry.link}}'>{{entry.label}}</a></li>
+        </template>
+      </ul>
+    </template>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'sky-dropdown',
+
+      properties: {
+        title:        { type: String, value: 'dropdown' },
+		styling:      { type: String, value: "" },
+		faIcon:       { type: String, value: null },
+		collapseFrom: { type: Number, value: 0 },
+       	data:         { type: Array,  value: function () { return []; } }
+      },
+      atLeastNEntries: function(data, i) {
+        if (data == null) {
+        	return false;
+        }
+        return data.length >= i;
+      },
+      getIconClass: function(icon) {
+      	return "fa fa-" + icon;
+      },
+      renderItemIcon: function (icon) {
+   		return 'fa fa-'+icon;
+      }
+    });
+  </script>
+</dom-module>

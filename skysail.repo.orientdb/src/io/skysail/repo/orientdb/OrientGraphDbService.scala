@@ -204,6 +204,10 @@ class OrientGraphDbService extends AbstractOrientDbService with ScalaDbService {
   def persist(entity: Any, applicationModel: ApplicationModel): Try[OrientVertex] = {
     new Persister(getGraphDb(), applicationModel).persist(entity)
   }
+  
+  def update(entity: Any, applicationModel: ApplicationModel): Try[OrientVertex] = {
+    new Persister(getGraphDb(), applicationModel).persist(entity)
+  }
 
   def findGraphs[T](cls: Class[_], sql: String, params: Map[String, Object]): List[JValue] = {
     //println(metricsCollector)

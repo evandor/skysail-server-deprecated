@@ -18,7 +18,6 @@ import org.osgi.framework._
 import java.util.Optional
 import java.util.Arrays
 import scala.collection.JavaConverters._
-import io.skysail.domain.ddd.ScalaEntity
 
 object StringTemplateRenderer {
   val SKYSAIL_SERVER_CONVERTER = "skysail.converter";
@@ -43,21 +42,21 @@ class StringTemplateRenderer(htmlConverter: HtmlConverter, resource: SkysailServ
     val index = getStringTemplateIndex(resource, styling, stGroup);
     val resourceModel = createResourceModel(entity, target, theming, resource);
     addSubstitutions(resourceModel, index);
-    //  checkForInspection(resource, index);
+    checkForInspection(resource, index);
     return createRepresentation(index, stGroup);
   }
 
   def createStringTemplateGroup(resource: Resource, styling: Styling, theme: Theming) = {
     import StringTemplateRenderer._
     val stGroup = new STGroupBundleDir(determineBundleToUse(), resource, TEMPLATES_DIR, htmlConverter.getTemplateProvider());
-//    stGroup.registerModelAdaptor(classOf[ScalaEntity[_]], new ObjectModelAdaptor() {
-//      override def getProperty(interpreter: Interpreter, self: ST, o: AnyRef, property: AnyRef, propertyName: String): AnyRef = {
-//        //if (propertyName.equals("name")) return ((User)o).name.substring(0, 1).toUpperCase() + ((User)o).name.substring(1);
-//        //if (propertyName.equals("description")) return "User object with id:" + ((User)o).id;
-//        println(propertyName)
-//        return super.getProperty(interpreter, self, o, property, propertyName);
-//      }
-//    })
+    //    stGroup.registerModelAdaptor(classOf[ScalaEntity[_]], new ObjectModelAdaptor() {
+    //      override def getProperty(interpreter: Interpreter, self: ST, o: AnyRef, property: AnyRef, propertyName: String): AnyRef = {
+    //        //if (propertyName.equals("name")) return ((User)o).name.substring(0, 1).toUpperCase() + ((User)o).name.substring(1);
+    //        //if (propertyName.equals("description")) return "User object with id:" + ((User)o).id;
+    //        println(propertyName)
+    //        return super.getProperty(interpreter, self, o, property, propertyName);
+    //      }
+    //    })
     importFrom(resource, theme, stGroup, SKYSAIL_SERVER_CONVERTER);
     importFrom(resource, theme, stGroup, System.getProperty(io.skysail.core.Constants.PRODUCT_BUNDLE_IDENTIFIER));
     stGroup;
@@ -177,6 +176,16 @@ class StringTemplateRenderer(htmlConverter: HtmlConverter, resource: SkysailServ
     decl.add("request", new StRequestWrapper(
       resource.getRequest(),
       resourceModel.getFormfields().asScala.map(f => f.getId).toList));
+  }
+
+  private def checkForInspection(resource: Resource, index: ST) {
+    if (resource == null || resource.getRequest() == null || resource.getRequest().getAttributes() == null) {
+      return ;
+    }
+    val inspect = resource.getRequest().getAttributes().get(SkysailServerResource.INSPECT_PARAM_NAME);
+    //if (resource.getHostRef().getHostDomain().contains("localhost") && inspect != null) {
+    //  index.inspect();
+    //}
   }
 
 }

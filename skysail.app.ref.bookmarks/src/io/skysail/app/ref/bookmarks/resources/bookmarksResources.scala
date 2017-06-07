@@ -45,10 +45,11 @@ class PutBookmarkResource extends PutEntityServerResource[Bookmark] {
   def updateEntity(entity: Bookmark): Unit = {
     val original = getEntity()
     //    val originalCreated = original.getCreated()
-    //    copyProperties(original, entity)
+    copyProperties(original, entity)
     //    original.setCreated(originalCreated)
     //    original.setModified(new Date())
     //    //NotesResource.noteRepo(getApplication()).update(original, getApplicationModel())
+    Services.bookmarks.update(entity)
   }
 }
 

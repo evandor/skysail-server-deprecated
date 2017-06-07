@@ -3,13 +3,13 @@ package io.skysail.repo.orientdb
 import scala.util.Try
 import io.skysail.domain.repo.ScalaDbRepository
 import scala.util._
-import io.skysail.domain.ddd.ScalaEntity
 import scala.collection.JavaConverters._
 import org.json4s.JsonAST.JValue
 import io.skysail.restlet.utils.ScalaReflectionUtils
 import io.skysail.queryfilter.filter.Filter
 import io.skysail.queryfilter.pagination.Pagination
 import io.skysail.core.model.ApplicationModel
+import io.skysail.core.domain.ScalaEntity
 
 trait BaseDbRepository[T] extends ScalaDbRepository {
   def save(entity: T, appModel: ApplicationModel): Try[T]
@@ -32,6 +32,11 @@ class OrientDbRepository[T](db: ScalaDbService) extends BaseDbRepository[T] {
   def findOne(id: String): Option[JValue] = {
     //return dbService.findById2(entityType, id);
     db.findOne(id)
+  }
+  
+  def update(entity: T, appModel: ApplicationModel): Unit = {
+    val result = db.update(entity, appModel)
+    
   }
 
   def save(entity: T, appModel: ApplicationModel): Try[T] = {

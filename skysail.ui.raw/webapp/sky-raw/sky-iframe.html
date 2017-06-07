@@ -1,0 +1,26 @@
+<link rel="import" href="/_polymer/bower_components/polymer/polymer.html">
+
+<dom-module id="sky-iframe">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    
+	<iframe src="{{src}}" style="{{style}}"></iframe>
+	      
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'sky-iframe',
+
+      properties: {
+      	src:   { type: String, value: ""},
+      	style: { type: String, value: ''}
+      }
+    });
+  </script>
+</dom-module>

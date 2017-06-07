@@ -1,9 +1,9 @@
 package io.skysail.app.ref.bookmarks.domain
 
 import scala.annotation.meta.field
-import io.skysail.domain.ddd.ScalaEntity
 import io.skysail.core.html.Field
 import scala.beans.BeanProperty
+import io.skysail.core.domain.ScalaEntity
 
 /**
  * the most simple Bookmark Entity consisting of title and url, with

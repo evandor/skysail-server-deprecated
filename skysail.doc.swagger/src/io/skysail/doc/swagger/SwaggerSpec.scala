@@ -1,6 +1,5 @@
 package io.skysail.doc.swagger
 
-import io.skysail.domain.ddd.ScalaEntity
 import com.fasterxml.jackson.annotation.JsonIgnore
 import io.skysail.core.app.SkysailApplication
 import org.restlet.Request
@@ -12,6 +11,7 @@ import scala.beans.BeanProperty
 import java.util.Arrays
 import com.fasterxml.jackson.annotation.JsonInclude
 import com.fasterxml.jackson.annotation.JsonInclude.Include
+import io.skysail.core.domain.ScalaEntity
 
 @JsonInclude(Include.NON_NULL)
 class SwaggerSpec(skysailApplication: SkysailApplication, request: Request) extends ScalaEntity[String] {

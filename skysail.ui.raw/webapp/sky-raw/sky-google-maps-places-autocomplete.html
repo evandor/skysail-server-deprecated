@@ -1,0 +1,57 @@
+<link rel="import" href="/_polymer/bower_components/polymer/polymer.html">
+<link rel="import" href="/_polymer/bower_components/google-apis/google-maps-api.html">
+
+<dom-module id="sky-google-maps-places-autocomplete">
+  <template>
+    
+    <style>
+        :host {
+        position: relative;
+        display: block;
+        height: 100%;
+      }
+      #map {
+        height: 200px;
+      }
+    </style>
+
+    <google-maps-api api-key="{{apiKey}}" version="3.exp"></google-maps-api>
+    
+    <div id="map" style="background-color: #e1e1e1"></div>
+    
+	<script>
+	  var mapsAPI = document.querySelector('google-maps-api');
+	  mapsAPI.addEventListener('api-load', function(e) {
+	    var map = new this.api.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          scrollwheel: false,
+          zoom: 8
+        });
+	  });
+	</script>
+    
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'sky-google-maps-places-autocomplete',
+
+      properties: {
+      	apiKey: String,
+      	da: String
+      },
+      getApiKey: function() {
+      	return "AIzaSyBaywrpgIGIY8guYt9vqRlzBCAs7LNjMUY";
+      },
+      getKey: function(da) {
+      	var key = da.split('=')[1].split("\"").join("").split("'").join("");
+      	alert(key);
+      	return 'AIzaSyBaywrpgIGIY8guYt9vqRlzBCAs7LNjMUY';
+      },
+      hasHelp: function(help) {
+        return help.length > 0;
+	  }
+    });
+  </script>
+</dom-module>

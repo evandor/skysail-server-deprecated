@@ -1,0 +1,30 @@
+Bundle-Name: SKYSAIL :: ui :: raw
+
+Bundle-Version: 0.1.0.${tstamp}
+
+# read like: The content of the local folder "webapp/theuiframework" will be available at "_/ui/theuiframework/x.y.z".
+# The first part ("_ui/theuiframework") has to be the name of the SemanticUiApplication.
+Include-Resource: _ui/raw/0.6.2=webapp/pure-0.6.2, _ui/raw/sky-raw=webapp/sky-raw, templates=templates
+
+Provide-Capability: io.skysail.server.ui;styling="raw"
+
+-buildpath: \
+    ${osgi},\
+    org.osgi.service.event;version=1.3,\
+    ${testlibs},\
+    ${restlet},\
+    skysail.core;version=${skysail.core.version},\
+    skysail.server.testsupport;version=${skysail.server.testsupport.version},\
+    ${logging},\
+    ${commons},\
+    ${javax},\
+    de.twentyeleven.skysail.org.antlr.stringtemplate-osgi;version=4.0.8,\
+    de.twentyeleven.skysail.org.json-osgi;version=20080701.0,\
+    com.orientechnologies.orientdb-core;version=${com.orientechnologies.orientdb.version},\
+    com.orientechnologies.orientdb-graphdb;version=${com.orientechnologies.orientdb.version},\
+    io.skysail.bundled.tinkerpop.blueprints-core;version=2.6,\
+    org.jsoup;version=1.8,\
+    com.fasterxml.jackson.core.jackson-annotations;version=2.5,\
+    org.jsoup;version=1.8
+
+Private-Package: io.skysail.ui.raw
