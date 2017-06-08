@@ -1,3 +1,7 @@
+tasks.assemble.dependsOn(':skysail.converter:build')
+tasks.assemble.dependsOn(':skysail.http.jetty:build')
+tasks.assemble.dependsOn(':skysail.ui.raw:build')
+
 apply plugin: 'scala'
 
 repositories {

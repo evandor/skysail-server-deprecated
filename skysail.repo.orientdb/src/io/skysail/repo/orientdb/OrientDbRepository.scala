@@ -1,7 +1,6 @@
 package io.skysail.repo.orientdb
 
 import scala.util.Try
-import io.skysail.domain.repo.ScalaDbRepository
 import scala.util._
 import scala.collection.JavaConverters._
 import org.json4s.JsonAST.JValue
@@ -10,6 +9,7 @@ import io.skysail.queryfilter.filter.Filter
 import io.skysail.queryfilter.pagination.Pagination
 import io.skysail.core.model.ApplicationModel
 import io.skysail.core.domain.ScalaEntity
+import io.skysail.core.domain.repo.ScalaDbRepository
 
 trait BaseDbRepository[T] extends ScalaDbRepository {
   def save(entity: T, appModel: ApplicationModel): Try[T]
