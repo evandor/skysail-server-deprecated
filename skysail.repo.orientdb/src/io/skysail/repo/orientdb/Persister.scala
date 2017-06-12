@@ -9,6 +9,7 @@ import java.util.function.Consumer
 import scala.collection.JavaConverters._
 import scala.util._
 import io.skysail.core.model._
+import io.skysail.core.domain.ScalaEntity
 
 object Persister {
   def getMethodName(prefix: String, key: String): String = {
@@ -29,7 +30,7 @@ class Persister(db: OrientGraph, applicationModel: ApplicationModel) {
   val mapper = new ObjectMapper()
 
   protected def execute(entity: Any): OrientVertex = {
-    val vertex = determineVertex(entity)
+    val vertex = determineVertex(entity.asInstanceOf[ScalaEntity[_]])
     try {
       val props = mapper.convertValue(entity, classOf[java.util.Map[String, Object]])
       props.keySet().stream().forEach(setPropertyOrCreateEdge(entity, vertex, props.asScala.toMap))
@@ -60,16 +61,13 @@ class Persister(db: OrientGraph, applicationModel: ApplicationModel) {
     }
   }
 
-  private def determineVertex(entity: Any): OrientVertex = {
+  private def determineVertex(entity: ScalaEntity[_]): OrientVertex = {
     require(entity != null, "Provided entity is null")
-    //        OrientVertex vertex
-    //        if (entity.getId() != null) {
-    //            vertex = db.getVertex(entity.getId())
-    //        } else {
+    if (entity.id != null) {
+      return db.getVertex(entity.id.get)
+    }
     val name = "class:" + entity.getClass().getName().replace(".", "_")
     db.addVertex(name: Any, Array[Object](): _*)
-    //        }
-    //        return vertex
   }
 
   val plusOne = new java.util.function.Function[Int, Int] {
@@ -159,7 +157,7 @@ class Persister(db: OrientGraph, applicationModel: ApplicationModel) {
     //        if (result.isInstanceOf[ValueObject]) {
     //            vertex.setProperty(key, ((ValueObject)result).getValue().toString());
     //        } else {
-    
+
     vertex.setProperty(key, result);
     //        }
   }

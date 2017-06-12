@@ -29,14 +29,15 @@ class OrientDbRepository[T](db: ScalaDbService) extends BaseDbRepository[T] {
     db.findGraphs[T](entityType, sql, filter.params)
   }
 
-  def findOne(id: String): Option[JValue] = {
-    //return dbService.findById2(entityType, id);
-    db.findOne(id)
-  }
+  def findOne(id: String): Option[JValue] = db.findOne(id)
   
-  def update(entity: T, appModel: ApplicationModel): Unit = {
+  def update(entity: T, appModel: ApplicationModel): Try[T] = {
     val result = db.update(entity, appModel)
-    
+    if (result.isSuccess) {
+      Success(entity)
+    } else {
+      Failure(result.failed.get)
+    }
   }
 
   def save(entity: T, appModel: ApplicationModel): Try[T] = {

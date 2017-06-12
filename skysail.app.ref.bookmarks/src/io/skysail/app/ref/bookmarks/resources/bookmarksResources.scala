@@ -49,6 +49,7 @@ class PutBookmarkResource extends PutEntityServerResource[Bookmark] {
     //    original.setCreated(originalCreated)
     //    original.setModified(new Date())
     //    //NotesResource.noteRepo(getApplication()).update(original, getApplicationModel())
+    entity.id = original.id
     Services.bookmarks.update(entity)
   }
 }

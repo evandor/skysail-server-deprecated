@@ -27,6 +27,10 @@
        name=Skysail Release Repository; \
        locations=https://raw.githubusercontent.com/evandor/skysail/master/cnf/releaserepo/index.xml; \
    ,\
+   aQute.bnd.deployer.repository.FixedIndexedRepo;  \
+       name=Skysail Ext Release Repository; \
+       locations=https://raw.githubusercontent.com/evandor/skysail-ext/master/cnf/releaserepo/index.xml; \
+   ,\
    aQute.bnd.deployer.repository.wrapper.Plugin; \
         location = "${build}/cache/wrapper"; \
         reindex = true; \

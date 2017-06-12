@@ -3,7 +3,6 @@ package io.skysail.converter
 import java.util.Collections
 import java.util.Arrays
 import io.skysail.restlet.SkysailServerResource
-import io.skysail.api.um.UserManagementProvider
 import io.skysail.restlet.responses.ScalaSkysailResponse
 import io.skysail.restlet.queries.QueryFilterParser
 import io.skysail.restlet.services.StringTemplateProvider
@@ -20,6 +19,7 @@ import io.skysail.core.app.SkysailApplicationService
 import io.skysail.core.osgi.services.OsgiConverterHelper
 import io.skysail.core.osgi.services.OsgiConverterHelper
 import org.restlet.engine.Engine
+import io.skysail.api.um.UserManagementProvider
 
 object ScalaHtmlConverter {
   val DEFAULT_MATCH_VALUE = 0.5f;

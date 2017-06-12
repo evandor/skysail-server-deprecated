@@ -17,7 +17,7 @@ class BookmarksService(dbService: ScalaDbService, appModel: ApplicationModel) {
   private var i = 0
 
   def create(car: Bookmark): Try[Bookmark] = repo.save(car, appModel)
-  def update(car: Bookmark): Try[Bookmark] = repo.save(car, appModel)
+  def update(car: Bookmark): Try[Bookmark] = repo.update(car, appModel)
 
   def getById(id: String): Option[Bookmark] = {
     val entry = repo.findOne(id)
