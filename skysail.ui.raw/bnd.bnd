@@ -14,7 +14,6 @@ Provide-Capability: io.skysail.server.ui;styling="raw"
     ${testlibs},\
     ${restlet},\
     skysail.core;version=${skysail.core.version},\
-    skysail.server.testsupport;version=${skysail.server.testsupport.version},\
     ${logging},\
     ${commons},\
     ${javax},\
