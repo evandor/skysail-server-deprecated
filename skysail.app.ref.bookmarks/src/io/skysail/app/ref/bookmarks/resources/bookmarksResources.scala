@@ -42,7 +42,7 @@ class PostBookmarkResource extends PostEntityServerResource[Bookmark] {
 class PutBookmarkResource extends PutEntityServerResource[Bookmark] {
   addToContext(ResourceContextId.LINK_TITLE, "update bookmark")
   override def getEntity(): Bookmark = Services.bookmarks.getById(getAttribute("id")).get
-  def updateEntity(entity: Bookmark): Unit = {
+  def updateEntity(entity: Bookmark): Bookmark = {
     val original = getEntity()
     //    val originalCreated = original.getCreated()
     copyProperties(original, entity)
@@ -50,7 +50,7 @@ class PutBookmarkResource extends PutEntityServerResource[Bookmark] {
     //    original.setModified(new Date())
     //    //NotesResource.noteRepo(getApplication()).update(original, getApplicationModel())
     entity.id = original.id
-    Services.bookmarks.update(entity)
+    Services.bookmarks.update(entity).get
   }
 }
 

@@ -10,6 +10,7 @@ import io.skysail.restlet.SkysailServerResource
 import org.restlet.ext.jackson.JacksonRepresentation
 import org.restlet.data.MediaType
 import io.skysail.restlet.responses.ScalaSkysailResponse
+import scala.collection.JavaConverters._
 
 @Component(immediate = true)
 class SkysailJacksonConverter extends JacksonConverter with OsgiConverterHelper {
@@ -24,17 +25,6 @@ class SkysailJacksonConverter extends JacksonConverter with OsgiConverterHelper 
 
         val messages = Map() //skysailServerResource.getMessages(resourceModel.getFields());
         val descrition = "desc" //messages.get("content.header");
-        //HeadersUtils.getHeaders(resource.getResponse()).add("X-Resource-Description", descrition.getValue());
-
-        //                val columnNames = resourceModel.getFormfields().stream().map(f -> {
-        //                    return "\"" + f.getId() + "\": \"" + messages.get(f.getNameKey()) + "\"";
-        //                }).collect(Collectors.joining(","));
-        //                HeadersUtils.getHeaders(resource.getResponse()).add("X-Resource-ColumnNames", "{" + columnNames + ",\"_links\": \"Actions\"}");
-
-        //                val columns = resourceModel.getFormfields().stream().map(f -> {
-        //                    return "\"" + f.getId() + "\"";
-        //                }).collect(Collectors.joining(","));
-        //                HeadersUtils.getHeaders(resource.getResponse()).add("X-Resource-Columns", "[" + columns + ",\"_links\"]");
 
         return super.toRepresentation(resourceModel.getRawData(), target, resource);
       }
@@ -50,6 +40,9 @@ class SkysailJacksonConverter extends JacksonConverter with OsgiConverterHelper 
       //                };
       //                return jacksonRepresentation;
       //            }
+      if (entity.isInstanceOf[List[_]]) {
+        return super.toRepresentation(entity.asInstanceOf[List[_]].asJava, target, resource);
+      }
       return super.toRepresentation(entity, target, resource);
     }
     return super.toRepresentation(source, target, resource);

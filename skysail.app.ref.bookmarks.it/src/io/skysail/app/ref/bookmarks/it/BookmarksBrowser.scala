@@ -22,15 +22,15 @@ class BookmarksBrowser(port: Integer) extends ScalaApplicationBrowser("bookmarks
   private val random = new Random()
   private implicit val formats = DefaultFormats
 
-  def getPacts(mediaType: MediaType = MediaType.APPLICATION_JSON) = {
-    log.info(s"$logPrefix getting pacts")
+  def getBookmarks(mediaType: MediaType = MediaType.APPLICATION_JSON) = {
+    log.info(s"$logPrefix getting bookmarks")
     client.get("/" --> appName, mediaType)
   }
 
-  def getPostPacts(mediaType: MediaType = MediaType.APPLICATION_JSON): Representation = {
-    log.info(s"$logPrefix getting pacts")
-    client.get("/" --> appName --> "post pact", mediaType)
-  }
+//  def getPostPacts(mediaType: MediaType = MediaType.APPLICATION_JSON): Representation = {
+//    log.info(s"$logPrefix getting pacts")
+//    client.get("/" --> appName --> "post pact", mediaType)
+//  }
 
   def postToPostBookmark(bookmark: Bookmark, mediaType: MediaType = MediaType.APPLICATION_JSON) = {
     log.info(s"$logPrefix posting form to bookmarks")
@@ -83,30 +83,6 @@ class BookmarksBrowser(port: Integer) extends ScalaApplicationBrowser("bookmarks
     setId(client.getLocation().getLastSegment(true))
   }
 
-//  private def createWithForm(client: ScalaApplicationClient, entity: Confirmation): Representation = {
-//    navigateToPostEntityPage(client)
-//    val form = createForm(entity)
-//    val result = client.post(form, MediaType.APPLICATION_WWW_FORM)
-//    val loc = client.getLocation()
-//    if (loc != null) setId(loc.getLastSegment(true))
-//    return result
-//  }
-//
-//  private def createWithForm(client: ScalaApplicationClient, entity: Pact): Representation = {
-//    navigateToPostPactPage(client)
-//    val form = createForm(entity)
-//    val result = client.post(form, MediaType.APPLICATION_WWW_FORM)
-//    val loc = client.getLocation()
-//    if (loc != null) setId(loc.getLastSegment(true))
-//    return result
-//  }
-//
-//  private def createForm(entity: Confirmation): Form = {
-//    val form = new Form()
-//    //form.add("io.skysail.app.notes.domain.Note|content", entity.getContent())
-//    form
-//  }
-
   private def getTurn() = {
     client.gotoAppRoot().followLinkTitle(Method.GET,"", "turn")
     client.currentRepresentation
@@ -127,10 +103,5 @@ class BookmarksBrowser(port: Integer) extends ScalaApplicationBrowser("bookmarks
     form
   }
 
-//  private def createForm(car: Car) = {
-//    val form = new Form()
-//    form.add("io.skysail.app.wyt.domain.Car|model", car.model)
-//    form.add("io.skysail.app.wyt.domain.Car|year", "12")
-//    form
-//  }
+
 }

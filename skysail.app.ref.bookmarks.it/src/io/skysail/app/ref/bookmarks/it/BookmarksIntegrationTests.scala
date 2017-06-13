@@ -14,52 +14,51 @@ class BookmarksIntegrationTests extends BrowserTests2[BookmarksBrowser] {
 
   private implicit val formats = DefaultFormats
 
+  private var bookmark: Bookmark = null
+
   @Before def setUp() {
     browser = new BookmarksBrowser(2018)
+    bookmark = createSomeBookmark()
   }
 
-//  //@Test
-//  def postPact_returns_created_pact_with_id() {
-//    val title = "pactTitle_" + new BigInteger(130, random).toString(32)
-//    val pact = browser.postToPostPacts(Pact(None, title))
-//    assertThat(pact.id.get).isNotNull()
-//    assertThat(pact.title).isEqualTo(title)
-//  }
-//
   @Test
-  def postBookmark_returns_created_bookmark_with_id() {
-    val model = "bookmarkTitle_" + new BigInteger(130, random).toString(32)
-    val bookmark = browser.postToPostBookmark(Bookmark(None, "title", "url"))
-    assertThat(bookmark.id.isDefined).isTrue()
-    //assertThat(car.model).isEqualTo(model)
-  }
-//
-//  //@Test
-//  def postPact_returns_created_pact_with_default_turn() {
-//    val pact = browser.postToPostPacts(Pact(None, "pactTitle_" + new BigInteger(130, random).toString(32)))
-//    assertThat(pact.getTurn()).isNotNull()
-//    assertThat(pact.getTurn().nextTurn).isEqualTo("test")
-//  }
-
-  //@Test
-  def pacts_are_available_in_various_formats() {
-    var rep = browser.getPacts().getText
+  def bookmarks_are_available_in_various_formats() {
+    var rep = browser.getBookmarks().getText
     assertThat(rep).startsWith("{")
     assertThat(rep).endsWith("}")
 
-    rep = browser.getPacts(MediaType.TEXT_XML).getText
+    rep = browser.getBookmarks(MediaType.TEXT_XML).getText
     assertThat(rep).startsWith("<")
     assertThat(rep).endsWith(">")
 
-    rep = browser.getPacts(MediaType.TEXT_HTML).getText
+    rep = browser.getBookmarks(MediaType.TEXT_HTML).getText
     assertThat(rep).contains("<!DOCTYPE html>")
   }
 
-  //@Test
-  def get_request_on_PostPactEndpoint_with_html_media_type_returns_HTML() {
-    val rep = browser.getPostPacts(MediaType.TEXT_HTML).getText
-    assertThat(rep).contains("<!DOCTYPE html>")
+  @Test
+  def postBookmark_returns_created_bookmark_with_id() {
+    val entity = browser.postToPostBookmark(bookmark)
+    assertThat(entity.id.isDefined).isTrue()
+    assertThat(entity.title).isEqualTo(bookmark.title)
   }
 
+  @Test
+  def created_bookmark_shows_in_bookmarksList() {
+    val entity = browser.postToPostBookmark(bookmark)
+    val bookmarks = browser.getBookmarks()
+    //println(bookmarks.getText)
+    assertThat(bookmarks.getText).contains(entity.title)
+  }
+
+  @Test
+  def retrieve_created_bookmark() {
+    val entity = browser.postToPostBookmark(bookmark)
+    //browser.getBookmarks()
+  }
+
+  def createSomeBookmark() = {
+    val title = "bookmarkTitle_" + new BigInteger(130, random).toString(32)
+    Bookmark(None, title, "url")
+  }
 
 }

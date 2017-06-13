@@ -63,7 +63,7 @@ class Persister(db: OrientGraph, applicationModel: ApplicationModel) {
 
   private def determineVertex(entity: ScalaEntity[_]): OrientVertex = {
     require(entity != null, "Provided entity is null")
-    if (entity.id != null) {
+    if (entity.id.isDefined) {
       return db.getVertex(entity.id.get)
     }
     val name = "class:" + entity.getClass().getName().replace(".", "_")
