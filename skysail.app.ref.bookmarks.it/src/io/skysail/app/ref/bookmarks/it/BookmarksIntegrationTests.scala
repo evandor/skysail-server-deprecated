@@ -24,8 +24,8 @@ class BookmarksIntegrationTests extends BrowserTests2[BookmarksBrowser] {
   @Test
   def bookmarks_are_available_in_various_formats() {
     var rep = browser.getBookmarks().getText
-    assertThat(rep).startsWith("{")
-    assertThat(rep).endsWith("}")
+    assertThat(rep).startsWith("[{")
+    assertThat(rep).endsWith("}]")
 
     rep = browser.getBookmarks(MediaType.TEXT_XML).getText
     assertThat(rep).startsWith("<")
