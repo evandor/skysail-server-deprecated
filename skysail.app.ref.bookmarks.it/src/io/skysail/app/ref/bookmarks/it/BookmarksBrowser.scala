@@ -27,27 +27,26 @@ class BookmarksBrowser(port: Integer) extends ScalaApplicationBrowser("bookmarks
     client.get("/" --> appName, mediaType)
   }
 
-//  def getPostPacts(mediaType: MediaType = MediaType.APPLICATION_JSON): Representation = {
-//    log.info(s"$logPrefix getting pacts")
-//    client.get("/" --> appName --> "post pact", mediaType)
-//  }
+  def getBookmark(id: String, mediaType: MediaType = MediaType.APPLICATION_JSON) = {
+    log.info(s"$logPrefix getting bookmark with id '$id'")
+    client.get("/" --> appName --> "show", mediaType)
+  }
 
-  def postToPostBookmark(bookmark: Bookmark, mediaType: MediaType = MediaType.APPLICATION_JSON) = {
+  def postToPostBookmark(bookmark: Bookmark, mediaType: MediaType = MediaType.APPLICATION_JSON): Bookmark = {
     log.info(s"$logPrefix posting form to bookmarks")
     val rep = client.post(createForm(bookmark), "/" --> appName --> "post bookmark", mediaType).getText
     parse(rep).extract[Bookmark]
   }
-
 
   def getNextTurn(mediaType: MediaType = MediaType.APPLICATION_JSON): Representation = {
     log.info(s"$logPrefix getting next turn")
     getTurn()
   }
 
-//  def createPact() = {
-//    log.info(s"$logPrefix posting new pact")
-//    createWithForm(client, Pact(None, "test pact"))
-//  }
+  //  def createPact() = {
+  //    log.info(s"$logPrefix posting new pact")
+  //    createWithForm(client, Pact(None, "test pact"))
+  //  }
 
   def createRandomEntity(): JSONObject = {
     val jo = new JSONObject()
@@ -84,24 +83,23 @@ class BookmarksBrowser(port: Integer) extends ScalaApplicationBrowser("bookmarks
   }
 
   private def getTurn() = {
-    client.gotoAppRoot().followLinkTitle(Method.GET,"", "turn")
+    client.gotoAppRoot().followLinkTitle(Method.GET, "", "turn")
     client.currentRepresentation
   }
 
   private def navigateToPostEntityPage(client: ScalaApplicationClient) {
-    client.gotoAppRoot().followLinkTitle(Method.GET,"", "post confirmation")
+    client.gotoAppRoot().followLinkTitle(Method.GET, "", "post confirmation")
   }
 
   private def navigateToPostPactPage(client: ScalaApplicationClient) {
-    client.gotoAppRoot().followLinkTitle(Method.GET,"", "post pact")
+    client.gotoAppRoot().followLinkTitle(Method.GET, "", "post pact")
   }
-  
+
   private def createForm(bookmark: Bookmark) = {
     val form = new Form()
     form.add(classOf[Bookmark].getName + "|title", bookmark.title)
     form.add(classOf[Bookmark].getName + "|url", bookmark.url)
     form
   }
-
 
 }

@@ -46,8 +46,16 @@ class BookmarksIntegrationTests extends BrowserTests2[BookmarksBrowser] {
   def created_bookmark_shows_in_bookmarksList() {
     val entity = browser.postToPostBookmark(bookmark)
     val bookmarks = browser.getBookmarks()
-    //println(bookmarks.getText)
     assertThat(bookmarks.getText).contains(entity.title)
+  }
+
+  @Test
+  @Ignore
+  def created_bookmark_can_be_retrieved_again() {
+    val entity = browser.postToPostBookmark(bookmark)
+    val result = browser.getBookmark(entity.id.get)
+    println(result.getText)
+    assertThat(result.getText()).contains(entity.id.get)
   }
 
   @Test
