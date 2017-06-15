@@ -1,0 +1,20 @@
+Bundle-Name: SKYSAIL :: config :: init
+
+Bundle-Version: 0.1.0.${tstamp}
+
+-buildpath: \
+	${osgi},\
+    biz.aQute.bnd.annotation;version=2.4,\
+	org.osgi.service.event;version=1.3,\
+	${testlibs},\
+	${restlet},\
+	${logging},\
+	${commons},\
+	${javax},\
+	${fasterxml},\
+	com.thoughtworks.paranamer;version=2.8,\
+	com.google.guava;version='[16.0,16.1)',\
+    skysail.core;version=${skysail.core.version}
+	
+	
+Private-Package: io.skysail.config.init
