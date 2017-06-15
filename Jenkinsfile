@@ -31,13 +31,13 @@ node {
      gatlingArchive()
    }*/
 
-   /*stage('document') {
+   stage('document') {
       parallel (
 	    //code:    { buildCode() },
 		//doc:     { build 'skysail.doc' },
-   	    javadoc: { buildJavadoc() }
+   	    scaladoc: { buildScaladoc() }
 	  )
-   }*/   
+   }  
    
 }
 
@@ -45,7 +45,7 @@ def buildCode() {
   sh './gradlew build'
 }
 
-def buildJavadoc() {
-  sh './gradlew javadoc'
-  publishHTML([allowMissing: true, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'skysail.app.notes/generated/docs/javadoc', reportFiles: 'index.html', reportName: 'Javadoc'])
+def buildScaladoc() {
+  sh './gradlew scaladoc'
+  publishHTML([allowMissing: true, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'skysail.converter/generated/docs/scaladoc', reportFiles: 'index.html', reportName: 'Scaladoc Converter'])
 }
