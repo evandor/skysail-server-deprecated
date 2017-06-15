@@ -1,0 +1,6 @@
+/.apt_generated/
+/.cache-main
+/.cache-tests
+/bin/
+/bin_test/
+/generated/

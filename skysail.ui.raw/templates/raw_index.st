@@ -1,4 +1,4 @@
-raw_index(user, messages, converter, model, request) ::= <<
+raw_index(user, messages, converter, model, request,response) ::= <<
 <!doctype html>
 <html lang="en">
 <head>
@@ -40,7 +40,7 @@ raw_index(user, messages, converter, model, request) ::= <<
         
         <div class="pure-g">
           <div class="pure-u-lg-1-24">&nbsp;</div>
-          <div class="pure-u-lg-22-24">$content/raw_content(user,converter,messages,model,request)$</div>
+          <div class="pure-u-lg-22-24">$content/raw_content(user,converter,messages,model,request,response)$</div>
           <div class="pure-u-lg-1-24">&nbsp;</div>
         </div>
 

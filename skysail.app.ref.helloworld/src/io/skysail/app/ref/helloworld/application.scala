@@ -1,4 +1,4 @@
-package io.skysail.app.ref.bookmarks
+package io.skysail.app.ref.helloworld
 
 import org.osgi.service.component.annotations._
 import org.restlet.data.Protocol
@@ -12,28 +12,24 @@ import io.skysail.core.app.ApplicationConfiguration
 import io.skysail.restlet.services.MenuItemProvider
 import org.osgi.service.component.ComponentContext
 import io.skysail.core.model.APPLICATION_CONTEXT_RESOURCE
-import io.skysail.app.ref.bookmarks.services.BookmarksService
-import io.skysail.app.ref.bookmarks.resources.BookmarksResource
-import io.skysail.app.ref.bookmarks.resources.PostBookmarkResource
-import io.skysail.app.ref.bookmarks.resources.BookmarkResource
-import io.skysail.app.ref.bookmarks.resources.PutBookmarkResource
+import io.skysail.app.ref.helloworld._
 
-object BookmarksApplication {
-  final val APP_NAME = "bookmarks"
+object HelloWorldApplication {
+  final val APP_NAME = "hello"
 }
 
 @Component(
   immediate = true,
   configurationPolicy = ConfigurationPolicy.OPTIONAL,
   service = Array(classOf[ApplicationProvider]))
-class BookmarksApplication extends SkysailApplication(BookmarksApplication.APP_NAME,new ApiVersion(int2Integer(1))) {
+class HelloWorldApplication extends SkysailApplication(HelloWorldApplication.APP_NAME,new ApiVersion(int2Integer(1))) {
 
-  setDescription("bookmarks reference application")
+  setDescription("helloworld reference application")
   getConnectorService().getClientProtocols().add(Protocol.HTTPS)
 
-  addAssociatedResourceClasses(List((APPLICATION_CONTEXT_RESOURCE, classOf[BookmarksResource])))
+  addAssociatedResourceClasses(List((APPLICATION_CONTEXT_RESOURCE, classOf[HellosResource])))
 
-  var bookmarksService: BookmarksService = null
+  var hellosService: HelloWorldService = null
 
   @Reference(cardinality = ReferenceCardinality.MANDATORY)
   var dbService: ScalaDbService = null
@@ -50,15 +46,15 @@ class BookmarksApplication extends SkysailApplication(BookmarksApplication.APP_N
   @Activate
   override def activate(appConfig: ApplicationConfiguration, componentContext: ComponentContext) = {
     super.activate(appConfig, componentContext);
-    bookmarksService = new BookmarksService(dbService, getApplicationModel2())
+    hellosService = new HelloWorldService(dbService, getApplicationModel2())
   }
 
   override def attach() = {
-    router.attach(new RouteBuilder("", classOf[BookmarksResource]))
-    router.attach(new RouteBuilder("/bookmarks", classOf[BookmarksResource]))
-    router.attach(new RouteBuilder("/bookmarks/", classOf[PostBookmarkResource]))
-    router.attach(new RouteBuilder("/bookmarks/{id}", classOf[BookmarkResource]))
-    router.attach(new RouteBuilder("/bookmarks/{id}/", classOf[PutBookmarkResource]))
+    router.attach(new RouteBuilder("", classOf[HellosResource]))
+    router.attach(new RouteBuilder("/hellos", classOf[HellosResource]))
+    router.attach(new RouteBuilder("/hellos/", classOf[PostHelloResource]))
+    router.attach(new RouteBuilder("/hellos/{id}", classOf[HelloResource]))
+    router.attach(new RouteBuilder("/hellos/{id}/", classOf[PutHelloResource]))
 
     createStaticDirectory();
   }

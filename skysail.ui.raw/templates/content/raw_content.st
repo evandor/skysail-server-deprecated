@@ -1,4 +1,4 @@
-raw_content(user,converter,messages,model,request)::= <<
+raw_content(user,converter,messages,model,request,response)::= <<
   <div class="container">
     <div class="row">
       <div class="col-md-16">
@@ -71,6 +71,10 @@ raw_content(user,converter,messages,model,request)::= <<
         	$model.links: { link | 
         	<tr><td>$link.title$</td><td><a href='$link.uri$'>[$link.uri$]</a></td><td>$link.alt$</td><td>$link.relation$</td><td>$link.verbs$</td><td>$link.needsAuth$</td><td>$link.linkRole$</td><td>$link.refId$</td><td>$link.resourceClass$</td></tr>
         };separator="<br>\n"$</table></small>
+        <h5>Request</h5>
+        <small>-</small>
+        <h5>Response Headers (excerpt)</h5>
+        <code><small>$response.headers$</small></code>
         <h5>Form Fields</h5>
         <small><table  class="pure-table">
         	<tr><th>Label</th><th>id</th><th>name</th><th>inputType</th></tr>

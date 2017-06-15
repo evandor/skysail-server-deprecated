@@ -175,7 +175,8 @@ class StringTemplateRenderer(htmlConverter: HtmlConverter, resource: SkysailServ
     decl.add("model", resourceModel);
     decl.add("request", new StRequestWrapper(
       resource.getRequest(),
-      resourceModel.getFormfields().asScala.map(f => f.getId).toList));
+      resourceModel.getFormfields().asScala.map(f => f.getId).toList))
+    decl.add("response", new StResponseWrapper(resource.getResponse))
   }
 
   private def checkForInspection(resource: Resource, index: ST) {
