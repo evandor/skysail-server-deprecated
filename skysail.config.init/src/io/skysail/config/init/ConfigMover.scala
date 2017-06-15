@@ -34,6 +34,7 @@ object ConfigMover {
   private final val CONFIG_PATH_SOURCES = "config"
 
   def readResource(bundle: Bundle, path: String): String = {
+    log.info(s"about to read Resource '$path'")
     val url = bundle.getResource(path)
     val sb = new StringBuilder()
     try {
@@ -43,7 +44,7 @@ object ConfigMover {
       }
       br.close()
     } catch {
-      case e: IOException => log.error(e.getMessage(), e)
+      case e: Throwable => log.error(e.getMessage(), e)
     }
     return sb.toString()
   }
@@ -120,7 +121,7 @@ class ConfigMover {
       } catch {
         case e: FileAlreadyExistsException => log.info("file '{}' already exists, no config files will be copied",
           copyToPath.toAbsolutePath().toString())
-        case e1: IOException => log.error(e1.getMessage(), e1)
+        case e1: Throwable => log.error(e1.getMessage(), e1)
       }
     }
     return configCreated
@@ -133,6 +134,7 @@ class ConfigMover {
 
   private def handleConfigFiles(bundle: Bundle, entryPaths: Iterator[String]): Boolean = {
     if (entryPaths == null) {
+      log.warn("entryPaths is null, stopping copy process...")
       return false
     }
     var configCreated = false
@@ -142,7 +144,7 @@ class ConfigMover {
       try {
         configCreated = copyFileIfNotExists(sourceFileName, content) || configCreated
       } catch {
-        case e: IOException => log.error(e.getMessage(), e)
+        case e: Throwable => log.error(e.getMessage(), e)
       }
     }
     return configCreated
@@ -150,6 +152,7 @@ class ConfigMover {
 
   private def copyFileIfNotExists(sourceFileName: String, content: String): Boolean = {
     val targetFilePath = Paths.get(("./" + sourceFileName).replace("/standalone", ""))
+    log.info(s"checking if file '${targetFilePath}' exists...")
     if (Files.exists(targetFilePath)) {
       log.debug(s"not copying '$sourceFileName', as it already exists in ${targetFilePath.toString()}")
       if (targetFilePath.toString().contains("logback.xml")) {
