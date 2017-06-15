@@ -40,7 +40,7 @@ node {
    }  
    
    stage('deploy') {
-     cp '/home/carsten/.hudson/jobs/skysail-server.pipeline/workspace/skysail.app.ref.helloworld/generated/skysail.app.ref.helloworld.jar /var/www/downloads.skysail.io/apps/helloworld'
+     sh 'cp /home/carsten/.hudson/jobs/skysail-server.pipeline/workspace/skysail.app.ref.helloworld/generated/skysail.app.ref.helloworld.jar /var/www/downloads.skysail.io/apps/helloworld'
    }
    
 }
