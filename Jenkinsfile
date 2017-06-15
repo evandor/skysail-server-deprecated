@@ -48,4 +48,5 @@ def buildCode() {
 def buildScaladoc() {
   sh './gradlew scaladoc'
   publishHTML([allowMissing: true, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'skysail.converter/generated/docs/scaladoc', reportFiles: 'index.html', reportName: 'Scaladoc Converter'])
+  publishHTML([allowMissing: true, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'skysail.http.jetty/generated/docs/scaladoc', reportFiles: 'index.html', reportName: 'Scaladoc Http.Jetty'])
 }
