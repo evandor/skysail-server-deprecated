@@ -40,8 +40,8 @@ node {
    }  
    
    stage('create helloworld') {
-     sh './gradlew skysail.app.ref.helloworld:export.helloworld.refapp'
-     sh 'cp /home/carsten/.hudson/jobs/skysail-server.pipeline/workspace/skysail.app.ref.helloworld/generated/distributions/executable/helloworld.refapp.jar  /var/www/downloads.skysail.io/apps/helloworld/helloworld.jar'
+     sh './gradlew skysail.app.ref.helloworld:export.helloworld.refapp.standalone'
+     sh 'cp /home/carsten/.hudson/jobs/skysail-server.pipeline/workspace/skysail.app.ref.helloworld/generated/distributions/executable/helloworld.refapp.standalonejar  /var/www/downloads.skysail.io/apps/helloworld/skysail.app.helloworld.jar'
    }
    
 }
