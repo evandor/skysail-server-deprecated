@@ -41,7 +41,7 @@ node {
    
    stage('create helloworld') {
      sh './gradlew skysail.app.ref.helloworld:export.helloworld.refapp'
-     sh 'cp /home/carsten/.hudson/jobs/skysail-server.pipeline/workspace/skysail.app.ref.helloworld$ cd generated/distributions/executable/helloworld.refapp.jar /var/www/downloads.skysail.io/apps/helloworld/helloworld.jar'
+     sh 'cp /home/carsten/.hudson/jobs/skysail-server.pipeline/workspace/skysail.app.ref.helloworld/helloworld.refapp.jar cd generated/distributions/executable/helloworld.refapp.jar /var/www/downloads.skysail.io/apps/helloworld/helloworld.jar'
    }
    
 }
