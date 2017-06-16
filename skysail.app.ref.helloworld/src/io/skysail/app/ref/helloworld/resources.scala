@@ -42,11 +42,7 @@ class PutHelloResource extends PutEntityServerResource[Hello] {
   override def getEntity(): Hello = Services.hellosService.getById(getAttribute("id")).get
   def updateEntity(entity: Hello): Hello = {
     val original = getEntity()
-    //    val originalCreated = original.getCreated()
     copyProperties(original, entity)
-    //    original.setCreated(originalCreated)
-    //    original.setModified(new Date())
-    //    //NotesResource.noteRepo(getApplication()).update(original, getApplicationModel())
     entity.id = original.id
     Services.hellosService.update(entity).get
   }

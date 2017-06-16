@@ -2,16 +2,16 @@ package io.skysail.converter
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.SerializationFeature
-import io.skysail.restlet.SkysailServerResource
-import io.skysail.restlet.responses.ScalaSkysailResponse
-import io.skysail.core.app.SkysailApplicationService
-import io.skysail.restlet.responses.FormResponse
 import io.skysail.converter.forms.helper.CellRendererHelper
+import io.skysail.core.app.SkysailApplicationService
+import io.skysail.core.forms.ScalaFormField
 import io.skysail.core.model.resource.StFormFieldsWrapper
 import io.skysail.core.model._
+import io.skysail.restlet.SkysailServerResource
+import io.skysail.restlet.responses.ScalaSkysailResponse
+import io.skysail.restlet.responses.FormResponse
 import io.skysail.restlet.queries.QueryFilterParser
 import io.skysail.restlet.resources._
-import io.skysail.restlet.forms.ScalaFormField
 import io.skysail.restlet.utils._
 import io.skysail.restlet.responses._
 import java.util.LinkedHashMap

@@ -12,3 +12,19 @@
 skysail.config.path            = config
 logback.configurationFile.path = config
 
+-runbundles: \
+    ${serverbundles-minimal-1.0.0},\
+    ${skysail.server.um},\
+    ${orientdb},\
+    ${jetty},\
+    skysail.converter;version=latest,\
+    skysail.queryfilter;version=latest,\
+    skysail.core;version=${skysail.core.version},\
+    skysail.http.jetty;version=latest,\
+    skysail.repo.orientdb;version=latest,\
+    skysail.config.init;version=latest,\
+    skysail.app.ref.helloworld;version=latest,\
+    io.skysail.bundled.json4s_2.11-3.5.1;version=3.5,\
+    org.scala-lang.scala-library;version=2.11.8,\
+    org.scala-lang.scala-reflect;version=2.11.8
+                
