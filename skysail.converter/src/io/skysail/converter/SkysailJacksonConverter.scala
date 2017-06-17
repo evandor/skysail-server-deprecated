@@ -6,7 +6,7 @@ import org.restlet.ext.jackson.JacksonConverter
 import org.restlet.representation.Variant
 import org.restlet.resource.Resource
 import org.restlet.representation.Representation
-import io.skysail.restlet.SkysailServerResource
+import io.skysail.core.restlet.SkysailServerResource
 import org.restlet.ext.jackson.JacksonRepresentation
 import org.restlet.data.MediaType
 import io.skysail.restlet.responses.ScalaSkysailResponse

@@ -2,9 +2,9 @@ package io.skysail.app.ref.bookmarks.resources
 
 import io.skysail.api.doc._
 import org.json4s.DefaultFormats
-import io.skysail.restlet.resources.ListServerResource
-import io.skysail.restlet.ResourceContextId
-import io.skysail.restlet.resources.PostEntityServerResource
+import io.skysail.core.restlet.resources.ListServerResource
+import io.skysail.core.restlet.ResourceContextId
+import io.skysail.core.restlet.resources.PostEntityServerResource
 import io.skysail.queryfilter.filter.Filter
 import io.skysail.queryfilter.pagination.Pagination
 import io.skysail.restlet.responses.ScalaSkysailResponse
@@ -18,8 +18,8 @@ import org.json4s.native.Serialization.{ read, write }
 import org.json4s.JsonAST.JObject
 import io.skysail.app.ref.bookmarks.domain.Bookmark
 import io.skysail.app.ref.bookmarks.services.Services
-import io.skysail.restlet.resources.EntityServerResource
-import io.skysail.restlet.resources.PutEntityServerResource
+import io.skysail.core.restlet.resources.EntityServerResource
+import io.skysail.core.restlet.resources.PutEntityServerResource
 
 class BookmarksResource extends ListServerResource[List[Bookmark]](classOf[BookmarkResource]) {
   addToContext(ResourceContextId.LINK_TITLE, "bookmarks")

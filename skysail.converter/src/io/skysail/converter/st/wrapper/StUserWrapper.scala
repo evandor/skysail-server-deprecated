@@ -1,6 +1,6 @@
 package io.skysail.converter.st.wrapper
 
-import io.skysail.restlet.SkysailServerResource
+import io.skysail.core.restlet.SkysailServerResource
 import io.skysail.api.um.UserManagementProvider
 
 object StUserWrapper {

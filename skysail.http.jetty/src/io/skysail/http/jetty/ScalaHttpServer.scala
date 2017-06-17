@@ -1,6 +1,6 @@
 package io.skysail.http.jetty
 
-import io.skysail.restlet.ScalaSkysailComponent
+import io.skysail.core.restlet.ScalaSkysailComponent
 import io.skysail.restlet.services._
 import java.util.logging.Level
 import java.net.ServerSocket

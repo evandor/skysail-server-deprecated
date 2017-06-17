@@ -1,19 +1,19 @@
 package io.skysail.doc.swagger
 
 import io.skysail.api.doc.ApiMetadata
-import io.skysail.restlet.{ RouteBuilder, SkysailServerResource }
+import io.skysail.core.restlet.{ RouteBuilder, SkysailServerResource }
 import org.slf4j.LoggerFactory
 import scala.annotation.meta.field
 import scala.beans.BeanProperty
-import io.skysail.restlet.resources.EntityServerResource
-import io.skysail.restlet.resources.PostEntityServerResource
-import io.skysail.restlet.resources.PutEntityServerResource
+import io.skysail.core.restlet.resources.EntityServerResource
+import io.skysail.core.restlet.resources.PostEntityServerResource
+import io.skysail.core.restlet.resources.PutEntityServerResource
 import java.util.Arrays
 import scala.collection.JavaConverters._
 import com.fasterxml.jackson.annotation.JsonInclude
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import org.restlet.resource.ServerResource
-import io.skysail.restlet.resources.ListServerResource
+import io.skysail.core.restlet.resources.ListServerResource
 
 object SwaggerPath {
   val PARAMETERS = "parameters"

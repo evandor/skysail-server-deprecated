@@ -8,7 +8,7 @@ import com.orientechnologies.orient.core.sql._
 import com.orientechnologies.orient.core.db.OPartitionedDatabasePool
 import com.orientechnologies.orient.core.record.impl.ODocument
 import io.skysail.api.metrics.NoOpMetricsCollector
-import io.skysail.restlet.ScalaSkysailBeanUtils
+import io.skysail.core.restlet.ScalaSkysailBeanUtils
 import io.skysail.core.app.SkysailApplicationService
 import java.util.Locale
 import org.osgi.service.component._

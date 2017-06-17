@@ -5,7 +5,7 @@ import io.skysail.core.app.SkysailApplication
 import org.restlet.Request
 import java.net.InetAddress
 import java.net.UnknownHostException
-import io.skysail.restlet.SkysailServerResource
+import io.skysail.core.restlet.SkysailServerResource
 import scala.annotation.meta.field
 import scala.beans.BeanProperty
 import java.util.Arrays

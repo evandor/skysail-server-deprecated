@@ -1,7 +1,7 @@
 package io.skysail.converter.test
 
 import org.mockito.Mockito
-import io.skysail.restlet.SkysailServerResource
+import io.skysail.core.restlet.SkysailServerResource
 import org.restlet.Request
 import org.restlet.Response
 import org.restlet.data.Reference

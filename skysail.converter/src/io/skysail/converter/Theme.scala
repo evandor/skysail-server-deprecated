@@ -1,6 +1,6 @@
 package io.skysail.converter
 
-import io.skysail.restlet.SkysailServerResource
+import io.skysail.core.restlet.SkysailServerResource
 import org.restlet.representation.Variant
 import java.util.Optional
 import io.skysail.restlet.utils.ScalaCookiesUtils
