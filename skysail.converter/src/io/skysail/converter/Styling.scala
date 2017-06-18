@@ -2,7 +2,7 @@ package io.skysail.converter
 
 import org.restlet.resource.Resource
 import io.skysail.core.restlet.SkysailServerResource
-import io.skysail.restlet.utils.ScalaCookiesUtils
+import io.skysail.core.restlet.utils.ScalaCookiesUtils
 import io.skysail.core.Constants
 
 object Styling {

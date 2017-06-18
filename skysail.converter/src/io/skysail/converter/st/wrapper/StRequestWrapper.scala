@@ -2,7 +2,7 @@ package io.skysail.converter.st.wrapper
 
 import org.restlet.Request
 import java.util.Collections
-import io.skysail.restlet.utils.SortingParamUtils
+import io.skysail.core.restlet.utils.SortingParamUtils
 
 case class StRequestWrapper(request: Request, fieldNames: List[String]) {
 

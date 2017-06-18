@@ -9,7 +9,7 @@ import io.skysail.repo.orientdb.ScalaDbService
 import io.skysail.core.ApiVersion
 import io.skysail.core.restlet.RouteBuilder
 import io.skysail.core.app.ApplicationConfiguration
-import io.skysail.restlet.services.MenuItemProvider
+import io.skysail.core.restlet.services.MenuItemProvider
 import org.osgi.service.component.ComponentContext
 import io.skysail.core.model.APPLICATION_CONTEXT_RESOURCE
 import io.skysail.app.ref.helloworld._

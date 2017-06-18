@@ -9,7 +9,7 @@ import org.restlet.representation.Representation
 import io.skysail.core.restlet.SkysailServerResource
 import org.restlet.ext.jackson.JacksonRepresentation
 import org.restlet.data.MediaType
-import io.skysail.restlet.responses.ScalaSkysailResponse
+import io.skysail.core.restlet.responses.ScalaSkysailResponse
 import scala.collection.JavaConverters._
 
 @Component(immediate = true)

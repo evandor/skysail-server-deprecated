@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory
 import org.restlet.ext.slf4j.Slf4jLogger
 import st4hidden.org.antlr.runtime.ANTLRInputStream
 import java.io.IOException
-import io.skysail.restlet.services.StringTemplateProvider
+import io.skysail.core.restlet.services.StringTemplateProvider
 
 object STGroupBundleDir {
   val UTF8_ENCODING = "UTF-8";

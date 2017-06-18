@@ -3,7 +3,7 @@ package io.skysail.converter
 import io.skysail.core.restlet.SkysailServerResource
 import org.restlet.representation.Variant
 import java.util.Optional
-import io.skysail.restlet.utils.ScalaCookiesUtils
+import io.skysail.core.restlet.utils.ScalaCookiesUtils
 import io.skysail.core.Constants
 
 object Theming {

@@ -18,9 +18,9 @@ import java.util.GregorianCalendar
 import java.util.Date
 import java.util.Calendar
 import org.restlet.data.CacheDirective
-import io.skysail.restlet.utils.CompositeClassLoader
-import io.skysail.restlet.utils.ClassLoaderDirectory
-import io.skysail.restlet.services.MenuItemProvider
+import io.skysail.core.restlet.utils.CompositeClassLoader
+import io.skysail.core.restlet.utils.ClassLoaderDirectory
+import io.skysail.core.restlet.services.MenuItemProvider
 import io.skysail.core.ApiVersion
 import io.skysail.core.app.ApplicationProvider
 

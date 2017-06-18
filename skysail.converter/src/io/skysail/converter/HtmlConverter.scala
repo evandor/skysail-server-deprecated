@@ -3,9 +3,9 @@ package io.skysail.converter
 import java.util.Collections
 import java.util.Arrays
 import io.skysail.core.restlet.SkysailServerResource
-import io.skysail.restlet.responses.ScalaSkysailResponse
-import io.skysail.restlet.queries.QueryFilterParser
-import io.skysail.restlet.services.StringTemplateProvider
+import io.skysail.core.restlet.responses.ScalaSkysailResponse
+import io.skysail.core.restlet.queries.QueryFilterParser
+import io.skysail.core.restlet.services.StringTemplateProvider
 import io.skysail.core.app._
 import org.restlet.engine.resource.VariantInfo
 import org.restlet.representation.Representation

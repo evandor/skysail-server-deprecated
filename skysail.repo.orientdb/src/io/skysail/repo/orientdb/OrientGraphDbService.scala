@@ -17,7 +17,7 @@ import org.slf4j.LoggerFactory
 import scala.collection.JavaConverters._
 import scala.util._
 import scala.collection.JavaConverters._
-import io.skysail.restlet.transformations.Transformations
+import io.skysail.core.restlet.transformations.Transformations
 import org.json4s.DefaultFormats
 import org.json4s.JsonAST.JValue
 import io.skysail.core.model.ApplicationModel

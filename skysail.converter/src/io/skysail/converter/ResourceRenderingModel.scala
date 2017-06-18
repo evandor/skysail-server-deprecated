@@ -8,12 +8,12 @@ import io.skysail.core.forms.ScalaFormField
 import io.skysail.core.model.resource.StFormFieldsWrapper
 import io.skysail.core.model._
 import io.skysail.core.restlet.SkysailServerResource
-import io.skysail.restlet.responses.ScalaSkysailResponse
-import io.skysail.restlet.responses.FormResponse
-import io.skysail.restlet.queries.QueryFilterParser
+import io.skysail.core.restlet.responses.ScalaSkysailResponse
+import io.skysail.core.restlet.responses.FormResponse
+import io.skysail.core.restlet.queries.QueryFilterParser
 import io.skysail.core.restlet.resources._
-import io.skysail.restlet.utils._
-import io.skysail.restlet.responses._
+import io.skysail.core.restlet.utils._
+import io.skysail.core.restlet.responses._
 import java.util.LinkedHashMap
 import java.util.HashMap
 import java.util.Optional
@@ -22,7 +22,7 @@ import java.util.Collections
 import org.restlet.representation.Variant
 import org.restlet.data.MediaType
 import scala.collection.JavaConverters._
-import io.skysail.restlet.services.MenuItemProvider
+import io.skysail.core.restlet.services.MenuItemProvider
 import io.skysail.core.app.resources.ModelResource
 import io.skysail.api.um.UserManagementProvider
 

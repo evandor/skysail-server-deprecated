@@ -7,11 +7,11 @@ import io.skysail.core.restlet.ResourceContextId
 import io.skysail.core.restlet.resources.PostEntityServerResource
 import io.skysail.queryfilter.filter.Filter
 import io.skysail.queryfilter.pagination.Pagination
-import io.skysail.restlet.responses.ScalaSkysailResponse
+import io.skysail.core.restlet.responses.ScalaSkysailResponse
 import org.restlet.representation.Variant
 import org.restlet.resource.Post
 import org.restlet.data.Form
-import io.skysail.restlet.transformations.Transformations
+import io.skysail.core.restlet.transformations.Transformations
 import org.json4s.jackson.JsonMethods._
 import org.json4s.native.Serialization
 import org.json4s.native.Serialization.{ read, write }

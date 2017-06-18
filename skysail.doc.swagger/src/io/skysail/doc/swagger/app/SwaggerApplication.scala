@@ -7,7 +7,7 @@ import io.skysail.core.security.config.SecurityConfigBuilder
 import io.skysail.core.app._
 import io.skysail.core.ApiVersion
 import io.skysail.core.restlet.RouteBuilder
-import io.skysail.restlet.services.MenuItemProvider
+import io.skysail.core.restlet.services.MenuItemProvider
 import org.osgi.service.component.ComponentContext
 import io.skysail.core.model.APPLICATION_CONTEXT_RESOURCE
 import org.restlet.Restlet

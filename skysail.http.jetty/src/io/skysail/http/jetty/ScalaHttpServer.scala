@@ -1,7 +1,7 @@
 package io.skysail.http.jetty
 
 import io.skysail.core.restlet.ScalaSkysailComponent
-import io.skysail.restlet.services._
+import io.skysail.core.restlet.services._
 import java.util.logging.Level
 import java.net.ServerSocket
 import java.io.IOException

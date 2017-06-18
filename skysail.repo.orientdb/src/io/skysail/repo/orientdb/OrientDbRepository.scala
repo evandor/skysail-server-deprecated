@@ -4,7 +4,7 @@ import scala.util.Try
 import scala.util._
 import scala.collection.JavaConverters._
 import org.json4s.JsonAST.JValue
-import io.skysail.restlet.utils.ScalaReflectionUtils
+import io.skysail.core.restlet.utils.ScalaReflectionUtils
 import io.skysail.queryfilter.filter.Filter
 import io.skysail.queryfilter.pagination.Pagination
 import io.skysail.core.model.ApplicationModel

@@ -2,8 +2,8 @@ package io.skysail.ui.raw
 
 import org.osgi.service.component.annotations._
 import org.osgi.service.component.ComponentContext
-import io.skysail.restlet.services.StringTemplateProvider
-import io.skysail.restlet.services.AbstractStringTemplateProvider
+import io.skysail.core.restlet.services.StringTemplateProvider
+import io.skysail.core.restlet.services.AbstractStringTemplateProvider
 
 object RawTemplatesProvider {
   def NAMESPACE = "raw";

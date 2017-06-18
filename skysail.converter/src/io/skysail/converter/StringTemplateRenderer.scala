@@ -4,11 +4,11 @@ import io.skysail.converter.st.wrapper._
 import io.skysail.core.app._
 import io.skysail.core.restlet.SkysailServerResource
 import io.skysail.core.app.SkysailApplicationService
-import io.skysail.restlet.queries.QueryFilterParser
-import io.skysail.restlet.responses.ScalaSkysailResponse
+import io.skysail.core.restlet.queries.QueryFilterParser
+import io.skysail.core.restlet.responses.ScalaSkysailResponse
 import io.skysail.core.app.SkysailApplication
 import io.skysail.core.restlet.ResourceContextId
-import io.skysail.restlet.utils._
+import io.skysail.core.restlet.utils._
 import org.restlet.representation.{ StringRepresentation, Variant }
 import org.restlet.resource.Resource
 import org.restlet.data.MediaType
