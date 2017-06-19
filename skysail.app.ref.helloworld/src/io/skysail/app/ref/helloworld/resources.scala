@@ -35,6 +35,8 @@ class PostHelloResource extends PostEntityServerResource[Hello] {
   addToContext(ResourceContextId.LINK_TITLE, "post Hello")
   def createEntityTemplate() = Hello(None, "world")
   def addEntity(entity: Hello): Hello = Services.hellosService.create(entity).get
+  override def redirectTo() = super.redirectTo(classOf[HellosResource])
+ 
 }
 
 class PutHelloResource extends PutEntityServerResource[Hello] {

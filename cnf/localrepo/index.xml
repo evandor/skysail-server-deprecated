@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<repository increment="1497763102000" name="Local" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+<repository increment="1497768397000" name="Local" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="biz.aQute.bnd.annotation"/>
@@ -2347,39 +2347,39 @@
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="skysail.converter"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" type="Version" value="0.1.1.201706130633"/>
+      <attribute name="version" type="Version" value="0.1.1.201706180534"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="osgi.content" value="6639cb5aa88e5bcb503c2463d7cf44b78c8ebb28dc5368e37893a6fc33c719c5"/>
+      <attribute name="osgi.content" value="8ab006d2cebf02015b30a9546aade94380f819c8f8d1dd04b7dc1a2ca3d878b7"/>
       <attribute name="url" value="skysail.converter/skysail.converter-0.1.1.jar"/>
-      <attribute name="size" type="Long" value="2188322"/>
+      <attribute name="size" type="Long" value="2190210"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
       <attribute name="osgi.wiring.bundle" value="skysail.converter"/>
-      <attribute name="bundle-version" type="Version" value="0.1.1.201706130633"/>
+      <attribute name="bundle-version" type="Version" value="0.1.1.201706180534"/>
     </capability>
     <capability namespace="osgi.wiring.host">
       <attribute name="osgi.wiring.host" value="skysail.converter"/>
-      <attribute name="bundle-version" type="Version" value="0.1.1.201706130633"/>
+      <attribute name="bundle-version" type="Version" value="0.1.1.201706180534"/>
     </capability>
     <capability namespace="osgi.service">
-      <attribute name="objectClass" type="List&lt;String&gt;" value="io.skysail.core.app.ApplicationProvider,io.skysail.restlet.services.MenuItemProvider"/>
-    </capability>
-    <capability namespace="osgi.service">
-      <attribute name="objectClass" type="List&lt;String&gt;" value="io.skysail.core.osgi.services.OsgiConverterHelper"/>
+      <attribute name="objectClass" type="List&lt;String&gt;" value="io.skysail.core.app.ApplicationProvider,io.skysail.core.restlet.services.MenuItemProvider"/>
     </capability>
     <capability namespace="osgi.service">
       <attribute name="objectClass" type="List&lt;String&gt;" value="io.skysail.core.osgi.services.OsgiConverterHelper"/>
-      <directive name="uses" value="io.skysail.core.osgi.services"/>
     </capability>
     <capability namespace="osgi.service">
       <attribute name="objectClass" type="List&lt;String&gt;" value="io.skysail.core.osgi.services.OsgiConverterHelper"/>
       <directive name="uses" value="io.skysail.core.osgi.services"/>
     </capability>
     <capability namespace="osgi.service">
-      <attribute name="objectClass" type="List&lt;String&gt;" value="io.skysail.core.app.ApplicationProvider,io.skysail.restlet.services.MenuItemProvider"/>
-      <directive name="uses" value="io.skysail.core.app,io.skysail.restlet.services"/>
+      <attribute name="objectClass" type="List&lt;String&gt;" value="io.skysail.core.osgi.services.OsgiConverterHelper"/>
+      <directive name="uses" value="io.skysail.core.osgi.services"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="io.skysail.core.app.ApplicationProvider,io.skysail.core.restlet.services.MenuItemProvider"/>
+      <directive name="uses" value="io.skysail.core.app,io.skysail.core.restlet.services"/>
     </capability>
     <requirement namespace="osgi.wiring.package">
       <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind)(version&gt;=2.8.0)(!(version&gt;=3.0.0)))"/>
@@ -2397,34 +2397,37 @@
       <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.core.app.resources)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.core.forms)(version&gt;=0.1.0)(!(version&gt;=1.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
       <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.core.model)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.core.model.resource)(version&gt;=0.1.0)(!(version&gt;=1.0.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.core.model.resource)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
       <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.core.osgi.services)(version&gt;=0.1.0)(!(version&gt;=0.2.0)))"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.restlet)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.core.restlet)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.restlet.forms)(version&gt;=0.1.0)(!(version&gt;=1.0.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.core.restlet.queries)(version&gt;=0.1.0)(!(version&gt;=1.0.0)))"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.restlet.queries)(version&gt;=0.1.0)(!(version&gt;=1.0.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.core.restlet.resources)(version&gt;=0.1.0)(!(version&gt;=1.0.0)))"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.restlet.resources)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.core.restlet.responses)(version&gt;=0.1.0)(!(version&gt;=1.0.0)))"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.restlet.responses)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.core.restlet.services)(version&gt;=1.0.0)(!(version&gt;=1.1.0)))"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.restlet.services)(version&gt;=0.1.0)(!(version&gt;=0.2.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.core.restlet.utils)(version&gt;=0.1.0)(!(version&gt;=1.0.0)))"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.restlet.utils)(version&gt;=0.1.0)(!(version&gt;=1.0.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.commons.lang)(version&gt;=2.6.0)(!(version&gt;=3.0.0)))"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
       <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.8.0)(!(version&gt;=2.0.0)))"/>
@@ -2516,12 +2519,12 @@
       <directive name="effective" value="active"/>
     </requirement>
     <requirement namespace="osgi.service">
-      <directive name="filter" value="(objectClass=io.skysail.restlet.queries.QueryFilterParser)"/>
+      <directive name="filter" value="(objectClass=io.skysail.core.restlet.queries.QueryFilterParser)"/>
       <directive name="effective" value="active"/>
       <directive name="resolution" value="optional"/>
     </requirement>
     <requirement namespace="osgi.service">
-      <directive name="filter" value="(objectClass=io.skysail.restlet.services.StringTemplateProvider)"/>
+      <directive name="filter" value="(objectClass=io.skysail.core.restlet.services.StringTemplateProvider)"/>
       <directive name="effective" value="active"/>
       <directive name="resolution" value="optional"/>
       <directive name="cardinality" value="multiple"/>
@@ -2530,7 +2533,7 @@
       <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.6))"/>
     </requirement>
     <requirement namespace="osgi.service">
-      <directive name="filter" value="(objectClass=io.skysail.restlet.queries.QueryFilterParser)"/>
+      <directive name="filter" value="(objectClass=io.skysail.core.restlet.queries.QueryFilterParser)"/>
       <directive name="resolution" value="optional"/>
       <directive name="effective" value="active"/>
     </requirement>
@@ -2539,7 +2542,7 @@
       <directive name="effective" value="active"/>
     </requirement>
     <requirement namespace="osgi.service">
-      <directive name="filter" value="(objectClass=io.skysail.restlet.services.StringTemplateProvider)"/>
+      <directive name="filter" value="(objectClass=io.skysail.core.restlet.services.StringTemplateProvider)"/>
       <directive name="resolution" value="optional"/>
       <directive name="cardinality" value="multiple"/>
       <directive name="effective" value="active"/>
@@ -3753,278 +3756,285 @@
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="skysail.core"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="version" type="Version" value="1.0.1.201706180528"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="osgi.content" value="3c67ad17755d8b320ff7ff493e8738001fc072dcd1452de58b4c99b474960529"/>
+      <attribute name="osgi.content" value="14d6a017a5ad124e53c1d2fe89feaeb3d0cbbbecac118ceabb5795dbeaaff81a"/>
       <attribute name="url" value="skysail.core/skysail.core-1.0.1.jar"/>
-      <attribute name="size" type="Long" value="884071"/>
+      <attribute name="size" type="Long" value="912942"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
       <attribute name="osgi.wiring.bundle" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
     </capability>
     <capability namespace="osgi.wiring.host">
       <attribute name="osgi.wiring.host" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.api.doc"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.api.metrics"/>
       <attribute name="version" type="Version" value="1.0.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="scala,scala.collection,scala.collection.immutable,scala.reflect,scala.runtime"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.api.text"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="org.osgi.framework,org.restlet,org.restlet.resource,scala.collection,scala.reflect"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.api.um"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="org.restlet,org.restlet.security,scala.reflect"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.api.validation"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="javax.validation"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.api.validation.hibernate"/>
       <attribute name="version" type="Version" value="1.0.1"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="javax.validation,javax.validation.spi"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.api.weaving"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core"/>
       <attribute name="version" type="Version" value="1.0.1"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="scala,scala.collection,scala.reflect,scala.runtime"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.app"/>
       <attribute name="version" type="Version" value="1.0.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="io.skysail.api.metrics,io.skysail.api.text,io.skysail.api.um,io.skysail.core,io.skysail.core.app.resources,io.skysail.core.domain.repo,io.skysail.core.model,io.skysail.core.restlet,io.skysail.core.restlet.menu,io.skysail.core.restlet.router,io.skysail.core.restlet.services,io.skysail.core.restlet.utils,io.skysail.core.security.config,org.osgi.framework,org.osgi.service.cm,org.osgi.service.component,org.restlet,org.restlet.resource,org.slf4j,scala,scala.collection,scala.collection.immutable,scala.collection.mutable,scala.math,scala.reflect,scala.runtime"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.app.resources"/>
       <attribute name="version" type="Version" value="1.0.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="io.skysail.core.domain,io.skysail.core.html,io.skysail.core.model,io.skysail.core.restlet,io.skysail.core.restlet.menu,io.skysail.core.restlet.resources,io.skysail.core.um.domain,scala,scala.collection,scala.collection.immutable,scala.reflect,scala.runtime"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.domain"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="scala,scala.reflect"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.domain.repo"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="scala.reflect"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.model.resource"/>
       <attribute name="version" type="Version" value="1.0.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="io.skysail.api.text,io.skysail.core.forms,org.restlet,scala,scala.collection,scala.collection.immutable,scala.reflect,scala.runtime"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.osgi.services"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="scala.reflect"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.restlet"/>
       <attribute name="version" type="Version" value="1.0.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="com.google.common.base,io.skysail.api.doc,io.skysail.api.metrics,io.skysail.api.text,io.skysail.core,io.skysail.core.app,io.skysail.core.forms,io.skysail.core.model,io.skysail.core.restlet.filter,io.skysail.core.restlet.responses,io.skysail.core.restlet.utils,org.restlet,org.restlet.data,org.restlet.representation,org.restlet.resource,org.restlet.security,org.slf4j,scala,scala.collection,scala.collection.immutable,scala.collection.mutable,scala.reflect,scala.runtime"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.restlet.filter"/>
       <attribute name="version" type="Version" value="1.0.1"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="io.skysail.core.app,io.skysail.core.domain,io.skysail.core.model,io.skysail.core.restlet,org.owasp.html,org.restlet,org.restlet.representation,org.restlet.routing,org.slf4j,scala,scala.collection.immutable,scala.collection.mutable,scala.reflect,scala.runtime"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.restlet.menu"/>
       <attribute name="version" type="Version" value="1.0.1"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="io.skysail.core,io.skysail.core.domain,scala,scala.collection,scala.reflect,scala.runtime"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.restlet.queries"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="io.skysail.core.restlet.queries.impl,scala.collection.immutable,scala.reflect"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="io.skysail.core.restlet.queries.impl"/>
+      <attribute name="version" type="Version" value="1.0.1"/>
+      <attribute name="bundle-symbolic-name" value="skysail.core"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
+      <directive name="uses" value="scala,scala.collection,scala.collection.immutable,scala.collection.mutable,scala.reflect,scala.runtime"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.restlet.resources"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="io.skysail.api.doc,io.skysail.core.model,io.skysail.core.restlet,io.skysail.core.restlet.responses,org.restlet.data,org.restlet.representation,org.restlet.resource,scala.collection.immutable,scala.reflect,scala.runtime"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.restlet.responses"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="org.restlet,org.restlet.data,scala,scala.collection,scala.reflect"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.restlet.router"/>
       <attribute name="version" type="Version" value="1.0.1"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="io.skysail.core,io.skysail.core.app,io.skysail.core.restlet,io.skysail.core.security.config,org.restlet,org.restlet.resource,org.restlet.routing,org.slf4j,scala,scala.collection.immutable,scala.collection.mutable,scala.reflect,scala.runtime"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.restlet.services"/>
       <attribute name="version" type="Version" value="1.0.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="io.skysail.core.restlet,io.skysail.core.restlet.menu,org.osgi.framework,org.restlet,org.restlet.data,org.restlet.representation,org.restlet.service,org.slf4j,scala.collection.immutable,scala.reflect"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.restlet.transformations"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="org.json4s,org.restlet.data,scala,scala.collection.immutable,scala.reflect,scala.runtime"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.restlet.utils"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="io.skysail.api.text,io.skysail.core,io.skysail.core.app,io.skysail.core.forms,io.skysail.core.restlet,io.skysail.core.restlet.responses,org.apache.commons.beanutils,org.restlet,org.restlet.data,org.restlet.resource,org.restlet.util,org.slf4j,scala,scala.collection,scala.collection.immutable,scala.collection.mutable,scala.reflect,scala.runtime"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.security"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="scala.collection,scala.reflect"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.security.config"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="io.skysail.api.um,io.skysail.core,org.restlet,org.restlet.security,org.slf4j,scala,scala.collection.mutable,scala.reflect,scala.runtime"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.security.token"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="io.skysail.core.security,scala,scala.collection,scala.reflect,scala.runtime"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.um.domain"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="io.skysail.core,scala,scala.collection,scala.collection.immutable,scala.reflect,scala.runtime"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.html"/>
       <attribute name="version" type="Version" value="2.2.1"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.model"/>
       <attribute name="version" type="Version" value="1.0.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="io.skysail.core,io.skysail.core.restlet,org.restlet,org.restlet.data,scala,scala.collection,scala.collection.immutable,scala.collection.mutable,scala.reflect,scala.runtime"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.metrics"/>
       <attribute name="version" type="Version" value="1.0.1"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="io.skysail.api.metrics,scala,scala.reflect,scala.runtime"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.forms"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
       <directive name="uses" value="io.skysail.core.html,io.skysail.core.model,io.skysail.core.restlet,javax.validation.constraints,scala,scala.annotation,scala.collection,scala.reflect,scala.runtime"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.api.links"/>
       <attribute name="version" type="Version" value="1.0.1"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.api.responses"/>
       <attribute name="version" type="Version" value="1.0.1"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.resources"/>
       <attribute name="version" type="Version" value="1.0.1"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.core.utils"/>
       <attribute name="version" type="Version" value="1.0.1"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.restlet.model"/>
       <attribute name="version" type="Version" value="1.0.1"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.restlet.queries"/>
       <attribute name="version" type="Version" value="1.0.1"/>
       <attribute name="bundle-symbolic-name" value="skysail.core"/>
-      <attribute name="bundle-version" type="Version" value="1.0.1.201706180511"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1.201706180528"/>
     </capability>
     <capability namespace="osgi.service">
       <attribute name="objectClass" type="List&lt;String&gt;" value="io.skysail.api.metrics.MetricsCollector"/>
@@ -4614,40 +4624,40 @@
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="skysail.http.jetty"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" type="Version" value="0.1.1.201706130633"/>
+      <attribute name="version" type="Version" value="0.1.1.201706180537"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="osgi.content" value="cbec5e5538231c67deefa376a5c4c634c59efab085f033238ad8a79485bd028a"/>
+      <attribute name="osgi.content" value="362467c69ac25a461dde9722fa30530290a440649706c3d180e90335737655c8"/>
       <attribute name="url" value="skysail.http.jetty/skysail.http.jetty-0.1.1.jar"/>
-      <attribute name="size" type="Long" value="14251"/>
+      <attribute name="size" type="Long" value="14254"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
       <attribute name="osgi.wiring.bundle" value="skysail.http.jetty"/>
-      <attribute name="bundle-version" type="Version" value="0.1.1.201706130633"/>
+      <attribute name="bundle-version" type="Version" value="0.1.1.201706180537"/>
     </capability>
     <capability namespace="osgi.wiring.host">
       <attribute name="osgi.wiring.host" value="skysail.http.jetty"/>
-      <attribute name="bundle-version" type="Version" value="0.1.1.201706130633"/>
+      <attribute name="bundle-version" type="Version" value="0.1.1.201706180537"/>
     </capability>
     <capability namespace="osgi.service">
-      <attribute name="objectClass" type="List&lt;String&gt;" value="io.skysail.restlet.services.ScalaInstallationProvider,io.skysail.restlet.services.ScalaRestletServicesProvider,io.skysail.restlet.services.ScalaSkysailComponentProvider"/>
+      <attribute name="objectClass" type="List&lt;String&gt;" value="io.skysail.core.restlet.services.ScalaInstallationProvider,io.skysail.core.restlet.services.ScalaRestletServicesProvider,io.skysail.core.restlet.services.ScalaSkysailComponentProvider"/>
     </capability>
     <capability namespace="osgi.service">
-      <attribute name="objectClass" type="List&lt;String&gt;" value="io.skysail.restlet.services.ScalaRestletServicesProvider,io.skysail.restlet.services.ScalaSkysailComponentProvider,io.skysail.restlet.services.ScalaInstallationProvider"/>
+      <attribute name="objectClass" type="List&lt;String&gt;" value="io.skysail.core.restlet.services.ScalaRestletServicesProvider,io.skysail.core.restlet.services.ScalaSkysailComponentProvider,io.skysail.core.restlet.services.ScalaInstallationProvider"/>
       <attribute name="port" type="Long" value="2015"/>
       <attribute name="productName" value="skysail"/>
       <attribute name="event.topics" value="de/twenty11/skysail/server/configuration/UPDATED"/>
-      <directive name="uses" value="io.skysail.restlet.services,io.skysail.restlet.services,io.skysail.restlet.services"/>
+      <directive name="uses" value="io.skysail.core.restlet.services,io.skysail.core.restlet.services,io.skysail.core.restlet.services"/>
     </capability>
     <requirement namespace="osgi.wiring.package">
       <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.core.osgi.services)(version&gt;=0.1.0)(!(version&gt;=1.0.0)))"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.restlet)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.core.restlet)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.restlet.services)(version&gt;=0.1.0)(!(version&gt;=0.2.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.core.restlet.services)(version&gt;=1.0.0)(!(version&gt;=1.1.0)))"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
       <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.jetty.servlet)(version&gt;=9.2.0)(!(version&gt;=10.0.0)))"/>
@@ -4730,34 +4740,34 @@
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="skysail.queryfilter"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" type="Version" value="0.1.1.201706130633"/>
+      <attribute name="version" type="Version" value="0.1.1.201706180539"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="osgi.content" value="120f9f43b37dfaaa260098b3aac53b6ed542e0c9c1b2501a542d2d574d9bdec7"/>
+      <attribute name="osgi.content" value="78211e4d8dd59bb239dce73e1aa47551c261f0426908ed71566da6714a3fac5b"/>
       <attribute name="url" value="skysail.queryfilter/skysail.queryfilter-0.1.1.jar"/>
-      <attribute name="size" type="Long" value="5845"/>
+      <attribute name="size" type="Long" value="5846"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
       <attribute name="osgi.wiring.bundle" value="skysail.queryfilter"/>
-      <attribute name="bundle-version" type="Version" value="0.1.1.201706130633"/>
+      <attribute name="bundle-version" type="Version" value="0.1.1.201706180539"/>
     </capability>
     <capability namespace="osgi.wiring.host">
       <attribute name="osgi.wiring.host" value="skysail.queryfilter"/>
-      <attribute name="bundle-version" type="Version" value="0.1.1.201706130633"/>
+      <attribute name="bundle-version" type="Version" value="0.1.1.201706180539"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.queryfilter.filter"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.queryfilter"/>
-      <attribute name="bundle-version" type="Version" value="0.1.1.201706130633"/>
+      <attribute name="bundle-version" type="Version" value="0.1.1.201706180539"/>
       <directive name="uses" value="org.restlet,scala.collection.immutable,scala.reflect"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.queryfilter.pagination"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.queryfilter"/>
-      <attribute name="bundle-version" type="Version" value="0.1.1.201706130633"/>
+      <attribute name="bundle-version" type="Version" value="0.1.1.201706180539"/>
       <directive name="uses" value="org.restlet,scala.reflect"/>
     </capability>
     <requirement namespace="osgi.wiring.package">
@@ -4783,27 +4793,27 @@
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="skysail.repo.orientdb"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" type="Version" value="0.1.1.201706130633"/>
+      <attribute name="version" type="Version" value="0.1.1.201706180540"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="osgi.content" value="54d23dfa9c01c95c3f7baa25f1988f77aff4d98cf84e5b294bfa14b09d0c55ce"/>
+      <attribute name="osgi.content" value="b8f09f6780e72f99748380d7d70b3b0a65806a40834bb26e8970ae8f62cf67eb"/>
       <attribute name="url" value="skysail.repo.orientdb/skysail.repo.orientdb-0.1.1.jar"/>
-      <attribute name="size" type="Long" value="51696"/>
+      <attribute name="size" type="Long" value="51704"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
       <attribute name="osgi.wiring.bundle" value="skysail.repo.orientdb"/>
-      <attribute name="bundle-version" type="Version" value="0.1.1.201706130633"/>
+      <attribute name="bundle-version" type="Version" value="0.1.1.201706180540"/>
     </capability>
     <capability namespace="osgi.wiring.host">
       <attribute name="osgi.wiring.host" value="skysail.repo.orientdb"/>
-      <attribute name="bundle-version" type="Version" value="0.1.1.201706130633"/>
+      <attribute name="bundle-version" type="Version" value="0.1.1.201706180540"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="osgi.wiring.package" value="io.skysail.repo.orientdb"/>
       <attribute name="version" type="Version" value="0.1.0"/>
       <attribute name="bundle-symbolic-name" value="skysail.repo.orientdb"/>
-      <attribute name="bundle-version" type="Version" value="0.1.1.201706130633"/>
+      <attribute name="bundle-version" type="Version" value="0.1.1.201706180540"/>
       <directive name="uses" value="com.fasterxml.jackson.databind,com.orientechnologies.orient.core.record.impl,com.orientechnologies.orient.graph.sql.functions,com.orientechnologies.orient.object.db,com.tinkerpop.blueprints,com.tinkerpop.blueprints.impls.orient,io.skysail.api.metrics,io.skysail.core.app,io.skysail.core.domain.repo,io.skysail.core.model,io.skysail.queryfilter.filter,io.skysail.queryfilter.pagination,org.json4s,org.osgi.service.cm,org.osgi.service.component,org.slf4j,scala,scala.collection,scala.collection.immutable,scala.reflect,scala.runtime,scala.util"/>
     </capability>
     <capability namespace="osgi.service">
@@ -4896,19 +4906,19 @@
       <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.core.model)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.core.restlet)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.core.restlet.transformations)(version&gt;=0.1.0)(!(version&gt;=1.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.core.restlet.utils)(version&gt;=0.1.0)(!(version&gt;=1.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
       <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.queryfilter.filter)(version&gt;=0.1.0)(!(version&gt;=1.0.0)))"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
       <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.queryfilter.pagination)(version&gt;=0.1.0)(!(version&gt;=1.0.0)))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.restlet)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.restlet.transformations)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=io.skysail.restlet.utils)(version&gt;=0.1.0)(!(version&gt;=1.0.0)))"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
       <directive name="filter" value="(&amp;(osgi.wiring.package=org.json4s)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
@@ -5366,21 +5376,21 @@
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="skysail.um.httpbasic"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" type="Version" value="0.2.1.201706180518"/>
+      <attribute name="version" type="Version" value="0.2.1.201706180646"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="osgi.content" value="5e235870cd778534b3f50be202c0ebd429eb4526a916d41ada36495acfc3881f"/>
+      <attribute name="osgi.content" value="3f7b2f1e1a793a1326e9e84ad29bcdfac2ab47934505886cd656d583f0bab8e1"/>
       <attribute name="url" value="skysail.um.httpbasic/skysail.um.httpbasic-0.2.1.jar"/>
-      <attribute name="size" type="Long" value="25545"/>
+      <attribute name="size" type="Long" value="25547"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
       <attribute name="osgi.wiring.bundle" value="skysail.um.httpbasic"/>
-      <attribute name="bundle-version" type="Version" value="0.2.1.201706180518"/>
+      <attribute name="bundle-version" type="Version" value="0.2.1.201706180646"/>
     </capability>
     <capability namespace="osgi.wiring.host">
       <attribute name="osgi.wiring.host" value="skysail.um.httpbasic"/>
-      <attribute name="bundle-version" type="Version" value="0.2.1.201706180518"/>
+      <attribute name="bundle-version" type="Version" value="0.2.1.201706180646"/>
     </capability>
     <capability namespace="osgi.service">
       <attribute name="objectClass" type="List&lt;String&gt;" value="io.skysail.api.um.UserManagementProvider"/>
@@ -5622,21 +5632,21 @@
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="skysail.um.repo.test"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" type="Version" value="0.2.1.201706180518"/>
+      <attribute name="version" type="Version" value="0.2.1.201706180646"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="osgi.content" value="28820a9533c1be4d9a60ba3b0bfa9863a8c43969d5d61ff3ea9f0a3cd611ad45"/>
+      <attribute name="osgi.content" value="3b280e344b042509d85125093a5baa389104cfbd6a5d5485d90d4302e37dc838"/>
       <attribute name="url" value="skysail.um.repo.test/skysail.um.repo.test-0.2.1.jar"/>
       <attribute name="size" type="Long" value="7002"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
       <attribute name="osgi.wiring.bundle" value="skysail.um.repo.test"/>
-      <attribute name="bundle-version" type="Version" value="0.2.1.201706180518"/>
+      <attribute name="bundle-version" type="Version" value="0.2.1.201706180646"/>
     </capability>
     <capability namespace="osgi.wiring.host">
       <attribute name="osgi.wiring.host" value="skysail.um.repo.test"/>
-      <attribute name="bundle-version" type="Version" value="0.2.1.201706180518"/>
+      <attribute name="bundle-version" type="Version" value="0.2.1.201706180646"/>
     </capability>
     <capability namespace="osgi.service">
       <attribute name="objectClass" type="List&lt;String&gt;" value="io.skysail.api.um.UserManagementRepository"/>
@@ -6053,21 +6063,21 @@
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="skysail.um.shiro"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" type="Version" value="0.2.1.201706180518"/>
+      <attribute name="version" type="Version" value="0.2.1.201706180646"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="osgi.content" value="8d46a24481e39a08a57d5a61d90586029180763ba528c04d393ffa58791869b1"/>
+      <attribute name="osgi.content" value="4cc46242d50d763053e42fceaab1a7ec94830785f7ed84bbb51485f4f5fd150c"/>
       <attribute name="url" value="skysail.um.shiro/skysail.um.shiro-0.2.1.jar"/>
       <attribute name="size" type="Long" value="74656"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
       <attribute name="osgi.wiring.bundle" value="skysail.um.shiro"/>
-      <attribute name="bundle-version" type="Version" value="0.2.1.201706180518"/>
+      <attribute name="bundle-version" type="Version" value="0.2.1.201706180646"/>
     </capability>
     <capability namespace="osgi.wiring.host">
       <attribute name="osgi.wiring.host" value="skysail.um.shiro"/>
-      <attribute name="bundle-version" type="Version" value="0.2.1.201706180518"/>
+      <attribute name="bundle-version" type="Version" value="0.2.1.201706180646"/>
     </capability>
     <capability namespace="io.skysail.api.um">
       <attribute name="type" value="shiro"/>
