@@ -37,7 +37,7 @@ class ResourceRenderingModel(
     target: Variant,
     theming: Theming) {
 
-  val appModel = resource.getSkysailApplication().getApplicationModel2()
+  val appModel = resource.getModel()
   def getAppModelHtmlRepresentation() = appModel.toHtml(resource.getRequest)
 
   var menuProviders = Set[MenuItemProvider]()

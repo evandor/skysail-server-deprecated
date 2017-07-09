@@ -24,6 +24,7 @@ Provide-Capability: io.skysail.server.ui;styling="raw"
     io.skysail.bundled.tinkerpop.blueprints-core;version=2.6,\
     org.jsoup;version=1.8,\
     com.fasterxml.jackson.core.jackson-annotations;version=2.5,\
-    org.jsoup;version=1.8
+    org.jsoup;version=1.8,\
+    ${akka-compiletime}
 
 Private-Package: io.skysail.ui.raw

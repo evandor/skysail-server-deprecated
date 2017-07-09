@@ -20,6 +20,7 @@ Include-Resource: templates=templates,webapp=webapp
     com.fasterxml.jackson.core.jackson-core;version=${com.fasterxml.jackson.version},\
 	com.fasterxml.jackson.core.jackson-databind;version=${com.fasterxml.jackson.version},\
     io.skysail.bundled.json4s_2.11-3.5.1;version=3.5,\
+    ${akka-compiletime}
 	    
 Private-Package: \
 	io.skysail.converter,\

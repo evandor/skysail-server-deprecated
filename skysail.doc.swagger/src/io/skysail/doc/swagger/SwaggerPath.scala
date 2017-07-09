@@ -36,7 +36,7 @@ class SwaggerPath(routeBuilder: RouteBuilder) {
 
   val parentClass = routeBuilder.targetClass.getSuperclass()
 
-  private var apiMetadata = ApiMetadata.builder().build();
+  private var apiMetadata = new ApiMetadata()//.builder().build();
 
   try {
     val newInstance = routeBuilder.targetClass.newInstance().asInstanceOf[SkysailServerResource[_]]
@@ -113,27 +113,27 @@ class SwaggerPath(routeBuilder: RouteBuilder) {
   }
 
   private def addApiMetadataForGet(map: java.util.Map[String, Object], apiMetadata: ApiMetadata) = {
-    map.put(SwaggerPath.SUMMARY, apiMetadata.getSummaryForGet())
-    map.put(SwaggerPath.DESCRIPTION, apiMetadata.getDescriptionForGet())
-    map.put(SwaggerPath.TAGS, apiMetadata.getTagsForGet())
+//    map.put(SwaggerPath.SUMMARY, apiMetadata.getSummaryForGet())
+//    map.put(SwaggerPath.DESCRIPTION, apiMetadata.getDescriptionForGet())
+//    map.put(SwaggerPath.TAGS, apiMetadata.getTagsForGet())
   }
 
   private def addApiMetadataForPost(map: java.util.Map[String, Object], apiMetadata: ApiMetadata) = {
-    map.put(SwaggerPath.SUMMARY, apiMetadata.getSummaryForPost())
-    map.put(SwaggerPath.DESCRIPTION, apiMetadata.getDescriptionForPost())
-    map.put(SwaggerPath.TAGS, apiMetadata.getTagsForPost())
+//    map.put(SwaggerPath.SUMMARY, apiMetadata.getSummaryForPost())
+//    map.put(SwaggerPath.DESCRIPTION, apiMetadata.getDescriptionForPost())
+//    map.put(SwaggerPath.TAGS, apiMetadata.getTagsForPost())
   }
 
   private def addApiMetadataForPut(map: java.util.Map[String, Object], apiMetadata: ApiMetadata) = {
-    map.put(SwaggerPath.SUMMARY, apiMetadata.getSummaryForPut())
-    map.put(SwaggerPath.DESCRIPTION, apiMetadata.getDescriptionForPut())
-    map.put(SwaggerPath.TAGS, apiMetadata.getTagsForPut())
+//    map.put(SwaggerPath.SUMMARY, apiMetadata.getSummaryForPut())
+//    map.put(SwaggerPath.DESCRIPTION, apiMetadata.getDescriptionForPut())
+//    map.put(SwaggerPath.TAGS, apiMetadata.getTagsForPut())
   }
 
   private def addApiMetadataForDelete(map: java.util.Map[String, Object], apiMetadata: ApiMetadata) = {
-    map.put(SwaggerPath.SUMMARY, apiMetadata.getSummaryForDelete())
-    map.put(SwaggerPath.DESCRIPTION, apiMetadata.getDescriptionForDelete())
-    map.put(SwaggerPath.TAGS, apiMetadata.getTagsForDelete())
+//    map.put(SwaggerPath.SUMMARY, apiMetadata.getSummaryForDelete())
+//    map.put(SwaggerPath.DESCRIPTION, apiMetadata.getDescriptionForDelete())
+//    map.put(SwaggerPath.TAGS, apiMetadata.getTagsForDelete())
   }
 
   private def analyse(targetClass: Class[_ <: ServerResource]) = {

@@ -50,7 +50,7 @@ class BookmarksApplication extends SkysailApplication(BookmarksApplication.APP_N
   @Activate
   override def activate(appConfig: ApplicationConfiguration, componentContext: ComponentContext) = {
     super.activate(appConfig, componentContext);
-    bookmarksService = new BookmarksService(dbService, getApplicationModel2())
+    bookmarksService = new BookmarksService(dbService, getApplicationModel())
   }
 
   override def attach() = {

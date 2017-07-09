@@ -46,7 +46,7 @@ class HelloWorldApplication extends SkysailApplication(HelloWorldApplication.APP
   @Activate
   override def activate(appConfig: ApplicationConfiguration, componentContext: ComponentContext) = {
     super.activate(appConfig, componentContext);
-    hellosService = new HelloWorldService(dbService, getApplicationModel2())
+    hellosService = new HelloWorldService(dbService, getApplicationModel())
   }
 
   override def attach() = {

@@ -1,15 +1,15 @@
 package io.skysail.app.ref.bookmarks.it
 
+import io.skysail.testsupport._
+import io.skysail.app.ref.bookmarks.domain._
+import io.skysail.testsupport.PathDsl._
+import java.util.Random
+import java.math.BigInteger
 import org.restlet.data._
 import org.restlet.ext.json.JsonRepresentation
 import org.json.JSONObject
-import io.skysail.testsupport._
-import io.skysail.app.ref.bookmarks.domain._
-import java.math.BigInteger
-import java.util.Random
 import org.slf4j.LoggerFactory
 import org.restlet.representation.Representation
-import io.skysail.testsupport.PathDsl._
 import org.json4s._
 import org.json4s.native.JsonMethods._
 

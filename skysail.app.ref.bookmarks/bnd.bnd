@@ -42,7 +42,8 @@ Bundle-Description: reference app for simple bookmarks
 	org.eclipse.jetty.util;version=9.2,\
 	com.thoughtworks.paranamer;version=2.8,\
     skysail.um.shiro;version=latest,\
-	org.assertj.core;version=3.5
+	org.assertj.core;version=3.5,\
+    ${akka-compiletime}
 
 Private-Package: \
 	io.skysail.app.ref.bookmarks,\
